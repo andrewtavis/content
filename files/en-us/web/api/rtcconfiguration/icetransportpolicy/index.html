@@ -20,8 +20,7 @@ browser-compat: api.RTCConfiguration.iceTransportPolicy
 <p>The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC Device API</a> dictionary
   {{domxref("RTCConfiguration")}}'s <code><strong>iceTransportPolicy</strong></code>
   property is a string indicating the transport selection policy the {{Glossary("ICE")}}
-  agent should use during negotiation of connections. Its value must come from the
-  {{domxref("RTCIceTransportPolicy")}} enumerated type.</p>
+  agent should use during negotiation of connections.</p>
 
 <p>If this property isn't included in the <code>RTCConfiguration</code>, the default
   value, <code>all</code>, is used.</p>
@@ -56,11 +55,11 @@ let <em>policy</em> = <em>rtcConfiguration</em>.iceTransportPolicy;
       This includes, for example, those candidates relayed by a {{Glossary("STUN")}} or
       {{Glossary("TURN")}} server.</p>
 
-    <div class="note">This can be used to prevent the remote endpoint from receiving the
+    <div class="note"><p><strong>Note:</strong> This can be used to prevent the remote endpoint from receiving the
       user's IP addresses, which may be important in some security situations. For
       example, in a video calling application, the app may want to prevent unknown callers
       from learning the callee's IP addresses until the callee has agreed to receive the
-      call.</div>
+      call.</p></div>
   </dd>
 </dl>
 

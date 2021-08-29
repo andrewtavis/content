@@ -2,21 +2,21 @@
 title: RTCPeerConnection.generateCertificate() static function
 slug: Web/API/RTCPeerConnection/generateCertificate
 tags:
-- API
-- Media
-- Method
-- RTCPeerConnection
-- Reference
-- Security
-- Static Method
-- WebRTC
-- WebRTC API
-- generateCertificate
+  - API
+  - Media
+  - RTCPeerConnection
+  - Reference
+  - Security
+  - Static Method
+  - Method
+  - WebRTC
+  - WebRTC API
+  - generateCertificate
 browser-compat: api.RTCPeerConnection.generateCertificate
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p>The static  <strong><code>RTCPeerConnection.generateCertificate()</code></strong>
+<p>The static <strong><code>RTCPeerConnection.generateCertificate()</code></strong>
   function creates an X.509 certificate and corresponding private key, returning a promise
   that resolves with the new {{domxref("RTCCertificate")}} once it's generated.</p>
 
@@ -35,7 +35,7 @@ browser-compat: api.RTCPeerConnection.generateCertificate
 </dl>
 
 <div class="note">
-  <p><code>RTCPeerConnection.generateCertificate()</code> is a static method, so it is
+  <p><strong>Note:</strong> <code>RTCPeerConnection.generateCertificate()</code> is a static method, so it is
     always called on the <code>RTCPeerConnection</code> interface itself, not an instance
     thereof.</p>
 </div>
@@ -76,7 +76,7 @@ browser-compat: api.RTCPeerConnection.generateCertificate
 <pre class="brush: js">let stdRSACertificate = {
   name: "RSASSA-PKCS1-v1_5",
   modulusLength: 2048,
-  publicExponent: new UInt8Array([1, 0, 1]),
+  publicExponent: new Uint8Array([1, 0, 1]),
   hash: "SHA-256"
 };
 </pre>
@@ -107,7 +107,7 @@ browser-compat: api.RTCPeerConnection.generateCertificate
     name: 'RSASSA-PKCS1-v1_5',
     hash: 'SHA-256',
     modulusLength: 2048,
-    publicExponent: new UInt8Array([1, 0, 1])
+    publicExponent: new Uint8Array([1, 0, 1])
 }).then(function(cert) {
   var pc = new RTCPeerConnection({certificates: [cert]});
 });</pre>

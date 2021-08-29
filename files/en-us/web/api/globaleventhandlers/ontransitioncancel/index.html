@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.ontransitioncancel
 <div>{{APIRef("CSS3 Transitions")}}</div>
 
 <p>The <strong><code>ontransitioncancel</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an {{event("Event_handlers", "event handler")}} that
+  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
   processes {{event("transitioncancel")}} events.</p>
 
 <p>The <code>transitioncancel</code> event is sent when a <a
@@ -49,7 +49,7 @@ browser-compat: api.GlobalEventHandlers.ontransitioncancel
   value of {{cssxref("transition-duration")}}.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: <code>elapsedTime</code> does not include time prior to the
+  <p><strong>Note:</strong> <code>elapsedTime</code> does not include time prior to the
     transition effect beginning; that means that the value of
     {{cssxref("transition-delay")}} doesn't affect the value of <code>elapsedTime</code>,
     which is zero until the delay period ends and the animation begins.</p>
@@ -80,7 +80,7 @@ browser-compat: api.GlobalEventHandlers.ontransitioncancel
   color and size change, and causes the box to rotate, while the mouse cursor hovers over
   it.</p>
 
-<pre class="brush: css highlight:[13,14]">.box {
+<pre class="brush: css">.box {
   margin-left: 70px;
   margin-top: 30px;
   border-style: solid;

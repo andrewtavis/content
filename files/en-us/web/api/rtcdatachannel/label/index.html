@@ -2,7 +2,6 @@
 title: RTCDataChannel.label
 slug: Web/API/RTCDataChannel/label
 tags:
-  - Experimental
   - Property
   - RTCDataChannel
   - Read-only
@@ -11,7 +10,7 @@ tags:
   - label
 browser-compat: api.RTCDataChannel.label
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The read-only <code>RTCDataChannel</code> property <code><strong>label</strong></code>
   returns a {{domxref("DOMString")}} containing a name describing the data channel. These
@@ -25,7 +24,7 @@ browser-compat: api.RTCDataChannel.label
 <p>A unique ID can be found in the {{domxref("RTCDataChannel.id", "id")}} property.</p>
 
 <div class="note">
-  <p>A data channel's label is set when the channel is created by calling
+  <p><strong>Note:</strong> A data channel's label is set when the channel is created by calling
     {{domxref("RTCPeerConnection.createDataChannel()")}}. It cannot be changed after that.
   </p>
 </div>

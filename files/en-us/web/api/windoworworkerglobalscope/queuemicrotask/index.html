@@ -26,10 +26,12 @@ browser-compat: api.WindowOrWorkerGlobalScope.queueMicrotask
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>queueMicrotask()</strong></code> method,
+<p>The <code><strong>queueMicrotask()</strong></code> method,
     which is exposed on the {{domxref("Window")}} or {{domxref("Worker")}} interface,
     queues a microtask to be executed at a safe time prior to control returning to the
-    browser's event loop.</span> The microtask is a short function which will run after
+    browser's event loop.</p>
+
+<p>The microtask is a short function which will run after
   the current task has completed its work and when there is no other code waiting to be
   run before control of the execution context is returned to the browser's event loop.</p>
 
@@ -52,7 +54,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.queueMicrotask
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>scope</em>.queueMicrotask(<em>function</em>);
+<pre class="brush: js">queueMicrotask(<em>function</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -70,7 +72,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.queueMicrotask
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">self.queueMicrotask(() =&gt; {
+<pre class="brush: js">queueMicrotask(() =&gt; {
   // function contents here
 })</pre>
 
@@ -98,8 +100,8 @@ browser-compat: api.WindowOrWorkerGlobalScope.queueMicrotask
 <p>The code below is basically a monkey-patch for <code>queueMicrotask()</code> for modern
   engines. It creates a microtask by using a promise that resolves immediately.</p>
 
-<pre class="brush: js">if (typeof window.queueMicrotask !== "function") {
-  window.queueMicrotask = function (callback) {
+<pre class="brush: js">if (typeof self.queueMicrotask !== "function") {
+  self.queueMicrotask = function (callback) {
     Promise.resolve()
       .then(callback)
       .catch(e =&gt; setTimeout(() =&gt; { throw e; })); // report exceptions

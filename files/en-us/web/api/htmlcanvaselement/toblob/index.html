@@ -13,16 +13,13 @@ browser-compat: api.HTMLCanvasElement.toBlob
 
 <p>The <strong><code>HTMLCanvasElement.toBlob()</code></strong> method creates a
   {{domxref("Blob")}} object representing the image contained in the canvas; this file may
-  be cached on the disk or stored in memory at the discretion of the user agent. If
-  <code>type</code> is not specified, the image type is <code>image/png</code>. The
-  created image is in a resolution of 96dpi.</p>
+  be cached on the disk or stored in memory at the discretion of the user agent.
 
-<p>The third argument is used when creating images using lossy compression (such as
-  <code>image/jpeg</code>) to specify the quality of the output.</p>
+  <p>The created image is in a resolution of 96dpi.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>canvas</var>.toBlob(<var>callback</var>, <var>mimeType</var>, <var>qualityArgument</var>);
+<pre class="brush: js"><var>canvas</var>.toBlob(<var>callback</var>, <var>type</var>, <var>quality</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -31,14 +28,16 @@ browser-compat: api.HTMLCanvasElement.toBlob
   <dt><code>callback</code></dt>
   <dd>A callback function with the resulting {{domxref("Blob")}} object as a single
     argument.</dd>
-  <dt><code>mimeType</code> {{optional_inline}}</dt>
+  <dt><code>type</code> {{optional_inline}}</dt>
   <dd>A {{domxref("DOMString")}} indicating the image format. The default type is
-    <code>image/png</code>.</dd>
-  <dt><code>qualityArgument</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Number")}} between <code>0</code> and <code>1</code> indicating image
+    <code>image/png</code>; that type is also used if the given type isn't supported.</dd>
+  <dt><code>quality</code> {{optional_inline}}</dt>
+  <dd>A {{jsxref("Number")}} between <code>0</code> and <code>1</code>, indicating image
     quality if the requested type is <code>image/jpeg </code>or <code>image/webp</code>.
     If this argument is anything else, the default values 0.92 and 0.80 are used for
-    image/jpeg and image/webp respectively. Other arguments are ignored.</dd>
+    image/jpeg and image/webp respectively. Other arguments are ignored.
+    <p>This argument is used when creating images using lossy compression (such as <code>image/jpeg</code>), to specify the quality of the output.</p>
+    </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -123,7 +122,7 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
   with OS.File (chrome/add-on context only)</h3>
 
 <div class="note">
-  <p>This technique saves it to the desktop and is only useful in Firefox chrome context
+  <p><strong>Note:</strong> This technique saves it to the desktop and is only useful in Firefox chrome context
     or add-on code, as OS APIs are not present on web sites.</p>
 </div>
 

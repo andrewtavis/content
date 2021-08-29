@@ -30,7 +30,7 @@ browser-compat: api.Request
  <dt>{{domxref("Request.body")}} {{readonlyInline}}</dt>
  <dd>A {{domxref("ReadableStream")}} of the body contents.</dd>
  <dt>{{domxref("Request.bodyUsed")}} {{readonlyInline}}</dt>
- <dd>Stores a {{domxref("Boolean")}} that declares whether the body has been used in a request yet.</dd>
+ <dd>Stores <code>true</code> or <code>false</code> to indicate whether or not the body has been used in a request yet.</dd>
  <dt>{{domxref("Request.cache")}} {{readonlyInline}}</dt>
  <dd>Contains the cache mode of the request (e.g., <code>default</code>, <code>reload</code>, <code>no-cache</code>).</dd>
  <dt>{{domxref("Request.credentials")}} {{readonlyInline}}</dt>
@@ -59,7 +59,7 @@ browser-compat: api.Request
 
 <dl>
  <dt>{{domxref("Request.arrayBuffer()")}}</dt>
- <dd>Returns a promise that resolves with an {{domxref("ArrayBuffer")}} representation of the request body.</dd>
+ <dd>Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the request body.</dd>
  <dt>{{domxref("Request.blob()")}}</dt>
  <dd>Returns a promise that resolves with a {{domxref("Blob")}} representation of the request body.</dd>
  <dt>{{domxref("Request.clone()")}}</dt>
@@ -73,7 +73,7 @@ browser-compat: api.Request
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: The request body functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.</p>
+<p><strong>Note:</strong> The request body functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>

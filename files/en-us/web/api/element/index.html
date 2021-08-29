@@ -13,7 +13,9 @@ browser-compat: api.Element
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>Element</code></strong> is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from <code>Element</code>.</span> For example, the {{DOMxRef("HTMLElement")}} interface is the base interface for HTML elements, while the {{DOMxRef("SVGElement")}} interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.</p>
+<p><strong><code>Element</code></strong> is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from <code>Element</code>.</p>
+
+<p>For example, the {{DOMxRef("HTMLElement")}} interface is the base interface for HTML elements, while the {{DOMxRef("SVGElement")}} interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.</p>
 
 <p>Languages outside the realm of the Web platform, like XUL through the <code>XULElement</code> interface, also implement <code>Element</code>.</p>
 
@@ -197,8 +199,6 @@ browser-compat: api.Element
  <dd>Registers an event handler to a specific event type on the element.</dd>
  <dt>{{DOMxRef("Element.after()")}}</dt>
  <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the <code>Element</code>'s parent, just after the <code>Element</code>.</dd>
- <dt>{{DOMxRef("Element.attachInternals()")}}</dt>
- <dd>Returns an {{DOMxRef("ElementInternals")}} object, and enables a custom element to participate in HTML forms.</dd>
  <dt>{{DOMxRef("Element.attachShadow()")}}</dt>
  <dd>Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.</dd>
  <dt>{{DOMxRef("Element.animate()")}} {{Experimental_Inline}}</dt>
@@ -214,7 +214,7 @@ browser-compat: api.Element
  <dt>{{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}</dt>
  <dd>Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.</dd>
  <dt>{{DOMxRef("EventTarget.dispatchEvent()")}}</dt>
- <dd>Dispatches an event to this node in the DOM and returns a {{jsxref("Boolean")}} that indicates whether no handler canceled the event.</dd>
+ <dd>Dispatches an event to this node in the DOM and returns a boolean value that indicates whether no handler canceled the event.</dd>
  <dt>{{DOMxRef("Element.getAnimations()")}} {{Experimental_Inline}}</dt>
  <dd>Returns an array of Animation objects currently active on the element.</dd>
  <dt>{{DOMxRef("Element.getAttribute()")}}</dt>
@@ -240,11 +240,11 @@ browser-compat: api.Element
  <dt>{{DOMxRef("Element.getElementsByTagNameNS()")}}</dt>
  <dd>Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name and namespace, from the current element.</dd>
  <dt>{{DOMxRef("Element.hasAttribute()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute or not.</dd>
+ <dd>Returns a boolean value indicating if the element has the specified attribute or not.</dd>
  <dt>{{DOMxRef("Element.hasAttributeNS()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute, in the specified namespace, or not.</dd>
+ <dd>Returns a boolean value indicating if the element has the specified attribute, in the specified namespace, or not.</dd>
  <dt>{{DOMxRef("Element.hasAttributes()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has one or more HTML attributes present.</dd>
+ <dd>Returns a boolean value indicating if the element has one or more HTML attributes present.</dd>
  <dt>{{DOMxRef("Element.hasPointerCapture()")}}</dt>
  <dd>Indicates whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID.</dd>
  <dt>{{DOMxRef("Element.insertAdjacentElement()")}}</dt>
@@ -254,7 +254,7 @@ browser-compat: api.Element
  <dt>{{DOMxRef("Element.insertAdjacentText()")}}</dt>
  <dd>Inserts a given text node at a given position relative to the element it is invoked upon.</dd>
  <dt>{{DOMxRef("Element.matches()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.</dd>
+ <dd>Returns a boolean value indicating whether or not the element would be selected by the specified selector string.</dd>
  <dt>{{DOMxRef("Element.prepend()")}}</dt>
  <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the element.</dd>
  <dt>{{DOMxRef("Element.querySelector()")}}</dt>
