@@ -1,19 +1,12 @@
 ---
-title: Gamepad.axes
+title: "Gamepad: axes property"
+short-title: axes
 slug: Web/API/Gamepad/axes
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.axes
 ---
 
-{{APIRef("Gamepad API")}}
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`Gamepad.axes`** property of the {{domxref("Gamepad") }}
 interface returns an array representing the controls with axes present on the device
@@ -48,7 +41,7 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   const start = requestAnimationFrame(gameLoop);
-};
+}
 ```
 
 ## Specifications

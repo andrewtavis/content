@@ -1,14 +1,10 @@
 ---
-title: CSSPrimitiveValue.setStringValue()
+title: "CSSPrimitiveValue: setStringValue() method"
+short-title: setStringValue()
 slug: Web/API/CSSPrimitiveValue/setStringValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - NeedsExample
-  - setStringValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.setStringValue
 ---
 
@@ -19,7 +15,8 @@ The **`setStringValue()`** method of the
 property attached to this value can't accept the specified unit or the string value, the
 value will be unchanged and a {{domxref("DOMException")}} will be raised.
 
-> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:
@@ -45,7 +42,7 @@ setStringValue(stringType, stringValue)
     | `CSS_ATTR`   | The value is an {{cssxref("attr", "attr()")}} function. |
     | `CSS_IDENT`  | The value is an identifier.                             |
     | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}.           |
-    | `CSS_URI`    | The value is a {{cssxref("url", "url()")}}.             |
+    | `CSS_URI`    | The value is a {{cssxref("url_value", "&lt;url&gt;")}}. |
 
 - `stringValue`
   - : A string representing the new string value.

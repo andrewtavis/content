@@ -2,11 +2,6 @@
 title: SVGEllipseElement
 slug: Web/API/SVGEllipseElement
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGEllipseElement
 ---
 
@@ -18,7 +13,7 @@ The **`SVGEllipseElement`** interface provides access to the properties of {{SVG
 
 ## Instance properties
 
-_This interface also inherits properties from its parent interface, {{domxref("SVGGeometryElement")}}._
+_Inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 
 - {{domxref("SVGEllipseElement.cx")}} {{ReadOnlyInline}}
   - : This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("cx")}} attribute of the given {{SVGElement("ellipse")}} element.
@@ -31,11 +26,11 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 
 ## Instance methods
 
-_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
+_Inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 
 ## Example
 
-### SVG content
+### SVG
 
 ```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +44,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 </svg>
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
 function outputSize() {
@@ -58,8 +53,8 @@ function outputSize() {
   // Outputs "horizontal radius: 100 vertical radius: 60"
   console.log(
     `horizontal radius: ${ellipse.rx.baseVal.valueAsString}`,
-    `vertical radius: ${ellipse.ry.baseVal.valueAsString}`
-  )
+    `vertical radius: ${ellipse.ry.baseVal.valueAsString}`,
+  );
 }
 ```
 

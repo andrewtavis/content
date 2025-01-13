@@ -1,19 +1,11 @@
 ---
 title: "ARIA: figure role"
 slug: Web/Accessibility/ARIA/Roles/figure_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA figure
-  - Accessibility
-  - Reference
-  - Role
-  - document structure role
-  - figure
-spec-urls:
-  - https://w3c.github.io/aria/#figure
-  - https://w3c.github.io/aria-practices/#describing_with_captions
+page-type: aria-role
+spec-urls: https://w3c.github.io/aria/#figure
 ---
+
+{{AccessibilitySidebar}}
 
 The ARIA `figure` role can be used to identify a figure inside page content where appropriate semantics do not already exist. A figure is generally considered to be one or more images, code snippets, or other content that puts across information in a different way to a regular flow of text.
 
@@ -53,7 +45,8 @@ This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')
 </figure>
 ```
 
-> **Note:** If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a figure and its caption — {{htmlelement("figure")}} and {{htmlelement("figcaption")}}.
+> [!NOTE]
+> If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a figure and its caption — {{htmlelement("figure")}} and {{htmlelement("figcaption")}}.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -122,11 +115,3 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
 - [HTML `<figure>` element](/en-US/docs/Web/HTML/Element/figure)
 - [HTML `<figcaption>` element](/en-US/docs/Web/HTML/Element/figcaption)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

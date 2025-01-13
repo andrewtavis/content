@@ -1,13 +1,8 @@
 ---
-title: SVGStyleElement.media
+title: "SVGStyleElement: media property"
+short-title: media
 slug: Web/API/SVGStyleElement/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStyleElement.media
 ---
 
@@ -49,8 +44,8 @@ The code below gets the `style` element (an `SVGStyleElement`) using its id.
 ```js
 const svg = document.querySelector("svg");
 // Create the `style` element in the SVG namespace
-const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
-const node = document.createTextNode('circle { fill: red; }');
+const style = document.createElementNS("http://www.w3.org/2000/svg", "style");
+const node = document.createTextNode("circle { fill: red; }");
 svg.appendChild(style);
 style.appendChild(node);
 ```
@@ -60,23 +55,21 @@ This function is called to set the initial button text, and also when the window
 The button event handler also sets the value of the style's `media` property.
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
 function setButtonText() {
   button.textContent = `Media: ${style.media} (Width: ${window.innerWidth})`;
 }
 setButtonText();
 
-
-addEventListener('resize', () => {
-    setButtonText();
+addEventListener("resize", () => {
+  setButtonText();
 });
 
-
-button.addEventListener('click', () => {
-   style.media = "all and (min-width: 700px)";
-   setButtonText();
-   });
+button.addEventListener("click", () => {
+  style.media = "all and (min-width: 700px)";
+  setButtonText();
+});
 ```
 
 ### Result
@@ -88,7 +81,8 @@ Press the button to toggle the value of the `media` property on the style (which
 
 {{EmbedLiveSample("Examples")}}
 
-> **Note:** The `media` property may be set to any string, but will be ignored if the string is not a valid media query.
+> [!NOTE]
+> The `media` property may be set to any string, but will be ignored if the string is not a valid media query.
 
 ## Specifications
 

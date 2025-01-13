@@ -2,11 +2,6 @@
 title: GamepadButton
 slug: Web/API/GamepadButton
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Reference
 browser-compat: api.GamepadButton
 ---
 
@@ -27,7 +22,7 @@ A `GamepadButton` object is returned by querying any value of the array returned
 
 ## Example
 
-The button values in the following example are stored as an array of {{domxref("GamepadButton")}} objects. This simple example checks to see if the {{domxref("GamepadButton.value")}} of a button is greater than `0`, or if the {{domxref("GamepadButton.pressed")}} property indicates the button has been pressed.
+The button values in the following example are stored as an array of `GamepadButton` objects. This simple example checks to see if the {{domxref("GamepadButton.value")}} of a button is greater than `0`, or if the {{domxref("GamepadButton.pressed")}} property indicates the button has been pressed.
 
 ```js
 function gameLoop() {
@@ -47,7 +42,7 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   requestAnimationFrame(gameLoop);
-};
+}
 ```
 
 ## Specifications

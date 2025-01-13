@@ -2,16 +2,6 @@
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
 page-type: guide
-tags:
-  - CSS
-  - CSS Cookbook
-  - Guide
-  - CSS layout
-  - flexbox
-  - pagination
-browser-compat:
-  - css.properties.justify-content
-  - css.properties.column-gap.flex_context
 ---
 
 {{CSSRef}}
@@ -28,21 +18,96 @@ Typically, the pagination component will be centered horizontally underneath the
 
 ## Recipe
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/pagination.html", '100%', 720)}}
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
-> **Callout:**
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/pagination--download.html)
+```html live-sample___pagination-example
+<nav aria-label="pagination">
+  <ul class="pagination">
+    <li>
+      <a href="">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="visuallyhidden">previous set of pages</span>
+      </a>
+    </li>
+    <li>
+      <a href=""><span class="visuallyhidden">page </span>1</a>
+    </li>
+    <li>
+      <a href="" aria-current="page">
+        <span class="visuallyhidden">page </span>2
+      </a>
+    </li>
+    <li>
+      <a href=""> <span class="visuallyhidden">page </span>3 </a>
+    </li>
+    <li>
+      <a href=""> <span class="visuallyhidden">page </span>4 </a>
+    </li>
+    <li>
+      <a href="">
+        <span class="visuallyhidden">next set of pages</span
+        ><span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+```
+
+```css live-sample___pagination-example
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+nav {
+  border-top: 1px solid #eee;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  font: 1.2em sans-serif;
+
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.pagination li {
+  margin: 0 1px;
+}
+
+.pagination a {
+  display: block;
+  padding: 0.5em 1em;
+  border: 1px solid #999;
+  border-radius: 0.2em;
+  text-decoration: none;
+}
+
+.pagination a[aria-current="page"] {
+  background-color: #333;
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("pagination-example")}}
 
 ## Choices made
 
-This pattern is laid out using [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.
+This pattern is laid out using [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.
 
-The list itself also becomes a flex container to lay the items out as a row. To space the items out we will use a {{cssxref("margin")}} on the flex items.
-
-## Alternative methods
-
-Once the {{cssxref("column-gap")}} property has implementation in browsers this could be used instead of margins to space out the items.
+The list itself also becomes a flex container to lay the items out as a row. To space the items out we can either use a {{cssxref("margin")}} on the flex items or add a {{cssxref("gap")}} on the flex container.
 
 ```css
 .pagination {
@@ -50,7 +115,7 @@ Once the {{cssxref("column-gap")}} property has implementation in browsers this 
   margin: 0;
   padding: 0;
   display: flex;
-  column-gap: 2px;
+  gap: 2px;
 }
 ```
 
@@ -62,18 +127,10 @@ We have also added some additional content that would be read by a screen reader
 
 The "See Also" section at the end of this document has links to related accessibility topics.
 
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
-- {{Cssxref("justify-content")}}, {{Cssxref("column-gap")}}
-- [Know your ARIA: 'Hidden' vs 'None'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)
-- [Invisible content just for screen reader users](https://webaim.org/techniques/css/invisiblecontent/#techniques)
-- [Writing CSS With Accessibility in mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
-- [a11y Style Guide: Pagination](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)
+- {{Cssxref("justify-content")}}, {{Cssxref("gap")}}
+- [Know your ARIA: 'hidden' vs 'none'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html) (2018)
+- [Invisible content just for screen reader users](https://webaim.org/techniques/css/invisiblecontent/#techniques) via WebAIM.org (2020)
+- [Writing CSS with accessibility in mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) (2017)
+- [a11y style guide: pagination](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)

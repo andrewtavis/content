@@ -1,13 +1,7 @@
 ---
-title: '<menu>: The Menu element'
+title: "<menu>: The Menu element"
 slug: Web/HTML/Element/menu
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
 browser-compat: html.elements.menu
 ---
 
@@ -23,9 +17,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-The `<menu>` and {{HTMLElement("ul")}} elements both represent an unordered list of items. The key difference is that {{HTMLElement("ul")}} primarily contains items for display, while `<menu>` was intended for interactive items. The related {{HTMLElement("menuitem")}} element has been deprecated.
+The `<menu>` and {{HTMLElement("ul")}} elements both represent an unordered list of items. The key difference is that {{HTMLElement("ul")}} primarily contains items for display, while `<menu>` was intended for interactive items.
 
-> **Note:** In early versions of the HTML specification, the `<menu>` element had an additional use case as a context menu. This functionality is considered obsolete and is not in the specification.
+> [!NOTE]
+> In early versions of the HTML specification, the `<menu>` element had an additional use case as a context menu. This functionality is considered obsolete and is not in the specification.
 
 ## Examples
 
@@ -83,18 +78,18 @@ button {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
         <p>
-          <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
             >Flow content</a
           >. If the element's children include at least one
           {{HTMLElement("li")}} element:
           <a
-            href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+            href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
             >Palpable content</a
           >.
         </p>
@@ -112,13 +107,13 @@ button {
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{No_Tag_Omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -127,7 +122,7 @@ button {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/list_role"
             >list</a
           ></code
         >

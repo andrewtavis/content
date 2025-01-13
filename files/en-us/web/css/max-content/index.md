@@ -2,18 +2,14 @@
 title: max-content
 slug: Web/CSS/max-content
 page-type: css-keyword
-tags:
-  - CSS
-  - CSS Grid
-  - Reference
-  - max-content
-  - sizing
 browser-compat: css.properties.width.max-content
 ---
 
 {{CSSRef}}
 
-The `max-content` sizing keyword represents the intrinsic maximum width or height of the content. For text content this means that the content will not wrap at all even if it causes overflows.
+The `max-content` sizing keyword represents the maximum {{glossary("intrinsic size")}} of the content. For text content this means that the content will not wrap at all even if it causes overflows.
+
+The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function can be used to enable animations to and from `max-content`.
 
 ## Syntax
 
@@ -26,13 +22,6 @@ block-size: max-content;
 
 /* used in grid tracks */
 grid-template-columns: 200px 1fr max-content;
-
-/* Global values */
-max-content: inherit;
-max-content: initial;
-max-content: revert;
-max-content: revert-layer;
-max-content: unset;
 ```
 
 ## Examples
@@ -118,3 +107,4 @@ max-content: unset;
 ## See also
 
 - Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("fit-content")}}
+- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module

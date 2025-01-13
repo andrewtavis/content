@@ -1,23 +1,16 @@
 ---
 title: Cognitive accessibility
 slug: Web/Accessibility/Cognitive_accessibility
-tags:
-  - Accessibility
-  - Best practices
-  - Forms
-  - WCAG
-  - cognitive accessibility
+page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 Cognitive accessibility covers accessibility considerations for people with cognition and learning disabilities. This document introduces cognitive accessibility and improving accessibility of the web for people with cognitive and learning differences.
 
 Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who may have the most-limited capabilities, to age-related issues with thinking and remembering. The range includes people with mental illnesses, such as depression and schizophrenia. It also includes people with learning disabilities, such as dyslexia and attention deficit hyperactivity disorder (ADHD).
 
-Though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These problems include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent or non-traditional web page layouts. In this document, we focus on steps developers should take to improve the cognitive accessibility of their web sites and applications.
+Though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These problems include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent or non-traditional web page layouts. In this document, we focus on steps developers should take to improve the cognitive accessibility of their websites and applications.
 
 ## Overview
 
@@ -78,7 +71,7 @@ A **time limit** is any process that happens without user initiation after a set
 Options for adjusting time requirements include:
 
 - Allowing the user to turn off or adjust the time to at least 10 times the original limit before encountering it.
-- Alerting the user and providing a buffer of at least 20 seconds to extend the timeout duration by a factor of 10 with a simple action, such as hitting the space bar.
+- Alerting the user and providing a buffer of at least 20 seconds to extend the timeout duration by a factor of 10 with an action, such as hitting the space bar.
 
 Provide a toggle on content that allows users to enable a longer session time limit, or no session time limit at all. Examples of timed content include forms, timed reading exercises, and training materials. If the time limit is longer than 20 hours, accommodations are not required.
 
@@ -86,7 +79,7 @@ Provide a toggle on content that allows users to enable a longer session time li
 
 It is important not to distract users, especially ones with cognitive disabilities.
 
-If moving, blinking, scrolling, or auto-updating information starts automatically, lasts more than five seconds, and is presented in parallel with other content, the user must able to pause, stop, hide or control it, unless it's an essential functionality. "Essential" means that removing the moving, blinking, scrolling, or auto-updating information would fundamentally change the meaning of the content and/or functionality, **and** information and functionality cannot be achieved in another way that would conform. This includes animated gifs, if the gif animates for more than 5 seconds.
+If moving, blinking, scrolling, or auto-updating information starts automatically, lasts more than five seconds, and is presented in parallel with other content, the user must able to pause, stop, hide or control it, unless it's an essential functionality. "Essential" means that removing the moving, blinking, scrolling, or auto-updating information would fundamentally change the meaning of the content and/or functionality, **and** information and functionality cannot be achieved in another way that would conform. This includes animated GIFs, if the gif animates for more than 5 seconds.
 
 Additional timing criteria to consider are:
 
@@ -174,7 +167,7 @@ Provide an expanded form of the abbreviation the first time it is used, followed
 
 ### Reading level
 
-Content should be written as clearly and as possible. A good rule to go by is to make content simple enough that it can be understood the first time. Methods to achieve this include:
+Content should be written as clearly as possible. A good rule to go by is to make content simple enough that it can be understood the first time. Methods to achieve this include:
 
 - Using short, simple words.
 - Writing short sentences.
@@ -194,7 +187,7 @@ There are multiple techniques that can help teach people how to pronounce words:
 - Provide a glossary with pronunciation.
 - Use the {{HTMLElement('ruby')}} element to illustrate how a word is pronounced.
 
-Providing guidance on how to pronounce words helps many different kinds of people, including those who prefer to read aloud, non-native language speakers, and people who may unfamiliar with the meaning of a term in context.
+Providing guidance on how to pronounce words helps many different kinds of people, including those who prefer to read aloud, non-native language speakers, and people who are unfamiliar with the meaning of a term in context.
 
 Another solution is to use glyphs or diacritical marks to illustrate pronunciation. However, if this technique is used, there must be a mechanism to turn it off. Further, it is helpful to link to a guide to the marks being used, as their meaning may not be obvious.
 
@@ -273,17 +266,17 @@ The above are good design practices. They will benefit everyone.
 - Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C's [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/).
 - The W3C's [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) produces web accessibility guidelines for people with cognitive impairments.
 - WebAIM has a [Cognitive page](https://webaim.org/articles/cognitive/) of relevant information and resources.
-- The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 U.S. citizens have a disability and, of them, [cognitive impairment is the most common for young people](https://www.cdc.gov/media/releases/2018/p0816-disability.html).
+- The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 U.S. citizens have a disability and, of them, [cognitive impairment is the most common for young people](https://archive.cdc.gov/www_cdc_gov/media/releases/2018/p0816-disability.html).
 - In the U.S., "intellectual disabilities" used to be called "mental retardation". In the U.K., "intellectual disabilities" is commonly called "learning disabilities" or "learning difficulties".
 
 ## See also
 
 - [Accessibility Guidelines](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
-- [What is accessibility](/en-US/docs/Learn/Accessibility/What_is_accessibility)
+- [What is accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
 - [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [Understanding WCAG Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
-- [Accessibility overview](/en-US/docs/Learn/Accessibility)
-- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines).
-- [CThe W3Cs cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
+- [Accessibility overview](/en-US/docs/Learn_web_development/Core/Accessibility)
+- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)
+- [The W3C's Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
-- [CDC information on disabilities.](https://www.cdc.gov/media/releases/2018/p0816-disability.html)
+- [CDC information on disabilities](https://www.cdc.gov/ncbddd/disabilityandhealth/)

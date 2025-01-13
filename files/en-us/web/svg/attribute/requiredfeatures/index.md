@@ -2,11 +2,9 @@
 title: requiredFeatures
 slug: Web/SVG/Attribute/requiredFeatures
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
-  - Deprecated
-browser-compat: svg.attributes.conditional_processing.requiredFeatures
+status:
+  - deprecated
+browser-compat: svg.global_attributes.requiredFeatures
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
@@ -17,14 +15,10 @@ If the attribute is not present, then its implicit evaluated value is `true`. If
 
 `requiredFeatures` is often used in conjunction with the {{SVGElement("switch")}} element. If `requiredFeatures` is used in other situations, it represents a simple switch on the given element whether to render the element or not.
 
-To detect availability of an SVG feature from script, there is the (also deprecated) {{domxref("DOMImplementation.hasFeature()")}} method.
-
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("circle")}}
@@ -113,7 +107,7 @@ text {
 
 ## Feature strings
 
-The following are the feature strings for the `requiredFeatures` attribute. These same feature strings apply to the [hasFeature](/en-US/docs/DOM/DOMImplementation.hasFeature) method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the [SVG Specification](https://www.w3.org/TR/SVG/feature.html). Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.
+The following are the feature strings for the `requiredFeatures` attribute. These same feature strings apply to the [`hasFeature`](/en-US/docs/Web/API/DOMImplementation/hasFeature) method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the [SVG Specification](https://www.w3.org/TR/SVG/feature.html). Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.
 
 - `http://www.w3.org/TR/SVG11/feature#SVG`
 
@@ -180,7 +174,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic`
   - : The browser supports all DOM interfaces and methods to the language features for `http://www.w3.org/TR/SVG11/feature#SVG-dynamic`.
 - `http://www.w3.org/TR/SVG11/feature#CoreAttribute`
-  - : The browser supports the {{SVGAttr("id")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}} and {{SVGAttr("xml:space")}} attributes
+  - : The browser supports the {{SVGAttr("id")}}, {{SVGAttr("xml:lang")}} and {{SVGAttr("xml:space")}} attributes
 - `http://www.w3.org/TR/SVG11/feature#Structure`
   - : The browser supports {{SVGElement("svg")}}, {{SVGElement("g")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("title")}}, {{SVGElement("metadata")}}, {{SVGElement("symbol")}} and {{SVGElement("use")}} elements.
 - `http://www.w3.org/TR/SVG11/feature#BasicStructure`
@@ -188,7 +182,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#ContainerAttribute`
   - : The browser supports the {{SVGAttr("enable-background")}} attribute
 - `http://www.w3.org/TR/SVG11/feature#ConditionalProcessing`
-  - : The browser supports the {{SVGElement("switch")}} element, and the {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes
+  - : The browser supports the {{SVGElement("switch")}} element, and the `requiredFeatures`, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes
 - `http://www.w3.org/TR/SVG11/feature#Image`
   - : The browser supports the {{SVGElement("image")}} element.
 - `http://www.w3.org/TR/SVG11/feature#Style`
@@ -198,7 +192,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#Shape`
   - : The browser supports the {{SVGElement("rect")}}, {{SVGElement("circle")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}}, {{SVGElement("polygon")}}, {{SVGElement("ellipse")}} and {{SVGElement("path")}} elements.
 - `http://www.w3.org/TR/SVG11/feature#Text`
-  - : The browser supports the {{SVGElement("text")}}, {{SVGElement("tspan")}}, {{SVGElement("tref")}}, {{SVGElement("textPath")}}, {{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}} and {{SVGElement("glyphRef")}} elements.
+  - : The browser supports the {{SVGElement("text")}}, {{SVGElement("tspan")}}, {{SVGElement("tref")}}, {{SVGElement("textPath")}}, and {{SVGElement("glyphRef")}} elements.
 - `http://www.w3.org/TR/SVG11/feature#BasicText`
   - : The browser supports the {{SVGElement("text")}} element
 - `http://www.w3.org/TR/SVG11/feature#PaintAttribute`
@@ -228,11 +222,11 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#BasicFilter`
   - : The browser supports the {{SVGElement("filter")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feOffset")}}, {{SVGElement("feTile")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}} and {{SVGElement("feFuncA")}} elements
 - `http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute`
-  - : The browser supports the {{SVGAttr("onunload")}}, {{SVGAttr("onabort")}}, {{SVGAttr("onerror")}}, {{SVGAttr("onresize")}}, {{SVGAttr("onscroll")}} and {{SVGAttr("onzoom")}} attributes
+  - : The browser supports the `onunload`, `onabort`, `onerror`, `onresize`, `onscroll` and `onzoom` [event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
 - `http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute`
-  - : The browser supports the {{SVGAttr("onfocusin")}}, {{SVGAttr("onfocusout")}}, {{SVGAttr("onactivate")}}, {{SVGAttr("onclick")}}, {{SVGAttr("onmousedown")}}, {{SVGAttr("onmouseup")}}, {{SVGAttr("onmouseover")}}, {{SVGAttr("onmousemove")}}, {{SVGAttr("onmouseout")}} and {{SVGAttr("onload")}} attributes
+  - : The browser supports the `onfocusin`, `onfocusout`, `onactivate`, `onclick`, `onmousedown`, `onmouseup`, `onmouseover`, `onmousemove`, `onmouseout` and `onload` [event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
 - `http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute`
-  - : The browser supports the {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}} and {{SVGAttr("onload")}} attributes
+  - : The browser supports the `onbegin`, `onend`, `onrepeat` and `onload` [event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
 - `http://www.w3.org/TR/SVG11/feature#Cursor`
   - : The browser supports the {{SVGElement("cursor")}} element
 - `http://www.w3.org/TR/SVG11/feature#Hyperlinking`
@@ -244,7 +238,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#Script`
   - : The browser supports the {{SVGElement("script")}} element
 - `http://www.w3.org/TR/SVG11/feature#Animation`
-  - : The browser supports the {{SVGElement("animate")}}, {{SVGElement("set")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("animateColor")}} and {{SVGElement("mpath")}} elements
+  - : The browser supports the {{SVGElement("animate")}}, {{SVGElement("set")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("mpath")}} elements
 - `http://www.w3.org/TR/SVG11/feature#Font`
   - : The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("font-face-format")}} and {{SVGElement("font-face-name")}} elements
 - `http://www.w3.org/TR/SVG11/feature#BasicFont`
@@ -810,7 +804,3 @@ text {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("DOMImplementation.hasFeature()")}}

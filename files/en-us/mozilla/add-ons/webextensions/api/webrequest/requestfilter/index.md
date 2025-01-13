@@ -2,20 +2,10 @@
 title: webRequest.RequestFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - RequestFilter
-  - Type
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.RequestFilter
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An object describing filters to apply to webRequest events.
 
@@ -40,7 +30,8 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-RequestFilter) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#type-RequestFilter) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

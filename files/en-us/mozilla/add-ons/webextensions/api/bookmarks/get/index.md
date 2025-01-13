@@ -2,20 +2,10 @@
 title: bookmarks.get()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
 browser-compat: webextensions.api.bookmarks.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Given the ID of a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} or an array of such IDs, the **`bookmarks.get()`** method retrieves the matching nodes.
 
@@ -32,7 +22,7 @@ let getBookmarks = browser.bookmarks.get(
 ### Parameters
 
 - `idOrIdList`
-  - : `string` A {{jsxref("string")}} or {{jsxref("array")}} of strings specifying the IDs of one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} objects to retrieve.
+  - : A {{jsxref("string")}} or {{jsxref("array")}} of strings specifying the IDs of one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} objects to retrieve.
 
 ### Return value
 
@@ -61,7 +51,8 @@ gettingBookmarks.then(onFulfilled, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-get) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-get) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,18 +1,12 @@
 ---
-title: WorkerNavigator.language
+title: "WorkerNavigator: language property"
+short-title: language
 slug: Web/API/WorkerNavigator/language
 page-type: web-api-instance-property
-tags:
-  - API
-  - Language
-  - WorkerNavigator
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.WorkerNavigator.language
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`WorkerNavigator.language`** read-only property returns
 a string representing the preferred language of the user, usually the language of the

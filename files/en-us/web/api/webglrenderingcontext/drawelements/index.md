@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.drawElements()
+title: "WebGLRenderingContext: drawElements() method"
+short-title: drawElements()
 slug: Web/API/WebGLRenderingContext/drawElements
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawElements
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.drawElements()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data.
 

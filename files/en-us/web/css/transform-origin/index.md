@@ -2,14 +2,6 @@
 title: transform-origin
 slug: Web/CSS/transform-origin
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - "default value: center"
-  - recipe:css-property
-  - transform-origin
 browser-compat: css.properties.transform-origin
 ---
 
@@ -127,7 +119,8 @@ The keywords are convenience shorthands and match the following {{cssxref("&lt;p
 
 {{CSSInfo}}
 
-> **Note:** The initial value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), and whose `transform-origin` is `50% 50%`, like other CSS elements. See the [SVG transform-origin](/en-US/docs/Web/SVG/Attribute/transform-origin) attribute for more information.
+> [!NOTE]
+> The initial value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), and whose `transform-origin` is `50% 50%`, like other CSS elements. See the [SVG transform-origin](/en-US/docs/Web/SVG/Attribute/transform-origin) attribute for more information.
 
 ## Formal syntax
 
@@ -326,5 +319,5 @@ transform-origin: 100% -30%;
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

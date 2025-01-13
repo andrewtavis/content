@@ -2,10 +2,9 @@
 title: Transient activation
 slug: Glossary/Transient_activation
 page-type: glossary-definition
-tags:
-  - Transient activation
-  - JavaScript
 ---
+
+{{GlossarySidebar}}
 
 **Transient activation** (or "transient user activation") is a window state that indicates a user has recently pressed a button, moved a mouse, used a menu, or performed some other user interaction.
 
@@ -16,10 +15,12 @@ See [Features gated by user activation](/en-US/docs/Web/Security/User_activation
 
 See the {{domxref("UserActivation.isActive")}} property to programmatically access the current window's transient activation state.
 
-> **Note:** Transient activation expires after a timeout (if not renewed by further interaction), and may also be "consumed" by some APIs. See {{Glossary("Sticky activation")}} for a user activation that doesn't reset after it has been set initially.
+> [!NOTE]
+> Transient activation expires after a timeout (if not renewed by further interaction), and may also be "consumed" by some APIs. See {{Glossary("Sticky activation")}} for a user activation that doesn't reset after it has been set initially.
 
 ## See also
 
 - [HTML Living Standard > Transient activation](https://html.spec.whatwg.org/multipage/interaction.html#transient-activation)
-- {{Glossary("Sticky activation")}}
+- Related glossary terms:
+  - {{Glossary("Sticky activation")}}
 - {{domxref("UserActivation.isActive")}}

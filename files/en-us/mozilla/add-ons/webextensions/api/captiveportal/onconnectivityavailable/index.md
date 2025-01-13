@@ -2,32 +2,24 @@
 title: onConnectivityAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captivePortal
 browser-compat: webextensions.api.captivePortal.onConnectivityAvailable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fires when the captive portal service determines that the user can connect to the internet.
 
 ## Syntax
 
 ```js-nolint
-browser.captivePortal.onConnectivityAvailable.addListener(callback)
+browser.captivePortal.onConnectivityAvailable.addListener(listener)
 browser.captivePortal.onConnectivityAvailable.removeListener(listener)
 browser.captivePortal.onConnectivityAvailable.hasListener(listener)
 ```
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -38,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that is called when this event occurs. The function is passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `status`
       - : `string` The status of the service, being one of `captive` if there is an unlocked captive portal present or `clear` if no captive portal is detected.

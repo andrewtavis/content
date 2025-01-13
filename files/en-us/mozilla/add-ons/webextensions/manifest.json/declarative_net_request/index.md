@@ -1,10 +1,7 @@
 ---
 title: declarative_net_request
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.declarative_net_request
 ---
 
@@ -22,7 +19,7 @@ browser-compat: webextensions.manifest.declarative_net_request
     </tr>
     <tr>
       <th scope="row">Manifest version</th>
-      <td>2</td>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
@@ -41,7 +38,12 @@ browser-compat: webextensions.manifest.declarative_net_request
   </tbody>
 </table>
 
-Specify static rulesets for use with {{WebExtAPIRef("declarativeNetRequest")}}.
+Specify static rulesets for use with {{WebExtAPIRef("declarativeNetRequest")}}. See [static ruleset limits](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#static_ruleset_limits) for information on the number of rulesets, enabled rulesets, and rules that can be specified.
+
+See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions">Permissions</a> for more information on permission requirements.
+
+> [!NOTE]
+> A rule containing unrecognized properties is loaded if it is otherwise valid, that is, unrecognized properties are ignored. Before Firefox 128, a rule with unrecognized properties was considered invalid and not loaded.
 
 ## Syntax
 
@@ -64,12 +66,12 @@ The `"declarative_net_request"` key is an object that must contain the `"rule_re
     <tr>
       <td><code>"enabled"</code></td>
       <td><code>Boolean</code></td>
-      <td>Whether the ruleset is enabled by default.</td>
+      <td>Whether the ruleset is enabled by default. The {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets")}} method can be used to enable or disable a ruleset at runtime.</td>
     </tr>
     <tr>
       <td><code>"path"</code></td>
       <td><code>String</code></td>
-      <td>The path of the JSON ruleset relative to the extension directory. See the <a href="/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules">Rules</a> section of the `declarativeNetRequest` API for information on the content of the ruleset JSON file.</td>
+      <td>The path of the JSON ruleset relative to the extension directory. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules">Rules</a> section of the <code>declarativeNetRequest</code> API for information on the content of the ruleset JSON file.</td>
     </tr>
   </tbody>
 </table>
@@ -89,6 +91,13 @@ The `"declarative_net_request"` key is an object that must contain the `"rule_re
   }]
 }
 ```
+
+## Example extensions
+
+<!-- Ideally we'd use the WebExtExamples template, but examples are not categorized by manifest keys yet - https://github.com/mdn/webextensions-examples/issues/524 -->
+
+- [dnr-block-only](https://github.com/mdn/webextensions-examples/tree/main/dnr-block-only)
+- [dnr-redirect-url](https://github.com/mdn/webextensions-examples/tree/main/dnr-redirect-url)
 
 ## Browser compatibility
 

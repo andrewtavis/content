@@ -1,13 +1,8 @@
 ---
-title: DOMImplementation.createDocument()
+title: "DOMImplementation: createDocument() method"
+short-title: createDocument()
 slug: Web/API/DOMImplementation/createDocument
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOMImplementation
-  - Method
-  - Reference
 browser-compat: api.DOMImplementation.createDocument
 ---
 
@@ -19,8 +14,8 @@ returns an {{domxref("XMLDocument")}}.
 ## Syntax
 
 ```js-nolint
-createDocument(namespaceURI, qualifiedNameStr)
-createDocument(namespaceURI, qualifiedNameStr, documentType)
+createDocument(namespaceURI, qualifiedName)
+createDocument(namespaceURI, qualifiedName, documentType)
 ```
 
 ### Parameters
@@ -28,9 +23,9 @@ createDocument(namespaceURI, qualifiedNameStr, documentType)
 - `namespaceURI`
   - : A string containing the namespace URI of the document to be
     created, or `null` if the document doesn't belong to one.
-- `qualifiedNameStr`
+- `qualifiedName`
   - : A string containing the qualified name, that is an optional
-    prefix and colon plus the local root element name, of the document to be created.
+    prefix and colon plus the local root element name, of the document to be created. A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
 - `documentType` {{optional_inline}}
   - : Is the {{domxref("DocumentType")}} of the document to be created. It defaults to
     `null`.
@@ -42,11 +37,15 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const doc = document.implementation.createDocument('http://www.w3.org/1999/xhtml', 'html', null);
-const body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
-body.setAttribute('id', 'abc');
+const doc = document.implementation.createDocument(
+  "http://www.w3.org/1999/xhtml",
+  "html",
+  null,
+);
+const body = document.createElementNS("http://www.w3.org/1999/xhtml", "body");
+body.setAttribute("id", "abc");
 doc.documentElement.appendChild(body);
-alert(doc.getElementById('abc')); // [object HTMLBodyElement]
+alert(doc.getElementById("abc")); // [object HTMLBodyElement]
 ```
 
 ## Specifications

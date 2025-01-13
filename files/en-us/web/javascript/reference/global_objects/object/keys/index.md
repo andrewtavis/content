@@ -2,13 +2,6 @@
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Polyfill
 browser-compat: javascript.builtins.Object.keys
 ---
 
@@ -44,7 +37,7 @@ If you need the property values, use {{jsxref("Object.values()")}} instead. If y
 ### Using Object.keys()
 
 ```js
-// Simple array
+// Basic array
 const arr = ["a", "b", "c"];
 console.log(Object.keys(arr)); // ['0', '1', '2']
 
@@ -75,17 +68,18 @@ If you want _all_ string-keyed own properties, including non-enumerable ones, se
 
 ### Using Object.keys() on primitives
 
-Non-object arguments are [coerced to objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). Only strings may have own enumerable properties, while all other primitives return an empty array.
+Non-object arguments are [coerced to objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) cannot be coerced to objects and throw a {{jsxref("TypeError")}} upfront. Only strings may have own enumerable properties, while all other primitives return an empty array.
 
 ```js
 // Strings have indices as enumerable own properties
 console.log(Object.keys("foo")); // ['0', '1', '2']
 
-// Other primitives have no own properties
+// Other primitives except undefined and null have no own properties
 console.log(Object.keys(100)); // []
 ```
 
-> **Note:** In ES5, passing a non-object to `Object.keys()` threw a {{jsxref("TypeError")}}.
+> [!NOTE]
+> In ES5, passing a non-object to `Object.keys()` threw a {{jsxref("TypeError")}}.
 
 ## Specifications
 

@@ -2,14 +2,6 @@
 title: Web Audio API
 slug: Web/API/Web_Audio_API
 page-type: web-api-overview
-tags:
-  - API
-  - Audio
-  - Example
-  - Landing
-  - Overview
-  - Web Audio API
-  - sound
 browser-compat: api.AudioContext
 ---
 
@@ -39,7 +31,8 @@ Timing is controlled with high precision and low latency, allowing developers to
 
 The Web Audio API also allows us to control how audio is _spatialized_. Using a system based on a _source-listener model_, it allows control of the _panning model_ and deals with _distance-induced attenuation_ induced by a moving source (or moving listener).
 
-> **Note:** You can read about the theory of the Web Audio API in a lot more detail in our article [Basic concepts behind Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+> [!NOTE]
+> You can read about the theory of the Web Audio API in a lot more detail in our article [Basic concepts behind Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
 
 ## Web Audio API target audience
 
@@ -57,7 +50,7 @@ We also have other tutorials and comprehensive reference material available that
 
 If you are more familiar with the musical side of things, are familiar with music theory concepts, want to start building instruments, then you can go ahead and start building things with the advanced tutorial and others as a guide (the above-linked tutorial covers scheduling notes, creating bespoke oscillators and envelopes, as well as an LFO among other things.)
 
-If you aren't familiar with the programming basics, you might want to consult some beginner's JavaScript tutorials first and then come back here — see our [Beginner's JavaScript learning module](/en-US/docs/Learn/JavaScript) for a great place to begin.
+If you aren't familiar with the programming basics, you might want to consult some beginner's JavaScript tutorials first and then come back here — see our [Beginner's JavaScript learning module](/en-US/docs/Learn_web_development/Core/Scripting) for a great place to begin.
 
 ## Web Audio API interfaces
 
@@ -193,19 +186,17 @@ It is possible to process/render an audio graph very quickly in the background �
 
 ## Guides and tutorials
 
-{{LandingPageListSubpages}}
+{{SubpagesWithSummaries}}
 
 ## Examples
 
-You can find a number of examples at our [webaudio-example repo](https://github.com/mdn/webaudio-examples/) on GitHub.
+You can find a number of examples at our [webaudio-examples repo](https://github.com/mdn/webaudio-examples/) on GitHub.
 
 ## Specifications
 
 {{Specifications}}
 
 ## Browser compatibility
-
-### AudioContext
 
 {{Compat}}
 
@@ -221,9 +212,8 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Mixing Positional Audio and WebGL (2012)](https://web.dev/webaudio-positional-audio/)
-- [Developing Game Audio with the Web Audio API (2012)](https://auth.web.dev/webaudio-games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [Mixing Positional Audio and WebGL (2012)](https://web.dev/articles/webaudio-positional-audio)
+- [Developing Game Audio with the Web Audio API (2012)](https://web.dev/articles/webaudio-games)
 
 ### Libraries
 

@@ -2,10 +2,6 @@
 title: baseFrequency
 slug: Web/SVG/Attribute/baseFrequency
 page-type: svg-attribute
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feTurbulence.baseFrequency
 ---
 
@@ -85,7 +81,7 @@ svg {
     <tr>
       <th scope="row">Value</th>
       <td>
-        <a href="/en-US/docs/Web/SVG/Content_type#Number-optional-number"
+        <a href="/en-US/docs/Web/SVG/Content_type#number-optional-number"
           >&#x3C;number-optional-number></a
         >
       </td>

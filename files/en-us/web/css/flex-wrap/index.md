@@ -2,12 +2,6 @@
 title: flex-wrap
 slug: Web/CSS/flex-wrap
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.flex-wrap
 ---
 
@@ -17,7 +11,7 @@ The **`flex-wrap`** [CSS](/en-US/docs/Web/CSS) property sets whether flex items 
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-See [Using CSS flexible boxes](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for more properties and information.
+The {{cssxref("flex-flow")}} property shorthand can be used to set both the {{CSSXRef("flex-direction")}} and `flex-wrap` properties, which define the flex container's main and cross axes, respectively.
 
 ## Syntax
 
@@ -34,18 +28,16 @@ flex-wrap: revert-layer;
 flex-wrap: unset;
 ```
 
-The `flex-wrap` property is specified as a single keyword chosen from the list of values below.
-
 ### Values
 
-The following values are accepted:
+The `flex-wrap` property is specified as a single keyword chosen from the following values below:
 
 - `nowrap`
-  - : The flex items are laid out in a single line which may cause the flex container to overflow. The **cross-start** is either equivalent to **start** or **before** depending on the {{cssxref("flex-direction")}} value. This is the default value.
+  - : The flex items are laid out in a single line which may cause the flex container to overflow. The cross-start is the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the {{cssxref("flex-direction")}} value. This is the default value.
 - `wrap`
-  - : The flex items break into multiple lines. The **cross-start** is either equivalent to **start** or **before** depending `flex-direction` value and the **cross-end** is the opposite of the specified **cross-start**.
+  - : The flex items break into multiple lines. The cross-start is the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the current [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes), and the {{cssxref("flex-direction")}} value.
 - `wrap-reverse`
-  - : Behaves the same as `wrap` but **cross-start** and **cross-end** are permuted.
+  - : Behaves the same as `wrap`, but cross-start and cross-end are inverted.
 
 ## Formal definition
 
@@ -141,5 +133,8 @@ The following values are accepted:
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- {{CSSXRef("flex-direction")}}
+- {{CSSXRef("flex-flow")}} shorthand
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module

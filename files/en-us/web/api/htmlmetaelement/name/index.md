@@ -1,13 +1,8 @@
 ---
-title: HTMLMetaElement.name
+title: "HTMLMetaElement: name property"
+short-title: name
 slug: Web/API/HTMLMetaElement/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLMetaElement.name
 ---
 
@@ -29,7 +24,7 @@ The `name` value is logged to the console, showing that [keywords](/en-US/docs/W
 
 ```js
 // given <meta name="keywords" content="documentation, HTML, web technologies">
-let meta = document.querySelector("meta");
+const meta = document.querySelector("meta");
 console.log(meta.name);
 // "keywords"
 ```

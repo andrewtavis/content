@@ -2,15 +2,10 @@
 title: DecompressionStream
 slug: Web/API/DecompressionStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - DecompressionStream
 browser-compat: api.DecompressionStream
 ---
 
-{{APIRef("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
 The **`DecompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for decompressing a stream of data.
 
@@ -31,7 +26,7 @@ The **`DecompressionStream`** interface of the {{domxref('Compression Streams AP
 In this example a blob is decompressed using gzip compression.
 
 ```js
-const ds = new DecompressionStream('gzip');
+const ds = new DecompressionStream("gzip");
 const decompressedStream = blob.stream().pipeThrough(ds);
 ```
 

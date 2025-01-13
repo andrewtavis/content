@@ -2,16 +2,6 @@
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Maximum
-  - Reference
-  - Largest
-  - Largest Number
-  - Largest Value
-  - max
 browser-compat: javascript.builtins.Math.max
 ---
 
@@ -25,14 +15,14 @@ The **`Math.max()`** static method returns the largest of the numbers given as i
 
 ```js-nolint
 Math.max()
-Math.max(value0)
-Math.max(value0, value1)
-Math.max(value0, value1, /* … ,*/ valueN)
+Math.max(value1)
+Math.max(value1, value2)
+Math.max(value1, value2, /* …, */ valueN)
 ```
 
 ### Parameters
 
-- `value1`, `value2`, … , `valueN`
+- `value1`, …, `valueN`
   - : Zero or more numbers among which the largest value will be selected and returned.
 
 ### Return value

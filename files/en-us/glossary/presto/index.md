@@ -2,9 +2,9 @@
 title: Presto
 slug: Glossary/Presto
 page-type: glossary-definition
-tags:
-  - Infrastructure
 ---
+
+{{GlossarySidebar}}
 
 Presto was the proprietary browser layout engine used to power the {{Glossary("Opera browser")}} until version 15. Since then, the Opera browser is based on Chromium, which uses the {{Glossary('Blink')}} layout engine.
 

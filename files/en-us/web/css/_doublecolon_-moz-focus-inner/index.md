@@ -2,23 +2,18 @@
 title: "::-moz-focus-inner"
 slug: Web/CSS/::-moz-focus-inner
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Firefox
-  - Mozilla
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - experimental
+  - non-standard
 browser-compat: css.selectors.-moz-focus-inner
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{CSSRef}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`::-moz-focus-inner`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents an inner focus ring of the {{HTMLElement("button")}} element as well as the {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}}, and {{HTMLElement("input/color","color")}} types of the {{HTMLElement("input")}} element.
 
-> **Note:** Using `::-moz-focus-inner` with anything than the buttons that support it doesn't match anything and has no effect.
+> [!NOTE]
+> Using `::-moz-focus-inner` with anything than the buttons that support it doesn't match anything and has no effect.
 
 ## Syntax
 
@@ -73,7 +68,6 @@ Not part of any standard.
 
 - Related CSS selectors:
 
-  - [`:-moz-focusring`](/en-US/docs/Web/CSS/:-moz-focusring)
   - [`:focus`](/en-US/docs/Web/CSS/:focus)
   - [`:focus-visible`](/en-US/docs/Web/CSS/:focus-visible)
   - [`:focus-within`](/en-US/docs/Web/CSS/:focus-within)

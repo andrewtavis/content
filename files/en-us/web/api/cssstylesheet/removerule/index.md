@@ -1,24 +1,10 @@
 ---
-title: CSSStyleSheet.removeRule()
+title: "CSSStyleSheet: removeRule() method"
+short-title: removeRule()
 slug: Web/API/CSSStyleSheet/removeRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Method
-  - Object Model
-  - Reference
-  - Rule
-  - StyleSheet
-  - delete
-  - legacy
-  - remove
-  - removeRule
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.removeRule
 ---
 
@@ -29,7 +15,8 @@ The obsolete {{domxref("CSSStyleSheet")}} method
 object. It is functionally identical to the standard, preferred method
 {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}.
 
-> **Note:** This is a _legacy method_ which has been replaced by
+> [!NOTE]
+> This is a _legacy method_ which has been replaced by
 > the standard method {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}. You
 > should use that instead.
 

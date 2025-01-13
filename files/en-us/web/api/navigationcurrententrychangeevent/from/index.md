@@ -1,27 +1,16 @@
 ---
-title: NavigationCurrentEntryChangeEvent.from
+title: "NavigationCurrentEntryChangeEvent: from property"
+short-title: from
 slug: Web/API/NavigationCurrentEntryChangeEvent/from
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - from
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationCurrentEntryChangeEvent.from
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`from`** read-only property of the
-{{domxref("NavigationCurrentEntryChangeEvent")}} interface returns the {{domxref("NavigationHistoryEntry")}} that was navigated from.
+The **`from`** read-only property of the {{domxref("NavigationCurrentEntryChangeEvent")}} interface returns the {{domxref("NavigationHistoryEntry")}} that was navigated from.
 
 ## Value
 

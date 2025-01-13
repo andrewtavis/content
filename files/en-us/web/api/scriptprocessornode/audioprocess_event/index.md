@@ -1,13 +1,10 @@
 ---
-title: 'ScriptProcessorNode: audioprocess event'
+title: "ScriptProcessorNode: audioprocess event"
+short-title: audioprocess
 slug: Web/API/ScriptProcessorNode/audioprocess_event
 page-type: web-api-event
-tags:
-  - ScriptProcessorNode
-  - Web Audio API
-  - audioprocess
-  - event
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.ScriptProcessorNode.audioprocess_event
 ---
 
@@ -15,7 +12,8 @@ browser-compat: api.ScriptProcessorNode.audioprocess_event
 
 The `audioprocess` event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.
 
-> **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
+> [!NOTE]
+> This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
 This event is not cancelable and does not bubble.
 
@@ -46,7 +44,7 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}.
 ## Examples
 
 ```js
-scriptNode.addEventListener('audioprocess', (audioProcessingEvent) => {
+scriptNode.addEventListener("audioprocess", (audioProcessingEvent) => {
   // The input buffer is a song we loaded earlier
   const inputBuffer = audioProcessingEvent.inputBuffer;
 
@@ -64,10 +62,10 @@ scriptNode.addEventListener('audioprocess', (audioProcessingEvent) => {
       outputData[sample] = inputData[sample];
 
       // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+      outputData[sample] += (Math.random() * 2 - 1) * 0.2;
     }
   }
-})
+});
 ```
 
 You could also set up the event handler using the `onaudioprocess` property:
@@ -75,7 +73,7 @@ You could also set up the event handler using the `onaudioprocess` property:
 ```js
 scriptNode.onaudioprocess = (audioProcessingEvent) => {
   // ...
-}
+};
 ```
 
 ## Specifications

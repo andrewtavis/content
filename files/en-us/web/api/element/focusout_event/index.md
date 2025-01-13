@@ -1,16 +1,8 @@
 ---
-title: 'Element: focusout event'
+title: "Element: focusout event"
+short-title: focusout
 slug: Web/API/Element/focusout_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - FocusEvent
-  - Reference
-  - focusout
-  - onfocusout
 browser-compat: api.Element.focusout_event
 ---
 
@@ -27,12 +19,12 @@ The `focusout` event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
 ```js
-addEventListener('focusout', (event) => {});
+addEventListener("focusout", (event) => {});
 ```
 
 ## Event type
 
-A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 
@@ -51,10 +43,12 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <label>Some text:
+  <label>
+    Some text:
     <input type="text" placeholder="text input" />
   </label>
-  <label>Password:
+  <label>
+    Password:
     <input type="password" placeholder="password" />
   </label>
 </form>
@@ -63,14 +57,14 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 #### JavaScript
 
 ```js
-const form = document.getElementById('form');
+const form = document.getElementById("form");
 
-form.addEventListener('focusin', (event) => {
-  event.target.style.background = 'pink';
+form.addEventListener("focusin", (event) => {
+  event.target.style.background = "pink";
 });
 
-form.addEventListener('focusout', (event) => {
-  event.target.style.background = '';
+form.addEventListener("focusout", (event) => {
+  event.target.style.background = "";
 });
 ```
 
@@ -82,7 +76,8 @@ form.addEventListener('focusout', (event) => {
 
 {{Specifications}}
 
-**Note:** The _UI Events_ specification describes an [order of focus events](/en-US/docs/Web/API/FocusEvent#order_of_events) that's different from what current browsers implement.
+> [!NOTE]
+> The _UI Events_ specification describes an [order of focus events](/en-US/docs/Web/API/FocusEvent#order_of_events) that's different from what current browsers implement.
 
 ## Browser compatibility
 

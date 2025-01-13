@@ -2,13 +2,6 @@
 title: types
 slug: Mozilla/Add-ons/WebExtensions/API/types
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Types
-  - WebExtensions
 ---
 
 {{AddonSidebar}}
@@ -24,9 +17,8 @@ Defines the `BrowserSetting` type, which is used to represent a browser setting.
 
 {{WebExtExamples("h2")}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -2,14 +2,6 @@
 title: atan()
 slug: Web/CSS/atan
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - atan
 browser-compat: css.types.atan
 ---
 
@@ -29,7 +21,7 @@ transform: rotate(atan(pi / 2));
 transform: rotate(atan(e * 3));
 ```
 
-### Parameter
+### Parameters
 
 The `atan(number)` function accepts only one value as its parameter.
 
@@ -52,7 +44,7 @@ That is:
 - `atan(1)` representing `45deg`
 - `atan(infinity)` representing `90deg`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

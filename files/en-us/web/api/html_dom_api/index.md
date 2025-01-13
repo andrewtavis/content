@@ -2,19 +2,6 @@
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
 page-type: web-api-overview
-tags:
-  - API
-  - Beginner
-  - DOM
-  - Documents
-  - Elements
-  - HTML DOM
-  - HTML DOM API
-  - Nodes
-  - Overview
-  - Web
-  - Windows
-  - hierarchy
 browser-compat: api.HTMLElement
 ---
 
@@ -30,7 +17,7 @@ The functional areas included in the HTML DOM API include:
 - Management of media connected to the HTML media elements ({{HTMLElement("audio")}} and {{HTMLElement("video")}}).
 - Dragging and dropping of content on webpages.
 - Access to the browser navigation history
-- Supporting and connective interfaces for other APIs such as [Web Components](/en-US/docs/Web/Web_Components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, and {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
+- Supporting and connective interfaces for other APIs such as [Web Components](/en-US/docs/Web/API/Web_components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, and {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
 
 ## HTML DOM concepts and usage
 
@@ -169,8 +156,6 @@ These interfaces represent specific HTML elements (or sets of related elements w
 - {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLMenuItemElement")}} {{deprecated_inline}}
 
 ### Web app and browser integration interfaces
 
@@ -186,7 +171,6 @@ These interfaces offer access to the browser window and document that contain th
 
 #### Obsolete web app and browser integration interfaces
 
-- {{DOMxRef("ApplicationCache")}} {{deprecated_inline}}
 - {{DOMxRef("Plugin")}} {{deprecated_inline}}
 - {{DOMxRef("PluginArray")}} {{deprecated_inline}}
 
@@ -248,12 +232,14 @@ The History API interfaces let you access information about the browser's histor
 - {{DOMxRef("HashChangeEvent")}}
 - {{DOMxRef("History")}}
 - {{DOMxRef("Location")}}
+- {{DOMxRef("PageRevealEvent")}}
+- {{DOMxRef("PageSwapEvent")}}
 - {{DOMxRef("PageTransitionEvent")}}
 - {{DOMxRef("PopStateEvent")}}
 
 ### Web Components interfaces
 
-These interfaces are used by the [Web Components API](/en-US/docs/Web/Web_Components) to create and manage the available [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements).
+These interfaces are used by the [Web Components API](/en-US/docs/Web/API/Web_components) to create and manage the available [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements).
 
 - {{DOMxRef("CustomElementRegistry")}}
 
@@ -311,7 +297,7 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 ## Examples
 
-In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLElement/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
+In this example, an {{HTMLElement("input")}} element's {{domxref("Element/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
 
 ### JavaScript
 
@@ -355,7 +341,7 @@ The HTML for the form looks like this:
     <input type="text" id="userName" /> (*)
   </p>
   <p>
-    <label for="email">Email:</label>
+    <label for="userEmail">Email:</label>
     <input type="email" id="userEmail" />
   </p>
   <input type="submit" value="Send" id="sendButton" />
@@ -384,4 +370,4 @@ The HTML for the form looks like this:
 
 ### Guides
 
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents): A beginner's guide to manipulating the DOM.
+- [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)

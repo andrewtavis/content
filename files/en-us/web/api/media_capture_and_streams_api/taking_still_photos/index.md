@@ -2,18 +2,6 @@
 title: Taking still photos with getUserMedia()
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Example
-  - Photos
-  - Sample code
-  - Still Photos
-  - Video
-  - camera
-  - MediaDevices
-  - getusermedia
-  - webcam
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
@@ -33,13 +21,13 @@ The first panel on the left contains two components: a {{HTMLElement("video")}} 
 ```html
 <div class="camera">
   <video id="video">Video stream not available.</video>
-  <button id="startbutton">Take photo</button>
+  <button id="start-button">Take photo</button>
 </div>
 ```
 
 This is straightforward, and we'll see how it ties together when we get into the JavaScript code.
 
-Next, we have a {{HTMLElement("canvas")}} element into which the captured frames are stored, potentially manipulated in some way, and then converted into an output image file. This canvas is kept hidden by styling the canvas with {{cssxref("display")}}`:none`, to avoid cluttering up the screen — the user does not need to see this intermediate stage.
+Next, we have a {{HTMLElement("canvas")}} element into which the captured frames are stored, potentially manipulated in some way, and then converted into an output image file. This canvas is kept hidden by styling the canvas with {{cssxref("display", "display: none")}}, to avoid cluttering up the screen — the user does not need to see this intermediate stage.
 
 We also have an {{HTMLElement("img")}} element into which we will draw the image — this is the final display shown to the user.
 
@@ -70,7 +58,7 @@ We start by wrapping the whole script in an anonymous function to avoid global v
   let video = null;
   let canvas = null;
   let photo = null;
-  let startbutton = null;
+  let startButton = null;
 ```
 
 Those variables are:
@@ -78,7 +66,7 @@ Those variables are:
 - `width`
   - : Whatever size the incoming video is, we're going to scale the resulting image to be 320 pixels wide.
 - `height`
-  - : The output height of the image will be computed given the `width` and the aspect ratio of the stream.
+  - : The output height of the image will be computed given the `width` and the {{glossary("aspect ratio")}} of the stream.
 - `streaming`
   - : Indicates whether or not there is currently an active stream of video running.
 - `video`
@@ -87,7 +75,7 @@ Those variables are:
   - : This will be a reference to the {{HTMLElement("canvas")}} element after the page is done loading.
 - `photo`
   - : This will be a reference to the {{HTMLElement("img")}} element after the page is done loading.
-- `startbutton`
+- `startButton`
   - : This will be a reference to the {{HTMLElement("button")}} element that's used to trigger capture. We'll get that after the page is done loading.
 
 ### The startup() function
@@ -103,7 +91,7 @@ First, we grab references to the major elements we need to be able to access.
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
-    startbutton = document.getElementById('startbutton');
+    startButton = document.getElementById('start-button');
 ```
 
 #### Get the media stream
@@ -148,7 +136,7 @@ video.addEventListener(
       streaming = true;
     }
   },
-  false
+  false,
 );
 ```
 
@@ -160,38 +148,38 @@ Finally, the `width` and `height` of both the video and the canvas are set to ma
 
 #### Handle clicks on the button
 
-To capture a still photo each time the user clicks the `startbutton`, we need to add an event listener to the button, to be called when the {{domxref("Element/click_event", "click")}} event is issued:
+To capture a still photo each time the user clicks the `startButton`, we need to add an event listener to the button, to be called when the {{domxref("Element/click_event", "click")}} event is issued:
 
 ```js
-startbutton.addEventListener(
+startButton.addEventListener(
   "click",
   (ev) => {
-    takepicture();
+    takePicture();
     ev.preventDefault();
   },
-  false
+  false,
 );
 ```
 
-This method is simple enough: it just calls our `takepicture()` function, defined below in the section [Capturing a frame from the stream](#capturing_a_frame_from_the_stream), then calls {{domxref("Event.preventDefault()")}} on the received event to prevent the click from being handled more than once.
+This method is simple enough: it just calls our `takePicture()` function, defined below in the section [Capturing a frame from the stream](#capturing_a_frame_from_the_stream), then calls {{domxref("Event.preventDefault()")}} on the received event to prevent the click from being handled more than once.
 
 #### Wrapping up the startup() method
 
 There are only two more lines of code in the `startup()` method:
 
 ```js
-    clearphoto();
+    clearPhoto();
   }
 ```
 
-This is where we call the `clearphoto()` method we'll describe below in the section [Clearing the photo box](#clearing_the_photo_box).
+This is where we call the `clearPhoto()` method we'll describe below in the section [Clearing the photo box](#clearing_the_photo_box).
 
 ### Clearing the photo box
 
 Clearing the photo box involves creating an image, then converting it into a format usable by the {{HTMLElement("img")}} element that displays the most recently captured frame. That code looks like this:
 
 ```js
-function clearphoto() {
+function clearPhoto() {
   const context = canvas.getContext("2d");
   context.fillStyle = "#AAA";
   context.fillRect(0, 0, canvas.width, canvas.height);
@@ -207,10 +195,10 @@ Last in this function, we convert the canvas into a PNG image and call {{domxref
 
 ### Capturing a frame from the stream
 
-There's one last function to define, and it's the point to the entire exercise: the `takepicture()` function, whose job it is to capture the currently displayed video frame, convert it into a PNG file, and display it in the captured frame box. The code looks like this:
+There's one last function to define, and it's the point to the entire exercise: the `takePicture()` function, whose job it is to capture the currently displayed video frame, convert it into a PNG file, and display it in the captured frame box. The code looks like this:
 
 ```js
-function takepicture() {
+function takePicture() {
   const context = canvas.getContext("2d");
   if (width && height) {
     canvas.width = width;
@@ -220,27 +208,28 @@ function takepicture() {
     const data = canvas.toDataURL("image/png");
     photo.setAttribute("src", data);
   } else {
-    clearphoto();
+    clearPhoto();
   }
 }
 ```
 
-As is the case any time we need to work with the contents of a canvas, we start by getting the {{domxref("CanvasRenderingContext2D","2D drawing context")}} for the hidden canvas.
+As is the case any time we need to work with the contents of a canvas, we start by getting the [2D drawing context](/en-US/docs/Web/API/CanvasRenderingContext2D) for the hidden canvas.
 
 Then, if the width and height are both non-zero (meaning that there's at least potentially valid image data), we set the width and height of the canvas to match that of the captured frame, then call {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} to draw the current frame of the video into the context, filling the entire canvas with the frame image.
 
-> **Note:** This takes advantage of the fact that the {{domxref("HTMLVideoElement")}} interface looks like an {{domxref("HTMLImageElement")}} to any API that accepts an `HTMLImageElement` as a parameter, with the video's current frame presented as the image's contents.
+> [!NOTE]
+> This takes advantage of the fact that the {{domxref("HTMLVideoElement")}} interface looks like an {{domxref("HTMLImageElement")}} to any API that accepts an `HTMLImageElement` as a parameter, with the video's current frame presented as the image's contents.
 
 Once the canvas contains the captured image, we convert it to PNG format by calling {{domxref("HTMLCanvasElement.toDataURL()")}} on it; finally, we call {{domxref("Element.setAttribute", "photo.setAttribute()")}} to make our captured still box display the image.
 
-If there isn't a valid image available (that is, the `width` and `height` are both 0), we clear the contents of the captured frame box by calling `clearphoto()`.
+If there isn't a valid image available (that is, the `width` and `height` are both 0), we clear the contents of the captured frame box by calling `clearPhoto()`.
 
 ## Demo
 
 ### HTML
 
 ```html
-<div class="contentarea">
+<div class="content-area">
   <h1>MDN - navigator.mediaDevices.getUserMedia(): Still photo capture demo</h1>
   <p>
     This example demonstrates how to set up a media stream using your built-in
@@ -248,7 +237,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   </p>
   <div class="camera">
     <video id="video">Video stream not available.</video>
-    <button id="startbutton">Take photo</button>
+    <button id="start-button">Take photo</button>
   </div>
   <canvas id="canvas"> </canvas>
   <div class="output">
@@ -257,7 +246,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   <p>
     Visit our article
     <a
-      href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">
+      href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos">
       Taking still photos with WebRTC</a
     >
     to learn more about the technologies used here.
@@ -297,21 +286,21 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   vertical-align: top;
 }
 
-#startbutton {
+#start-button {
   display: block;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   bottom: 32px;
-  background-color: rgba(0, 150, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
+  background-color: rgb(0 150 0 / 50%);
+  border: 1px solid rgb(255 255 255 / 70%);
+  box-shadow: 0px 0px 1px 2px rgb(0 0 0 / 20%);
   font-size: 14px;
   font-family: "Lucida Grande", "Arial", sans-serif;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
 }
 
-.contentarea {
+.content-area {
   font-size: 16px;
   font-family: "Lucida Grande", "Arial", sans-serif;
   width: 760px;
@@ -340,14 +329,14 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   let video = null;
   let canvas = null;
   let photo = null;
-  let startbutton = null;
+  let startButton = null;
 
   function showViewLiveResultButton() {
     if (window.self !== window.top) {
       // Ensure that if our document is in a frame, we get the user
       // to first open it in its own tab or window. Otherwise, it
       // won't be able to request permission for camera access.
-      document.querySelector(".contentarea").remove();
+      document.querySelector(".content-area").remove();
       const button = document.createElement("button");
       button.textContent = "View live result of the example code above";
       document.body.append(button);
@@ -364,7 +353,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
     video = document.getElementById("video");
     canvas = document.getElementById("canvas");
     photo = document.getElementById("photo");
-    startbutton = document.getElementById("startbutton");
+    startButton = document.getElementById("start-button");
 
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: false })
@@ -396,25 +385,25 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
           streaming = true;
         }
       },
-      false
+      false,
     );
 
-    startbutton.addEventListener(
+    startButton.addEventListener(
       "click",
       (ev) => {
-        takepicture();
+        takePicture();
         ev.preventDefault();
       },
-      false
+      false,
     );
 
-    clearphoto();
+    clearPhoto();
   }
 
   // Fill the photo with an indication that none has been
   // captured.
 
-  function clearphoto() {
+  function clearPhoto() {
     const context = canvas.getContext("2d");
     context.fillStyle = "#AAA";
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -429,7 +418,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // drawing that to the screen, we can change its size and/or apply
   // other changes before drawing it.
 
-  function takepicture() {
+  function takePicture() {
     const context = canvas.getContext("2d");
     if (width && height) {
       canvas.width = width;
@@ -439,7 +428,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
       const data = canvas.toDataURL("image/png");
       photo.setAttribute("src", data);
     } else {
-      clearphoto();
+      clearPhoto();
     }
   }
 

@@ -2,27 +2,24 @@
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.toLowerCase
 ---
 
 {{JSRef}}
 
-The **`toLowerCase()`** method returns the calling string value
-converted to lower case.
+The **`toLowerCase()`** method of {{jsxref("String")}} values returns this string converted to lower case.
 
-{{EmbedInteractiveExample("pages/js/string-tolowercase.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/string-tolowercase.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 toLowerCase()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

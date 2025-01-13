@@ -2,22 +2,10 @@
 title: Control flow and error handling
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 page-type: guide
-tags:
-  - Beginner
-  - Decision making
-  - Error Handling
-  - Flow control
-  - Guide
-  - JavaScript
-  - Logic
-  - control
-  - "l10n:priority"
-  - statements
 ---
 
 {{jsSidebar("JavaScript Guide")}}
-{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
-  "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript supports a compact set of statements, specifically
 control flow statements, that you can use to incorporate a great deal of interactivity
@@ -28,13 +16,13 @@ contains exhaustive details about the statements in this chapter. The semicolon
 (`;`) character is used to separate statements in JavaScript code.
 
 Any JavaScript expression is also a statement.
-See [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+See [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
 for complete information about expressions.
 
 ## Block statement
 
 The most basic statement is a _block statement_, which is used to group
-statements. The block is delimited by a pair of curly brackets:
+statements. The block is delimited by a pair of curly braces:
 
 ```js
 {
@@ -99,9 +87,9 @@ Here, the `condition` can be any expression that evaluates to
 for an explanation of what evaluates to `true` and `false`.)
 
 If `condition` evaluates to `true`,
-`statement_1` is executed. Otherwise,
-`statement_2` is executed. `statement_1` and
-`statement_2` can be any statement, including further nested
+`statement1` is executed. Otherwise,
+`statement2` is executed. `statement1` and
+`statement2` can be any statement, including further nested
 `if` statements.
 
 You can also compound the statements using `else if` to have multiple
@@ -162,7 +150,8 @@ The following values evaluate to `false` (also known as [Falsy](/en-US/docs/Glos
 All other values—including all objects—evaluate to `true` when passed to a
 conditional statement.
 
-> **Note:** Do not confuse the primitive boolean values
+> [!NOTE]
+> Do not confuse the primitive boolean values
 > `true` and `false` with the true and false values of the
 > {{jsxref("Boolean")}} object!
 >
@@ -240,16 +229,16 @@ The optional `break` statement associated with each `case` clause
 ensures that the program breaks out of `switch` once the matched statement is
 executed, and then continues execution at the statement following `switch`.
 If `break` is omitted, the program continues execution inside the
-`switch` statement (and will evaluate the next `case`, and so on).
+`switch` statement (and will execute statements under the next `case`, and so on).
 
 ##### Example
 
 In the following example, if `fruitType` evaluates to
-`'Bananas'`, the program matches the value with case `'Bananas'`
+`"Bananas"`, the program matches the value with `case "Bananas"`
 and executes the associated statement. When `break` is encountered, the
 program exits the `switch` and continues execution from the statement
 following `switch`. If `break` were omitted, the statement for
-`case 'Cherries'` would also be executed.
+`case "Cherries"` would also be executed.
 
 ```js
 switch (fruitType) {
@@ -269,7 +258,7 @@ switch (fruitType) {
     console.log("Mangoes are $0.56 a pound.");
     break;
   case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
+    console.log("Papayas are $2.79 a pound.");
     break;
   default:
     console.log(`Sorry, we are out of ${fruitType}.`);
@@ -294,7 +283,6 @@ this purpose:
 
 - [ECMAScript exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 - [`DOMException`](/en-US/docs/Web/API/DOMException)
-  and [`DOMError`](/en-US/docs/Web/API/DOMError)
 
 ### throw statement
 
@@ -319,7 +307,7 @@ throw {
 };
 ```
 
-### `try...catch` statement
+### try...catch statement
 
 The `try...catch` statement marks a block of statements to try, and
 specifies one or more responses should an exception be thrown. If an exception is
@@ -345,7 +333,7 @@ function. If the value does not correspond to a month number
 `'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
-```js
+```js-nolint
 function getMonthName(mo) {
   mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
   const months = [
@@ -373,13 +361,13 @@ try {
 You can use a `catch` block to handle all exceptions that may be generated
 in the `try` block.
 
-```js
-catch (catchID) {
+```js-nolint
+catch (exception) {
   statements
 }
 ```
 
-The `catch` block specifies an identifier (`catchID`
+The `catch` block specifies an identifier (`exception`
 in the preceding syntax) that holds the value specified by the `throw`
 statement. You can use this identifier to get information about the exception that was
 thrown.
@@ -400,7 +388,8 @@ try {
 }
 ```
 
-> **Note:** When logging errors to the console inside
+> [!NOTE]
+> When logging errors to the console inside
 > a `catch` block, using `console.error()` rather than
 > `console.log()` is advised for debugging. It formats the message as an
 > error, and adds it to the list of error messages generated by the page.
@@ -507,7 +496,7 @@ If an inner `try` block does _not_ have a corresponding
 2. the enclosing `try...catch` statement's `catch` block is
    checked for a match.
 
-For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)
+For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try_blocks)
 on the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 reference page.
 
@@ -545,5 +534,4 @@ try {
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
-  "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

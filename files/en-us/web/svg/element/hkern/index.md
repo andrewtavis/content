@@ -2,13 +2,8 @@
 title: <hkern>
 slug: Web/SVG/Element/hkern
 page-type: svg-element
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Font
+status:
+  - deprecated
 browser-compat: svg.elements.hkern
 ---
 
@@ -21,12 +16,6 @@ The **`<hkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the ho
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
 
 - {{SVGAttr("u1")}} {{Deprecated_Inline}}
 - {{SVGAttr("g1")}} {{Deprecated_Inline}}

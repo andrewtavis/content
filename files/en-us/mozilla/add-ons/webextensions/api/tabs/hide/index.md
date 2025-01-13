@@ -2,19 +2,10 @@
 title: tabs.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - hide
-  - tabs
 browser-compat: webextensions.api.tabs.hide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Hides one or more tabs.
 

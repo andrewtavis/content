@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.framebufferRenderbuffer()
+title: "WebGLRenderingContext: framebufferRenderbuffer() method"
+short-title: framebufferRenderbuffer()
 slug: Web/API/WebGLRenderingContext/framebufferRenderbuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.framebufferRenderbuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.framebufferRenderbuffer()`**
 method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) attaches a
@@ -97,7 +92,7 @@ gl.framebufferRenderbuffer(
   gl.FRAMEBUFFER,
   gl.COLOR_ATTACHMENT0,
   gl.RENDERBUFFER,
-  renderbuffer
+  renderbuffer,
 );
 ```
 

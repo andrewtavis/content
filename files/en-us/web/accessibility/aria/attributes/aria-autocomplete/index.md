@@ -1,20 +1,13 @@
 ---
-title: "aria-autocomplete"
+title: aria-autocomplete
 slug: Web/Accessibility/ARIA/Attributes/aria-autocomplete
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-autocomplete
-  - combobox
-  - searchbox
-  - listbox
-  - NeedsExample
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-autocomplete,
-  - https://w3c.github.io/aria-practices/#combobox
+  - https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-autocomplete-both/
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-autocomplete` attribute indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role), or [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) and specifies how predictions will be presented if they are made.
 
@@ -42,7 +35,7 @@ If an autocomplete list value is automatically accepted when the field loses foc
 ## Values
 
 - `none` (default)
-  - : When a user is providing input, not automatic suggestion is displayed.
+  - : When a user is providing input, no automatic suggestion is displayed.
 - `inline`
   - : `aria-autocomplete="inline"` text suggesting one way to complete the provided input may be dynamically inserted after the caret.
 - `list`
@@ -62,7 +55,7 @@ Used in roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) role
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
@@ -74,11 +67,3 @@ Used in roles:
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute
 - [Editable Combobox With Both List and Inline Autocomplete Example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/combobox/combobox-autocomplete-both.html)
 - [Event.ariaAutoComplete](/en-US/docs/Web/API/Element/ariaAutoComplete)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

@@ -1,18 +1,12 @@
 ---
-title: Clients.matchAll()
+title: "Clients: matchAll() method"
+short-title: matchAll()
 slug: Web/API/Clients/matchAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.Clients.matchAll
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`matchAll()`** method of the {{domxref("Clients")}}
 interface returns a {{jsxref("Promise")}} for a list of service worker

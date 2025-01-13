@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.readPixels()
+title: "WebGLRenderingContext: readPixels() method"
+short-title: readPixels()
 slug: Web/API/WebGLRenderingContext/readPixels
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.readPixels
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.readPixels()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) reads a block of pixels from a
 specified rectangle of the current color framebuffer into a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
@@ -120,10 +115,20 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
-const pixels = new Uint8Array(gl.drawingBufferWidth * gl.drawingBufferHeight * 4);
-gl.readPixels(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const pixels = new Uint8Array(
+  gl.drawingBufferWidth * gl.drawingBufferHeight * 4,
+);
+gl.readPixels(
+  0,
+  0,
+  gl.drawingBufferWidth,
+  gl.drawingBufferHeight,
+  gl.RGBA,
+  gl.UNSIGNED_BYTE,
+  pixels,
+);
 console.log(pixels); // Uint8Array
 ```
 
@@ -137,4 +142,4 @@ console.log(pixels); // Uint8Array
 
 ## See also
 
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)

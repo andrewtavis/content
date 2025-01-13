@@ -1,18 +1,12 @@
 ---
-title: Client.url
+title: "Client: url property"
+short-title: url
 slug: Web/API/Client/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Client
-  - Property
-  - Reference
-  - Service Workers
-  - URL
 browser-compat: api.Client.url
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`url`** read-only property of the {{domxref("Client")}}
 interface returns the URL of the current service worker client.
@@ -44,7 +38,7 @@ self.addEventListener("notificationclick", (event) => {
         if (clients.openWindow) {
           return clients.openWindow("/");
         }
-      })
+      }),
   );
 });
 ```

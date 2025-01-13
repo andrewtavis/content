@@ -1,14 +1,11 @@
 ---
 title: aria-colcount
 slug: Web/Accessibility/ARIA/Attributes/aria-colcount
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-colcount
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colcount
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-colcount` attribute defines the total number of columns in a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) when not all columns are present in the [DOM](/en-US/docs/Glossary/DOM).
 
@@ -77,7 +74,7 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 
 Used in roles:
 
-- [`table`](/en-US/docs/Web/Accessibility/ARIA/Role/Table_role/)
+- [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
 
 Inherits into roles:
 
@@ -88,14 +85,6 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

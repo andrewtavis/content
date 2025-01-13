@@ -2,11 +2,6 @@
 title: "RangeError: repeat count must be non-negative"
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
 ---
 
 {{jsSidebar("Errors")}}
@@ -17,7 +12,7 @@ argument that is a negative number.
 
 ## Message
 
-```
+```plain
 RangeError: Invalid count value: -1 (V8-based)
 RangeError: repeat count must be non-negative (Firefox)
 RangeError: String.prototype.repeat argument must be greater than or equal to 0 and not be Infinity (Safari)

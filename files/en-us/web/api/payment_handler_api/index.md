@@ -2,17 +2,12 @@
 title: Payment Handler API
 slug: Web/API/Payment_Handler_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Overview
-  - Payment Handler API
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent
 ---
 
-{{DefaultAPISidebar("Payment Handler API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Payment Handler API")}}{{securecontext_header}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The Payment Handler API provides a standardized set of functionality for web applications to directly handle payments, rather than having to be redirected to a separate site for payment handling.
 
@@ -25,29 +20,40 @@ Communication with payment apps (authorization, passing of payment credentials) 
 On a merchant website, a payment request is initiated by the construction of a new {{domxref("PaymentRequest")}} object:
 
 ```js
-const request = new PaymentRequest([{
-  supportedMethods: 'https://bobbucks.dev/pay'
-}], {
-  total: {
-    label: 'total',
-    amount: { value: '10', currency: 'USD' }
-  }
-});
+const request = new PaymentRequest(
+  [
+    {
+      supportedMethods: "https://bobbucks.dev/pay",
+    },
+  ],
+  {
+    total: {
+      label: "total",
+      amount: { value: "10", currency: "USD" },
+    },
+  },
+);
 ```
 
 The `supportedMethods` property specifies a URL representing the payment method supported by the merchant. To use more than one payment method, you would specify them in an array of objects, like this:
 
 ```js
-const request = new PaymentRequest([{
-  supportedMethods: 'https://alicebucks.dev/pay'
-}, {
-  supportedMethods: 'https://bobbucks.dev/pay'
-}], {
-  total: {
-    label: 'total',
-    amount: { value: '10', currency: 'USD' }
-  }
-});
+const request = new PaymentRequest(
+  [
+    {
+      supportedMethods: "https://alicebucks.dev/pay",
+    },
+    {
+      supportedMethods: "https://bobbucks.dev/pay",
+    },
+  ],
+  {
+    total: {
+      label: "total",
+      amount: { value: "10", currency: "USD" },
+    },
+  },
+);
 ```
 
 ### Making payment apps available
@@ -57,16 +63,14 @@ In supporting browsers, the process starts by requesting a payment method manife
 ```json
 {
   "default_applications": ["https://bobbucks.dev/manifest.json"],
-  "supported_origins": [
-    "https://alicepay.friendsofalice.example"
-  ]
+  "supported_origins": ["https://alicepay.friendsofalice.example"]
 }
 ```
 
 Given a payment method identifier like `https://bobbucks.dev/pay`, the browser:
 
 1. Starts loading `https://bobbucks.dev/pay` and checks its HTTP headers.
-   1. If a {{httpheader("Link")}} header is found with `rel="payment-method-manifest"`, then it downloads the payment method manifest at that location instead (see [Optionally route the browser to find the payment method manifest in another location](https://web.dev/setting-up-a-payment-method/#optionally-route-the-browser-to-find-the-payment-method-manifest-in-another-location) for details).
+   1. If a {{httpheader("Link")}} header is found with `rel="payment-method-manifest"`, then it downloads the payment method manifest at that location instead (see [Optionally route the browser to find the payment method manifest in another location](https://web.dev/articles/setting-up-a-payment-method#optionally_route_the_browser_to_find_the_payment_method_manifest_in_another_location) for details).
    2. Otherwise, parse the response body of `https://bobbucks.dev/pay` as the payment method manifest.
 2. Parses the downloaded content as JSON with `default_applications` and `supported_origins` members.
 
@@ -124,9 +128,10 @@ When the {{domxref("PaymentRequest.show()")}} method is invoked by the merchant 
 - If there are multiple payment app options, a list of options is presented to the user for them to choose from. Selecting a payment app will start the payment flow, which causes the browser to Just-In-Time (JIT) install the web app if necessary, registering the service worker specified in the [`serviceworker`](/en-US/docs/Web/Manifest/serviceworker) member so it can handle the payment.
 - If there is only one payment app option, the {{domxref("PaymentRequest.show()")}} method will start the payment flow with this payment app, JIT-installing it if necessary, as described above. This is an optimization to avoid presenting the user with a list that contains only one payment app choice.
 
-> **Note:** If [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) is set to `true` in the payment app manifest, the browser will launch the platform-specific payment app specified in [`related_applications`](/en-US/docs/Web/Manifest/related_applications) to handle the payment (if it is available) instead of the web payment app.
+> [!NOTE]
+> If [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) is set to `true` in the payment app manifest, the browser will launch the platform-specific payment app specified in [`related_applications`](/en-US/docs/Web/Manifest/related_applications) to handle the payment (if it is available) instead of the web payment app.
 
-See [Serve a web app manifest](https://web.dev/setting-up-a-payment-method/#step-3-serve-a-web-app-manifest) for more details.
+See [Serve a web app manifest](https://web.dev/articles/setting-up-a-payment-method#step_3_serve_a_web_app_manifest) for more details.
 
 ### Checking whether the payment app is ready to pay with
 
@@ -134,7 +139,6 @@ The Payment Request API's {{domxref("PaymentRequest.canMakePayment()")}} method 
 
 ```js
 async function checkCanMakePayment() {
-
   // ...
 
   const canMakePayment = await request.canMakePayment();
@@ -144,15 +148,21 @@ async function checkCanMakePayment() {
 }
 ```
 
-The Payment Handler API adds an additional mechanism to prepare for handling a payment. The {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
+The Payment Handler API adds an additional mechanism to prepare for handling a payment. The {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
 
 ```js
-self.addEventListener("canmakepayment", e => {
-  e.respondWith(new Promise((resolve, reject) => {
-    someAppSpecificLogic()
-    .then(result => { resolve(result); })
-    .catch(error => { reject(error); });
-  }));
+self.addEventListener("canmakepayment", (e) => {
+  e.respondWith(
+    new Promise((resolve, reject) => {
+      someAppSpecificLogic()
+        .then((result) => {
+          resolve(result);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    }),
+  );
 });
 ```
 
@@ -168,7 +178,7 @@ let resolver;
 let client;
 
 // `self` is the global object in service worker
-self.addEventListener('paymentrequest', async e => {
+self.addEventListener("paymentrequest", async (e) => {
   if (payment_request_event) {
     // If there's an ongoing payment transaction, reject it.
     resolver.reject();
@@ -177,7 +187,6 @@ self.addEventListener('paymentrequest', async e => {
   payment_request_event = e;
 
   // ...
-
 });
 ```
 
@@ -185,7 +194,7 @@ When a `paymentrequest` event is received, the payment app can open a payment ha
 
 When the payment has been handled, {{domxref("PaymentRequestEvent.respondWith()")}} is used to pass the payment result back to the merchant website.
 
-See [Receive a payment request event from the merchant](https://web.dev/orchestrating-payment-transactions/#receive-payment-request-event) for more details of this stage.
+See [Receive a payment request event from the merchant](https://web.dev/articles/orchestrating-payment-transactions#receive-payment-request-event) for more details of this stage.
 
 ### Managing payment app functionality
 
@@ -194,18 +203,17 @@ Once a payment app service worker is registered, you can use the service worker'
 For example:
 
 ```js
-navigator.serviceWorker.register("serviceworker.js")
-  .then(registration => {
-    registration.paymentManager.userHint = "Card number should be 16 digits";
+navigator.serviceWorker.register("serviceworker.js").then((registration) => {
+  registration.paymentManager.userHint = "Card number should be 16 digits";
 
-    registration.paymentManager.enableDelegations(['shippingAddress', 'payerName']) 
-      .then(() => {
-          // ...
-      });
+  registration.paymentManager
+    .enableDelegations(["shippingAddress", "payerName"])
+    .then(() => {
+      // ...
+    });
 
-    // ...
-
-  });
+  // ...
+});
 ```
 
 - {{domxref("PaymentManager.userHint")}} is used to provide a hint for the browser to display along with the payment app's name and icon in the Payment Handler UI.
@@ -240,8 +248,8 @@ navigator.serviceWorker.register("serviceworker.js")
 ## See also
 
 - [BobBucks sample payment app](https://bobbucks.dev/)
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

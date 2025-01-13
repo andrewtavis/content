@@ -2,15 +2,6 @@
 title: margin-inline-end
 slug: Web/CSS/margin-inline-end
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - NeedsContent
-  - Reference
-  - margin-inline
-  - margin-inline-end
-  - recipe:css-property
 browser-compat: css.properties.margin-inline-end
 ---
 
@@ -27,6 +18,8 @@ The **`margin-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the logi
 margin-inline-end: 10px; /* An absolute length */
 margin-inline-end: 1em; /* relative to the text size */
 margin-inline-end: 5%; /* relative to the nearest block container's width */
+margin-inline-end: anchor-size(height);
+margin-inline-end: calc(anchor-size(--myAnchor self-inline, 25px) / 5);
 
 /* Keyword values */
 margin-inline-end: auto;
@@ -95,7 +88,7 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - {{cssxref("margin-inline-start")}}
 - The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

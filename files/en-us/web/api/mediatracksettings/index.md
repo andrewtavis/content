@@ -2,20 +2,9 @@
 title: MediaTrackSettings
 slug: Web/API/MediaTrackSettings
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - NeedsExample
-  - Reference
-  - Video
-browser-compat: api.MediaTrackSettings
+spec-urls:
+  - https://w3c.github.io/mediacapture-main/#media-track-settings
+  - https://w3c.github.io/mediacapture-screen-share/#extensions-to-mediatracksettings
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -31,7 +20,7 @@ Some or all of the following will be included in the object, either because it's
 ### Instance properties of all media tracks
 
 - {{domxref("MediaTrackSettings.deviceId", "deviceId")}}
-  - : A string indicating the current value of the {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} property. The device ID is an origin-unique string identifying the source of the track; this is usually a {{Glossary("GUID")}}. This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
+  - : A string indicating the current value of the {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} property. The device ID is an origin-unique string identifying the source of the track; this is usually a [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
 - {{domxref("MediaTrackSettings.groupId", "groupId")}}
   - : A string indicating the current value of the {{domxref("MediaTrackConstraints.groupId", "groupId")}} property. The group ID is a browsing session-unique string identifying the source group of the track. Two devices (as identified by the {{domxref("MediaTrackSettings.deviceId", "deviceId")}}) are considered part of the same group if they are from the same physical device. For instance, the audio input and output devices for the speaker and microphone built into a phone would share the same group ID, since they're part of the same physical device. The microphone on a headset would have a different ID, though. This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
 
@@ -57,7 +46,7 @@ Some or all of the following will be included in the object, either because it's
 ### Instance properties of video tracks
 
 - {{domxref("MediaTrackSettings.aspectRatio", "aspectRatio")}}
-  - : A double-precision floating point value indicating the current value of the {{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}} property, specified precisely to 10 decimal places. This is the width of the image in pixels divided by its height in pixels. Common values include 1.3333333333 (for the classic television 4:3 "standard" aspect ratio, also used on tablets such as Apple's iPad), 1.7777777778 (for the 16:9 high-definition widescreen aspect ratio), and 1.6 (for the 16:10 aspect ratio common among widescreen computers and tablets).
+  - : A double-precision floating point value indicating the current value of the {{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}} property, specified precisely to 10 decimal places. This is the width of the image in pixels divided by its height in pixels. Common values include 1.3333333333 (for the classic television 4:3 "standard" {{glossary("aspect ratio")}}, also used on tablets such as Apple's iPad), 1.7777777778 (for the 16:9 high-definition widescreen aspect ratio), and 1.6 (for the 16:10 aspect ratio common among widescreen computers and tablets).
 - {{domxref("MediaTrackSettings.facingMode", "facingMode")}}
 
   - : A string indicating the current value of the {{domxref("MediaTrackConstraints.facingMode", "facingMode")}} property, specifying the direction the camera is facing. The value will be one of:
@@ -105,8 +94,6 @@ Tracks containing video shared from a user's screen (regardless of whether the s
 
   - : A string which specifies the type of source the track contains; one of:
 
-    - `application`
-      - : The stream contains all of the windows of the application chosen by the user rendered into the one video track.
     - `browser`
       - : The stream contains the contents of a single browser tab selected by the user.
     - `monitor`
@@ -120,10 +107,6 @@ Tracks containing video shared from a user's screen (regardless of whether the s
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

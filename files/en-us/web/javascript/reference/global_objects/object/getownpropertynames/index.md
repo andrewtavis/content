@@ -2,14 +2,6 @@
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertyNames
 ---
 
@@ -86,7 +78,7 @@ myObj.foo = 1;
 console.log(Object.getOwnPropertyNames(myObj).sort()); // ["foo", "getFoo"]
 ```
 
-If you want only the enumerable properties, see {{jsxref("Object.keys()")}} or use a {{jsxref("Statements/for...in", "for...in")}} loop (note that this will also return enumerable properties found along the prototype chain for the object unless the latter is filtered with {{jsxref("Object.hasOwn()", "hasOwn()")}}).
+If you want only the enumerable properties, see {{jsxref("Object.keys()")}} or use a {{jsxref("Statements/for...in", "for...in")}} loop (note that this will also return enumerable properties found along the prototype chain for the object unless the latter is filtered with {{jsxref("Object.hasOwn()")}}).
 
 Items on the prototype chain are not listed:
 
@@ -111,11 +103,11 @@ This uses the {{jsxref("Array.prototype.filter()")}} function to remove the enum
 
 ```js
 const target = myObject;
-const enumAndNonenum = Object.getOwnPropertyNames(target);
+const enumAndNonEnum = Object.getOwnPropertyNames(target);
 const enumOnly = new Set(Object.keys(target));
-const nonenumOnly = enumAndNonenum.filter((key) => !enumOnly.has(key));
+const nonEnumOnly = enumAndNonEnum.filter((key) => !enumOnly.has(key));
 
-console.log(nonenumOnly);
+console.log(nonEnumOnly);
 ```
 
 ## Specifications

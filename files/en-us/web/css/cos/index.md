@@ -2,14 +2,6 @@
 title: cos()
 slug: Web/CSS/cos
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - cos
 browser-compat: css.types.cos
 ---
 
@@ -34,7 +26,7 @@ width: calc(100px * cos(pi));
 width: calc(100px * cos(e / 2));
 ```
 
-### Parameter
+### Parameters
 
 The `cos(angle)` function accepts only one value as its parameter.
 
@@ -47,7 +39,7 @@ The cosine of an `angle` will always return a number between `−1` and `1`.
 
 - If `angle` is `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

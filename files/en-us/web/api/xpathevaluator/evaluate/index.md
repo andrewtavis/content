@@ -1,15 +1,8 @@
 ---
-title: XPathEvaluator.evaluate()
+title: "XPathEvaluator: evaluate() method"
+short-title: evaluate()
 slug: Web/API/XPathEvaluator/evaluate
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathEvaluator
 browser-compat: api.XPathEvaluator.evaluate
 ---
 
@@ -36,7 +29,7 @@ evaluate(expression, contextNode, resolver, type, result)
 - `contextNode`
   - : A {{domxref("Node")}} representing the context to use for evaluating the expression.
 - `resolver` {{optional_inline}}
-  - : Permits translation of all prefixes, including the `xml` namespace
+  - : A {{domxref("Node")}}, `null`, or any object implementing the {{domxref("Node/lookupNamespaceURI", "lookupNamespaceURI")}} method. Permits translation of all prefixes, including the `xml` namespace
     prefix, within the XPath expression into appropriate namespace URIs.
 - `type` {{optional_inline}}
   - : Specifies the type of result to be returned by evaluating the expression. This must
@@ -67,7 +60,7 @@ In case result cannot be converted to the specified type, an
 #### NAMESPACE_ERR
 
 If the expression contains namespace prefixes which cannot be resolved by the specified
-{{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
+`XPathNSResolver`, a {{domxref("DOMException")}} of type
 `NAMESPACE_ERROR` is raised.
 
 #### WRONG_DOCUMENT_ERR
@@ -97,7 +90,12 @@ The following example shows the use of the `evaluate()` method.
 
 ```js
 const evaluator = new XPathEvaluator();
-const result = evaluator.evaluate("//div", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const result = evaluator.evaluate(
+  "//div",
+  document,
+  null,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

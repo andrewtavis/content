@@ -2,14 +2,7 @@
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
 page-type: html-attribute
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-browser-compat: html.global_attributes.itemprop
+spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#names:-the-itemprop-attribute
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -25,9 +18,11 @@ The example below shows the source for a set of elements marked up with `itempro
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director:
+  <span>
+    Director:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span>
+    (born August 16, 1954)
+  </span>
   <span itemprop="genre">Science fiction</span>
   <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">
     Trailer
@@ -72,7 +67,7 @@ The example below shows the source for a set of elements marked up with `itempro
 
 ## Properties
 
-Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its {{htmlattrxref("href", "a")}} attribute, the {{HTMLElement("img")}} element and its {{htmlattrxref("src", "img")}} attribute, or other elements that link to or embed external resources.
+Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute, the {{HTMLElement("img")}} element and its [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute, or other elements that link to or embed external resources.
 
 ### Three properties with values that are strings
 
@@ -96,7 +91,7 @@ When a string value can't be easily read and understood by a person (e.g., a lon
 
 ### An item with a property whose value is a product ID
 
-The ID is not human-friendly, so the product's name is used the human-visible text instead of the ID.
+The ID is not human-friendly, so the product's name is used instead.
 
 ```html
 <h1 itemscope>
@@ -147,8 +142,8 @@ Properties can also be groups of name-value pairs, by putting the itemscope attr
     Band:
     <span itemprop="band" itemscope>
       <span itemprop="name">Jazz Band</span>
-      (<span itemprop="size">12</span> players)</span
-    >
+      (<span itemprop="size">12</span> players)
+    </span>
   </p>
 </div>
 ```
@@ -157,7 +152,7 @@ The outer item above has two properties, "name" and "band". The "name" is "Amand
 
 ### All the properties separated from their items
 
-This example is the same as the previous one, but all the properties are separated from their items
+This example is the same as the previous one, but all the properties are separated from their items.
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
@@ -193,12 +188,16 @@ An element introducing a property can also introduce multiple properties at once
 
 ```html
 <div itemscope>
-  <span itemprop="favorite-color
-    favorite-fruit">orange</span>
+  <span
+    itemprop="favorite-color
+    favorite-fruit"
+    >orange
+  </span>
 </div>
 ```
 
-> **Note:** There is no relationship between the microdata and the content of the document where the microdata is marked up.
+> [!NOTE]
+> There is no relationship between the microdata and the content of the document where the microdata is marked up.
 
 ### Same structured data marked up in two different ways
 
@@ -284,9 +283,10 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
 2. If the item is not a typed item it must be:
 
-   1. A string that contains no "`.`" (U+002E FULL STOP) characters and no "`:`" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
+   1. A string that contains no `.` (U+002E FULL STOP) characters and no `:` characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
-> **Note:** The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
+> [!NOTE]
+> The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 
 ## Values
 
@@ -294,7 +294,7 @@ The property value of a name-value pair is as given for the first matching case 
 
 - If the element has an `itemscope` attribute
 
-  - The value is the **item** created by the element.
+  - The value is the **item** created by the element
 
 - If the element is a `meta` element
 
@@ -334,7 +334,7 @@ If a property's value is a `URL`, the property must be specified using a URL pro
 
 Names are unordered relative to each other, but if a particular name has multiple values, they do have a relative order.
 
-In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important
+In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important.
 
 ```html
 <div itemscope>
@@ -344,7 +344,7 @@ In the following example, the "a" property has the values "1" and "2", _in that 
 </div>
 ```
 
-The following is equivalent
+Here are several equivalent examples:
 
 ```html
 <div itemscope>
@@ -354,8 +354,6 @@ The following is equivalent
 </div>
 ```
 
-As is the following
-
 ```html
 <div itemscope>
   <p itemprop="a">1</p>
@@ -363,8 +361,6 @@ As is the following
   <p itemprop="a">2</p>
 </div>
 ```
-
-And the following
 
 ```html
 <div id="x">
@@ -430,10 +426,6 @@ This example uses microdata attributes to represent the following structured dat
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

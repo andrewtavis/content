@@ -2,19 +2,10 @@
 title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - remove
 browser-compat: webextensions.api.browsingData.remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes the specified browsing data.
 
@@ -90,7 +81,8 @@ browser.browsingData
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

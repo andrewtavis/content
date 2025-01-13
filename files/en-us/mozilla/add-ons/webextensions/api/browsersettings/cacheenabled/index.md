@@ -2,19 +2,10 @@
 title: browserSettings.cacheEnabled
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - cacheEnabled
 browser-compat: webextensions.api.browserSettings.cacheEnabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to globally enable or disable the browser cache.
 

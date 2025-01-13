@@ -2,25 +2,12 @@
 title: print-color-adjust
 slug: Web/CSS/print-color-adjust
 page-type: css-property
-tags:
-  - Adjusting Colors
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - print-color-adjust
-  - recipe:css-property
 browser-compat: css.properties.print-color-adjust
 ---
 
 {{CSSRef}}
 
-The **`print-color-adjust`** CSS property sets what, if anything, the {{Glossary("user agent")}} may do to optimize the appearance of the element on the output device.
+The **`print-color-adjust`** [CSS](/en-US/docs/Web/CSS) property sets what, if anything, the {{Glossary("user agent")}} may do to optimize the appearance of the element on the output device.
 By default, the browser is allowed to make any adjustments to the element's appearance it determines to be necessary and prudent given the type and capabilities of the output device.
 
 ## Syntax
@@ -83,15 +70,14 @@ For whatever reason, this is the desired appearance in any rendering environment
 ```css
 .my-box {
   background-color: black;
-  background-image: linear-gradient(
-    rgba(0, 0, 180, 0.5),
-    rgba(70, 140, 220, 0.5)
-  );
+  background-image: linear-gradient(rgb(0 0 180 / 50%), rgb(70 140 220 / 50%));
   color: #900;
   width: 15rem;
   height: 6rem;
   text-align: center;
-  font: 24px "Helvetica", sans-serif;
+  font:
+    24px "Helvetica",
+    sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,6 +107,5 @@ For whatever reason, this is the desired appearance in any rendering environment
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}

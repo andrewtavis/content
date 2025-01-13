@@ -1,14 +1,10 @@
 ---
-title: CSSValue.cssText
+title: "CSSValue: cssText property"
+short-title: cssText
 slug: Web/API/CSSValue/cssText
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSValue
-  - Property
-  - Reference
-  - cssText
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSValue.cssText
 ---
 
@@ -17,7 +13,8 @@ browser-compat: api.CSSValue.cssText
 The **`cssText`** property of the {{domxref("CSSValue")}}
 interface represents the current computed CSS property value.
 
-> **Note:** This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:
@@ -46,10 +43,7 @@ It has been superseded by a modern, but incompatible, [CSS Typed Object Model AP
 
 ## Browser compatibility
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
-standardization effort since then.
-
-It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.
+{{Compat}}
 
 ## See also
 

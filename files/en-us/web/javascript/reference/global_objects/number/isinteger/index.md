@@ -2,12 +2,6 @@
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Number.isInteger
 ---
 
@@ -78,4 +72,4 @@ Number.isInteger(4500000000000000.1); // true, because of loss of precision
 ## See also
 
 - [Polyfill of `Number.isInteger` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- The {{jsxref("Number")}} object it belongs to.
+- {{jsxref("Number")}}

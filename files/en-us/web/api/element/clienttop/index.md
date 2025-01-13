@@ -1,14 +1,8 @@
 ---
-title: Element.clientTop
+title: "Element: clientTop property"
+short-title: clientTop
 slug: Web/API/Element/clientTop
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientTop
 ---
 
@@ -26,7 +20,8 @@ starts immediately below the border, (client area includes padding.) Therefore, 
 Math.round(parseFloat()).) For example, if the computed "border-top-width" is zero,
 then **`clientTop`** is also zero.
 
-> **Note:** This property will round the value to an integer. If you
+> [!NOTE]
+> This property will round the value to an integer. If you
 > need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Value
@@ -57,7 +52,7 @@ In the following example, the client area has a white background and a 24px blac
 ```css
 #container {
   margin: 3rem;
-  background-color: rgb(255, 255, 204);
+  background-color: rgb(255 255 204);
   border: 4px dashed black;
 }
 

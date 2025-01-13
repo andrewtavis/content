@@ -2,14 +2,6 @@
 title: SpeechSynthesisEvent
 slug: Web/API/SpeechSynthesisEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisEvent
 ---
 
@@ -19,9 +11,14 @@ The **`SpeechSynthesisEvent`** interface of the [Web Speech API](/en-US/docs/Web
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("SpeechSynthesisEvent.SpeechSynthesisEvent", "SpeechSynthesisEvent()")}}
+  - : Creates a new `SpeechSynthesisEvent`.
+
 ## Instance properties
 
-_The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from its parent interface, {{domxref("Event")}}._
+_The `SpeechSynthesisEvent` interface also inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("SpeechSynthesisEvent.charIndex")}} {{ReadOnlyInline}}
   - : Returns the index position of the character in the {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.
@@ -36,19 +33,23 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from
 
 ## Instance methods
 
-_The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from its parent interface, {{domxref("Event")}}._
+_The `SpeechSynthesisEvent` interface also inherits methods from its parent interface, {{domxref("Event")}}._
 
 ## Examples
 
 ```js
 utterThis.onpause = (event) => {
   const char = event.utterance.text.charAt(event.charIndex);
-  console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
-}
+  console.log(
+    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+  );
+};
 
 utterThis.onboundary = (event) => {
-  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
-}
+  console.log(
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
+  );
+};
 ```
 
 ## Specifications

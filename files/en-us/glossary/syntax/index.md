@@ -2,10 +2,9 @@
 title: Syntax
 slug: Glossary/Syntax
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - Syntax
 ---
+
+{{GlossarySidebar}}
 
 Syntax specifies the required combination and sequence of {{Glossary("character","characters")}} making up correctly structured code. Syntax generally includes grammar and the rules that apply to writing it, such as indentation requirements in Python.
 

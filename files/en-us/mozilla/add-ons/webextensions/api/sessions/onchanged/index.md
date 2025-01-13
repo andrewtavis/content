@@ -2,20 +2,10 @@
 title: sessions.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChanged
-  - sessions
 browser-compat: webextensions.api.sessions.onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired whenever the list of closed tabs or windows changes.
 
@@ -29,7 +19,7 @@ browser.sessions.onChanged.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -40,8 +30,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-  - : Function that will be called when this event occurs. It's passed no parameters.
+- `listener`
+  - : The function called when this event occurs. It's passed no parameters.
 
 ## Browser compatibility
 
@@ -54,7 +44,7 @@ This very annoying extension listens for `onChanged`, then immediately restores 
 ```js
 function restoreSession(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
@@ -71,7 +61,7 @@ function onError(error) {
 
 function restoreMostRecent() {
   let gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1
+    maxResults: 1,
   });
   gettingSessions.then(restoreSession, onError);
 }
@@ -81,7 +71,8 @@ browser.sessions.onChanged.addListener(restoreMostRecent);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

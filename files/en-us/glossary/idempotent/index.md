@@ -2,9 +2,9 @@
 title: Idempotent
 slug: Glossary/Idempotent
 page-type: glossary-definition
-tags:
-  - WebMechanics
 ---
+
+{{GlossarySidebar}}
 
 An HTTP method is **idempotent** if the intended effect on the server of making a single request is the same as the effect of making several identical requests.
 

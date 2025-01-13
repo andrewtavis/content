@@ -1,20 +1,14 @@
 ---
-title: Window.credentialless
+title: "Window: credentialless property"
+short-title: credentialless
 slug: Web/API/Window/credentialless
 page-type: web-api-instance-property
-tags:
-  - API
-  - credentialless
-  - Property
-  - Read-Only
-  - Reference
-  - Window
-  - Experimental
-  - Non-standard
+status:
+  - experimental
 browser-compat: api.Window.credentialless
 ---
 
-{{APIRef}}{{SeeCompatTable}}{{Non-standard_header}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`window.credentialless`** read-only property returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}, meaning that it is loaded in a new, ephemeral context.
 
@@ -31,11 +25,12 @@ A boolean. A value of `true` indicates that the document was loaded inside a cre
 You can specify a credentialless `<iframe>` like so:
 
 ```html
-<iframe src="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)"
-        title="Spectre vulnerability Wikipedia page"
-        width="960"
-        height="600"
-        credentialless>
+<iframe
+  src="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)"
+  title="Spectre vulnerability Wikipedia page"
+  width="960"
+  height="600"
+  credentialless></iframe>
 ```
 
 In supporting browsers, if the document loaded in the `<iframe>` were to run the following line, it would return `true`:

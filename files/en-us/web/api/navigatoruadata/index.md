@@ -2,22 +2,19 @@
 title: NavigatorUAData
 slug: Web/API/NavigatorUAData
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - NavigatorUAData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NavigatorUAData
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-The **`NavigatorUAData`** interface of the {{domxref('User-Agent Client Hints API')}} returns information about the browser and operating system of a user.
+The **`NavigatorUAData`** interface of the {{domxref("User-Agent Client Hints API", "", "", "nocode")}} returns information about the browser and operating system of a user.
 
-An instance of this object is returned by calling {{domxref("Navigator.userAgentData")}}. Therefore, this interface has no constructor.
+An instance of this object is returned by calling {{domxref("Navigator.userAgentData")}} or {{domxref("WorkerNavigator.userAgentData")}}. Therefore, this interface has no constructor.
 
-> **Note:** The terms _high entropy_ and _low entropy_ refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by {{domxref("NavigatorUAData.getHighEntropyValues()")}} could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.
+> [!NOTE]
+> The terms _high entropy_ and _low entropy_ refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by {{domxref("NavigatorUAData.getHighEntropyValues()")}} could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.
 
 ## Instance properties
 
@@ -50,13 +47,17 @@ console.log(navigator.userAgentData.brands);
 In the following value a number of hints are requested using the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method. When the promise resolves, this information is printed to the console.
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platform",
-  "platformVersion",
-  "fullVersionList"])
-  .then((ua) => { console.log(ua) });
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platform",
+    "platformVersion",
+    "fullVersionList",
+  ])
+  .then((ua) => {
+    console.log(ua);
+  });
 ```
 
 ## Specifications
@@ -69,4 +70,4 @@ navigator.userAgentData.getHighEntropyValues(
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)

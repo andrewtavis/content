@@ -2,18 +2,8 @@
 title: NavigationHistoryEntry
 slug: Web/API/NavigationHistoryEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - History
-  - Interface
-  - Landing
-  - Navigate
-  - NavigationHistoryEntry
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry
 ---
 
@@ -40,7 +30,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("NavigationHistoryEntry.sameDocument", "sameDocument")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if this history entry is for the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
 - {{domxref("NavigationHistoryEntry.url", "url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the absolute URL of this history entry.
+  - : Returns the absolute URL of this history entry. If the entry corresponds to a different document than the current one (like `sameDocument` property is `false`), and that document was fetched with a {{httpheader("Referrer-Policy")}} header set to `no-referrer` or `origin`, the property returns `null`.
 
 ## Instance methods
 
@@ -60,19 +50,19 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 function initHomeBtn() {
   // Get the key of the first loaded entry
   // so the user can always go back to this view.
-  const {key} = navigation.currentEntry;
+  const { key } = navigation.currentEntry;
   backToHomeButton.onclick = () => {
     navigation.traverseTo(key);
-  }
+  };
 }
 // Intercept navigate events, such as link clicks, and
 // replace them with single-page navigations
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   event.intercept({
-      async handler() {
-        // Navigate to a different view,
-        // but the "home" button will always work.
-      }
+    async handler() {
+      // Navigate to a different view,
+      // but the "home" button will always work.
+    },
   });
 });
 ```

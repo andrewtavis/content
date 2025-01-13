@@ -2,9 +2,9 @@
 title: Property (CSS)
 slug: Glossary/Property/CSS
 page-type: glossary-definition
-tags:
-  - CodingScripting
 ---
+
+{{GlossarySidebar}}
 
 A **CSS property** is a characteristic (like color) whose associated value defines one aspect of how the browser should display the element.
 
@@ -26,6 +26,6 @@ div {
 
 ## See also
 
-- [Learn CSS](/en-US/docs/Learn/CSS)
+- [Learn CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
 - [The CSS reference on MDN](/en-US/docs/Web/CSS/Reference)
 - [The CSS Working Group current work](https://www.w3.org/Style/CSS/current-work)

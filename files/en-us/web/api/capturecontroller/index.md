@@ -2,16 +2,12 @@
 title: CaptureController
 slug: Web/API/CaptureController
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - CaptureController
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CaptureController
 ---
 
-{{APIRef("Screen Capture API")}}{{SeeCompatTable}}
+{{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`CaptureController`** interface provides methods that can be used to further manipulate a capture session separate from its initiation via {{domxref("MediaDevices.getDisplayMedia()")}}.
 

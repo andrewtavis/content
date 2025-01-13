@@ -2,11 +2,9 @@
 title: Fetch directive
 slug: Glossary/Fetch_directive
 page-type: glossary-definition
-tags:
-  - CSP
-  - HTTP
-  - Security
 ---
+
+{{GlossarySidebar}}
 
 **{{Glossary("CSP")}} fetch directives** are used in a {{HTTPHeader("Content-Security-Policy")}} header and control locations from which certain resource types may be loaded. For instance, {{CSP("script-src")}} allows developers to allow trusted sources of script to execute on a page, while {{CSP("font-src")}} controls the sources of web fonts.
 
@@ -16,15 +14,12 @@ See [Fetch directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetc
 
 ## See also
 
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive")}}
   - {{Glossary("Document directive")}}
   - {{Glossary("Navigation directive")}}
-
 - Reference
-
   - <https://www.w3.org/TR/CSP/#directives-fetch>
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}

@@ -2,12 +2,6 @@
 title: static
 slug: Web/JavaScript/Reference/Classes/static
 page-type: javascript-language-feature
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Static
 browser-compat: javascript.classes.static
 ---
 
@@ -17,7 +11,8 @@ The **`static`** keyword defines a [static method or field](/en-US/docs/Web/Java
 
 Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
-> **Note:** In the context of classes, MDN Web Docs content uses the terms properties and [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) interchangeably.
+> [!NOTE]
+> In the context of classes, MDN Web Docs content uses the terms properties and [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) interchangeably.
 
 {{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
 
@@ -42,14 +37,16 @@ There are some additional syntax restrictions:
 
 This page introduces public static properties of classes, which include static methods, static accessors, and static fields.
 
-- For private static features, see [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+- For private static features, see [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 - For instance features, see [methods definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get), [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), and [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 
-Public static features are declared using the `static` keyword. They are added to the class constructor at the time of class evaluation using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}). They are accessed again from the class constructor.
+Public static features are declared using the `static` keyword. They are added to the class constructor at the time of [class evaluation](/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order) using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}). They are accessed again from the class constructor.
 
 Static methods are often utility functions, such as functions to create or clone instances. Public static fields are useful when you want a field to exist only once per class, not on every class instance you create. This is useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
-Static fields without initializers are initialized to `undefined`. Public static fields are not reinitialized on subclasses, but can be accessed via the prototype chain.
+Static field names can be [computed](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names). The `this` value in the computed expression is the `this` surrounding the class definition, and referring to the class's name is a {{jsxref("ReferenceError")}} because the class is not initialized yet. {{jsxref("Operators/await", "await")}} and {{jsxref("Operators/yield", "yield")}} work as expected in this expression.
+
+Static fields can have an initializer. Static fields without initializers are initialized to `undefined`. Public static fields are not reinitialized on subclasses, but can be accessed via the prototype chain.
 
 ```js
 class ClassWithStaticField {
@@ -87,6 +84,13 @@ class SubClassWithStaticField extends ClassWithStaticField {
 console.log(ClassWithStaticField.anotherBaseStaticField); // "base static field"
 console.log(SubClassWithStaticField.subStaticField); // "base static method output"
 ```
+
+The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await", "await")}} or {{jsxref("Operators/yield", "yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
+
+Static field initializers and [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) are evaluated one-by-one. Field initializers can refer to field values above it, but not below it. All static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the one being initialized.
+
+> [!NOTE]
+> This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 
 ## Examples
 
@@ -153,7 +157,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### Calling static members from a class constructor and other methods
 
-Static members are not directly accessible using the {{JSxRef("Operators/this", "this")}} keyword from
+Static members are not directly accessible using the {{jsxref("Operators/this", "this")}} keyword from
 non-static methods. You need to call them using the class name:
 `CLASSNAME.STATIC_METHOD_NAME()` /
 `CLASSNAME.STATIC_PROPERTY_NAME` or by calling the method as a property of
@@ -186,6 +190,7 @@ class StaticMethodCall {
 
 ## See also
 
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- {{jsxref("Statements/class", "class")}}

@@ -1,16 +1,12 @@
 ---
-title: Window.scrollBy()
+title: "Window: scrollBy() method"
+short-title: scrollBy()
 slug: Web/API/Window/scrollBy
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
 browser-compat: api.Window.scrollBy
 ---
 
-{{ APIRef() }}
+{{APIRef}}
 
 The **`Window.scrollBy()`** method scrolls the document in the
 window by the given amount.
@@ -18,19 +14,18 @@ window by the given amount.
 ## Syntax
 
 ```js-nolint
-scrollBy(x-coord, y-coord)
+scrollBy(xCoord, yCoord)
 scrollBy(options)
 ```
 
 ### Parameters
 
-- `x-coord` is the horizontal pixel value that you want to scroll by.
-- `y-coord` is the vertical pixel value that you want to scroll by.
-
-\- or -
-
+- `xCoord`
+  - : The horizontal pixel value that you want to scroll by.
+- `yCoord`
+  - : The vertical pixel value that you want to scroll by.
 - `options`
-  - : A dictionary containing the following parameters:
+  - : An object containing the following properties:
     - `top`
       - : Specifies the number of pixels along the Y axis to scroll the window or element.
     - `left`
@@ -62,7 +57,7 @@ Using `options`:
 window.scrollBy({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

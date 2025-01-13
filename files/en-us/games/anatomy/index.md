@@ -1,11 +1,7 @@
 ---
 title: Anatomy of a video game
 slug: Games/Anatomy
-tags:
-  - Games
-  - JavaScript
-  - Main Loop
-  - requestAnimationFrame
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -30,7 +26,7 @@ Modern JavaScript — as described in the next sections — thankfully makes it 
 
 JavaScript works best with events and callback functions. Modern browsers strive to call methods right as they are needed and idle (or do their other tasks) in the gaps. It is an excellent idea to attach your code to the moments that are appropriate for them. Think about whether your function really needs to be called on a strict interval of time, every frame, or only after something else happens. Being more specific with the browser about when your function needs to be called allows the browser to optimize when it is called. Also, it will probably make your job easier.
 
-Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, `{{ domxref("window.requestAnimationFrame()") }}` will be the foundation of most well-programmed per-frame main loops. A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:
+Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, {{ domxref("window.requestAnimationFrame()") }} will be the foundation of most well-programmed per-frame main loops. A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:
 
 ```js
 window.main = () => {
@@ -42,7 +38,8 @@ window.main = () => {
 main(); // Start the cycle
 ```
 
-> **Note:** In each of the `main()` methods discussed here, we schedule a new `requestAnimationFrame` before performing our loop contents. That is not by accident and it is considered best practice. Calling the next `requestAnimationFrame` early ensures the browser receives it on time to plan accordingly even if your current frame misses its VSync window.
+> [!NOTE]
+> In each of the `main()` methods discussed here, we schedule a new `requestAnimationFrame` before performing our loop contents. That is not by accident and it is considered best practice. Calling the next `requestAnimationFrame` early ensures the browser receives it on time to plan accordingly even if your current frame misses its VSync window.
 
 The above chunk of code has two statements. The first statement creates a function as a global variable called `main()`. This function does some work and also tells the browser to call itself next frame with `window.requestAnimationFrame()`. The second statement calls the `main()` function, defined in the first statement. Because `main()` is called once in the second statement and every call of it places itself in the queue of things to do next frame, `main()` is synchronized to your frame rate.
 
@@ -54,7 +51,7 @@ But do not immediately assume animations require frame-by-frame control. Simple 
 
 ## Building a better main loop in JavaScript
 
-There are two obvious issues with our previous main loop: `main()` pollutes the `{{ domxref("window") }}` object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
+There are two obvious issues with our previous main loop: `main()` pollutes the {{ domxref("window") }} object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
 
 <!-- prettier-ignore-start -->
 ```js
@@ -79,9 +76,10 @@ There are two obvious issues with our previous main loop: `main()` pollutes the 
 
 When the browser comes across this IIFE, it will define your main loop and immediately queue it for the next frame. It will not be attached to any object and `main` (or `main()` for methods) will be a valid unused name in the rest of the application, free to be defined as something else.
 
-> **Note:** In practice, it is more common to prevent the next `requestAnimationFrame()` with an if-statement, rather than calling `cancelAnimationFrame()`.
+> [!NOTE]
+> In practice, it is more common to prevent the next `requestAnimationFrame()` with an if-statement, rather than calling `cancelAnimationFrame()`.
 
-For the second issue, stopping the main loop, you will need to cancel the call to `main()` with `{{ domxref("window.cancelAnimationFrame()") }}`. You will need to pass `cancelAnimationFrame()` the ID token given by `requestAnimationFrame()` when it was last called. Let us assume that your game's functions and variables are built on a namespace that you called `MyGame`. Expanding our last example, the main loop would now look like:
+For the second issue, stopping the main loop, you will need to cancel the call to `main()` with {{ domxref("window.cancelAnimationFrame()") }}. You will need to pass `cancelAnimationFrame()` the ID token given by `requestAnimationFrame()` when it was last called. Let us assume that your game's functions and variables are built on a namespace that you called `MyGame`. Expanding our last example, the main loop would now look like:
 
 <!-- prettier-ignore-start -->
 ```js
@@ -129,7 +127,8 @@ You can think about developing realtime applications as having a budget of time 
 
 While we are on the topic of budgeting time, many web browsers have a tool called _High Resolution Time_. The {{jsxref("Date")}} object is no longer the recognized method for timing events because it is very imprecise and can be modified by the system clock. High Resolution Time, on the other hand, counts the number of milliseconds since `navigationStart` (when the previous document is unloaded). This value is returned as a decimal number accurate to a thousandth of a millisecond. It is known as a {{ domxref("DOMHighResTimeStamp") }} but, for all intents and purposes, consider it a floating point number.
 
-> **Note:** Systems (hardware or software) that are not capable of microsecond accuracy are allowed to provide millisecond accuracy as a minimum. They should provide 0.001ms accuracy if they are capable of it, however.
+> [!NOTE]
+> Systems (hardware or software) that are not capable of microsecond accuracy are allowed to provide millisecond accuracy as a minimum. They should provide 0.001ms accuracy if they are capable of it, however.
 
 This value is not too useful alone, since it is relative to a fairly uninteresting event, but it can be subtracted from another timestamp to accurately and precisely determine how much time elapsed between those two points. To acquire one of these timestamps, you can call `window.performance.now()` and store the result as a variable.
 
@@ -169,7 +168,8 @@ Several other optimizations are possible and it really depends on what your game
 
 You will need to make hard decisions about your main loop: how to simulate the accurate progress of time. If you demand per-frame control then you will need to determine how frequently your game will update and draw. You might even want update and draw to occur at different rates. You will also need to consider how gracefully your game will fail if the user's system cannot keep up with the workload. Let us start by assuming that you will handle user input and update the game state every time you draw. We will branch out later.
 
-> **Note:** Changing how your main loop deals with time is a debugging nightmare, everywhere. Think about your needs carefully before working on your main loop.
+> [!NOTE]
+> Changing how your main loop deals with time is a debugging nightmare, everywhere. Think about your needs carefully before working on your main loop.
 
 ### What most browser games should look like
 
@@ -214,17 +214,17 @@ Other methods of tackling the problem exist.
 
 One common technique is to update the simulation at a constant frequency and then draw as much (or as little) of the actual frames as possible. The update method can continue looping without care about what the user sees. The draw method can view the last update and when it happened. Since draw knows when it represents, and the simulation time for the last update, it can predict a plausible frame to draw for the user. It does not matter whether this is more frequent than the official update loop (or even less frequent). The update method sets checkpoints and, as frequently as the system allows, the render method draws instants of time around them. There are many ways to separate the update method in web standards:
 
-- Draw on `requestAnimationFrame` and update on a {{ domxref("setInterval()") }} or {{ domxref("setTimeout()") }}.
+- Draw on `requestAnimationFrame()` and update on a {{domxref("Window.setInterval", "setInterval()")}} or {{domxref("Window.setTimeout", "setTimeout()")}}.
 
   - This uses processor time even when unfocused or minimized, hogs the main thread, and is probably an artifact of traditional game loops (but it is simple.)
 
-- Draw on `requestAnimationFrame` and update on a `setInterval` or `setTimeout` in a [Web Worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
+- Draw on `requestAnimationFrame()` and update on a {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}} or {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} in a [Web Worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 
   - This is the same as above, except update does not hog the main thread (nor does the main thread hog it). This is a more complex solution, and might be too much overhead for simple updates.
 
-- Draw on `requestAnimationFrame` and use it to poke a Web Worker containing the update method with the number of ticks to compute, if any.
+- Draw on `requestAnimationFrame()` and use it to poke a Web Worker containing the update method with the number of ticks to compute, if any.
 
-  - This sleeps until `requestAnimationFrame` is called and does not pollute the main thread, plus you are not relying on old-fashioned methods. Again, this is a bit more complex than the previous two options, and _starting_ each update will be blocked until the browser decides to fire rAF callbacks.
+  - This sleeps until `requestAnimationFrame()` is called and does not pollute the main thread, plus you are not relying on old-fashioned methods. Again, this is a bit more complex than the previous two options, and _starting_ each update will be blocked until the browser decides to fire rAF callbacks.
 
 Each of these methods have similar tradeoffs:
 
@@ -236,7 +236,8 @@ Each of these methods have similar tradeoffs:
 
 A separate update and draw method could look like the following example. For the sake of demonstration, the example is based on the third bullet point, just without using Web Workers for readability (and, let's be honest, writability).
 
-> **Warning:** This example, specifically, is in need of technical review.
+> [!WARNING]
+> This example, specifically, is in need of technical review.
 
 <!-- prettier-ignore-start -->
 ```js

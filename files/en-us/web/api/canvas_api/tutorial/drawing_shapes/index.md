@@ -2,13 +2,6 @@
 title: Drawing shapes with canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - HTML
-  - HTML Canvas
-  - Intermediate
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
@@ -44,7 +37,7 @@ Below is the `draw()` function from the previous page, but now it is making use 
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -63,9 +56,13 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 This example's output is shown below.
 
-{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "canvas_rect.png")}}
+{{EmbedLiveSample("Rectangular_shape_example", "", "160")}}
 
 The `fillRect()` function draws a large black square 100 pixels on each side. The `clearRect()` function then erases a 60x60 pixel square from the center, and then `strokeRect()` is called to create a rectangular outline 50x50 pixels within the cleared square.
 
@@ -96,13 +93,15 @@ Here are the functions used to perform these steps:
 
 The first step to create a path is to call the `beginPath()`. Internally, paths are stored as a list of sub-paths (lines, arcs, etc.) which together form a shape. Every time this method is called, the list is reset and we can start drawing new shapes.
 
-> **Note:** When the current path is empty, such as immediately after calling `beginPath()`, or on a newly created canvas, the first path construction command is always treated as a `moveTo()`, regardless of what it actually is. For that reason, you will almost always want to specifically set your starting position after resetting a path.
+> [!NOTE]
+> When the current path is empty, such as immediately after calling `beginPath()`, or on a newly created canvas, the first path construction command is always treated as a `moveTo()`, regardless of what it actually is. For that reason, you will almost always want to specifically set your starting position after resetting a path.
 
 The second step is calling the methods that actually specify the paths to be drawn. We'll see these shortly.
 
 The third, and an optional step, is to call `closePath()`. This method tries to close the shape by drawing a straight line from the current point to the start. If the shape has already been closed or there's only one point in the list, this function does nothing.
 
-> **Note:** When you call `fill()`, any open shapes are closed automatically, so you don't have to call `closePath()`. This is **not** the case when you call `stroke()`.
+> [!NOTE]
+> When you call `fill()`, any open shapes are closed automatically, so you don't have to call `closePath()`. This is **not** the case when you call `stroke()`.
 
 ### Drawing a triangle
 
@@ -110,7 +109,7 @@ For example, the code for drawing a triangle would look something like this:
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="100" height="100"></canvas>
   </body>
 </html>
@@ -131,9 +130,13 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 The result looks like this:
 
-{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}
+{{EmbedLiveSample("Drawing_a_triangle", "", "110")}}
 
 ### Moving the pen
 
@@ -148,7 +151,7 @@ To try this for yourself, you can use the code snippet below. Just paste it into
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -173,13 +176,18 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 The result looks like this:
 
-{{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}
+{{EmbedLiveSample("Moving_the_pen", "", "160")}}
 
 If you'd like to see the connecting lines, you can remove the lines that call `moveTo()`.
 
-> **Note:** To learn more about the `arc()` function, see the [Arcs](#arcs) section below.
+> [!NOTE]
+> To learn more about the `arc()` function, see the [Arcs](#arcs) section below.
 
 ### Lines
 
@@ -194,7 +202,7 @@ The example below draws two triangles, one filled and one outlined.
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -224,9 +232,13 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 This starts by calling `beginPath()` to start a new shape path. We then use the `moveTo()` method to move the starting point to the desired position. Below this, two lines are drawn which make up two sides of the triangle.
 
-{{EmbedLiveSample("Lines", 160, 160, "canvas_lineto.png")}}
+{{EmbedLiveSample("Lines", "", "160")}}
 
 You'll notice the difference between the filled and stroked triangle. This is, as mentioned above, because shapes are automatically closed when a path is filled, but not when they are stroked. If we left out the `closePath()` for the stroked triangle, only two lines would have been drawn, not a complete triangle.
 
@@ -241,7 +253,8 @@ To draw arcs or circles, we use the `arc()` or `arcTo()` methods.
 
 Let's have a more detailed look at the `arc` method, which takes six parameters: `x` and `y` are the coordinates of the center of the circle on which the arc should be drawn. `radius` is self-explanatory. The `startAngle` and `endAngle` parameters define the start and end points of the arc in radians, along the curve of the circle. These are measured from the x axis. The `counterclockwise` parameter is a Boolean value which, when `true`, draws the arc counterclockwise; otherwise, the arc is drawn clockwise.
 
-> **Note:** Angles in the `arc` function are measured in radians, not degrees. To convert degrees to radians you can use the following JavaScript expression: `radians = (Math.PI/180)*degrees`.
+> [!NOTE]
+> Angles in the `arc` function are measured in radians, not degrees. To convert degrees to radians you can use the following JavaScript expression: `radians = (Math.PI/180)*degrees`.
 
 The following example is a little more complex than the ones we've seen above. It draws 12 different arcs all with different angles and fills.
 
@@ -251,11 +264,12 @@ The `x` and `y` coordinates should be clear enough. `radius` and `startAngle` ar
 
 The statement for the `clockwise` parameter results in the first and third row being drawn as clockwise arcs and the second and fourth row as counterclockwise arcs. Finally, the `if` statement makes the top half stroked arcs and the bottom half filled arcs.
 
-> **Note:** This example requires a slightly larger canvas than the others on this page: 150 x 200 pixels.
+> [!NOTE]
+> This example requires a slightly larger canvas than the others on this page: 150 x 200 pixels.
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="200"></canvas>
   </body>
 </html>
@@ -290,7 +304,11 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Arcs", 160, 210, "canvas_arc.png")}}
+```js hidden
+draw();
+```
+
+{{EmbedLiveSample("Arcs", "", "210")}}
 
 ### Bezier and quadratic curves
 
@@ -299,7 +317,7 @@ The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bezie
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : Draws a quadratic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control point specified by `cp1x` and `cp1y`.
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo", "bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)")}}
-  - : Draws a cubic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control points specified by (`cp1x`, `cp1y`) and (cp2x, cp2y).
+  - : Draws a cubic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control points specified by (`cp1x`, `cp1y`) and (`cp2x`, `cp2y`).
 
 The difference between these is that a quadratic Bézier curve has a start and an end point (blue dots) and just one **control point** (indicated by the red dot) while a cubic Bézier curve uses two control points.
 ![Quadratic and Bezier curve comparison.](canvas_curves.png)
@@ -316,7 +334,7 @@ This example uses multiple quadratic Bézier curves to render a speech balloon.
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -342,7 +360,11 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}
+```js hidden
+draw();
+```
+
+{{EmbedLiveSample("Quadratic_Bezier_curves", "", "160")}}
 
 #### Cubic Bezier curves
 
@@ -350,7 +372,7 @@ This example draws a heart using cubic Bézier curves.
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -376,7 +398,11 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}
+```js hidden
+draw();
+```
+
+{{EmbedLiveSample("Cubic_Bezier_curves", "", "160")}}
 
 ### Rectangles
 
@@ -393,8 +419,8 @@ So far, each example on this page has used only one type of path function per sh
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
+  <body>
+    <canvas id="canvas" width="200" height="185"></canvas>
   </body>
 </html>
 ```
@@ -405,8 +431,8 @@ function draw() {
   if (canvas.getContext) {
     const ctx = canvas.getContext("2d");
 
-    roundedRect(ctx, 12, 12, 150, 150, 15);
-    roundedRect(ctx, 19, 19, 150, 150, 9);
+    roundedRect(ctx, 12, 12, 184, 168, 15);
+    roundedRect(ctx, 19, 19, 170, 154, 9);
     roundedRect(ctx, 53, 53, 49, 33, 10);
     roundedRect(ctx, 53, 119, 49, 16, 6);
     roundedRect(ctx, 135, 53, 49, 33, 10);
@@ -481,13 +507,60 @@ function roundedRect(ctx, x, y, width, height, radius) {
 }
 ```
 
+```js hidden
+draw();
+```
+
 The resulting image looks like this:
 
-{{EmbedLiveSample("Making_combinations", 160, 160, "combinations.png")}}
+{{EmbedLiveSample("Making_combinations", "", "200")}}
 
 We won't go over this in detail, since it's actually surprisingly simple. The most important things to note are the use of the `fillStyle` property on the drawing context, and the use of a utility function (in this case `roundedRect()`). Using utility functions for bits of drawing you do often can be very helpful and reduce the amount of code you need, as well as its complexity.
 
 We'll take another look at `fillStyle`, in more detail, later in this tutorial. Here, all we're doing is using it to change the fill color for paths from the default color of black to white, and then back again.
+
+### Shapes with holes
+
+To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape anticlockwise or the outer shape anticlockwise and the inner shape clockwise.
+
+```html hidden
+<html lang="en">
+  <body>
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
+</html>
+```
+
+```js
+function draw() {
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+
+    // Outer shape clockwise ⟳
+    ctx.moveTo(0, 0);
+    ctx.lineTo(150, 0);
+    ctx.lineTo(75, 129.9);
+
+    // Inner shape anticlockwise ↺
+    ctx.moveTo(75, 20);
+    ctx.lineTo(50, 60);
+    ctx.lineTo(100, 60);
+
+    ctx.fill();
+  }
+}
+```
+
+```js hidden
+draw();
+```
+
+{{EmbedLiveSample("Shapes_with_holes", "", "160")}}
+
+In the example above, the outer triangle goes clockwise (move to the top-left corner, then draw a line to the top-right corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
 
 ## Path2D objects
 
@@ -516,7 +589,7 @@ In this example, we are creating a rectangle and a circle. Both are stored as a 
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="130" height="100"></canvas>
   </body>
 </html>
@@ -540,7 +613,11 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}
+```js hidden
+draw();
+```
+
+{{EmbedLiveSample("Path2D_example", "", "110")}}
 
 ### Using SVG paths
 

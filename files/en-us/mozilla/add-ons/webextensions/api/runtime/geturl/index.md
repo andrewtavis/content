@@ -2,20 +2,10 @@
 title: runtime.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getURL
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getURL
-  - runtime
 browser-compat: webextensions.api.runtime.getURL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Given a relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension, return a fully-qualified URL.
 
@@ -36,7 +26,7 @@ browser.runtime.getURL(
 
 ### Return value
 
-`string`. The fully-qualified URL to the resource.
+`string`. The fully-qualified URL to the resource within the extension.
 
 ## Browser compatibility
 
@@ -55,7 +45,8 @@ console.log(fullURL);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-getURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-getURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

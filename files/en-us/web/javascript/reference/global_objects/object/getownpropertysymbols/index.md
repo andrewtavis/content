@@ -2,12 +2,6 @@
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertySymbols
 ---
 
@@ -40,7 +34,7 @@ As all objects have no own symbol properties initially, `Object.getOwnPropertySy
 
 ## Examples
 
-### Using getOwnPropertySymbols
+### Using Object.getOwnPropertySymbols()
 
 ```js
 const obj = {};

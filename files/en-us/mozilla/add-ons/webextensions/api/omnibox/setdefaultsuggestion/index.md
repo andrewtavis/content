@@ -2,19 +2,10 @@
 title: omnibox.setDefaultSuggestion()
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - omnibox
-  - setDefaultSuggestion
 browser-compat: webextensions.api.omnibox.setDefaultSuggestion
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Set the default suggestion to appear in the address bar drop-down list when the user starts interacting with your extension.
 
@@ -45,10 +36,11 @@ None.
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property"
+  description: "Type the name of a CSS property",
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [chrome.omnibox](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
+> [!NOTE]
+> This API is based on Chromium's [chrome.omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

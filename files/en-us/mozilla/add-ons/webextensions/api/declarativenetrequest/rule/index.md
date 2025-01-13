@@ -1,23 +1,15 @@
 ---
 title: declarativeNetRequest.Rule
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/Rule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Type
-  - declarativeNetRequest
-  - Rule
+page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.Rule
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-The object describing the actions to take for matching requests. These can be specified in the static rule resources linked by the [manifest.json's `declarative_net_request` key](Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request), or more dynamically through the {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} or {{WebExtAPIRef("declarativeNetRequest.updateSessionRules")}} methods.
+The object describing the actions to take for matching requests. These can be specified in the static rule resources linked by the [manifest.json's `declarative_net_request` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request), or more dynamically through the {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} or {{WebExtAPIRef("declarativeNetRequest.updateSessionRules")}} methods.
 
-See [Rules](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules) on the API overview page for more information about rules.
+See [Rules](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules) on the API overview page for more information about rules.
 
 ## Type
 
@@ -30,7 +22,9 @@ Values of this type are objects. They contain these properties:
 - `id`
   - : `number`. An ID that uniquely identifies a rule within a ruleset. Mandatory and should be >= 1.
 - `priority` {{optional_inline}}
-  - : `number`. Rule priority. Defaults to 1. When specified, should be >= 1. See [Matching precedents](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedents) for details on how priority affects which rules are applied.
+  - : `number`. Rule priority. Defaults to 1. When specified, should be >= 1. See [Matching precedence](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedence) for details on how priority affects which rules are applied.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

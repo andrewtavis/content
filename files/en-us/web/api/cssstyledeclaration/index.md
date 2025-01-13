@@ -2,12 +2,6 @@
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - Interface
-  - Reference
 browser-compat: api.CSSStyleDeclaration
 ---
 
@@ -34,7 +28,7 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 
 - {{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}
   - : Special alias for the {{CSSxRef("float")}} CSS property.
-- {{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> named properties', "", 1)}}
+- `CSSStyleDeclaration` named properties
   - : Dashed and camel-cased attributes for all supported CSS properties.
 
 ## Instance methods
@@ -73,7 +67,3 @@ console.log(styleObj.cssText);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [CSS Properties Reference](/en-US/docs/Web/CSS/CSS_Properties_Reference)

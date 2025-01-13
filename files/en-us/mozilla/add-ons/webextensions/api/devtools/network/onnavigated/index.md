@@ -2,18 +2,10 @@
 title: devtools.network.onNavigated
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Event
-  - WebExtensions
-  - devtools.network
 browser-compat: webextensions.api.devtools.network.onNavigated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the user navigates the inspected window to a new page.
 
@@ -38,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `url`
       - : `string`. The new URL for the window.
@@ -61,7 +53,8 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

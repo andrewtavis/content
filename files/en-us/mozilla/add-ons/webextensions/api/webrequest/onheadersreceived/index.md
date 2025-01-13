@@ -2,20 +2,10 @@
 title: webRequest.onHeadersReceived
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHeadersReceived
-  - webRequest
 browser-compat: webextensions.api.webRequest.onHeadersReceived
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the HTTP response headers for a request are received. Use this event to modify HTTP response headers.
 
@@ -43,7 +33,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter, extraInfoSpec)`
+- `addListener(listener, filter, extraInfoSpec)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -54,9 +44,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : The function called when this event occurs. The function is passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
       - : [`object`](#details_2). Details of the request. This will include response headers if you have included `"responseHeaders"` in `extraInfoSpec`.
@@ -77,7 +67,7 @@ Events have three functions:
 ### details
 
 - `cookieStoreId`
-  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.
+  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `documentUrl`
   - : `string`. URL of the document in which the resource will be loaded. For example, if the web page at "https\://example.com" contains an image or an iframe, then the `documentUrl` for the image or iframe will be "https\://example.com". For a top-level document, `documentUrl` is undefined.
 - `frameAncestors`
@@ -153,7 +143,7 @@ Events have three functions:
   - : `string`. Target of the request.
 - `urlClassification`
 
-  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with the following properties:
+  - : `object`. The type of tracking associated with the request, if the request is classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
 
     - `firstParty`
       - : `array` of `strings`. Classification flags for the request's first party.
@@ -162,12 +152,17 @@ Events have three functions:
 
     The classification flags include:
 
-    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
+    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting ("an origin found to fingerprint").
+      - `fingerprinting` indicates the domain is in the fingerprinting and tracking category. Examples of this type of domain include advertisers who want to associate a profile with the visiting user.
+      - `fingerprinting_content` indicates the domain is in the fingerprinting category but not the tracking category. Examples of this type of domain include payment providers who use fingerprinting techniques to identify the visiting user for anti-fraud purposes.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
     - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
-    - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
-    - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
-    - `any_social_tracking`: a meta flag that combines any social tracking flags.
+    - `emailtracking` and `emailtracking_content`: indicates the request is involved in tracking emails.
+    - `any_basic_tracking`: a meta flag that combines tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
+    - `any_strict_tracking`: a meta flag that combines all tracking and fingerprinting flags.
+    - `any_social_tracking`: a meta flag that combines all social tracking flags.
+
+    You can find more information on tracker types on the [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) website. The `content` suffix indicates trackers that track and serve content. Blocking them protects users but can lead to sites breaking or elements not being displayed.
 
 ## Browser compatibility
 
@@ -178,14 +173,15 @@ Events have three functions:
 This code sets an extra cookie when requesting a resource from the target URL:
 
 ```js
-let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+let targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
 function setCookie(e) {
   const setMyCookie = {
     name: "Set-Cookie",
-    value: "my-cookie1=my-cookie-value1"
+    value: "my-cookie1=my-cookie-value1",
   };
   e.responseHeaders.push(setMyCookie);
   return { responseHeaders: e.responseHeaders };
@@ -196,14 +192,15 @@ function setCookie(e) {
 browser.webRequest.onHeadersReceived.addListener(
   setCookie,
   { urls: [targetPage] },
-  ["blocking", "responseHeaders"]
+  ["blocking", "responseHeaders"],
 );
 ```
 
 This code does the same thing the previous example, except that the listener is asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with the new headers:
 
 ```js
-const targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+const targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
@@ -213,7 +210,7 @@ function setCookieAsync(e) {
     setTimeout(() => {
       const setMyCookie = {
         name: "Set-Cookie",
-        value: "my-cookie1=my-cookie-value1"
+        value: "my-cookie1=my-cookie-value1",
       };
       e.responseHeaders.push(setMyCookie);
       resolve({ responseHeaders: e.responseHeaders });
@@ -228,13 +225,14 @@ function setCookieAsync(e) {
 browser.webRequest.onHeadersReceived.addListener(
   setCookieAsync,
   { urls: [targetPage] },
-  ["blocking", "responseHeaders"]
+  ["blocking", "responseHeaders"],
 );
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onHeadersReceived) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#event-onHeadersReceived) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

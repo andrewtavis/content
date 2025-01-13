@@ -2,26 +2,14 @@
 title: WebGL model view projection
 slug: Web/API/WebGL_API/WebGL_model_view_projection
 page-type: guide
-tags:
-  - 3D
-  - Graphics
-  - Guide
-  - Model
-  - Scale
-  - Transformation
-  - View
-  - WebGL
-  - matrix
-  - projection
-  - render
-  - rotation
 ---
 
 {{DefaultAPISidebar("WebGL")}}
 
 This article explores how to take data within a [WebGL](/en-US/docs/Web/API/WebGL_API) project, and project it into the proper spaces to display it on the screen. It assumes a knowledge of basic matrix math using translation, scale, and rotation matrices. It explains the three core matrices that are typically used when composing a 3D scene: the model, view and projection matrices.
 
-> **Note:** This article is also available as an [MDN content kit](https://github.com/gregtatum/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) available under the `MDN` global object.
+> [!NOTE]
+> This article is also available as an [MDN content kit](https://github.com/gregtatum/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) available under the `MDN` global object.
 
 ## The model, view, and projection matrices
 
@@ -45,7 +33,8 @@ For this section we will put our data into the clip space coordinate system dire
 
 This example will create a custom `WebGLBox` object that will draw a 2D box on the screen.
 
-> **Note:** The code for each WebGLBox example is available in this [GitHub repo](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
+> [!NOTE]
+> The code for each WebGLBox example is available in this [GitHub repo](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
 
 #### WebGLBox constructor
 
@@ -65,7 +54,7 @@ function WebGLBox() {
   this.webglProgram = MDN.createWebGLProgramFromIds(
     gl,
     "vertex-shader",
-    "fragment-shader"
+    "fragment-shader",
   );
   gl.useProgram(this.webglProgram);
 
@@ -382,10 +371,10 @@ CubeDemo.prototype.computeModelMatrix = function (now) {
   //Scale down by 50%
   const scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
 
-  // Rotate a slight tilt
+  // Rotate around X according to time
   const rotateX = MDN.rotateXMatrix(now * 0.0003);
 
-  // Rotate according to time
+  // Rotate around Y according to time slightly faster
   const rotateY = MDN.rotateYMatrix(now * 0.0005);
 
   // Move slightly down
@@ -413,7 +402,7 @@ And finally the uniform is set to that location. This hands off the matrix to th
 gl.uniformMatrix4fv(
   this.locations.model,
   false,
-  new Float32Array(this.transforms.model)
+  new Float32Array(this.transforms.model),
 );
 ```
 
@@ -423,7 +412,8 @@ In the shader, each position vertex is first transformed into a homogeneous coor
 gl_Position = model * vec4(position, 1.0);
 ```
 
-> **Note:** In JavaScript, matrix multiplication requires a custom function, while in the shader it is built into the language with the simple \* operator.
+> [!NOTE]
+> In JavaScript, matrix multiplication requires a custom function, while in the shader it is built into the language with the simple \* operator.
 
 ### The results
 
@@ -571,7 +561,7 @@ CubeDemo.prototype.computeSimpleProjectionMatrix = function (scaleFactor) {
 };
 ```
 
-Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional **[projection matrix](#projection_matrix)**, which (as the name suggests) projects 3D points onto a 2D drawing surface:
+Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional **[projection matrix](#the_model_view_and_projection_matrices)**, which (as the name suggests) projects 3D points onto a 2D drawing surface:
 
 ```glsl
 // Make sure to read the transformations in reverse order
@@ -627,7 +617,7 @@ MDN.perspectiveMatrix = function (
   fieldOfViewInRadians,
   aspectRatio,
   near,
-  far
+  far,
 ) {
   const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
   const rangeInv = 1 / (near - far);
@@ -677,7 +667,7 @@ CubeDemo.prototype.computePerspectiveMatrix = function () {
     fieldOfViewInRadians,
     aspectRatio,
     nearClippingPlaneDistance,
-    farClippingPlaneDistance
+    farClippingPlaneDistance,
   );
 };
 ```

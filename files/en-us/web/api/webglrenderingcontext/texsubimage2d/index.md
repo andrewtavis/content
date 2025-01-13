@@ -1,18 +1,12 @@
 ---
-title: WebGLRenderingContext.texSubImage2D()
+title: "WebGLRenderingContext: texSubImage2D() method"
+short-title: texSubImage2D()
 slug: Web/API/WebGLRenderingContext/texSubImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.texSubImage2D
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.texSubImage2D()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a sub-rectangle of the

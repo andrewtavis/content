@@ -2,14 +2,8 @@
 title: "::-webkit-inner-spin-button"
 slug: Web/CSS/::-webkit-inner-spin-button
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-inner-spin-button
 ---
 
@@ -61,6 +55,5 @@ Not part of any standard.
 
 ## See also
 
-- {{cssxref("::-webkit-outer-spin-button")}}
 - {{cssxref("::-webkit-textfield-decoration-container")}}
 - [Styling Form Controls – WebKit](https://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)

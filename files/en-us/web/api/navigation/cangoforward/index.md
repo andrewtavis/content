@@ -1,20 +1,10 @@
 ---
-title: Navigation.canGoForward
+title: "Navigation: canGoForward property"
+short-title: canGoForward
 slug: Web/API/Navigation/canGoForward
 page-type: web-api-instance-property
-tags:
-  - API
-  - canGoForward
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.canGoForward
 ---
 
@@ -27,7 +17,7 @@ and `false` if it is not.
 
 ## Value
 
-A boolean value:`true` if it is possible to navigate forwards in the navigation history, `false`otherwise.
+A boolean value: `true` if it is possible to navigate forwards in the navigation history, `false` otherwise.
 
 ## Examples
 
@@ -38,7 +28,7 @@ async function backHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the first page');
+    displayBanner("You are on the first page");
   }
 }
 
@@ -48,7 +38,7 @@ async function forwardHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the last page');
+    displayBanner("You are on the last page");
   }
 }
 ```

@@ -1,10 +1,8 @@
 ---
-title: 'Element: compositionupdate event'
+title: "Element: compositionupdate event"
+short-title: compositionupdate
 slug: Web/API/Element/compositionupdate_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
 browser-compat: api.Element.compositionupdate_event
 ---
 
@@ -12,21 +10,21 @@ browser-compat: api.Element.compositionupdate_event
 
 The **`compositionupdate`** event is fired when a new character is received in the context of a text composition session controlled by a text composition system such as an {{glossary("input method editor")}}.
 
-For example, this event could be fired while a user enters a Chinese character using a [Pinyin](https://en.wikipedia.org/wiki/Pinyin) IME.
+For example, this event could be fired while a user enters a Chinese character using a [Pinyin](https://en.wikipedia.org/wiki/Pinyin) {{glossary("Input method editor")}}.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('compositionupdate', (event) => {});
+addEventListener("compositionupdate", (event) => {});
 
-oncompositionupdate = (event) => { };
+oncompositionupdate = (event) => {};
 ```
 
 ## Event type
 
-A {{domxref("CompositionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("CompositionEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("CompositionEvent")}}
 
@@ -44,7 +42,7 @@ _This interface also inherits properties of its parent, {{domxref("UIEvent")}}, 
 ```js
 const inputElement = document.querySelector('input[type="text"]');
 
-inputElement.addEventListener('compositionupdate', (event) => {
+inputElement.addEventListener("compositionupdate", (event) => {
   console.log(`generated characters were: ${event.data}`);
 });
 ```
@@ -116,20 +114,20 @@ kbd {
 
 ```js
 const inputElement = document.querySelector('input[type="text"]');
-const log = document.querySelector('.event-log-contents');
-const clearLog = document.querySelector('.clear-log');
+const log = document.querySelector(".event-log-contents");
+const clearLog = document.querySelector(".clear-log");
 
-clearLog.addEventListener('click', () => {
-    log.textContent = '';
+clearLog.addEventListener("click", () => {
+  log.textContent = "";
 });
 
 function handleEvent(event) {
-    log.textContent += `${event.type}: ${event.data}\n`;
+  log.textContent += `${event.type}: ${event.data}\n`;
 }
 
-inputElement.addEventListener('compositionstart', handleEvent);
-inputElement.addEventListener('compositionupdate', handleEvent);
-inputElement.addEventListener('compositionend', handleEvent);
+inputElement.addEventListener("compositionstart", handleEvent);
+inputElement.addEventListener("compositionupdate", handleEvent);
+inputElement.addEventListener("compositionend", handleEvent);
 ```
 
 #### Result

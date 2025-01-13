@@ -2,12 +2,6 @@
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-bottom-width
 ---
 
@@ -48,7 +42,8 @@ border-bottom-width: unset;
     - `medium`
     - `thick`
 
-> **Note:** Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
+> [!NOTE]
+> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
 
 ## Formal definition
 

@@ -1,9 +1,7 @@
 ---
 title: Critical rendering path
 slug: Web/Performance/Critical_rendering_path
-tags:
-  - Performance
-  - Reference
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -19,7 +17,7 @@ Optimizing the critical rendering path improves the time to first render. Unders
 
 Web performance includes the server requests and responses, loading, scripting, rendering, layout, and the painting of the pixels to the screen.
 
-A request for a web page or app starts with an HTML request. The server returns the HTML - response headers and data. The browser then begins parsing the HTML, converting the received bytes to the DOM tree. The browser initiates requests every time it finds links to external resources, be it stylesheets, scripts, or embedded image references. Some requests are blocking, which means the parsing of the rest of the HTML is halted until the imported asset is handled. The browser continues to parse the HTML making requests and building the DOM, until it gets to the end, at which point it constructs the CSS object model. With the DOM and CSSOM complete, the browser builds the render tree, computing the styles for all the visible content. After the render tree is complete, layout occurs, defining the location and size of all the render tree elements. Once complete, the page is rendered, or 'painted' on the screen.
+A request for a web page or app starts with an HTTP request. The server sends a response containing the HTML. The browser then begins parsing the HTML, converting the received bytes to the DOM tree. The browser initiates requests every time it finds links to external resources, be it stylesheets, scripts, or embedded image references. Some requests are blocking, which means the parsing of the rest of the HTML is halted until the imported asset is handled. The browser continues to parse the HTML making requests and building the DOM, until it gets to the end, at which point it constructs the CSS object model. With the DOM and CSSOM complete, the browser builds the render tree, computing the styles for all the visible content. After the render tree is complete, layout occurs, defining the location and size of all the render tree elements. Once complete, the page is rendered, or 'painted' on the screen.
 
 ### Document Object Model
 
@@ -35,7 +33,7 @@ CSS has its own set of rules for identifying valid tokens. Remember the C in CSS
 
 In terms of selector performance, less specific selectors are faster than more specific ones. For example, `.foo {}` is faster than `.bar .foo {}` because when the browser finds `.foo`, in the second scenario, it has to walk up the DOM to check if `.foo` has an ancestor `.bar`. The more specific tag requires more work from the browser, but this penalty is not likely worth optimizing around.
 
-If you measure the time it takes to parse CSS, you'll be amazed at how fast browsers truly are. The more specific rule is more expensive because it has to traverse more nodes in the DOM tree - but that extra expense is generally minimal. Measure first. Optimize as needed. Specificity is likely not your lowest hanging fruit. When it comes to CSS, selector performance optimization improvements will only be in microseconds. There are other [ways to optimize CSS](/en-US/docs/Learn/Performance/CSS), such as minification, and separating deferred CSS into non-blocking requests by using media queries.
+If you measure the time it takes to parse CSS, you'll be amazed at how fast browsers truly are. The more specific rule is more expensive because it has to traverse more nodes in the DOM tree - but that extra expense is generally minimal. Measure first. Optimize as needed. Specificity is likely not your lowest hanging fruit. When it comes to CSS, selector performance optimization improvements will only be in microseconds. There are other [ways to optimize CSS](/en-US/docs/Learn_web_development/Extensions/Performance/CSS), such as minification, and separating deferred CSS into non-blocking requests by using media queries.
 
 ### Render Tree
 

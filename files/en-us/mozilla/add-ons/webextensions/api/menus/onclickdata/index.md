@@ -2,20 +2,10 @@
 title: menus.OnClickData
 slug: Mozilla/Add-ons/WebExtensions/API/menus/OnClickData
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - OnClickData
-  - Reference
-  - Type
-  - WebExtensions
-  - contextMenus
 browser-compat: webextensions.api.menus.OnClickData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Information passed to the {{WebExtAPIRef("menus.onClicked")}} event listener when a menu item is clicked.
 
@@ -66,7 +56,8 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-OnClickData) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#type-OnClickData) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

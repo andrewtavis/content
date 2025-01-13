@@ -2,17 +2,10 @@
 title: animation-composition
 slug: Web/CSS/animation-composition
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - Experimental
 browser-compat: css.properties.animation-composition
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`animation-composition`** [CSS](/en-US/docs/Web/CSS) property specifies the {{Glossary("composite operation")}} to use when multiple animations affect the same property simultaneously.
 
@@ -37,7 +30,8 @@ animation-composition: revert-layer;
 animation-composition: unset;
 ```
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. If the number of animations and compositions differ, the values listed in the `animation-composition` property will cycle from the first to the last `animation-name`, looping until all the animations have an assigned `animation-composition` value. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> [!NOTE]
+> When you specify multiple comma-separated values on an `animation-*` property, they will be applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. If the number of animations and compositions differ, the values listed in the `animation-composition` property will cycle from the first to the last `animation-name`, looping until all the animations have an assigned `animation-composition` value. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
 ### Values
 
@@ -77,7 +71,8 @@ Consider different values for the `animation-composition` property in the above 
 - With `add`, the composite effect value in the `0%` keyframe will be `blur(5px) blur(10px)`.
 - With `accumulate`, the composite effect value in `0%` keyframe will be `blur(15px)`.
 
-> **Note:** A composite operation can also be specified in a keyframe. In that case, the specified composite operation is used for each property first within that keyframe and then on each property in the next keyframe.
+> [!NOTE]
+> A composite operation can also be specified in a keyframe. In that case, the specified composite operation is used for each property first within that keyframe and then on each property in the next keyframe.
 
 ## Formal definition
 
@@ -114,6 +109,24 @@ The example below shows the effect of different `animation-composition` values s
 
 Here the underlying value is `translateX(50px) rotate(45deg)`.
 
+```css hidden
+.container {
+  width: 230px;
+  height: 200px;
+  background: cyan;
+  display: inline-block;
+  text-align: center;
+}
+
+.target {
+  width: 20px;
+  height: 50px;
+  background: green;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+```
+
 ```css
 @keyframes slide {
   20%,
@@ -127,18 +140,9 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
     background: orange;
   }
 }
-.container {
-  width: 240px;
-  height: 220px;
-  background: cyan;
-  display: inline-block;
-}
+
 .target {
-  width: 20px;
-  height: 50px;
-  background: green;
-  border-radius: 10px;
-  transform: translateX(50px) rotate(45deg);
+  transform: translateX(30px) rotate(45deg);
   animation: slide 5s linear infinite;
 }
 .target:hover {
@@ -159,9 +163,9 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 {{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
-- With `replace`, the final effect value for the `transform` property in the `0%, 20%` keyframe is `translateX(100px)` (completely replacing the underlying value `translateX(50px) rotate(45deg)`). In this case, the element rotates from 45deg to 0deg as it animates from the default value set on the element itself to the non-rotated value set at the 0% mark. This is the default behavior.
-- With `add`, the final effect value for the `transform` property in the `0%, 20%` keyframe is `translateX(50px) rotate(45deg)` followed by `translateX(100px)`. So the element is moved `50px` to the right, rotated `45deg`, then translated `100px` more along the redirected X axis.
-- With `accumulate`, the final effect value in the `0%, 20%` keyframe is `translateX(150px) rotate(45deg)`. This means that the two X-axis translation values of `50px` and `100px` are combined or "accumulated".
+- With `replace`, the final effect value for the `transform` property in the `0%, 20%` keyframe is `translateX(100px)` (completely replacing the underlying value `translateX(30px) rotate(45deg)`). In this case, the element rotates from 45deg to 0deg as it animates from the default value set on the element itself to the non-rotated value set at the 0% mark. This is the default behavior.
+- With `add`, the final effect value for the `transform` property in the `0%, 20%` keyframe is `translateX(30px) rotate(45deg)` followed by `translateX(100px)`. So the element is moved `30px` to the right, rotated `45deg`, then translated `100px` more along the redirected X axis.
+- With `accumulate`, the final effect value in the `0%, 20%` keyframe is `translateX(130px) rotate(45deg)`. This means that the two X-axis translation values of `30px` and `100px` are combined or "accumulated".
 
 ## Specifications
 
@@ -173,6 +177,6 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - [Composite property of KeyFrameEffect](/en-US/docs/Web/API/KeyframeEffect/composite)
 - Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

@@ -2,15 +2,6 @@
 title: scroll-margin
 slug: Web/CSS/scroll-margin
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - margin
-  - recipe:css-shorthand-property
-  - scroll-margin
-  - scrollbar
-  - scrolling
 browser-compat: css.properties.scroll-margin
 ---
 
@@ -51,7 +42,7 @@ scroll-margin: unset;
 
 ## Description
 
-You can see the effect of `scroll-margin` by scrolling to a point partway between two of the "pages" of the example's content. The value specified for `scroll-margin` determines how much of the page that's primarily outside the snapport should remain visible.
+You can see the effect of `scroll-margin` by scrolling to a point partway between two of the "pages" of the example's content. The value specified for `scroll-margin` determines how much of the page that's primarily outside the [snapport](/en-US/docs/Glossary/Scroll_snap#snapport) should remain visible.
 
 Thus, the `scroll-margin` values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
@@ -65,7 +56,7 @@ Thus, the `scroll-margin` values represent outsets defining the scroll snap area
 
 ## Examples
 
-### Simple demonstration
+### Basic demonstration
 
 This example implements something very similar to the interactive example above, except that here we'll explain to you how it's implemented.
 
@@ -73,7 +64,7 @@ The aim here is to create four horizontally-scrolling blocks, the second and thi
 
 #### HTML
 
-The HTML that represents the blocks is very simple:
+The HTML includes a scroller with four children:
 
 ```html
 <div class="scroller">
@@ -140,13 +131,14 @@ Last of all we specify the scroll margin-values, a different one for the second 
 
 This means that when scrolling past the middle child elements, the scrolling will snap to `1rem` outside the left edge of the second `<div>`, and `2rems` outside the left edge of the third `<div>`.
 
-> **Note:** Here we are setting `scroll-margin` on all sides at once, but only the start edge is really relevant. It would work just as well here to only set a scroll margin on that one edge, for example with `scroll-margin-inline-start: 1rem`, or `scroll-margin: 0 0 0 1rem`.
+> [!NOTE]
+> Here we are setting `scroll-margin` on all sides at once, but only the start edge is really relevant. It would work just as well here to only set a scroll margin on that one edge, for example with `scroll-margin-inline-start: 1rem`, or `scroll-margin: 0 0 0 1rem`.
 
 #### Result
 
 Try it for yourself:
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 300)}}
 
 ## Specifications
 
@@ -158,5 +150,5 @@ Try it for yourself:
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

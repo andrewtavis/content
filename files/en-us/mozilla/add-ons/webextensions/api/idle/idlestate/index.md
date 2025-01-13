@@ -2,20 +2,10 @@
 title: idle.IdleState
 slug: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - IdleState
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
 browser-compat: webextensions.api.idle.IdleState
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 String describing the device's idle state.
 
@@ -29,7 +19,8 @@ Values of this type are strings. Possible values are: `"active"`, `"idle"`, `"lo
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/idle/#type-IdleState) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle#type-IdleState) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

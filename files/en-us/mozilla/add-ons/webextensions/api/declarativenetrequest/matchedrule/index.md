@@ -1,19 +1,11 @@
 ---
 title: declarativeNetRequest.MatchedRule
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MatchedRule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Type
-  - declarativeNetRequest
-  - MatchedRule
+page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.MatchedRule
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An object describing the matched rule. This type may be returned by the {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} or {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome")}} methods, or observed through the {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug")}} event.
 
@@ -26,10 +18,12 @@ Values of this type are objects. They contain these properties:
 - `ruleId`
   - : A `number`. The matching rule's ID.
 - `rulesetId`
-  - : A `string`. The ID of the [ruleset](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rulesets) this rule belongs to. The value returned is:
-    - For a rule originating from the set of static rules, the value specified in the "id" key of the ruleset in the [`declarative_net_request.rule_resources` manifest key](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request).
+  - : A `string`. The ID of the [ruleset](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rulesets) this rule belongs to. The value returned is:
+    - For a rule originating from the set of static rules, the value specified in the "id" key of the ruleset in the [`declarative_net_request.rule_resources` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request).
     - For a rule originating from the set of dynamic rules, the value defined in {{WebExtAPIRef("declarativeNetRequest.DYNAMIC_RULESET_ID")}}, i.e., `"_dynamic"`.
     - For a rule originating from the set of session rules, the value defined in {{WebExtAPIRef("declarativeNetRequest.SESSION_RULESET_ID")}}, i.e., `"_session"`.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

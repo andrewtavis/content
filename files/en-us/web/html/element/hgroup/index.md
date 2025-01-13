@@ -1,12 +1,7 @@
 ---
-title: <hgroup>
+title: "<hgroup>: The Heading Group element"
 slug: Web/HTML/Element/hgroup
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 browser-compat: html.elements.hgroup
 ---
 
@@ -29,7 +24,7 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <title>HTML Standard</title>
 <body>
   <hgroup id="document-title">
@@ -46,9 +41,9 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
 </body>
 ```
 
-## Accessibility concerns
+### Result
 
-The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
+{{EmbedLiveSample('Examples')}}
 
 ## Technical summary
 
@@ -56,12 +51,12 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, heading content, palpable content.
       </td>
@@ -70,21 +65,21 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
       <th scope="row">Permitted content</th>
       <td>
         Zero or more {{HTMLElement("p")}} elements, followed by one
-        {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
-        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
-        {{HTMLElement("h5")}}, or {{HTMLElement("h6")}} element,
+        {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},
+        {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},
+        {{HTMLElement("Heading_Elements", "h5")}}, or {{HTMLElement("Heading_Elements", "h6")}} element,
         followed by zero or more {{HTMLElement("p")}} elements.
       </td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -92,8 +87,10 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"
+            >group</a
+          ></code
         >
       </td>
     </tr>
@@ -118,5 +115,5 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
 
 ## See also
 
-- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).

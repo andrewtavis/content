@@ -2,13 +2,9 @@
 title: Text formatting
 slug: Web/JavaScript/Guide/Text_formatting
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - "l10n:priority"
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_expressions")}}
 
 This chapter introduces how to work with strings and text in JavaScript.
 
@@ -18,7 +14,7 @@ JavaScript's [String](/en-US/docs/Glossary/String) type is used to represent tex
 
 ### String literals
 
-You can create simple strings using either single or double quotes:
+You can declare strings in source code using either single or double quotes:
 
 ```js-nolint
 'foo'
@@ -45,7 +41,7 @@ The Unicode escape sequences require at least four hexadecimal digits following 
 
 #### Unicode code point escapes
 
-With Unicode code point escapes, any character can be escaped using hexadecimal numbers so that it is possible to use Unicode code points up to `0x10FFFF`. With simple Unicode escapes it is often necessary to write the surrogate halves separately to achieve the same result.
+With Unicode code point escapes, any character can be escaped using hexadecimal numbers so that it is possible to use Unicode code points up to `0x10FFFF`. With the four-digit Unicode escapes it is often necessary to write the surrogate halves separately to achieve the same result.
 
 See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
 
@@ -86,7 +82,7 @@ hello[0] = "L"; // This has no effect, because strings are immutable
 hello[0]; // This returns "H"
 ```
 
-Characters whose Unicode scalar values are greater than U+FFFF (such as some rare Chinese/Japanese/Korean/Vietnamese characters and some emoji) are stored in UTF-16 with two surrogate code units each. For example, a string containing the single character U+1F600 "Emoji grinning face" will have length 2. Accessing the individual code units in such a string using brackets may have undesirable consequences such as the formation of strings with unmatched surrogate code units, in violation of the Unicode standard. (Examples should be added to this page after MDN bug 857438 is fixed.) See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
+Characters whose Unicode scalar values are greater than U+FFFF (such as some rare Chinese/Japanese/Korean/Vietnamese characters and some emoji) are stored in UTF-16 with two surrogate code units each. For example, a string containing the single character U+1F600 "Emoji grinning face" will have length 2. Accessing the individual code units in such a string using square brackets may have undesirable consequences such as the formation of strings with unmatched surrogate code units, in violation of the Unicode standard. (Examples should be added to this page after MDN bug 857438 is fixed.) See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
 
 A `String` object has a variety of methods: for example those that return a variation on the string itself, such as `substring` and `toUpperCase`.
 
@@ -327,4 +323,4 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 
 For more information about the {{jsxref("Intl")}} API, see also [Introducing the JavaScript Internationalization API](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/).
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_expressions")}}

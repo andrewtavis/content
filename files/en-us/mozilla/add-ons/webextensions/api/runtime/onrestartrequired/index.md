@@ -2,22 +2,12 @@
 title: runtime.onRestartRequired
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRestartRequired
-  - runtime
 browser-compat: webextensions.api.runtime.onRestartRequired
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Fired when an app or the device that it runs on needs to be restarted. The app should close all its windows at its earliest convenience to let the restart happen. If the app does nothing, a restart will be enforced after a 24-hour grace period has passed. Currently, this event is only fired for Chrome OS kiosk apps.
+Fired when an app or the device that it runs on needs to be restarted. The app should close all its windows at its earliest convenience to let the restart happen. If the app does nothing, a restart will be enforced after a 24-hour grace period has passed. Currently, this event is only fired for ChromeOS kiosk apps.
 
 ## Syntax
 
@@ -29,7 +19,7 @@ browser.runtime.onRestartRequired.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,7 +32,7 @@ Events have three functions:
 
 - `function`
 
-  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `reason`
       - : A {{WebExtAPIRef('runtime.OnRestartRequiredReason')}} value — the reason that the event is being dispatched.
@@ -55,7 +45,8 @@ Events have three functions:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onRestartRequired) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onRestartRequired) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -2,12 +2,6 @@
 title: <feSpecularLighting>
 slug: Web/SVG/Element/feSpecularLighting
 page-type: svg-element
-tags:
-  - Element
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feSpecularLighting
 ---
 
@@ -22,16 +16,6 @@ This filter primitive produces an image which contains the specular reflection p
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
 
 - {{SVGAttr("in")}}
 - {{SVGAttr("surfaceScale")}}

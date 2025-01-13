@@ -2,17 +2,6 @@
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
 page-type: web-api-interface
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Interface
-  - Media
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCDataChannel
 ---
 
@@ -90,7 +79,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.close", "close()")}}
-  - : Closes the {{domxref("RTCDataChannel")}}.
+  - : Closes the `RTCDataChannel`.
     Either peer is permitted to call this method
     to initiate closure of the channel.
 - {{DOMxRef("RTCDataChannel.send", "send()")}}

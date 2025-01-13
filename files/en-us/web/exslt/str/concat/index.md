@@ -1,10 +1,7 @@
 ---
 title: str:concat()
 slug: Web/EXSLT/str/concat
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -22,10 +19,10 @@ str:concat(nodeSet)
 - `nodeSet`
   - : The node-set whose nodes' string values should be concatenated into one string.
 
-### Returns
+### Return value
 
 A string whose value is all the string values of the nodes in `nodeSet` concatenated together. If `nodeSet` is empty, an empty string is returned.
 
 ## Specifications
 
-[EXSLT - STR:CONCAT](http://exslt.org/str/functions/concat/index.html)
+[EXSLT - STR:CONCAT](https://exslt.github.io/str/functions/concat/index.html)

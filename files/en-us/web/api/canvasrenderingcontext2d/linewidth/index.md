@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.lineWidth
+title: "CanvasRenderingContext2D: lineWidth property"
+short-title: lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineWidth
 ---
 
@@ -17,7 +12,8 @@ The
 **`CanvasRenderingContext2D.lineWidth`**
 property of the Canvas 2D API sets the thickness of lines.
 
-> **Note:** Lines can be drawn with the
+> [!NOTE]
+> Lines can be drawn with the
 > {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}},
 > {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.

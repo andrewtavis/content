@@ -2,12 +2,6 @@
 title: background-size
 slug: Web/CSS/background-size
 page-type: css-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.background-size
 ---
 
@@ -93,7 +87,8 @@ These attributes are as follows:
 - CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.
 - Background images created with the {{cssxref("element", "element()")}} function use the intrinsic dimensions and proportions of the generating element.
 
-> **Note:** In Gecko, background images created using the [`element()`](/en-US/docs/Web/CSS/element) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
+> [!NOTE]
+> In Gecko, background images created using the [`element()`](/en-US/docs/Web/CSS/element) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
 
 Based on the intrinsic dimensions and proportions, the rendered size of the background image is computed as follows:
 
@@ -109,7 +104,8 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
     The other dimension is computed using the specified dimension and the intrinsic proportions.
   - If the image has only one intrinsic dimension but has no intrinsic proportions, it's rendered using the specified dimension and the other dimension of the background positioning area.
 
-  > **Note:** SVG images have a [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute that defaults to the equivalent of `contain`; an explicit `background-size` causes `preserveAspectRatio` to be ignored.
+  > [!NOTE]
+  > SVG images have a [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute that defaults to the equivalent of `contain`; an explicit `background-size` causes `preserveAspectRatio` to be ignored.
 
 - **If the `background-size` has one `auto` component and one non-`auto` component:**
 
@@ -119,7 +115,8 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
     The unspecified dimension is computed using the image's corresponding intrinsic dimension, if there is one.
     If there is no such intrinsic dimension, it becomes the corresponding dimension of the background positioning area.
 
-> **Note:** Background sizing for vector images that lack intrinsic dimensions or proportions is not yet fully implemented in all browsers.
+> [!NOTE]
+> Background sizing for vector images that lack intrinsic dimensions or proportions is not yet fully implemented in all browsers.
 > Be careful about relying on the behavior described above, and test in multiple browsers to be sure the results are acceptable.
 
 ## Formal definition
@@ -160,7 +157,7 @@ To do this, we can use a fixed `background-size` value of 150 pixels.
 
 {{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
 
-See [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images) for more examples.
+See [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images) for more examples.
 
 ## Specifications
 
@@ -172,6 +169,6 @@ See [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders
 
 ## See also
 
-- [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
+- [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
 - [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

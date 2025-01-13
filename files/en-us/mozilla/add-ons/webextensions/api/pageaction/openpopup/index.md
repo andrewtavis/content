@@ -2,19 +2,10 @@
 title: pageAction.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - close
-  - sidebarAction
 browser-compat: webextensions.api.pageAction.openPopup
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Open the page action's popup.
 
@@ -46,7 +37,7 @@ Open the popup when the user selects a context menu item:
 browser.menus.create({
   id: "open-popup",
   title: "open popup",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

@@ -1,18 +1,10 @@
 ---
-title: HTMLImageElement.border
+title: "HTMLImageElement: border property"
+short-title: border
 slug: Web/API/HTMLImageElement/border
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - border
-  - img
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.border
 ---
 
@@ -42,7 +34,9 @@ For compatibility (or perhaps other) reasons, you can use the older properties i
 A string containing an integer value specifying the thickness of the
 border that should surround the image, in CSS pixels. A value of `0`, or an
 empty string, indicates that there should be no border drawn. The default value of
-`border` is `0`
+`border` is `0`.
+
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.border = null` is equivalent to `elt.border = ""`.
 
 ## Usage notes
 

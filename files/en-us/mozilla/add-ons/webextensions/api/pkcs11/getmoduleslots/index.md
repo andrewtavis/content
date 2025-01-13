@@ -2,19 +2,10 @@
 title: pkcs11.getModuleSlots()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getModuleSlots
-  - pkcs11
 browser-compat: webextensions.api.pkcs11.getModuleSlots
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Enumerate a module's slots. This function returns an array containing one entry for each slot. Each entry contains the slot's name and, if the slot contains a token, information about the token.
 

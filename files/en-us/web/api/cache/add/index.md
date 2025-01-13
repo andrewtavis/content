@@ -1,19 +1,12 @@
 ---
-title: Cache.add()
+title: "Cache: add() method"
+short-title: add()
 slug: Web/API/Cache/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
 browser-compat: api.Cache.add
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`add()`** method of the {{domxref("Cache")}} interface takes a URL, retrieves it, and adds the resulting response object to the given cache.
 
@@ -60,7 +53,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ## Examples
 
-This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.add")}} to add an asset to it.
+This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using `Cache.add` to add an asset to it.
 
 ```js
 this.addEventListener("install", (event) => {
@@ -80,4 +73,4 @@ this.addEventListener("install", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

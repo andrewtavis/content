@@ -2,21 +2,10 @@
 title: menus.ContextType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - ContextType
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - contextMenus
-  - menus
 browser-compat: webextensions.api.menus.ContextType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The different contexts a menu item can appear in.
 
@@ -26,6 +15,8 @@ Values of this type are strings. The item is displayed when the given context ap
 
 - all
   - : Specifying 'all' is equivalent to the combination of all other contexts except for 'bookmark', 'tab' and 'tools_menu'.
+- action
+  - : Applies when the user context-clicks your browser action in a Manifest V3 extension. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
 - audio
   - : Applies when the user context-clicks an [audio](/en-US/docs/Web/HTML/Element/audio) element.
 - bookmark
@@ -33,7 +24,7 @@ Values of this type are strings. The item is displayed when the given context ap
   - : Applies when the user context-clicks a bookmark item in the bookmarks toolbar, bookmarks menu, bookmarks sidebar (<kbd>Ctrl</kbd>+<kbd>B</kbd>) and the Library window (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>). The latter two are supported as of Firefox 66. Requires the "bookmarks" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in the manifest.
 
 - browser_action
-  - : Applies when the user context-clicks your browser action. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
+  - : Applies when the user context-clicks your browser action in a Manifest V2 extension. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
 - editable
   - : Applies when the user context-clicks an editable element, like a [textarea](/en-US/docs/Web/HTML/Element/textarea).
 - frame
@@ -69,7 +60,8 @@ Note that "launcher" is not supported.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-ContextType) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#type-ContextType) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

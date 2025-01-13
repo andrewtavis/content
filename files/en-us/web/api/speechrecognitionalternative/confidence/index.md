@@ -1,16 +1,8 @@
 ---
-title: SpeechRecognitionAlternative.confidence
+title: "SpeechRecognitionAlternative: confidence property"
+short-title: confidence
 slug: Web/API/SpeechRecognitionAlternative/confidence
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionAlternative
-  - Web Speech API
-  - confidence
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionAlternative.confidence
 ---
 
@@ -20,7 +12,8 @@ The **`confidence`** read-only property of the
 {{domxref("SpeechRecognitionResult")}} interface returns a numeric estimate of how
 confident the speech recognition system is that the recognition is correct.
 
-> **Note:** Mozilla's implementation of `confidence` is still
+> [!NOTE]
+> Mozilla's implementation of `confidence` is still
 > being worked on — at the moment, it always seems to return 1.
 
 ## Value
@@ -47,7 +40,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(`Confidence: ${event.results[0][0].confidence}`);
-}
+};
 ```
 
 ## Specifications

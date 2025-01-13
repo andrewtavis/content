@@ -2,20 +2,10 @@
 title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Non-standard
-  - OnChangedCause
-  - Reference
-  - Type
-  - WebExtensions
 browser-compat: webextensions.api.cookies.OnChangedCause
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `OnChangedCause` type of the {{WebExtAPIRef("cookies")}} API represents the reason a cookie changed.
 
@@ -44,16 +34,19 @@ You can listen to the {{WebExtAPIRef("cookies.onChanged")}} event to be notified
 
 ```js
 browser.cookies.onChanged.addListener((changeInfo) => {
-  console.log(`Cookie changed: \n`
-    + ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n`
-    + ` * Cause: ${changeInfo.cause}\n`
-    + ` * Removed: ${changeInfo.removed}`);
+  console.log(
+    `Cookie changed: \n` +
+      ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n` +
+      ` * Cause: ${changeInfo.cause}\n` +
+      ` * Removed: ${changeInfo.removed}`,
+  );
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#type-OnChangedCause) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-OnChangedCause) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,25 +1,19 @@
 ---
-title: CredentialsContainer.store()
+title: "CredentialsContainer: store() method"
+short-title: store()
 slug: Web/API/CredentialsContainer/store
 page-type: web-api-instance-method
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Method
-  - NeedsExample
-  - Reference
-  - credential management
 browser-compat: api.CredentialsContainer.store
 ---
 
-{{APIRef("Credential Management API")}}
+{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 The **`store()`** method of the
 {{domxref("CredentialsContainer")}} stores a set of credentials for the user inside a
 {{domxref("Credential")}} instance, returning this in a {{jsxref("Promise")}}.
 
-> **Note:** This method is restricted to top-level contexts. Calls to it within an
+> [!NOTE]
+> This method is restricted to top-level contexts. Calls to it within an
 > `<iframe>` element will resolve without effect.
 
 ## Syntax
@@ -36,6 +30,11 @@ store(credentials)
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to `undefined`.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if there is also a credential of the same type as the current one under operation.
 
 ## Examples
 
@@ -59,7 +58,7 @@ if ("PasswordCredential" in window) {
     },
     (err) => {
       console.error("Error while storing the credential: ", err);
-    }
+    },
   );
 }
 ```

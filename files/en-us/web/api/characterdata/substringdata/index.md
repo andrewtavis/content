@@ -1,10 +1,8 @@
 ---
-title: CharacterData.substringData()
+title: "CharacterData: substringData() method"
+short-title: substringData()
 slug: Web/API/CharacterData/substringData
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.substringData
 ---
 
@@ -33,7 +31,7 @@ and extending for a given number of characters afterwards.
 
 A string with the substring.
 
-## Exceptions
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `offset` + `count` is larger than the length of the contained data.

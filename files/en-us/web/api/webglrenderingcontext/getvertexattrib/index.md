@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.getVertexAttrib()
+title: "WebGLRenderingContext: getVertexAttrib() method"
+short-title: getVertexAttrib()
 slug: Web/API/WebGLRenderingContext/getVertexAttrib
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getVertexAttrib
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getVertexAttrib()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about a vertex

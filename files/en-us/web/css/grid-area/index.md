@@ -2,12 +2,6 @@
 title: grid-area
 slug: Web/CSS/grid-area
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.grid-area
 ---
 
@@ -25,7 +19,7 @@ When `grid-row-end` is omitted, if `grid-row-start` is a `<custom-ident>`, `grid
 
 When `grid-column-start` is omitted, if `grid-row-start` is a `<custom-ident>`, all four longhands are set to that value. Otherwise, it is set to `auto`.
 
-The grid-area property can also be set to a {{cssxref("&lt;custom-ident&gt;")}} which acts as a name for the area, which can then be placed using {{cssxref("grid-template-areas")}}.
+The `grid-area` property can also be set to a {{cssxref("&lt;custom-ident&gt;")}} which acts as a name for the area, which can then be placed using {{cssxref("grid-template-areas")}}.
 
 ## Constituent properties
 
@@ -72,9 +66,10 @@ grid-area: unset;
   - : Is a keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement or a default span of `1`.
 - `<custom-ident>`
 
-  - : If there is a named line with the name '`<custom-ident>-start`'/'`<custom-ident>-end`', it contributes the first such line to the grid item's placement.
+  - : If there is a named line with the name `<custom-ident>-start` or `<custom-ident>-end`, it contributes the first such line to the grid item's placement.
 
-    > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-area: foo;` will choose the start/end edge of that named grid area (unless another line named `foo-start`/`foo-end` was explicitly specified before it).
+    > [!NOTE]
+    > Named grid areas automatically generate implicit named lines of this form, so specifying `grid-area: foo;` will choose the start/end edge of that named grid area (unless another line named `foo-start`/`foo-end` was explicitly specified before it).
 
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
@@ -153,6 +148,12 @@ grid-area: unset;
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}
-- Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-template-areas")}}
+- [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- Video: [Grid template areas](https://gridbyexample.com/video/grid-template-areas/)

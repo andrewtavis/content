@@ -2,16 +2,10 @@
 title: "::highlight()"
 slug: Web/CSS/::highlight
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Experimental
 browser-compat: css.selectors.highlight
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`::highlight()`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to a custom highlight.
 
@@ -31,7 +25,7 @@ In particular, {{CSSxRef("background-image")}} is ignored.
 
 ## Syntax
 
-```
+```css-nolint
 ::highlight(custom-highlight-name)
 ```
 
@@ -128,3 +122,8 @@ for (let i = 0; i < textNode.textContent.length; i++) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API)
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module

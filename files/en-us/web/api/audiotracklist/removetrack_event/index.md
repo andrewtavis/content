@@ -1,21 +1,8 @@
 ---
 title: "AudioTrackList: removetrack event"
+short-title: removetrack
 slug: Web/API/AudioTrackList/removetrack_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - Event
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - Removing Audio Tracks
-  - Removing Tracks
-  - remove
-  - removetrack
-  - track
 browser-compat: api.AudioTrackList.removetrack_event
 ---
 
@@ -50,7 +37,7 @@ _`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are als
 
 ### Trigger
 
-The {{domxref("AudioTrackList/removetrack_event", "removetrack")}} event is called whenever a track is removed from the media
+The `removetrack` event is called whenever a track is removed from the media
 element whose audio tracks are represented by the `AudioTrackList` object.
 
 This event is not cancelable and does not bubble.

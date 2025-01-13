@@ -1,16 +1,7 @@
 ---
 title: "CSP: upgrade-insecure-requests"
 slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Requests
-  - Security
-  - Upgrade
-  - upgrade-insecure-requests
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.upgrade-insecure-requests
 ---
 
@@ -20,10 +11,11 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`upgrade-insecure-requests`** directive instructs user
 agents to treat all of a site's insecure URLs (those served over HTTP) as though they
 have been replaced with secure URLs (those served over HTTPS). This directive is
-intended for web sites with large numbers of insecure legacy URLs that need to be
+intended for websites with large numbers of insecure legacy URLs that need to be
 rewritten.
 
-> **Note:** The `upgrade-insecure-requests` directive is evaluated before
+> [!NOTE]
+> The `upgrade-insecure-requests` directive is evaluated before
 > {{CSP("block-all-mixed-content")}} and if it is set, the latter is effectively a
 > no-op. It is recommended to set either directive, but not both, unless you want to
 > force HTTPS on older browsers that do not force it after a redirect to HTTP.

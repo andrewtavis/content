@@ -1,13 +1,8 @@
 ---
-title: HTMLInputElement.showPicker()
+title: "HTMLInputElement: showPicker() method"
+short-title: showPicker()
 slug: Web/API/HTMLInputElement/showPicker
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - Reference
 browser-compat: api.HTMLInputElement.showPicker
 ---
 
@@ -56,7 +51,7 @@ None ({{jsxref("undefined")}}).
 The code below shows how to check if `showPicker()` is supported:
 
 ```js
-if ('showPicker' in HTMLInputElement.prototype) {
+if ("showPicker" in HTMLInputElement.prototype) {
   // showPicker() is supported.
 }
 ```
@@ -65,7 +60,8 @@ if ('showPicker' in HTMLInputElement.prototype) {
 
 This example shows how this feature can be used for `color` and `file` input pickers.
 
-> **Note:** Pickers for `date`, `datetime-local`, `month`, `time`, `week` are launched in the same way.
+> [!NOTE]
+> Pickers for `date`, `datetime-local`, `month`, `time`, `week` are launched in the same way.
 > They cannot be shown here because live examples run in a cross-origin frame, and would cause a [`SecurityError`](#securityerror)
 
 #### HTML
@@ -93,7 +89,7 @@ document.querySelectorAll("button").forEach((button) => {
     try {
       input.showPicker();
     } catch (error) {
-      window.alert(error);
+      console.log(error);
     }
   });
 });
@@ -115,7 +111,6 @@ First we define a `<datalist>` in HTML consisting of a number of internet browse
 <datalist id="browsers">
   <option value="Chrome"></option>
   <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
   <option value="Opera"></option>
   <option value="Safari"></option>
   <option value="Microsoft Edge"></option>
@@ -128,16 +123,16 @@ First we define a `<datalist>` in HTML consisting of a number of internet browse
 The code below adds an event listener that calls `showPicker()` when the button is clicked.
 
 ```js
-  const button = document.querySelector("button");
-  const browserInput = document.querySelector("input");
+const button = document.querySelector("button");
+const browserInput = document.querySelector("input");
 
-  button.addEventListener("click", () => {
-    try {
-      browserInput.showPicker();
-    } catch (error) {
-      // Fall back to another picker mechanism
-    }
-  });
+button.addEventListener("click", () => {
+  try {
+    browserInput.showPicker();
+  } catch (error) {
+    // Fall back to another picker mechanism
+  }
+});
 ```
 
 ### showPicker() for autocomplete
@@ -153,16 +148,16 @@ Here we define an input that takes an autocomplete option of "name".
 The code below shows the picker for the input when the button is clicked.
 
 ```js
-  const button = document.querySelector("button");
-  const browserInput = document.querySelector("input");
+const button = document.querySelector("button");
+const browserInput = document.querySelector("input");
 
-  button.addEventListener("click", () => {
-    try {
-      browserInput.showPicker();
-    } catch (error) {
-      // Fall back to another picker mechanism
-    }
-  });
+button.addEventListener("click", () => {
+  try {
+    browserInput.showPicker();
+  } catch (error) {
+    // Fall back to another picker mechanism
+  }
+});
 ```
 
 ## Specifications
@@ -177,5 +172,6 @@ The code below shows the picker for the input when the button is clicked.
 
 - {{ HTMLElement("input") }}
 - {{ domxref("HTMLInputElement") }}
+- {{ domxref("HTMLSelectElement.showPicker()") }}
 - {{htmlelement("datalist")}}
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)

@@ -1,14 +1,8 @@
 ---
-title: Window.console
+title: "Window: console property"
+short-title: console
 slug: Web/API/Window/console
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - console
 spec-urls: https://console.spec.whatwg.org/
 ---
 
@@ -38,4 +32,5 @@ For more examples, see the [Examples](/en-US/docs/Web/API/console#examples) sect
 
 {{Specifications}}
 
-> **Note:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.
+> [!NOTE]
+> Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.

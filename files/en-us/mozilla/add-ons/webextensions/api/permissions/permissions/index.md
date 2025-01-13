@@ -2,17 +2,10 @@
 title: Permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/Permissions
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Permissions
-  - Reference
-  - Type
-  - WebExtensions
 browser-compat: webextensions.api.permissions.Permissions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A `Permissions` object represents a collection of permissions.
 
@@ -31,4 +24,5 @@ An {{jsxref("object")}} with the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.

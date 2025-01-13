@@ -2,18 +2,10 @@
 title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - management
-  - uninstallSelf
 browser-compat: webextensions.api.management.uninstallSelf
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Uninstalls the calling add-on.
 
@@ -60,7 +52,7 @@ function onCanceled(error) {
 }
 
 let uninstalling = browser.management.uninstallSelf({
-  showConfirmDialog: true
+  showConfirmDialog: true,
 });
 
 uninstalling.then(null, onCanceled);
@@ -75,7 +67,7 @@ function onCanceled(error) {
 
 let uninstalling = browser.management.uninstallSelf({
   showConfirmDialog: true,
-  dialogMessage: "Testing self-uninstall"
+  dialogMessage: "Testing self-uninstall",
 });
 
 uninstalling.then(null, onCanceled);
@@ -83,9 +75,8 @@ uninstalling.then(null, onCanceled);
 
 {{WebExtExamples}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-uninstallSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-uninstallSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

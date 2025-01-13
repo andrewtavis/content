@@ -2,15 +2,7 @@
 title: "@color-profile"
 slug: Web/CSS/@color-profile
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Color
-  - color-profile
-browser-compat: css.at-rules.color-profile
+spec-urls: https://www.w3.org/TR/css-color-5/#at-profile
 ---
 
 {{CSSRef}}
@@ -44,6 +36,10 @@ The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CS
     - `saturation`
       - : This option was created to preserve the relative saturation (chroma) of the original, and to keep solid colors pure. However, it experienced interoperability problems like the perceptual intent.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 This example is from the specification and demonstrates using offset printing to ISO 12647-2:2004 using the CGATS/SWOP TR005 2007 characterization data on grade 5 paper with an ink limit of 300% Total Area Coverage, and medium gray component replacement (GCR).
@@ -59,14 +55,10 @@ The `src` descriptor specifies the URL to retrieve the color-profile information
 }
 ```
 
-## Formal syntax
-
-{{csssyntax}}
-
 ## Specifications
 
 {{Specifications}}
 
 ## Browser compatibility
 
-{{Compat}}
+There is no browser implementing this feature.

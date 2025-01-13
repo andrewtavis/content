@@ -2,13 +2,6 @@
 title: <feSpotLight>
 slug: Web/SVG/Element/feSpotLight
 page-type: svg-element
-tags:
-  - Element
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - Reference
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feSpotLight
 ---
 
@@ -22,12 +15,6 @@ It is used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
 
 - {{SVGAttr("x")}}
 - {{SVGAttr("y")}}
@@ -44,7 +31,7 @@ This element implements the {{domxref("SVGFESpotLightElement")}} interface.
 
 ## Example
 
-### HTML Content
+### HTML
 
 ```html
 <svg
@@ -73,7 +60,7 @@ This element implements the {{domxref("SVGFESpotLightElement")}} interface.
   </defs>
 
   <image
-    xlink:href="mdn_logo_only_color.png"
+    href="mdn_logo_only_color.png"
     x="10%"
     y="10%"
     width="80%"

@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.renderbufferStorage()
+title: "WebGLRenderingContext: renderbufferStorage() method"
+short-title: renderbufferStorage()
 slug: Web/API/WebGLRenderingContext/renderbufferStorage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.renderbufferStorage
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.renderbufferStorage()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a

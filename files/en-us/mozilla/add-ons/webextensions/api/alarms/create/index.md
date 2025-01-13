@@ -2,20 +2,10 @@
 title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
 browser-compat: webextensions.api.alarms.create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Creates a new alarm for the current browser session. An alarm may fire once or multiple times. An alarm is cleared after it fires for the last time.
 
@@ -93,7 +83,8 @@ browser.alarms.create("my-periodic-alarm", {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,21 +1,15 @@
 ---
 title: Traversing an HTML table with JavaScript and DOM Interfaces
-slug: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 page-type: guide
-tags:
-  - API
-  - DOM
-  - Guide
-  - HTML
-  - JavaScript
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
 This article is an overview of some powerful, fundamental DOM level 1 methods and how to use them from JavaScript. You will learn how to create, access and control, and remove HTML elements dynamically. The DOM methods presented here are not specific to HTML; they also apply to XML. The demonstrations provided here will work fine in any modern browser.
 
-> **Note:** The DOM methods presented here are part of the Document Object Model (Core) level 1 specification. DOM level 1 includes both methods for generic document access and manipulation (DOM 1 Core) as well as methods specific to HTML documents (DOM 1 HTML).
+> [!NOTE]
+> The DOM methods presented here are part of the Document Object Model (Core) level 1 specification. DOM level 1 includes both methods for generic document access and manipulation (DOM 1 Core) as well as methods specific to HTML documents (DOM 1 HTML).
 
 ## Creating an HTML table dynamically
 
@@ -232,7 +226,7 @@ After testing this sample, note that the words hello and world are together: hel
 
 ![Text nodes in a paragraph element as individual siblings in the DOM tree.](sample2b2.jpg)
 
-> **Note:** `createTextNode()` and `appendChild()` is a simple way to include white space between the words hello and world. Another important note is that the `appendChild` method will append the child after the last child, just like the word world has been added after the word hello. So if you want to append a Text Node between hello and world, you will need to use `insertBefore` instead of `appendChild`.
+> **Note:** `createTextNode()` and `appendChild()` is a simple way to include white space between the words _hello_ and _world_. Another important note is that the `appendChild` method will append the child after the last child, just like the word _world_ has been added after the word _hello_. So if you want to append a text node between _hello_ and _world_, you will need to use `insertBefore` instead of `appendChild`.
 
 ### Creating New Elements with the document object and the createElement(..) method
 
@@ -279,7 +273,8 @@ The basic steps to create the table in sample1.html are:
 - Create all the elements.
 - Finally, append each child according to the table structure (as in the above figure). The following source code is a commented version for the sample1.html.
 
-> **Note:** At the end of the `start` function, there is a new line of code. The table's `border` property was set using another DOM method, `setAttribute()`. `setAttribute()` has two arguments: the attribute name and the attribute value. You can set any attribute of any element using the `setAttribute` method.
+> [!NOTE]
+> At the end of the `start` function, there is a new line of code. The table's `border` property was set using another DOM method, `setAttribute()`. `setAttribute()` has two arguments: the attribute name and the attribute value. You can set any attribute of any element using the `setAttribute` method.
 
 ```html
 <html lang="en">
@@ -306,7 +301,7 @@ The basic steps to create the table in sample1.html are:
             const myCurrentCell = document.createElement("td");
             // creates a Text Node
             const currentText = document.createTextNode(
-              `cell is row ${j}, column ${i}`
+              `cell is row ${j}, column ${i}`,
             );
             // appends the Text Node we created into the cell <td>
             myCurrentCell.appendChild(currentText);
@@ -336,13 +331,14 @@ The basic steps to create the table in sample1.html are:
 
 This example introduces two new DOM attributes. First it uses the `childNodes` attribute to get the list of child nodes of myCell. The `childNodes` list includes all child nodes, regardless of what their name or type is. Like `getElementsByTagName()`, it returns a list of nodes.
 
-The differences are that (a) `getElementsByTagName()` only returns elements of the specified tag name; and (b) `getElementsByTagName()` returns descendants at any level, not just immediate children.
+The differences are that (a) `getElementsByTagName()` only returns elements of the specified tag name; and (b) `childNodes` includes all descendants at any level, not just immediate children.
 
-Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in myCellText the text node of the second cell in the second row of the table.
+Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in `myCellText` the text node of the second cell in the second row of the table.
 
 Then, to display the results in this example, it creates a new text node whose content is the data of `myCellText`, and appends it as a child of the `<body>` element.
 
-> **Note:** If your object is a text node, you can use the data attribute and retrieve the text content of the node.
+> [!NOTE]
+> If your object is a text node, you can use the data attribute and retrieve the text content of the node.
 
 ```js
 myBody = document.getElementsByTagName("body")[0];
@@ -390,7 +386,7 @@ Once you have the object in your JavaScript variable, you can set `style` proper
           // set the cell background color
           // if the column is 0. If the column is 1 hide the cell
           if (col === 0) {
-            myCurrentCell.style.background = "rgb(255, 0, 0)";
+            myCurrentCell.style.background = "rgb(255 0 0)";
           } else {
             myCurrentCell.style.display = "none";
           }

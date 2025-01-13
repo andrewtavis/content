@@ -2,22 +2,16 @@
 title: "RangeError: precision is out of range"
 slug: Web/JavaScript/Reference/Errors/Precision_range
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
 ---
 
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "precision is out of range" occurs when a number that's
-outside of the range of 0 and 20 (or 21) was passed into `toFixed` or
-`toPrecision`.
+outside of the allowed range was passed into `toExponential`, `toFixed`, or `toPrecision`.
 
 ## Message
 
-```
+```plain
 RangeError: toExponential() argument must be between 0 and 100 (V8-based & Safari)
 RangeError: toFixed() digits argument must be between 0 and 100 (V8-based & Safari)
 RangeError: toPrecision() argument must be between 1 and 100 (V8-based & Safari)

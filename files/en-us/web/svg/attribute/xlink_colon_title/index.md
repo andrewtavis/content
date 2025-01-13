@@ -2,11 +2,9 @@
 title: xlink:title
 slug: Web/SVG/Attribute/xlink:title
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.xlink.xlink_title
+status:
+  - deprecated
+browser-compat: svg.global_attributes.xlink_title
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
@@ -15,14 +13,15 @@ The **`xlink:title`** attribute is used to describe the meaning of a link or res
 
 The use of this information is highly dependent on the type of processing being done. It may be used, for example, to make titles available to applications used by visually impaired users, or to create a table of links, or to present help text that appears when a user lets a mouse pointer hover over a starting resource.
 
-> **Note:** New content should use a {{SVGElement("title")}} child element rather than a `xlink:title` attribute.
+> [!NOTE]
+> New content should use a {{SVGElement("title")}} child element rather than a `xlink:title` attribute.
+
+## Elements
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("cursor")}}
@@ -41,7 +40,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("tref")}}
 - {{SVGElement("use")}}
 
-## Usage context
+## Usage notes
 
 <table class="properties">
   <tbody>

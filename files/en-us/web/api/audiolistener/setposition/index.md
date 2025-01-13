@@ -1,15 +1,10 @@
 ---
-title: AudioListener.setPosition()
+title: "AudioListener: setPosition() method"
+short-title: setPosition()
 slug: Web/API/AudioListener/setPosition
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioListener
-  - Deprecated
-  - Method
-  - Reference
-  - Web Audio API
-  - setPosition
+status:
+  - deprecated
 browser-compat: api.AudioListener.setPosition
 ---
 
@@ -21,7 +16,8 @@ The three parameters `x`, `y` and `z` are unitless and describe the listener's p
 
 The default value of the position vector is `(0, 0, 0)`.
 
-> **Note: ** As this method is deprecated, use the three {{domxref("AudioListener.positionX", "positionX")}}, {{domxref("AudioListener.positionY", "positionY")}}, and {{domxref("AudioListener.positionZ", "positionZ")}} properties instead.
+> [!NOTE]
+> As this method is deprecated, use the three {{domxref("AudioListener.positionX", "positionX")}}, {{domxref("AudioListener.positionY", "positionY")}}, and {{domxref("AudioListener.positionZ", "positionZ")}} properties instead.
 
 ## Syntax
 
@@ -44,7 +40,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

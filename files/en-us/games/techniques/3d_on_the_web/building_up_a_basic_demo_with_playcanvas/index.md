@@ -1,18 +1,7 @@
 ---
 title: Building up a basic demo with PlayCanvas
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
-tags:
-  - 3D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - PlayCanvas
-  - Tutorial
-  - WebGL
-  - camera
-  - lighting
-  - rendering
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -31,7 +20,8 @@ PlayCanvas has a few well-known demos published that showcase its possibilities.
 
 ![A list of PlayCanvas demos: Tanx, Swooop, Star Lord, BMW i8.](playcanvas-demos.png)
 
-> **Note:** Check out the list of [featured demos](https://playcanvas.com/explore) to find more examples.
+> [!NOTE]
+> Check out the list of [featured demos](https://playcanvas.com/explore) to find more examples.
 
 ## Engine vs. editor
 

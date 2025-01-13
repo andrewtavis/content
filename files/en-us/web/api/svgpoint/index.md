@@ -2,13 +2,8 @@
 title: SVGPoint
 slug: Web/API/SVGPoint
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - NeedsContent
-  - SVG
+status:
   - deprecated
-  - Deprecated
 browser-compat: api.SVGPoint
 ---
 
@@ -40,6 +35,10 @@ let s = document.getElementById("SVG-ElementID").createSVGPoint();
 s.y = 10;
 s.x = 10;
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

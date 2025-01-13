@@ -2,13 +2,6 @@
 title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
 page-type: javascript-static-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Reference
-  - supportedValuesOf
 browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
 
@@ -16,14 +9,12 @@ browser-compat: javascript.builtins.Intl.supportedValuesOf
 
 The **`Intl.supportedValuesOf()`** static method returns an array containing the supported calendar, collation, currency, numbering systems, or unit values supported by the implementation.
 
-Duplicates are omitted and the array is sorted in ascending alphabetic order (or more precisely, using {{jsxref("Array/sort", "Array.prototype.sort()")}} with an `undefined` compare function)
+Duplicates are omitted and the array is sorted in ascending lexicographical order (or more precisely, using {{jsxref("Array/sort", "Array.prototype.sort()")}} with an `undefined` compare function).
 
 The method can be used to feature-test whether values are supported in a particular implementation and download a polyfill only if necessary.
 It can also be used to build UIs that allow users to select their preferred localized values, for example when the UI is created from WebGL or server-side.
 
 {{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html", "taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -34,17 +25,19 @@ Intl.supportedValuesOf(key)
 ### Parameters
 
 - `key`
-  - : A key string indicating the category of values to be returned.
-    This is one of: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
+  - : A key string indicating the category of values to be returned. This is one of: `"calendar"`, `"collation"`, `"currency"`, `"numberingSystem"`, `"timeZone"`, `"unit"`.
 
 ### Return value
 
 A sorted array of unique string values indicating the values supported by the implementation for the given key.
 
+> [!NOTE]
+> While the IANA database changes from time to time, the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes. Some browsers may use the legacy name, while others override it with the new name. See {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones")}} for more information.
+
 ### Exceptions
 
-- `RangeError`
-  - : An unsupported key was passed as a parameter.
+- {{jsxref("RangeError")}}
+  - : Thrown if an unsupported key was passed as a parameter.
 
 ## Examples
 
@@ -69,7 +62,8 @@ Intl.supportedValuesOf("calendar").forEach((calendar) => {
 });
 ```
 
-> **Note:** The array returned for calendar values will always include the value "gregory" (gregorian).
+> [!NOTE]
+> The array returned for calendar values will always include the value "gregory" (gregorian).
 
 The other values are all obtained in the same way:
 
@@ -115,5 +109,5 @@ try {
 
 ## See also
 
-- {{jsxref("Global_Objects/Intl", "Intl")}}
-- [A polyfill of `Intl.supportedValuesOf` in FormatJS](https://github.com/formatjs/formatjs/tree/main/packages/intl-enumerator)
+- [Polyfill of `Intl.supportedValuesOf` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-supportedvaluesof/)
+- {{jsxref("Intl")}}

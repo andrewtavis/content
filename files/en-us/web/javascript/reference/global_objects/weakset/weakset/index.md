@@ -2,19 +2,12 @@
 title: WeakSet() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakSet
-  - Polyfill
 browser-compat: javascript.builtins.WeakSet.WeakSet
 ---
 
 {{JSRef}}
 
-The **`WeakSet`** constructor lets you create
-`WeakSet` objects that store weakly held _objects_ in a collection.
+The **`WeakSet()`** constructor creates {{jsxref("WeakSet")}} objects.
 
 ## Syntax
 
@@ -28,8 +21,7 @@ new WeakSet(iterable)
 ### Parameters
 
 - `iterable` {{optional_inline}}
-  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
-    `WeakSet`. null is treated as undefined.
+  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new `WeakSet`. `null` is treated as `undefined`.
 
 ## Examples
 

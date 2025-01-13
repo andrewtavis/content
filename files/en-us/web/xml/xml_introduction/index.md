@@ -1,11 +1,7 @@
 ---
 title: XML introduction
 slug: Web/XML/XML_introduction
-tags:
-  - Beginner
-  - Introduction
-  - NeedsContent
-  - XML
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}
@@ -28,9 +24,9 @@ XML - declaration is not a tag. It is used for the transmission of the meta-data
 
 #### Attributes
 
-- version:
+- `version`
   - : Used version XML in this document.
-- encoding:
+- `encoding`
   - : Used encoding in this document.
 
 ### Comments
@@ -75,9 +71,9 @@ A document that contains an undefined tag is invalid. For example, if we never d
 
 Most browsers offer a debugger that can identify poorly-formed XML documents.
 
-## Entities
+## Character references
 
-Like HTML, XML offers methods (called entities) for referring to some special reserved characters (such as a greater than sign which is used for tags). There are five of these characters that you should know:
+Like HTML, XML offers {{glossary("character reference", "character references")}} for referring to some special reserved characters (such as a greater than sign which is used for tags). There are five of these characters that you should know:
 
 | Entity     | Character | Description                               |
 | ---------- | --------- | ----------------------------------------- |
@@ -87,7 +83,7 @@ Like HTML, XML offers methods (called entities) for referring to some special re
 | &amp;quot; | "         | One double-quotation mark                 |
 | &amp;apos; | '         | One apostrophe (or single-quotation mark) |
 
-Even though there are only 5 declared entities, more can be added using the document's [Document Type Definition](/en-US/docs/Glossary/Doctype). For example, to create a new `&warning;` entity, you can do this:
+Even though there are only 5 declared character references, or entities, more can be added using the document's [Document Type Definition](/en-US/docs/Glossary/Doctype). For example, to create a new `&warning;` entity, you can do this:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

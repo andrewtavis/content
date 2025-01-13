@@ -2,19 +2,10 @@
 title: Clients
 slug: Web/API/Clients
 page-type: web-api-interface
-tags:
-  - API
-  - Clients
-  - Interface
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - Workers
 browser-compat: api.Clients
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The `Clients` interface provides access to {{domxref("Client")}} objects. Access it via `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` within a [service worker](/en-US/docs/Web/API/Service_Worker_API).
 
@@ -63,7 +54,7 @@ addEventListener("notificationclick", (event) => {
 
       // Message the client:
       chatClient.postMessage("New chat messages!");
-    })()
+    })(),
   );
 });
 ```
@@ -79,5 +70,3 @@ addEventListener("notificationclick", (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}

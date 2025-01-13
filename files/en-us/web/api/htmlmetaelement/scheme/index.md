@@ -1,14 +1,10 @@
 ---
-title: HTMLMetaElement.scheme
+title: "HTMLMetaElement: scheme property"
+short-title: scheme
 slug: Web/API/HTMLMetaElement/scheme
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLMetaElement.scheme
 ---
 
@@ -31,7 +27,7 @@ The `scheme` value is logged to the console to display the scheme of the metadat
 
 ```js
 // given <meta name="identifier" content="1580081754" scheme="ISBN">
-let meta = document.querySelector("meta[name='identifier']");
+const meta = document.querySelector("meta[name='identifier']");
 console.log(meta.scheme);
 // "ISBN"
 ```

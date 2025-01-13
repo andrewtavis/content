@@ -2,19 +2,12 @@
 title: <feMergeNode>
 slug: Web/SVG/Element/feMergeNode
 page-type: svg-element
-tags:
-  - Element
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feMergeNode
 ---
 
 {{SVGRef}}
 
-The `feMergeNode` takes the result of another filter to be processed by its parent {{ SVGElement("feMerge") }}.
+The **`<feMergeNode>`** [SVG](/en-US/docs/Web/SVG) takes the result of another filter to be processed by its parent {{ SVGElement("feMerge") }}.
 
 ## Usage context
 
@@ -58,17 +51,11 @@ The `feMergeNode` takes the result of another filter to be processed by its pare
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute/Core)
-
-### Specific attributes
-
 - {{ SVGAttr("in") }}
 
 ## DOM Interface
 
-This element implements the [`SVGFEMergeNodeElement`](/en-US/docs/DOM/SVGFEMergeNodeElement) interface.
+This element implements the [`SVGFEMergeNodeElement`](/en-US/docs/Web/API/SVGFEMergeNodeElement) interface.
 
 ## Specifications
 

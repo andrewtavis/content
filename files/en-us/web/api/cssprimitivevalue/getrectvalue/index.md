@@ -1,13 +1,10 @@
 ---
-title: CSSPrimitiveValue.getRectValue()
+title: "CSSPrimitiveValue: getRectValue() method"
+short-title: getRectValue()
 slug: Web/API/CSSPrimitiveValue/getRectValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getRectValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getRectValue
 ---
 
@@ -19,7 +16,8 @@ value doesn't contain a rect value, a {{domxref("DOMException")}} is raised.
 Modification to the corresponding style property can be achieved using the
 {{domxref("Rect")}} interface.
 
-> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

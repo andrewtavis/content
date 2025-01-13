@@ -2,13 +2,6 @@
 title: TouchEvent
 slug: Web/API/TouchEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - TouchEvent
-  - touch
 browser-compat: api.TouchEvent
 ---
 
@@ -83,7 +76,8 @@ There are several types of event that can be fired to indicate that touch-relate
     This event is also sent
     if the values of the radius, rotation angle, or force attributes of a touch point change.
 
-    > **Note:** The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
+    > [!NOTE]
+    > The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
 
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
 
@@ -117,4 +111,3 @@ See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_eve
 
 - [Touch events](/en-US/docs/Web/API/Touch_events)
 - {{domxref("GestureEvent")}}
-- {{domxref("MSGestureEvent")}}

@@ -2,18 +2,16 @@
 title: Applying SVG effects to HTML content
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - HTML
-  - SVG
 ---
+
+{{SVGRef}}
 
 Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 
 You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/mask), [`clip-path`](/en-US/docs/Web/CSS/clip-path), and [`filter`](/en-US/docs/Web/CSS/filter).
 
-> **Note:** References to SVG in external files must be to the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the referencing document.
+> [!NOTE]
+> References to SVG in external files must be to the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the referencing document.
 
 ## Using embedded SVG
 
@@ -68,8 +66,10 @@ Applying the SVG effect to HTML is accomplished by assigning the `target` class 
 </p>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing
-  <em class="target">elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.</em>
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
+  >
   Ut enim ad minim veniam.
 </p>
 ```
@@ -89,8 +89,10 @@ This example demonstrates using SVG to clip HTML content. Notice that even the c
 </p>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing
-  <em class="target">elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.</em>
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
+  >
   Ut enim ad minim veniam.
 </p>
 
@@ -140,8 +142,10 @@ This demonstrates applying a filter to HTML content using SVG. It establishes se
 <pre class="target">lorem</pre>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing
-  <em class="target">elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.</em>
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
+  >
   Ut enim ad minim veniam.
 </p>
 ```
@@ -229,7 +233,7 @@ pre.target:hover {
 
 ### Example: Blurred Text
 
-In order to blur text, Webkit based browsers have a (prefixed) CSS filter called blur (see also [CSS filter](/en-US/docs/Web/CSS/filter#blur%28%29_2)). You can achieve the same effect using SVG filters.
+In order to blur text, there is a CSS filter function called [`blur()`](/en-US/docs/Web/CSS/filter-function/blur). You can achieve the same effect using SVG filters.
 
 ```html
 <p class="blur">Time to clean my glasses</p>

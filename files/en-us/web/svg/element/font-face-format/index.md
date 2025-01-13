@@ -2,13 +2,8 @@
 title: <font-face-format>
 slug: Web/SVG/Element/font-face-format
 page-type: svg-element
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Font
+status:
+  - deprecated
 browser-compat: svg.elements.font-face-format
 ---
 
@@ -21,12 +16,6 @@ The **`<font-face-format>`** [SVG](/en-US/docs/Web/SVG) element describes the ty
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
 
 {{SVGAttr("string")}} {{Deprecated_Inline}}
 

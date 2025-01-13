@@ -2,12 +2,6 @@
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Writing Modes
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.text-combine-upright
 ---
 
@@ -26,10 +20,6 @@ This is used to produce an effect that is known as tate-chū-yoko <q lang="ja">�
 text-combine-upright: none;
 text-combine-upright: all;
 
-/* Digits values */
-text-combine-upright: digits; /* fits 2 consecutive digits horizontally inside vertical text */
-text-combine-upright: digits 4; /* fits up to 4 consecutive digits horizontally inside vertical text */
-
 /* Global values */
 text-combine-upright: inherit;
 text-combine-upright: initial;
@@ -44,8 +34,9 @@ text-combine-upright: unset;
   - : There is no special processing.
 - `all`
   - : Attempts to typeset all consecutive characters within the box horizontally, such that they take up the space of a single character within the vertical line of the box.
-- `digits <integer>?`
-  - : Attempts to display a sequence of consecutive ASCII digits (U+0030–U+0039) that has as many or fewer characters than the specified integer, such that it takes up the space of a single character within the vertical line box. If the integer is omitted, it computes to 2. Integers outside the range of 2-4 are invalid.
+
+> [!NOTE]
+> The [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module defines a `digits <integer>` value for the `text-combine-upright` property to display two to four consecutive {{Glossary("ASCII")}} digits (U+0030–U+0039) such that it takes up the space of a single character within the vertical line box, however, this is not supported in any browsers.
 
 ## Formal definition
 
@@ -57,31 +48,7 @@ text-combine-upright: unset;
 
 ## Examples
 
-### Example using "digits"
-
-The digits value requires less markup than the all value when digits are being combined, but it is currently not very widely supported by browsers.
-
-#### HTML
-
-```html
-<p lang="ja" class="exampleText">平成20年4月16日に</p>
-```
-
-#### CSS
-
-```css
-.exampleText {
-  writing-mode: vertical-lr;
-  text-combine-upright: digits 2;
-  font: 36px serif;
-}
-```
-
-#### Results
-
-{{EmbedLiveSample('Example using "digits"', 100, 350, "tate-chu-yoko.png")}}
-
-### Example using "all"
+### Using 'all' with horizontal text
 
 The all value requires markup around every piece of horizontal text, but it is currently supported by more browsers than the digits value.
 
@@ -110,7 +77,7 @@ html {
 
 #### Results
 
-{{EmbedLiveSample('Example using "all"', 250, 300, "text-combine-upright-all.png")}}
+{{EmbedLiveSample('Example using "all"', 250, 200)}}
 
 ## Specifications
 

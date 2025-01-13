@@ -2,20 +2,10 @@
 title: bookmarks.onChildrenReordered
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChildrenReordered
 browser-compat: webextensions.api.bookmarks.onChildrenReordered
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the children of a folder have changed their order due to the order being sorted in the UI. This is not called as a result of a call to {{WebExtAPIRef("bookmarks.move()")}} or a drag operation in the UI.
 
@@ -29,7 +19,7 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -40,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `id`
       - : `string`. ID of the folder whose children were reordered.
@@ -77,7 +67,8 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#event-onChildrenReordered) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#event-onChildrenReordered) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

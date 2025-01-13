@@ -2,27 +2,14 @@
 title: Intl.DateTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 page-type: javascript-instance-method
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.format
 ---
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.prototype.format()`** method formats
-a date according to the locale and formatting options of this
-{{jsxref("Intl.DateTimeFormat")}} object.
+The **`format()`** method of {{jsxref("Intl.DateTimeFormat")}} instances formats a date according to the locale and formatting options of this `Intl.DateTimeFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -35,10 +22,12 @@ format(date)
 - `date`
   - : The date to format.
 
-## Description
+### Return value
 
-The `format` getter formats a date into a string according to the locale and
-formatting options of this {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object.
+A string representing the given `date` formatted according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object.
+
+> [!NOTE]
+> Most of the time, the formatting returned by `format()` is consistent. However, the output may vary between implementations, even within the same locale — output variations are by design and allowed by the specification. It may also not be what you expect. For example, the string may use non-breaking spaces or be surrounded by bidirectional control characters. You should not compare the results of `format()` to hardcoded constants.
 
 ## Examples
 
@@ -62,7 +51,7 @@ console.log(dateTimeFormat.format(new Date()));
 ### Using format with map
 
 Use the `format` getter function for formatting all dates in an array. Note
-that the function is bound to the {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+that the function is bound to the {{jsxref("Intl.DateTimeFormat")}}
 from which it was obtained, so it can be passed directly to
 {{jsxref("Array.prototype.map()")}}.
 
@@ -74,36 +63,6 @@ const formatted = a.map(dateTimeFormat.format);
 console.log(formatted.join("; "));
 // "setembro de 2012; dezembro de 2012; abril de 2012"
 ```
-
-### Avoid comparing formatted date values to static values
-
-Most of the time, the formatting returned by `format()` is consistent.
-However, this might change in the future and isn't guaranteed for all the languages —
-output variations are by design and allowed by the specification. Most notably, the IE
-and Edge browsers insert bidirectional control characters around dates, so the output
-text will flow properly when concatenated with other text.
-
-For this reason you cannot expect to be able to compare the results of
-`format()` to a static value:
-
-```js example-bad
-let d = new Date("2019-01-01T00:00:00.000000Z");
-let formattedDate = Intl.DateTimeFormat(undefined, {
-  year: "numeric",
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-}).format(d);
-
-"1.1.2019, 01:00:00" === formattedDate;
-// true in Firefox and others
-// false in IE and Edge
-```
-
-> **Note:** See also this [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
-> for more details and examples.
 
 ## Specifications
 

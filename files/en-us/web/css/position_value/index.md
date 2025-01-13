@@ -2,21 +2,15 @@
 title: <position>
 slug: Web/CSS/position_value
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.position
 ---
 
 {{CSSRef}}
 
-The **`<position>`** (or **`<bg-position>`**) [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}} and {{cssxref("offset-anchor")}} properties.
+The **`<position>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}} {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}} and {{cssxref("transform-origin")}} properties.
 
-> **Note:** The final position described by the `<position>` value does not need to be inside the element's box.
+> [!NOTE]
+> The final position described by the `<position>` value does not need to be inside the element's box.
 
 ## Syntax
 
@@ -45,11 +39,12 @@ value value              /* A value for each direction (horizontal then vertical
 keyword value keyword value /* Each value is an offset from the keyword that precedes it */
 ```
 
-> **Note:** The {{cssxref("background-position")}} property also accepts a three-value syntax. This is not allowed in other properties that use `<position>`.
+> [!NOTE]
+> The {{cssxref("background-position")}} property also accepts a three-value syntax. This is not allowed in other properties that use `<position>`.
 
 ## Interpolation
 
-When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single [timing function](/en-US/docs/Web/CSS/easing-function) for both coordinates, the point will move in a straight line.
+When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single [easing function](/en-US/docs/Web/CSS/easing-function) for both coordinates, the point will move in a straight line.
 
 ## Formal syntax
 
@@ -90,7 +85,7 @@ bottom top
 ## See also
 
 - [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS Values and Units introduction](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: CSS Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
 - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}

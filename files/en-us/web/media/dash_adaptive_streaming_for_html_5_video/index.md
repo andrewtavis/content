@@ -1,9 +1,7 @@
 ---
 title: DASH Adaptive Streaming for HTML 5 Video
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-tags:
-  - Guide
-  - HTML
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -14,17 +12,17 @@ Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. T
 
 Firefox 21 includes an implementation of DASH for HTML WebM video which is turned off by default. It can be enabled via "about:config" and the "media.dash.enabled" preference.
 
-Firefox 23 removed support for DASH for HTML WebM video. It will be replaced by an implementation of the [Media Source Extensions API](https://www.w3.org/TR/media-source/) which will allow support for DASH via JavaScript libraries such as dash.js. See bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617) for details.
+Firefox 23 removed support for DASH for HTML WebM video. It will be replaced by an implementation of the [Media Source Extensions API](https://www.w3.org/TR/media-source/) which will allow support for DASH via JavaScript libraries such as dash.js. See bug [778617](https://bugzil.la/778617) for details.
 
 ## Using DASH - Server Side
 
-First you'll need to convert your WebM video to a DASH manifest with the accompanying video files in various bit rates. To start with you'll only need the ffpmeg program from [ffmpeg.org](https://www.ffmpeg.org/), with libvpx and libvorbis support for WebM video and audio, at least version 2.5 (probably; this was tested with 3.2.5).
+First you'll need to convert your WebM video to a DASH manifest with the accompanying video files in various bit rates. To start with you'll only need the FFmpeg program from [ffmpeg.org](https://www.ffmpeg.org/), with libvpx and libvorbis support for WebM video and audio, at least version 2.5 (probably; this was tested with 3.2.5).
 
 ### 1. Use your existing WebM file to create one audio file and multiple video files
 
 For example:
 
-The file **_in.video_** can be any container with at least one audio and one video stream that can be decoded by ffmpeg,
+The file **_in.video_** can be any container with at least one audio and one video stream that can be decoded by FFmpeg,
 
 Create the audio using:
 
@@ -107,8 +105,8 @@ That's it! If DASH is supported by the browser, your video will now stream adapt
 
 ## Links
 
-[WebM DASH Specification at The WebM Project](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
+[WebM DASH Specification at The WebM Project](https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
 
 [DASH Industry Forum](https://dashif.org/)
 
-[WebM project description of how to create DASH files with FFMPEG](http://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)
+[WebM project description of how to create DASH files with FFMPEG](https://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)

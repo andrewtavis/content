@@ -2,20 +2,10 @@
 title: pageAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setTitle
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
-  - setTitle
 browser-compat: webextensions.api.pageAction.setTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the title of the page action. The title is displayed in a tooltip when the user hovers over the page action.
 
@@ -61,7 +51,8 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#method-setTitle) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#method-setTitle) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

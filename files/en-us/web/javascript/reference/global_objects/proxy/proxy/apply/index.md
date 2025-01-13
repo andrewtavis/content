@@ -2,11 +2,6 @@
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.apply
 ---
 
@@ -22,7 +17,7 @@ The **`handler.apply()`** method is a trap for the `[[Call]]` [object internal m
 new Proxy(target, {
   apply(target, thisArg, argumentsList) {
   }
-});
+})
 ```
 
 ### Parameters
@@ -34,11 +29,11 @@ The following parameters are passed to the `apply()` method. `this` is bound to 
 - `thisArg`
   - : The `this` argument for the call.
 - `argumentsList`
-  - : The list of arguments for the call.
+  - : An {{jsxref("Array")}} containing the arguments passed to the function.
 
 ### Return value
 
-The `apply()` method can return any value.
+The `apply()` method can return any value, representing the return value of the function call.
 
 ## Description
 
@@ -54,7 +49,7 @@ Or any other operation that invokes the `[[Call]]` [internal method](/en-US/docs
 
 ### Invariants
 
-If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
+The proxy's `[[Call]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
 - The `target` must be a callable itself. That is, it must be a function object.
 

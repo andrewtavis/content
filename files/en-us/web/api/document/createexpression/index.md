@@ -1,14 +1,8 @@
 ---
-title: Document.createExpression()
+title: "Document: createExpression() method"
+short-title: createExpression()
 slug: Web/API/Document/createExpression
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - XPath
-  - createExpression
 browser-compat: api.Document.createExpression
 ---
 
@@ -45,6 +39,10 @@ const nodeContext = document.querySelector("nav");
 // Re-using the XPathExpression "xpathExpr"
 const otherResult = xpathExpr.evaluate(nodeContext); // returns an XPathResult object
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

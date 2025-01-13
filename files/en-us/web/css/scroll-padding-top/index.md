@@ -2,14 +2,6 @@
 title: scroll-padding-top
 slug: Web/CSS/scroll-padding-top
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-padding
-  - scroll-padding-top
 browser-compat: css.properties.scroll-padding-top
 ---
 
@@ -40,7 +32,7 @@ scroll-padding-top: unset;
 
 ### Values
 
-- `{{cssxref("&lt;length-percentage&gt;")}}`
+- {{cssxref("&lt;length-percentage&gt;")}}
   - : An inwards offset from the top edge of the scrollport, as a valid length or a percentage.
 - `auto`
   - : The offset is determined by the user agent. This will generally be 0px, but a user agent is able to detect and do something else if a non-zero value is more appropriate.
@@ -63,5 +55,5 @@ scroll-padding-top: unset;
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

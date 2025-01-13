@@ -1,10 +1,7 @@
 ---
 title: Optimizing startup performance
 slug: Web/Performance/Optimizing_startup_performance
-tags:
-  - Apps
-  - Games
-  - Performance
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -35,7 +32,7 @@ However, even code like that can be made asynchronous, with a little work.
 
 Here are some suggestions for how to build your startup process to be as asynchronous as possible (whether it's a new app or a port):
 
-- Use the [`defer`](/en-US/docs/Web/HTML/Element/script#attr-defer) or [`async`](/en-US/docs/Web/HTML/Element/script#attr-async) attribute on script tags needed by the Web application. This allows HTML parsers to continue processing the document, instead of having to wait until the scripts have been downloaded and executed before continuing.
+- Use the [`defer`](/en-US/docs/Web/HTML/Element/script#defer) or [`async`](/en-US/docs/Web/HTML/Element/script#async) attribute on script tags needed by the Web application. This allows HTML parsers to continue processing the document, instead of having to wait until the scripts have been downloaded and executed before continuing.
 - If you need to decode asset files (for example, decoding JPEG files and turning them into raw texture data for later use by WebGL), that's great to do in workers.
 - When dealing with data supported by the browser (for example, decoding image data), use the decoders built into the browser or device rather than rolling your own or using one from the original codebase. The provided one is almost certainly significantly faster, and will reduce your app size to boot. In addition, the browser may automatically parallelize these decoders.
 - Any data processing that can be done in parallel should be. Don't do one chunk of data after another; do them all at once when possible!
@@ -65,11 +62,11 @@ In terms of responsiveness, users won't notice a delay of 50ms or less. Any dela
 There are other things beyond going asynchronous, which can help you improve your app's startup time. Here are a few of them:
 
 - Download time
-  - : Keep in mind how long it will take the user to download your application's data. If your application is very popular, or has to re-download content frequently, you should try to have as fast a hosting server as possible. Always [compress](/en-US/docs/Glossary/GZip_compression) your data to make it as small as you can.
+  - : Keep in mind how long it will take the user to download your application's data. If your application is very popular, or has to re-download content frequently, you should try to have as fast a hosting server as possible. Always [compress](/en-US/docs/Glossary/gzip_compression) your data to make it as small as you can.
 - Data size
   - : Do your best to optimize the size of your data; smaller level files will download and be processed faster than larger ones.
 - Subjective factors
-  - : Anything you can do to help keep the user engaged during the startup process will help make the time seem to go by faster. Displaying a mock splash screen can improve [perceived performance](/en-US/docs/Learn/Performance/Perceived_performance). For heavy sites, anything you can do to help the user feel like your app is doing something instead of sitting there quietly helps.
+  - : Anything you can do to help keep the user engaged during the startup process will help make the time seem to go by faster. Displaying a mock splash screen can improve [perceived performance](/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance). For heavy sites, anything you can do to help the user feel like your app is doing something instead of sitting there quietly helps.
 
 ## See also
 

@@ -1,15 +1,7 @@
 ---
 title: Buttons
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
-tags:
-  - 2D
-  - Beginner
-  - Buttons
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -54,7 +46,7 @@ startButton = game.add.button(
   this,
   1,
   0,
-  2
+  2,
 );
 startButton.anchor.set(0.5);
 ```
@@ -67,7 +59,8 @@ The `button()` method's parameters are as follows:
 - A reference to `this` to specify the execution context
 - The frames that will be used for the _over_, _out_ and _down_ events.
 
-> **Note:** The over event is the same as hover, out is when the pointer moves out of the button and down is when the button is pressed.
+> [!NOTE]
+> The over event is the same as hover, out is when the pointer moves out of the button and down is when the button is pressed.
 
 Now we need to define the `startGame()` function referenced in the code above:
 

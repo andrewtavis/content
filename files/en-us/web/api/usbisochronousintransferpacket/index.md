@@ -2,19 +2,12 @@
 title: USBIsochronousInTransferPacket
 slug: Web/API/USBIsochronousInTransferPacket
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBIsochronousInTransferPacket
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBIsochronousInTransferPacket
 ---
 
-{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The `USBIsochronousInTransferPacket` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) is part of the response from a call to the `isochronousTransferIn()` method of the `USBDevice` interface. It represents the status of an individual packet from a request to transfer data from the USB device to the USB host over an isochronous endpoint.
 

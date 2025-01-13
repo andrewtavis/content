@@ -1,16 +1,13 @@
 ---
 title: "Permissions-Policy: microphone"
 slug: Web/HTTP/Headers/Permissions-Policy/microphone
-tags:
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - header
-  - microphone
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.microphone
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `microphone` directive controls whether the current document is allowed to use audio input devices.
 

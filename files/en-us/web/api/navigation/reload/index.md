@@ -1,20 +1,10 @@
 ---
-title: Navigation.reload()
+title: "Navigation: reload() method"
+short-title: reload()
 slug: Web/API/Navigation/reload
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - reload
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.reload
 ---
 
@@ -33,9 +23,9 @@ navigate(options)
 
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
-    - `state`
+    - `state` {{optional_inline}}
       - : Developer-defined information to be stored in the associated {{domxref("NavigationHistoryEntry")}} once the navigation is complete, retrievable via {{domxref("NavigationHistoryEntry.getState", "getState()")}}. This can be any data type. You might, for example, wish to store a page visit count for analytics purposes, or store UI state details so the view can be shown exactly as the user last left it. Any data stored in `state` must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-    - `info`
+    - `info` {{optional_inline}}
       - : Developer-defined information to be passed along to the {{domxref("Navigation/navigate_event", "navigate")}} event, made available in {{domxref("NavigateEvent.info")}}. This can be any data type. You might, for example, wish to display newly-navigated content with a different animation depending on how it was navigated to (swipe left, swipe right, or go home). A string indicating which animation to use could be passed in as `info`.
 
 ### Return value
@@ -60,8 +50,12 @@ Either one of these promises rejects if the navigation has failed for some reaso
 
 ```js
 async function handleReload() {
-  await navigation.reload({ info: { animation: "fade-in" }, state: { infoPaneOpen: true } } );
+  await navigation.reload({
+    info: { animation: "fade-in" },
+    state: { infoPaneOpen: true },
+  }).finished;
 
+  // Update application state
   // ...
 }
 ```
@@ -70,8 +64,11 @@ Reload page and add a new state item:
 
 ```js
 async function handleReload() {
-  await navigation.reload({ state: { ...navigation.currentEntry.getState(), newState: 3 } });
+  await navigation.reload({
+    state: { ...navigation.currentEntry.getState(), newState: 3 },
+  }).finished;
 
+  // Update application state
   // ...
 }
 ```

@@ -2,12 +2,6 @@
 title: image-orientation
 slug: Web/CSS/image-orientation
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - image-orientation
-  - recipe:css-property
 browser-compat: css.properties.image-orientation
 ---
 
@@ -118,5 +112,5 @@ document.addEventListener("change", (evt) => {
 
 ## See also
 
-- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
 - {{cssxref("transform")}} and {{cssxref("rotate")}}

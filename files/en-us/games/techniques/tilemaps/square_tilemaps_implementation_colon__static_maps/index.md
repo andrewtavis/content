@@ -1,23 +1,15 @@
 ---
 title: "Square tilemaps implementation: Static maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-  - Static
-  - atlas
-  - spritesheet
-  - tilemap
-  - tilemaps
-  - tiles
+page-type: guide
 ---
 
 {{GamesSidebar}}
 
 This article covers how to implement static square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 
-> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article.
+> [!NOTE]
+> When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article.
 
 ## The tile atlas
 
@@ -94,7 +86,7 @@ for (let c = 0; c < map.cols; c++) {
         c * map.tsize, // target x
         r * map.tsize, // target y
         map.tsize, // target width
-        map.tsize // target height
+        map.tsize, // target height
       );
     }
   }

@@ -2,20 +2,10 @@
 title: BrowserSetting.onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Event
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
-  - onchange
 browser-compat: webextensions.api.types.BrowserSetting.onChange
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `BrowserSetting.onChange` event is fired when the setting is changed.
 
@@ -42,9 +32,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `details`
 
@@ -85,7 +75,8 @@ Events have three functions:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,21 +1,14 @@
 ---
-title: USBDevice.clearHalt()
+title: "USBDevice: clearHalt() method"
+short-title: clearHalt()
 slug: Web/API/USBDevice/clearHalt
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - clearHalt
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.clearHalt
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`clearHalt()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves when a halt condition is
@@ -47,7 +40,8 @@ A {{jsxref("promise")}}.
 The following example shows how to test for and clear a `'stall'` condition
 in the result of a data transfer.
 
-> **Note:** What data can be passed to a USB device and how it is passed is particular and unique
+> [!NOTE]
+> What data can be passed to a USB device and how it is passed is particular and unique
 > to each device.
 
 ```js
@@ -60,9 +54,9 @@ while (true) {
     console.log(`Channel 5: ${result.data.getUint16(4)}`);
   }
 
-  if (result.status === 'stall') {
-    console.warn('Endpoint stalled. Clearing.');
-    await device.clearHalt('in', 1);
+  if (result.status === "stall") {
+    console.warn("Endpoint stalled. Clearing.");
+    await device.clearHalt("in", 1);
   }
 }
 ```

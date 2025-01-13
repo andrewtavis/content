@@ -2,14 +2,6 @@
 title: acos()
 slug: Web/CSS/acos
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - acos
 browser-compat: css.types.acos
 ---
 
@@ -29,7 +21,7 @@ transform: rotate(acos(pi / 5));
 transform: rotate(acos(e / 3));
 ```
 
-### Parameter
+### Parameters
 
 The `acos(number)` function accepts only one value as its parameter.
 
@@ -43,7 +35,7 @@ The inverse cosine of an `number` will always return an {{cssxref("&lt;angle&gt;
 - If `number` is less than `-1` or greater than `1`, the result is `NaN`.
 - If `number` is exactly `1`, the result is `0`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

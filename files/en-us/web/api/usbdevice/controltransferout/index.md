@@ -1,21 +1,14 @@
 ---
-title: USBDevice.controlTransferOut()
+title: "USBDevice: controlTransferOut() method"
+short-title: controlTransferOut()
 slug: Web/API/USBDevice/controlTransferOut
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - controlTransferOut
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.controlTransferOut
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`controlTransferOut()`** method of the {{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBOutTransferResult")}} when a command or status operation has been transmitted from the USB device.
 
@@ -43,7 +36,7 @@ controlTransferOut(setup, data)
       - : The interface number of the recipient.
 
 - `data`
-  - : A {{domxref("TypedArray")}} containing the data that will be transferred to the device.
+  - : A {{jsxref("TypedArray")}} containing the data that will be transferred to the device.
     Not all commands require data; some commands can send data just through the value parameter.
     Check with your device to see what the specific request requires.
 

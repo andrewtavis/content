@@ -2,10 +2,6 @@
 title: version_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 browser-compat: webextensions.manifest.version_name
 ---
 
@@ -32,7 +28,7 @@ browser-compat: webextensions.manifest.version_name
   </tbody>
 </table>
 
-In addition to the [version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) field, which is used for update purposes, [version_name](https://developer.chrome.com/docs/extensions/mv3/manifest/version/) can be set to a descriptive version string and will be used for display purposes if present.
+In addition to the [version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) field, which is used for update purposes, [version_name](https://developer.chrome.com/docs/extensions/reference/manifest/version) can be set to a descriptive version string and will be used for display purposes if present.
 
 If no **version_name** is present, the **version** field will be used for display purposes as well.
 

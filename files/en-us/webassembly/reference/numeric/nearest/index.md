@@ -1,12 +1,7 @@
 ---
 title: Nearest
 slug: WebAssembly/Reference/Numeric/Nearest
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

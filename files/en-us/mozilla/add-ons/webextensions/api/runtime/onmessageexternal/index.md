@@ -2,20 +2,10 @@
 title: runtime.onMessageExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMessageExternal
-  - runtime
 browser-compat: webextensions.api.runtime.onMessageExternal
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Use this event to listen for messages from other extensions or web pages.
 
@@ -40,7 +30,7 @@ browser.runtime.onMessageExternal.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -51,9 +41,9 @@ Events have three functions:
 
 ### Parameters
 
-- `function`
+- `listener`
 
-  - : A callback function that is called when this event occurs. The function is passed these arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `message`
       - : `object`. The message itself. This is a JSON-ifiable object.
@@ -82,10 +72,7 @@ In this example the extension "blue\@mozilla.org" sends a message to the extensi
 // sender: browser.runtime.id === "blue@mozilla.org"
 
 // Send a message to the extension whose ID is "red@mozilla.org"
-browser.runtime.sendMessage(
-    "red@mozilla.org",
-    "my message"
-  );
+browser.runtime.sendMessage("red@mozilla.org", "my message");
 ```
 
 ```js
@@ -103,7 +90,8 @@ browser.runtime.onMessageExternal.addListener(handleMessage);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onMessageExternal) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onMessageExternal) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

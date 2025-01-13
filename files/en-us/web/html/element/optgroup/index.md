@@ -1,14 +1,7 @@
 ---
-title: '<optgroup>: The Option Group element'
+title: "<optgroup>: The Option Group element"
 slug: Web/HTML/Element/optgroup
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.optgroup
 ---
 
@@ -18,15 +11,16 @@ The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of 
 
 {{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
 
-> **Note:** Optgroup elements may not be nested.
+> [!NOTE]
+> Optgroup elements may not be nested.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}}
+- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
-- {{htmlattrdef("label")}}
+- `label`
   - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
 
 ## Examples
@@ -58,7 +52,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -105,4 +99,4 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## See also
 
-- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

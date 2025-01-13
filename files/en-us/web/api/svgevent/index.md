@@ -2,16 +2,11 @@
 title: SVGEvent
 slug: Web/API/SVGEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - WebAPI
 ---
 
 {{deprecated_header}}{{APIRef("SVG")}}
 
-The {{domxref("SVGEvent")}} interface represents the event object for most SVG-related events.
+The **`SVGEvent`** interface represents the event object for most SVG-related events.
 
 ## Instance properties
 

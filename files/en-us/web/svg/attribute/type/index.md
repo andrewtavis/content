@@ -2,12 +2,6 @@
 title: type
 slug: Web/SVG/Attribute/type
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
-  - filter
 ---
 
 {{SVGRef}}
@@ -180,7 +174,7 @@ SVG elements: {{SVGElement("style")}}, {{SVGElement("script")}}
     </tr>
     <tr>
       <th scope="row">Value</th>
-      <td>&#x3C;content-type></td>
+      <td>&#x3C;media-type></td>
     </tr>
     <tr>
       <th scope="row">Animatable</th>

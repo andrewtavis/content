@@ -1,28 +1,26 @@
 ---
 title: <mfenced>
 slug: Web/MathML/Element/mfenced
-tags:
-  - Deprecated
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
-  - Non-standard
+page-type: mathml-element
+status:
+  - deprecated
+  - non-standard
 browser-compat: mathml.elements.mfenced
 ---
 
 {{MathMLRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`<mfenced>`** [MathML](/en-US/docs/Web/MathML) element provides the possibility to add custom opening and closing parentheses (such as brackets) and separators (such as commas or semicolons) to an expression.
+The **`<mfenced>`** [MathML](/en-US/docs/Web/MathML) element provides the possibility to add custom opening and closing brackets (such as parentheses) and separators (such as commas or semicolons) to an expression.
 
-> **Note:** Historically, the `<mfenced>` element was defined as a shorthand for writing fenced expressions and equivalent to an expanded form involving {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements. Nowadays, it is recommended to use that equivalent form instead.
+> [!NOTE]
+> Historically, the `<mfenced>` element was defined as a shorthand for writing fenced expressions and equivalent to an expanded form involving {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements. Nowadays, it is recommended to use that equivalent form instead.
 
 ## Attributes
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
 - `close`
-  - : A string for the closing delimiter. The default value is `")`" and any white space is trimmed.
+  - : A string for the closing delimiter. The default value is `")"` and any white space is trimmed.
 - `open`
   - : A string for the opening delimiter. The default value is `"("` and any white space is trimmed.
 - `separators`
@@ -31,6 +29,19 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ## Examples
 
 ### The last separator is repeated (`,`)
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+```
 
 ```html
 <math display="block">
@@ -44,13 +55,28 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </math>
 ```
 
-Sample rendering: ![{a;b;c,d,e}](mfenced01.png)
+Sample rendering:
+
+![{a;b;c,d,e}](mfenced-repeated.svg)
 
 Rendering in your browser:
 
 {{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
 
 ### All excess is ignored (`,`)
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+```
 
 ```html
 <math display="block">
@@ -64,11 +90,26 @@ Rendering in your browser:
 </math>
 ```
 
-Sample rendering: ![[a|b|c|d|e]](mfenced02.png)
+Sample rendering:
+
+![[a|b|c|d|e]](mfenced-ignored.svg)
 
 Rendering in your browser:
 
 {{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

@@ -2,23 +2,17 @@
 title: offset-rotate
 slug: Web/CSS/offset-rotate
 page-type: css-property
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Reference
-  - offset-rotate
-  - recipe:css-property
 browser-compat: css.properties.offset-rotate
 ---
 
 {{CSSRef}}
 
-The **`offset-rotate`** CSS property defines the orientation/direction of the element as it is positioned along the {{cssxref("offset-path")}}.
+The **`offset-rotate`** [CSS](/en-US/docs/Web/CSS) property defines the orientation/direction of the element as it is positioned along the {{cssxref("offset-path")}}.
 
 {{EmbedInteractiveExample("pages/css/offset-rotate.html")}}
 
-> **Note:** Early versions of the spec called this property `motion-rotation`.
+> [!NOTE]
+> Early versions of the spec called this property `motion-rotation`.
 
 ## Syntax
 
@@ -44,7 +38,7 @@ offset-rotate: unset;
 
 - `auto`
   - : The element is rotated by the angle of the direction of the {{cssxref("offset-path")}}, relative to the positive x-axis. This is the default value.
-- `{{cssxref("&lt;angle&gt;")}}`
+- {{cssxref("&lt;angle&gt;")}}
   - : The element has a constant clockwise rotation transformation applied to it by the specified rotation angle.
 - `auto <angle>`
   - : If `auto` is followed by an {{cssxref("&lt;angle&gt;")}}, the computed value of the angle is added to the computed value of `auto`.

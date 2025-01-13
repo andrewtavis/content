@@ -2,13 +2,8 @@
 title: <font-face-uri>
 slug: Web/SVG/Element/font-face-uri
 page-type: svg-element
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Font
+status:
+  - deprecated
 browser-compat: svg.elements.font-face-uri
 ---
 
@@ -22,14 +17,7 @@ The **`<font-face-uri>`** [SVG](/en-US/docs/Web/SVG) element points to a remote 
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [XLink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
-
-### Specific attributes
-
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 

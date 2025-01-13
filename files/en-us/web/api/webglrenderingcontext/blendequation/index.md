@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.blendEquation()
+title: "WebGLRenderingContext: blendEquation() method"
+short-title: blendEquation()
 slug: Web/API/WebGLRenderingContext/blendEquation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendEquation
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.blendEquation()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) is used to set both the RGB blend
@@ -48,7 +43,7 @@ blendEquation(mode)
     - `gl.MIN`: Minimum of source and destination
     - `gl.MAX`: Maximum of source and destination
 
-### Exception
+### Exceptions
 
 If _mode_ is not one of the three possible values, a
 `gl.INVALID_ENUM` error is thrown.

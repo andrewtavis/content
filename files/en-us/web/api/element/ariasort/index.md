@@ -1,19 +1,12 @@
 ---
-title: Element.ariaSort
+title: "Element: ariaSort property"
+short-title: ariaSort
 slug: Web/API/Element/ariaSort
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSort
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaSort
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaSort`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 
@@ -85,9 +78,9 @@ In this example the `aria-sort` attribute on the element with an ID of `role-hea
 ```
 
 ```js
-let el = document.getElementById('role-heading');
+let el = document.getElementById("role-heading");
 console.log(el.ariaSort); // none
-el.ariaSort = "ascending"
+el.ariaSort = "ascending";
 console.log(el.ariaSort); // ascending
 ```
 

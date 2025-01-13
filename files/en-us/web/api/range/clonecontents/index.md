@@ -1,19 +1,14 @@
 ---
-title: Range.cloneContents()
+title: "Range: cloneContents() method"
+short-title: cloneContents()
 slug: Web/API/Range/cloneContents
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.cloneContents
 ---
 
 {{ APIRef("DOM") }}
 
-The **`Range.cloneContents()`** returns a {{
-  domxref("DocumentFragment") }} copying the objects of type {{ domxref("Node") }}
+The **`Range.cloneContents()`** returns a {{domxref("DocumentFragment")}} copying the objects of type {{ domxref("Node") }}
 included in the {{ domxref("Range") }}.
 
 Event listeners added using {{domxref("EventTarget.addEventListener()", "addEventListener()")}}

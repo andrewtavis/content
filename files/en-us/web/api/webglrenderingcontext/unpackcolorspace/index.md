@@ -1,18 +1,12 @@
 ---
-title: WebGLRenderingContext.unpackColorSpace
+title: "WebGLRenderingContext: unpackColorSpace property"
+short-title: unpackColorSpace
 slug: Web/API/WebGLRenderingContext/unpackColorSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - Experimental
 browser-compat: api.WebGLRenderingContext.unpackColorSpace
 ---
 
-{{APIRef("WebGL")}}{{SeeCompatTable}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.unpackColorSpace`** property specifies the color space to convert to when importing textures. Along with the default (`srgb`), the `display-p3` color space can be used.
 
@@ -26,7 +20,7 @@ Texture image sources can be the following:
 - [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas)
 - [`VideoFrame`](/en-US/docs/Web/API/VideoFrame)
 
-Textures are imported using the [`WebGLRenderingContext.texImage2D()`](/en-US/docs/Web/API/WebGLRenderingContext/texImage2D) and [`WebGLRenderingContext.texSubImage2D()`](/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D) methods and conversion to the specified `unpackColorSpace` color space happens during import.
+Textures are imported using the [`WebGL2RenderingContext.texImage2D()`](/en-US/docs/Web/API/WebGLRenderingContext/texImage2D) and [`WebGL2RenderingContext.texSubImage2D()`](/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D) methods and conversion to the specified `unpackColorSpace` color space happens during import.
 
 Note that this doesn't apply to [`HTMLImageElement`](/en-US/docs/Web/API/HTMLImageElement) when the `UNPACK_COLORSPACE_CONVERSION_WEBGL` pixel storage parameter is set to `NONE`.
 
@@ -56,7 +50,17 @@ const imageData = new ImageData(data, 32, 32);
 
 const tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);
-gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, imageData);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  gl.RGBA,
+  width,
+  height,
+  0,
+  gl.RGBA,
+  gl.UNSIGNED_BYTE,
+  imageData,
+);
 ```
 
 ## Specifications

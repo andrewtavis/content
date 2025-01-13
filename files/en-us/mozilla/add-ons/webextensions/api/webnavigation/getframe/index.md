@@ -2,20 +2,10 @@
 title: webNavigation.getFrame()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getFrame
-  - webNavigation
 browser-compat: webextensions.api.webNavigation.getFrame
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
 
@@ -37,8 +27,8 @@ let gettingFrame = browser.webNavigation.getFrame(
 
     - `tabId`
       - : `integer`. The ID of the tab in which the frame is.
-    - `processId` {{optional_inline}}
-      - : `integer`. The ID of the process running the renderer for this tab.
+    - `processId` {{optional_inline}} {{deprecated_inline}}
+      - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
     - `frameId`
       - : `integer`. The ID of the frame in the given tab.
 
@@ -72,7 +62,7 @@ function onError(error) {
 
 let gettingFrame = browser.webNavigation.getFrame({
   tabId: 19,
-  frameId: 1537
+  frameId: 1537,
 });
 
 // Edge specific - processId is required not optional, must be integer not null
@@ -83,7 +73,8 @@ gettingFrame.then(onGot, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#method-getFrame) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#method-getFrame) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -2,21 +2,12 @@
 title: privacy.websites
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/websites
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Privacy
-  - Property
-  - Reference
-  - WebExtensions
-  - websites
 browser-compat: webextensions.api.privacy.websites
 ---
 
 {{AddonSidebar}}
 
-The {{WebExtAPIRef("privacy.websites")}} property contains privacy-related settings controlling the way to browser interacts with websites. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
+The `privacy.websites` property contains privacy-related settings controlling the way to browser interacts with websites. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
 
 Default values for these properties tend to vary across browsers.
 
@@ -64,7 +55,7 @@ Default values for these properties tend to vary across browsers.
     Defaults to `false`.
 
 - `thirdPartyCookiesAllowed`
-  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `false`, the browser blocks [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies).
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `false`, the browser blocks [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
 - `trackingProtectionMode`
 
   - : "Tracking protection" is a browser feature that blocks requests made to domains that are known to engage in cross-site tracking of users. Sites that track users are most commonly third-party advertising and analytics sites. This setting is a {{WebExtAPIRef("types.BrowserSetting")}} object that determines whether the browser should enable tracking protection. Its underlying value is a string that may take one of three values:
@@ -91,27 +82,28 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
   let getting = browser.privacy.websites.hyperlinkAuditingEnabled.get({});
   getting.then((got) => {
     console.log(got.value);
-    if ((got.levelOfControl === "controlled_by_this_extension") ||
-        (got.levelOfControl === "controllable_by_this_extension")) {
+    if (
+      got.levelOfControl === "controlled_by_this_extension" ||
+      got.levelOfControl === "controllable_by_this_extension"
+    ) {
       let setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-        value: true
+        value: true,
       });
       setting.then(onSet);
     } else {
       console.log("Not able to set hyperlinkAuditingEnabled");
     }
   });
-
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

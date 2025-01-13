@@ -1,13 +1,9 @@
 ---
-title: '<param>: The Object Parameter element'
+title: "<param>: The Object Parameter element"
 slug: Web/HTML/Element/param
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - Deprecated
+status:
+  - deprecated
 browser-compat: html.elements.param
 ---
 
@@ -15,17 +11,20 @@ browser-compat: html.elements.param
 
 The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an {{HTMLElement("object")}} element.
 
+> [!NOTE]
+> Use the {{HTMLElement("object")}} element with a [`data`](/en-US/docs/Web/HTML/Element/object#data) attribute to set the URL of an external resource.
+
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("name")}} {{deprecated_inline}}
+- `name` {{deprecated_inline}}
   - : Name of the parameter.
-- {{htmlattrdef("value")}} {{deprecated_inline}}
+- `value` {{deprecated_inline}}
   - : Specifies the value of the parameter.
-- {{htmlattrdef("type")}} {{deprecated_inline}}
+- `type` {{deprecated_inline}}
   - : Only used if the `valuetype` is set to `ref`. Specifies the MIME type of values found at the URI specified by value.
-- {{htmlattrdef("valuetype")}} {{deprecated_inline}}
+- `valuetype` {{deprecated_inline}}
 
   - : Specifies the type of the `value` attribute. Possible values are:
 
@@ -39,7 +38,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -51,16 +50,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>
-        As it is a void element, the start tag must be present and the end tag
-        must not be present.
-      </td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         An {{HTMLElement("object")}} before any
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

@@ -2,13 +2,6 @@
 title: DocumentFragment
 slug: Web/API/DocumentFragment
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Interface
-  - Reference
-  - Web Components
 browser-compat: api.DocumentFragment
 ---
 
@@ -43,9 +36,9 @@ _This interface has no specific properties, but inherits those of its parent, {{
 _This interface inherits the methods of its parent, {{domxref("Node")}}._
 
 - {{DOMxRef("DocumentFragment.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document fragment.
+  - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the document fragment.
 - {{DOMxRef("DocumentFragment.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document fragment.
+  - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the document fragment.
 - {{domxref("DocumentFragment.querySelector()")}}
   - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified selectors.
 - {{domxref("DocumentFragment.querySelectorAll()")}}
@@ -78,13 +71,13 @@ The performance benefit of `DocumentFragment` is often overstated. In fact, in s
 ### JavaScript
 
 ```js
-const ul = document.querySelector('ul');
-const fruits = ['Apple', 'Orange', 'Banana', 'Melon'];
+const ul = document.querySelector("ul");
+const fruits = ["Apple", "Orange", "Banana", "Melon"];
 
 const fragment = new DocumentFragment();
 
 for (const fruit of fruits) {
-  const li = document.createElement('li');
+  const li = document.createElement("li");
   li.textContent = fruit;
   fragment.append(li);
 }

@@ -2,13 +2,6 @@
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
 browser-compat: javascript.builtins.Object.seal
 ---
 
@@ -42,6 +35,8 @@ Attempting to delete or add properties to a sealed object, or to convert a data 
 to accessor or vice versa, will fail, either silently or by throwing a
 {{jsxref("TypeError")}} (most commonly, although not exclusively, when in
 {{jsxref("Strict_mode", "strict mode", "", 1)}} code).
+
+[Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) do not have the concept of property descriptors. Private properties cannot be added or removed from the object, whether the object is sealed or not.
 
 The prototype chain remains untouched. However, due to the effect of [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions), the `[[Prototype]]` cannot be reassigned.
 

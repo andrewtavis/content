@@ -2,23 +2,19 @@
 title: Pinch zoom gestures
 slug: Web/API/Pointer_events/Pinch_zoom_gestures
 page-type: guide
-tags:
-  - Guide
-  - PointerEvent
-  - touch
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
 
 Adding _gestures_ to an application can significantly improve the user experience. There are many types of gestures, from the simple single-touch _swipe_ gesture to the more complex multi-touch _twist_ gesture, where the touch points (aka _pointers_) move in different directions.
 
-This example shows how to detect the _pinch/zoom_ gesture, which uses {{domxref("Pointer_events","pointer events")}} to detect whether the user moves two pointers closer or farther apart from each other.
+This example shows how to detect the _pinch/zoom_ gesture, which uses [pointer events](/en-US/docs/Web/API/Pointer_events) to detect whether the user moves two pointers closer or farther apart from each other.
 
 A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Pinch_zoom_gestures.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/main/pointerevents/Pinch_zoom_gestures.html); pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Example
 
-In this example, you use the {{domxref("Pointer_events","pointer events")}} to simultaneously detect two pointing devices of any type, including fingers, mice, and pens. The pinch in (zoom out) gesture, which moves the two pointers toward each other, changes the target element's background color to `lightblue`. The pinch out (zoom in) gesture, which moves the two pointers away from each other, changes the target element's background color to `pink`.
+In this example, you use the [pointer events](/en-US/docs/Web/API/Pointer_events) to simultaneously detect two pointing devices of any type, including fingers, mice, and pens. The pinch in (zoom out) gesture, which moves the two pointers toward each other, changes the target element's background color to `lightblue`. The pinch out (zoom in) gesture, which moves the two pointers away from each other, changes the target element's background color to `pink`.
 
 ### Define touch target
 
@@ -44,7 +40,7 @@ Supporting a two-pointer gesture requires preserving a pointer's event state dur
 ```js
 // Global vars to cache event state
 const evCache = [];
-const prevDiff = -1;
+let prevDiff = -1;
 ```
 
 ### Register event handlers
@@ -100,7 +96,9 @@ function pointermoveHandler(ev) {
   ev.target.style.border = "dashed";
 
   // Find this event in the cache and update its record with this event
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
+  );
   evCache[index] = ev;
 
   // If two pointers are down, check for pinch gestures
@@ -110,13 +108,13 @@ function pointermoveHandler(ev) {
 
     if (prevDiff > 0) {
       if (curDiff > prevDiff) {
-         // The distance between the two pointers has increased
-         log("Pinch moving OUT -> Zoom in", ev);
-         ev.target.style.background = "pink";
+        // The distance between the two pointers has increased
+        log("Pinch moving OUT -> Zoom in", ev);
+        ev.target.style.background = "pink";
       }
       if (curDiff < prevDiff) {
         // The distance between the two pointers has decreased
-        log("Pinch moving IN -> Zoom out",ev);
+        log("Pinch moving IN -> Zoom out", ev);
         ev.target.style.background = "lightblue";
       }
     }
@@ -138,7 +136,7 @@ function pointerupHandler(ev) {
   log(ev.type, ev);
   // Remove this pointer from the cache and reset the target's
   // background and border
-  remove_event(ev);
+  removeEvent(ev);
   ev.target.style.background = "white";
   ev.target.style.border = "1px solid black";
 
@@ -181,7 +179,9 @@ This function helps manage the global event caches `evCache`.
 ```js
 function removeEvent(ev) {
   // Remove this event from the target's cache
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
+  );
   evCache.splice(index, 1);
 }
 ```
@@ -201,17 +201,17 @@ function enableLog(ev) {
 
 function log(prefix, ev) {
   if (!logEvents) return;
-  const o = document.getElementsByTagName('output')[0];
-  const s = `${prefix}:<br>`
-    + `  pointerID   = ${ev.pointerId}<br>`
-    + `  pointerType = ${ev.pointerType}<br>`
-    + `  isPrimary   = ${ev.isPrimary}`;
-  o.innerHTML += `${s}<br>`;
+  const o = document.getElementsByTagName("output")[0];
+  o.innerText += `${prefix}:
+  pointerID   = ${ev.pointerId}
+  pointerType = ${ev.pointerType}
+  isPrimary   = ${ev.isPrimary}
+`;
 }
 
 function clearLog(event) {
-  const o = document.getElementsByTagName('output')[0];
-  o.innerHTML = "";
+  const o = document.getElementsByTagName("output")[0];
+  o.textContent = "";
 }
 ```
 
@@ -219,4 +219,4 @@ function clearLog(event) {
 
 - [Pointer Events now in Firefox Nightly](https://hacks.mozilla.org/2015/08/pointer-events-now-in-firefox-nightly/); Mozilla Hacks; by Matt Brubeck and Jason Weathersby; 2015-Aug-04
 - [jQuery Pointer Events Polyfill](https://github.com/jquery-archive/PEP)
-- [Gestures](https://material.io/design/interaction/gestures.html); Material Design
+- [Gestures](https://m2.material.io/design/interaction/gestures.html); Material Design

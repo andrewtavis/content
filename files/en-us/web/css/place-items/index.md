@@ -2,19 +2,12 @@
 title: place-items
 slug: Web/CSS/place-items
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.place-items
 ---
 
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **`place-items`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align items along both the block and inline directions at once (i.e. the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout). If the second value is not set, the first value is also used for it.
+The [CSS](/en-US/docs/Web/CSS) **`place-items`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) aligns items along both the block and inline directions at once. It sets the values of the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties. If the second value is not set, the first value is also used for it.
 
 {{EmbedInteractiveExample("pages/css/place-items.html")}}
 
@@ -28,11 +21,9 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Positional alignment */
 place-items: center;
 place-items: normal start;
-
-/* Positional alignment */
 place-items: center normal;
 place-items: start legacy;
 place-items: end normal;
@@ -40,6 +31,7 @@ place-items: self-start legacy;
 place-items: self-end normal;
 place-items: flex-start legacy;
 place-items: flex-end normal;
+place-items: anchor-center;
 
 /* Baseline alignment */
 place-items: baseline normal;
@@ -237,7 +229,7 @@ select {
 ```
 
 ```html hidden
-<div id="gridcontainer">
+<div id="grid-container">
   <div id="item1">1</div>
   <div id="item2">2</div>
   <div id="item3">3</div>
@@ -246,8 +238,8 @@ select {
 </div>
 
 <div class="row">
-  <label for="gridvalues">place-items: </label>
-  <select id="gridvalues">
+  <label for="grid-values">place-items: </label>
+  <select id="grid-values">
     <option value="stretch">stretch</option>
     <option value="start">start</option>
     <option value="center">center</option>
@@ -274,8 +266,8 @@ select {
 ```
 
 ```js hidden
-const values = document.getElementById("gridvalues");
-const container = document.getElementById("gridcontainer");
+const values = document.getElementById("grid-values");
+const container = document.getElementById("grid-container");
 
 values.addEventListener("change", (evt) => {
   container.style.placeItems = evt.target.value;
@@ -285,7 +277,7 @@ values.addEventListener("change", (evt) => {
 #### CSS
 
 ```css
-#gridcontainer {
+#grid-container {
   height: 200px;
   width: 240px;
   place-items: stretch; /* You can change this value by selecting another option in the list */
@@ -294,7 +286,7 @@ values.addEventListener("change", (evt) => {
   grid-template-columns: repeat(3, 1fr);
 }
 
-#gridcontainer > div {
+#grid-container > div {
   width: 50px;
 }
 ```
@@ -313,11 +305,11 @@ values.addEventListener("change", (evt) => {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
-- The {{CSSxRef("align-items")}} property
-- The {{CSSxRef("align-self")}} property
-- The {{CSSxRef("justify-items")}} property
-- The {{CSSxRef("justify-self")}} property
+- {{CSSxRef("align-items")}}
+- {{CSSxRef("align-self")}}
+- {{CSSxRef("justify-items")}}
+- {{CSSxRef("justify-self")}}
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module

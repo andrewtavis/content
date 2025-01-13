@@ -2,17 +2,10 @@
 title: Compression Streams API
 slug: Web/API/Compression_Streams_API
 page-type: web-api-overview
-tags:
-  - API
-  - Compression_Streams_API
-  - Compression
-  - Decompression
-  - Reference
-  - Overview
 browser-compat: api.CompressionStream
 ---
 
-{{DefaultAPISidebar("Compression Streams API")}}
+{{DefaultAPISidebar("Compression Streams API")}}{{AvailableInWorkers}}
 
 The **Compression Streams API** provides a JavaScript API for compressing and decompressing streams of data using the gzip or deflate formats.
 
@@ -31,7 +24,7 @@ In this example a stream is compressed using gzip compression.
 
 ```js
 const compressedReadableStream = inputReadableStream.pipeThrough(
-  new CompressionStream("gzip")
+  new CompressionStream("gzip"),
 );
 ```
 

@@ -1,19 +1,13 @@
 ---
-title: HighlightRegistry.forEach()
+title: "HighlightRegistry: forEach() method"
+short-title: forEach()
 slug: Web/API/HighlightRegistry/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - forEach
-  - Experimental
 browser-compat: api.HighlightRegistry.forEach
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.foreach
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The **`forEach()`** method of the {{domxref("HighlightRegistry")}} interface executes a provided function once for each {{domxref("Highlight")}} object in the registry, in insertion order.
 
@@ -22,22 +16,8 @@ The **`forEach()`** method of the {{domxref("HighlightRegistry")}} interface exe
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach(() => { /* … */ } )
-forEach((highlight) => { /* … */ } )
-forEach((highlight, name) => { /* … */ } )
-forEach((highlight, name, registry) => { /* … */ } )
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function() { /* … */ })
-forEach(function(highlight) { /* … */ })
-forEach(function(highlight, name) { /* … */ })
-forEach(function(highlight, name, registry) { /* … */ })
-forEach(function(highlight, name, registry) { /* … */ }, thisArg)
 ```
 
 ### Parameters

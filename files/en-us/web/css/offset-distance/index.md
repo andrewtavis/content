@@ -2,21 +2,12 @@
 title: offset-distance
 slug: Web/CSS/offset-distance
 page-type: css-property
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Motion Path
-  - Reference
-  - motion-offset
-  - offset-distance
-  - recipe:css-property
 browser-compat: css.properties.offset-distance
 ---
 
 {{CSSRef}}
 
-The **`offset-distance`** CSS property specifies a position along an {{CSSxRef("offset-path")}} for an element to be placed.
+The **`offset-distance`** [CSS](/en-US/docs/Web/CSS) property specifies a position along an {{CSSxRef("offset-path")}} for an element to be placed.
 
 {{EmbedInteractiveExample("pages/css/offset-distance.html")}}
 
@@ -40,7 +31,7 @@ offset-distance: revert-layer;
 offset-distance: unset;
 ```
 
-- `{{cssxref('&lt;length-percentage&gt;')}}`
+- {{cssxref('&lt;length-percentage&gt;')}}
 
   - : A length that specifies how far the element is along the path (defined with {{cssxref('offset-path')}}).
 

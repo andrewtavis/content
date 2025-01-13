@@ -2,9 +2,6 @@
 title: dur
 slug: Web/SVG/Attribute/dur
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.animate.dur
 ---
 
@@ -15,7 +12,6 @@ The **`dur`** attribute indicates the simple duration of an animation.
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
@@ -63,7 +59,7 @@ svg {
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Clock-value"
+          ><a href="/en-US/docs/Web/SVG/Content_type#clock-value"
             >&#x3C;clock-value></a
           ></code
         >
@@ -89,7 +85,8 @@ svg {
 - `indefinite`
   - : This value specifies the simple duration as indefinite.
 
-> **Note:** the {{Glossary("interpolation")}} will not work if the simple duration is indefinite (although this may still be useful for {{SVGElement("set")}} elements).
+> [!NOTE]
+> The {{Glossary("interpolation")}} will not work if the simple duration is indefinite (although this may still be useful for {{SVGElement("set")}} elements).
 
 ## Specifications
 

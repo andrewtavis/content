@@ -2,12 +2,6 @@
 title: ChannelMergerNode
 slug: Web/API/ChannelMergerNode
 page-type: web-api-interface
-tags:
-  - API
-  - ChannelMergerNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.ChannelMergerNode
 ---
 
@@ -39,7 +33,7 @@ Using a `ChannelMergerNode`, it is possible to create outputs with more channels
     </tr>
     <tr>
       <th scope="row">Channel count</th>
-      <td><code>2 </code>(not used in the default count mode)</td>
+      <td><code>2</code> (not used in the default count mode)</td>
     </tr>
     <tr>
       <th scope="row">Channel interpretation</th>
@@ -63,7 +57,7 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 
 ## Example
 
-See [`BaseAudioContext.createChannelMerger()`](/en-US/docs/Web/API/BaseAudioContext/createChannelMerger#example) for example code.
+See [`BaseAudioContext.createChannelMerger()`](/en-US/docs/Web/API/BaseAudioContext/createChannelMerger#examples) for example code.
 
 ## Specifications
 

@@ -1,17 +1,13 @@
 ---
 title: "ARIA: option role"
 slug: Web/Accessibility/ARIA/Roles/option_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - option role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#option
-  - https://w3c.github.io/aria-practices/#Listbox
+  - https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-scrollable/
 ---
+
+{{AccessibilitySidebar}}
 
 The `option` role is used for selectable items in a `listbox`.
 
@@ -88,7 +84,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
 
-  - : Used to indicate that an element is being modified, such as while it is loadingOptional.
+  - : Used to indicate that an element is being modified, such as while it is loading. Optional.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 
@@ -111,9 +107,3 @@ From the assistive technology user's perspective, the heading does not exist sin
 - [ARIA: `combobox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - [ARIA: `listbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-  </ol>
-</section>

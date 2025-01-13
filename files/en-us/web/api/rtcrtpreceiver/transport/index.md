@@ -1,26 +1,12 @@
 ---
-title: RTCRtpReceiver.transport
+title: "RTCRtpReceiver: transport property"
+short-title: transport
 slug: Web/API/RTCRtpReceiver/transport
 page-type: web-api-instance-property
-tags:
-  - API
-  - Communications
-  - DTLS
-  - Media
-  - Networking
-  - RTCP
-  - RTCRtpReceiver
-  - RTP
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - receiver
 browser-compat: api.RTCRtpReceiver.transport
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The read-only **`transport`** property of an
 {{domxref("RTCRtpReceiver")}} object provides the {{domxref("RTCDtlsTransport")}} object

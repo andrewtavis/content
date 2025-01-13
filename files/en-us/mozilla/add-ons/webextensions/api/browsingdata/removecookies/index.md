@@ -2,19 +2,10 @@
 title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeCookies
 browser-compat: webextensions.api.browsingData.removeCookies
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Clears the browser's cookies.
 
@@ -68,7 +59,8 @@ browser.browsingData
 
 Remove all cookies:
 
-> **Warning:** Using the API to remove all cookies will, simultaneously, clear all local storage objects (including those of other extensions).
+> [!WARNING]
+> Using the API to remove all cookies will, simultaneously, clear all local storage objects (including those of other extensions).
 >
 > If you want to clear all cookies without disrupting local storage facilities, use [browser.cookies](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies) to loop through and remove the contents of all cookie stores.
 
@@ -90,7 +82,8 @@ browser.browsingData.removeCookies({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

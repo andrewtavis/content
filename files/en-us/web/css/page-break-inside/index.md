@@ -2,20 +2,15 @@
 title: page-break-inside
 slug: Web/CSS/page-break-inside
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Page Breaks
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.page-break-inside
 ---
 
 {{CSSRef}}
 
-> **Warning:** This property has been replaced by the {{cssxref("break-inside")}} property.
+> [!WARNING]
+> This property has been replaced by the {{cssxref("break-inside")}} property.
 
-The **`page-break-inside`** CSS property adjusts page breaks _inside_ the current element.
+The **`page-break-inside`** [CSS](/en-US/docs/Web/CSS) property adjusts page breaks _inside_ the current element.
 
 {{EmbedInteractiveExample("pages/css/page-break-inside.html")}}
 

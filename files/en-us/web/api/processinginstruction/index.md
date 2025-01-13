@@ -2,9 +2,6 @@
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.ProcessingInstruction
 ---
 
@@ -16,7 +13,8 @@ The **`ProcessingInstruction`** interface represents a [processing instruction](
 
 A processing instruction may be different than the [XML declaration](/en-US/docs/Web/XML/XML_introduction#xml_declaration).
 
-> **Note:** User-defined processing instructions cannot begin with "`xml`", as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, `<?xml-stylesheet ?>`.
+> [!NOTE]
+> User-defined processing instructions cannot begin with `"xml"`, as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, `<?xml-stylesheet ?>`.
 
 For example:
 
@@ -33,6 +31,7 @@ is a processing instruction whose `target` is `xml`.
 _This interface also inherits properties from its parent interfaces, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
 - {{domxref("ProcessingInstruction.sheet")}} {{ReadOnlyInline}}
+
   - : Returns the associated {{domxref("StyleSheet")}} object, if any; or `null` if none.
 
 - {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}

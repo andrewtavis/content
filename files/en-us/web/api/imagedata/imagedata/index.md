@@ -1,17 +1,12 @@
 ---
-title: ImageData()
+title: "ImageData: ImageData() constructor"
+short-title: ImageData()
 slug: Web/API/ImageData/ImageData
 page-type: web-api-constructor
-tags:
-  - API
-  - Canvas
-  - Constructor
-  - ImageData
-  - Reference
 browser-compat: api.ImageData.ImageData
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`ImageData()`** constructor returns a newly instantiated
 {{domxref('ImageData')}} object built from the typed array given and having the
@@ -48,7 +43,7 @@ new ImageData(dataArray, width, height, settings)
 
 A new {{domxref('ImageData')}} object.
 
-### Errors thrown
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `array` is specified, but its length is not a multiple of `(4 * width)` or `(4 * width * height)`.
@@ -92,16 +87,16 @@ specifies a `width` of `200` for the new object, so its
 `height` defaults to 10,000 divided by 200, which is `50`.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 const arr = new Uint8ClampedArray(40_000);
 
 // Fill the array with the same RGBA values
 for (let i = 0; i < arr.length; i += 4) {
-  arr[i + 0] = 0;    // R value
-  arr[i + 1] = 190;  // G value
-  arr[i + 2] = 0;    // B value
-  arr[i + 3] = 255;  // A value
+  arr[i + 0] = 0; // R value
+  arr[i + 1] = 190; // G value
+  arr[i + 2] = 0; // B value
+  arr[i + 3] = 255; // A value
 }
 
 // Initialize a new ImageData object

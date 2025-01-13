@@ -2,18 +2,12 @@
 title: border-left-color
 slug: Web/CSS/border-left-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-left-color
 ---
 
 {{CSSRef}}
 
-The **`border-left-color`** CSS property sets the color of an element's left [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-left")}}.
+The **`border-left-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's left [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-left")}}.
 
 {{EmbedInteractiveExample("pages/css/border-left-color.html")}}
 
@@ -24,7 +18,7 @@ The **`border-left-color`** CSS property sets the color of an element's left [bo
 border-left-color: red;
 border-left-color: #ffbb00;
 border-left-color: rgb(255 0 0);
-border-left-color: hsl(100deg 50% 25% / 0.75);
+border-left-color: hsl(100deg 50% 25% / 75%);
 border-left-color: currentcolor;
 border-left-color: transparent;
 
@@ -58,10 +52,10 @@ The `border-left-color` property is specified as a single value.
 #### HTML
 
 ```html
-<div class="mybox">
+<div class="my-box">
   <p>
     This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
+    <span class="red-text">red</span>.
   </p>
 </div>
 ```
@@ -69,13 +63,13 @@ The `border-left-color` property is specified as a single value.
 #### CSS
 
 ```css
-.mybox {
+.my-box {
   border: solid 0.3em gold;
   border-left-color: red;
   width: auto;
 }
 
-.redtext {
+.red-text {
   color: red;
 }
 ```

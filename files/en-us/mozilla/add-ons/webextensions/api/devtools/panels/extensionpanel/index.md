@@ -2,18 +2,10 @@
 title: devtools.panels.ExtensionPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Type
-  - Reference
-  - WebExtensions
-  - devtools.panels
 browser-compat: webextensions.api.devtools.panels.ExtensionPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An `ExtensionPanel` represents a panel added to the devtools. It's the resolution of the [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) returned by [`browser.devtools.panels.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create).
 
@@ -43,19 +35,22 @@ function handleHidden(e) {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",                 // title
-  "icons/star.png",           // icon
-  "devtools/panel/panel.html" // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

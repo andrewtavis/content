@@ -1,12 +1,7 @@
 ---
 title: Navigation and resource timings
 slug: Web/Performance/Navigation_and_resource_timings
-tags:
-  - Navigation Timing
-  - Resource Timing
-  - Timings
-  - Web Performance
-  - performance APIs
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -23,7 +18,7 @@ The performance timing API provided read only times, in milliseconds(ms), descri
 
 ![Navigation Timing event metrics](screen_shot_2019-05-03_at_1.06.27_pm.png)
 
-With the metrics above, and a bit of math, we can calculate many important metrics like [time to first byte](/en-US/docs/Glossary/time_to_first_byte), page load time, dns lookup, and whether the connection is secure.
+With the metrics above, and a bit of math, we can calculate many important metrics like [time to first byte](/en-US/docs/Glossary/Time_to_first_byte), page load time, dns lookup, and whether the connection is secure.
 
 To help measure the time it takes to complete all the steps, the Performance Timing API provides read only measurements of navigation timings. To view and capture our app's timing we enter:
 
@@ -189,7 +184,7 @@ The order is:
         {{domxref("PerformanceTiming.unloadEventStart","unloadEventStart")}}
       </td>
       <td>
-        When the {{DOMxRef("Window.unload_event", "unload")}}>
+        When the {{DOMxRef("Window.unload_event", "unload")}}
         event has been thrown, indicating the time at which the previous
         document in the window began to unload. If there is no previous
         document, or if the previous document or one of the needed redirects is
@@ -235,7 +230,7 @@ The order is:
       <td>
         Right before the parser sent the
         <code
-          ><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event"
+          ><a href="/en-US/docs/Web/API/Document/DOMContentLoaded_event"
             >DOMContentLoaded</a
           ></code
         >
@@ -303,12 +298,12 @@ We can use these values to measure specific timings of interest:
 ```js
 const dns = time.domainLookupEnd - time.domainLookupStart;
 const tcp = time.connectEnd - time.connectStart;
-const ssl = time.requestStart - time.secureConnectionStart;
+const tls = time.requestStart - time.secureConnectionStart;
 ```
 
 ### Time to first byte
 
-[Time to First Byte](/en-US/docs/Glossary/time_to_first_byte) is the time between the `navigationStart` (start of the navigation) and `responseStart`, (when the first byte of response data is received) available in the `performanceTiming` API:
+[Time to First Byte](/en-US/docs/Glossary/Time_to_first_byte) is the time between the `navigationStart` (start of the navigation) and `responseStart`, (when the first byte of response data is received) available in the `performanceTiming` API:
 
 ```js
 const ttfb = time.responseStart - time.navigationStart;
@@ -319,7 +314,7 @@ const ttfb = time.responseStart - time.navigationStart;
 [Page load time](/en-US/docs/Glossary/Page_load_time) is the time between `navigationStart` and the start of when the load event is sent for the current document. They are only available in the performanceTiming API.
 
 ```js
-let pageloadtime = time.loadEventStart - time.navigationStart;
+let pageloadTime = time.loadEventStart - time.navigationStart;
 ```
 
 ### DNS lookup time
@@ -338,17 +333,17 @@ The time it takes for the [TCP](/en-US/docs/Glossary/TCP) handshake is the time 
 const tcp = time.connectEnd - time.connectStart;
 ```
 
-### SSL negotiation
+### TLS negotiation
 
-[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [https](/en-US/docs/Glossary/https) in not used, or a timestamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
+[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [HTTPS](/en-US/docs/Glossary/HTTPS) in not used, or a timestamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
 
 ```js
-const ssl = time.requestStart - time.secureConnectionStart;
+const tls = time.requestStart - time.secureConnectionStart;
 ```
 
 ## Performance Entry API
 
-The general performance timings above are deprecated but fully supported. We now have the {{domxref('PerformanceEntry', 'Performance Entry API')}}, which provides for marking and measuring times along the navigation and resource loading process. You can also create marks:
+The general performance timings above are deprecated but fully supported. We now have the [Performance Entry API](/en-US/docs/Web/API/PerformanceEntry), which provides for marking and measuring times along the navigation and resource loading process. You can also create marks:
 
 ```js
 performance.getEntriesByType("navigation").forEach((navigation) => {
@@ -380,7 +375,7 @@ In supporting browsers, you can use `performance.getEntriesByType('paint')` to q
 
 ## Navigation Timing
 
-When a user requests a website or application, [to populate the browser](/en-US/docs/Web/Performance/How_browsers_work) the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and SSL negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to _interactive_. If there are deferred scripts needing to be parsed, it will do so, then fire the [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event), after which the readiness is set to _complete_. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.
+When a user requests a website or application, [to populate the browser](/en-US/docs/Web/Performance/How_browsers_work) the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and TLS negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to _interactive_. If there are deferred scripts needing to be parsed, it will do so, then fire the [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event), after which the readiness is set to _complete_. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.
 
 ```js
 const navigationTimings = performance.getEntriesByType("navigation");

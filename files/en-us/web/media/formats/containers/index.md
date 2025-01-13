@@ -1,17 +1,7 @@
 ---
 title: Media container formats (file types)
 slug: Web/Media/Formats/Containers
-tags:
-  - Audio
-  - Containers
-  - File
-  - Filetypes
-  - Guide
-  - MIME Types
-  - MIMETypes
-  - Media
-  - Video
-  - formats
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -27,8 +17,8 @@ See [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for inf
 
 While there are a vast number of media container formats, the ones listed below are the ones you are most likely to encounter.
 Some support only audio while others support both audio and video.
-The MIME types and extensions for each are listed. The most commonly used containers for media on the web are probably MPEG-4 (MP4), QuickTime Movie (MOV), and the Wavefile Audio File Format (WAV).
-However, you may also encounter MP3, Ogg, WebM, AVI, and other formats.
+The MIME types and extensions for each are listed. The most commonly used containers for media on the web are probably MPEG-4 (MP4), Web Media File (WEBM), and MPEG Audio Layer III (MP3).
+However, you may also encounter MP3, Ogg, WAV, AVI, MOV, and other formats.
 Not all of these are broadly supported by browsers, however; some combinations of container and codec are sometimes given their own file extensions and MIME types as a matter of convenience, or because of their ubiquity.
 For example, an Ogg file with only an Opus audio track is sometimes referred to as an Opus file, and might even have the extension `.opus`.
 But it's still actually just an Ogg file.
@@ -67,7 +57,7 @@ To learn more about a specific container format, find it in this list and click 
     <tr>
       <th scope="row"><a href="#flac">FLAC</a></th>
       <td>Free Lossless Audio Codec</td>
-      <td>Chrome 56, Edge 16, Firefox 51, Safari 11</td>
+      <td>All browsers.</td>
     </tr>
     <tr>
       <th scope="row"><a href="#mpegmpeg-2">MPEG / MPEG-2</a></th>
@@ -77,15 +67,12 @@ To learn more about a specific container format, find it in this list and click 
     <tr>
       <th scope="row"><a href="#mpeg-4_mp4">MPEG-4 (MP4)</a></th>
       <td>Moving Picture Experts Group 4</td>
-      <td>Chrome 3, Edge 12, Firefox, Internet Explorer 9, Opera 24, Safari 3.1</td>
+      <td>All browsers.</td>
     </tr>
     <tr>
       <th scope="row"><a href="#ogg">Ogg</a></th>
       <td>Ogg</td>
-      <td>
-        <p>Chrome 3, Firefox 3.5, Edge 17 (desktop only), Internet Explorer 9, Opera 10.50</p>
-        <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
-      </td>
+      <td>All browsers.</td>
     </tr>
     <tr>
       <th scope="row"><a href="#quicktime">QuickTime (MOV)</a></th>
@@ -95,10 +82,7 @@ To learn more about a specific container format, find it in this list and click 
     <tr>
       <th scope="row"><a href="#webm">WebM</a></th>
       <td>Web Media</td>
-      <td>
-        <p>Chrome 6, Edge 17 (desktop only), Firefox 4, Opera 10.6, Safari 14.1 (macOS), Safari 15 (iOS).</p>
-        <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
-      </td>
+      <td>All browsers.</td>
     </tr>
   </tbody>
 </table>
@@ -487,7 +471,7 @@ In addition, you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/
       <td></td>
       <td>
         <p>Yes</p>
-        <p>Firefox support for AV1 is disabled on Android ({{bug(1672276)}}) and on Windows on ARM (enable by setting the preference <code>media.av1.enabled</code> to <code>true</code>).</p>
+        <p>Firefox support for AV1 is disabled on Windows on ARM (enable by setting the preference <code>media.av1.enabled</code> to <code>true</code>).</p>
       </td>
       <td></td>
     </tr>
@@ -572,7 +556,7 @@ In addition, you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/
 
 The [Ogg](https://en.wikipedia.org/wiki/Ogg) container format is a free and open format maintained by the [Xiph.org Foundation](https://www.xiph.org/).
 The Ogg framework also defines patent unencumbered media data formats, such as the Theora video codec and the Vorbis and Opus audio codecs.
-[Xiph.org documents about the Ogg format](https://xiph.org/ogg/) are available on their web site.
+[Xiph.org documents about the Ogg format](https://xiph.org/ogg/) are available on their website.
 
 While Ogg has been around for a long time, it has never gained the wide support needed to make it a good first choice for a media container.
 You are typically better off using WebM, though there are times when Ogg is useful to offer, such as when you wish to support older versions of Firefox and Chrome which don't yet support WebM.
@@ -674,6 +658,9 @@ You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_p
     </tr>
   </tbody>
 </table>
+
+> [!WARNING]
+> Ogg Opus audio files longer than 12h 35m 39s are truncated and exhibit seeking issues when played on Firefox Linux 64 bit ([Firefox bug 1810378](https://bugzil.la/1810378)).
 
 ### QuickTime
 
@@ -1106,7 +1093,7 @@ To optimize compatibility, it's worth considering providing more than one versio
 For example, you can offer an Ogg or WebM video as the first choice, with a fallback in MP4 format.
 You could even choose to offer a retro-like QuickTime or AVI fallback for good measure.
 
-To do this, you create a `<video>` (or `<audio>`) element with no {{htmlattrxref("src", "video")}} attribute.
+To do this, you create a `<video>` (or `<audio>`) element with no [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute.
 Then add child {{HTMLElement("source")}} elements within the `<video>` element, one for each version of the video you offer.
 This can be used to offer various versions of a video that can be selected depending on bandwidth availability, but in our case, we'll use it to offer format options.
 
@@ -1114,7 +1101,7 @@ In the example shown here, a video is offered to the browser in two formats: Web
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
-The video is offered first in WebM format (with the {{htmlattrxref("type", "video")}} attribute set to `video/webm`).
+The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Element/source#type) attribute set to `video/webm`).
 If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`.
 If neither of those can be played, the text "This browser does not support the HTML video element." is presented.
 
@@ -1131,11 +1118,11 @@ If neither of those can be played, the text "This browser does not support the H
 | [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html) (MPEG-4 Part 1 Systems)                                                                           | Defines the original MPEG-4 (MP4) container format                                                              |
 | {{RFC(3533)}}                                                                                                                                                | Defines the Ogg container format                                                                                |
 | {{RFC(5334)}}                                                                                                                                                | Defines the Ogg media types and file extensions                                                                 |
-| [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | Defines the QuickTime movie (MOV) format                                                                        |
+| [QuickTime File Format Specification](https://developer.apple.com/documentation/quicktime-file-format)                                                       | Defines the QuickTime movie (MOV) format                                                                        |
 | [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | The closest thing to an official WAVE specification                                                             |
-| [Resource Interchange File Format](https://docs.microsoft.com/windows/win32/xaudio2/resource-interchange-file-format--riff-) (used by WAV)                   | Defines the RIFF format; WAVE files are a form of RIFF                                                          |
+| [Resource Interchange File Format](https://learn.microsoft.com/en-us/windows/win32/xaudio2/resource-interchange-file-format--riff-) (used by WAV)            | Defines the RIFF format; WAVE files are a form of RIFF                                                          |
 | [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | Guide for adapting Matroska for WebM                                                                            |
-| [Matroska Specifications](https://matroska.org/index.html)                                                                                                   | The specification for the Matroska container format upon which WebM is based                                    |
+| [Matroska Specifications](https://www.matroska.org/index.html)                                                                                               | The specification for the Matroska container format upon which WebM is based                                    |
 | [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | WebM byte stream format for use with [Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API) |
 
 ## Browser compatibility
@@ -1274,7 +1261,7 @@ If neither of those can be played, the text "This browser does not support the H
       <td style="vertical-align: top">Safari</td>
     </tr>
     <tr>
-      <th scope="row" style="vertical-align: top">WAV (Waveform Audiofile)</th>
+      <th scope="row" style="vertical-align: top">WAV (Waveform Audio File)</th>
       <td style="vertical-align: top"><code>audio/wav</code></td>
       <td style="vertical-align: top"><code>.wav</code></td>
       <td style="vertical-align: top; border-right: 2px solid #d4dde4">

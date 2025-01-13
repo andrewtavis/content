@@ -1,18 +1,12 @@
 ---
-title: WebGLRenderingContext.createShader()
+title: "WebGLRenderingContext: createShader() method"
+short-title: createShader()
 slug: Web/API/WebGLRenderingContext/createShader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Graphics
-  - Method
-  - Reference
-  - Shader
-  - WebGL
 browser-compat: api.WebGLRenderingContext.createShader
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The {{domxref("WebGLRenderingContext")}}
 method **`createShader()`** of the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates a
@@ -55,7 +49,6 @@ See {{domxref("WebGLShader")}} for usage and examples.
 - {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
 - {{domxref("WebGLRenderingContext.compileShader()")}}
 - {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}
 - {{domxref("WebGLRenderingContext.deleteShader()")}}
 - {{domxref("WebGLRenderingContext.detachShader()")}}

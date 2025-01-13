@@ -2,20 +2,12 @@
 title: CSSMathSum
 slug: Web/API/CSSMathSum
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathSum
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
 browser-compat: api.CSSMathSum
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathSum`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
+The **`CSSMathSum`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
 
 A CSSMathSum is the object type returned when the [`StylePropertyMapReadOnly.get()`](/en-US/docs/Web/API/StylePropertyMapReadOnly/get) method is used on a CSS property whose value is created with a [`calc()`](/en-US/docs/Web/CSS/calc) function.
 
@@ -28,7 +20,7 @@ A CSSMathSum is the object type returned when the [`StylePropertyMapReadOnly.get
 
 ## Instance properties
 
-- {{domxref('CSSMathSum.values')}} {{Experimental_Inline}}
+- {{domxref('CSSMathSum.values')}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Static methods
@@ -39,13 +31,9 @@ _The interface may also inherit methods from its parent interface, {{domxref("CS
 
 _The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
 
-## Event handlers
-
-No
-
 ## Examples
 
-We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function, then {{DOMxRef("console.log()")}} the `operator` and `values`, and dig into the values a bit.
+We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function, then {{domxref("console/log_static", "console.log()")}} the `operator` and `values`, and dig into the values a bit.
 
 ```html
 <div>has width</div>

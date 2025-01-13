@@ -1,7 +1,10 @@
 ---
-title: FeaturePolicy.allowsFeature()
+title: "FeaturePolicy: allowsFeature() method"
+short-title: allowsFeature()
 slug: Web/API/FeaturePolicy/allowsFeature
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.FeaturePolicy.allowsFeature
 ---
 
@@ -16,24 +19,16 @@ specified context (or the default context if no context is specified).
 ## Syntax
 
 ```js-nolint
-const allowed = FeaturePolicy.allowsFeature(feature)
-```
-
-or
-
-```js
-const allowed = FeaturePolicy.allowsFeature(feature, origin);
+allowsFeature(feature)
+allowsFeature(feature, origin)
 ```
 
 ### Parameters
 
-#### `Feature name`
-
-A specific feature name must be specified.
-
-#### `Origin name` {{Optional_inline}}
-
-An origin URL to check the feature on. If it is omitted the default origin is used.
+- `feature`
+  - : The specific feature name to check its availability.
+- `origin` {{Optional_inline}}
+  - : The specific origin name to check its availability. If not specified, the default origin will be used.
 
 ### Return value
 
@@ -48,15 +43,15 @@ Permissions API, if the user did not grant the corresponding permission yet.
 
 ```js
 // First, get the Feature Policy object
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Then query feature for specific
-const allowed = featurePolicy.allowsFeature("camera")
+const allowed = featurePolicy.allowsFeature("camera");
 
-if (allowed){
-  console.log("FP allows camera.")
+if (allowed) {
+  console.log("FP allows camera.");
 } else {
-  console.log("FP does not allows camera.")
+  console.log("FP does not allows camera.");
 }
 ```
 

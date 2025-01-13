@@ -2,10 +2,6 @@
 title: <feGaussianBlur>
 slug: Web/SVG/Element/feGaussianBlur
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feGaussianBlur
 ---
 
@@ -19,16 +15,6 @@ The **`<feGaussianBlur>`** [SVG](/en-US/docs/Web/SVG) filter primitive blurs the
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
-
 - {{SVGAttr("in")}}
 - {{SVGAttr("stdDeviation")}}
 - {{SVGAttr("edgeMode")}}
@@ -39,7 +25,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 ## Example
 
-### Simple example
+### Basic example
 
 #### SVG
 
@@ -61,7 +47,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 #### Result
 
-{{EmbedLiveSample("Simple_example",232,124,"/files/4227/feGaussianBlur.png")}}
+{{EmbedLiveSample("Basic_example", "", "130")}}
 
 ### Drop shadow example
 
@@ -88,7 +74,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 #### Result
 
-{{EmbedLiveSample("Drop_shadow_example",125,124,"/files/4229/feGaussianBlur-dropshadow.png")}}
+{{EmbedLiveSample("Drop_shadow_example", "", "130")}}
 
 ## Specifications
 
@@ -100,6 +86,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 ## See also
 
+- [SVG Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}

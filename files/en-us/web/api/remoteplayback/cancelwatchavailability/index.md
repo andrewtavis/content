@@ -1,17 +1,12 @@
 ---
-title: RemotePlayback.cancelWatchAvailability()
+title: "RemotePlayback: cancelWatchAvailability() method"
+short-title: cancelWatchAvailability()
 slug: Web/API/RemotePlayback/cancelWatchAvailability
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - cancelWatchAvailability
-  - RemotePlayback
 browser-compat: api.RemotePlayback.cancelWatchAvailability
 ---
 
-{{DefaultAPISidebar("Remote Playback API")}}
+{{APIRef("Remote Playback API")}}
 
 The **`cancelWatchAvailability()`** method of the {{domxref("RemotePlayback")}} interface cancels the request to watch for one or all available devices.
 
@@ -53,7 +48,7 @@ function switchToRemoteUI() {
 
   // Stop monitoring the availability of remote playback devices.
   videoElem.remote.cancelWatchAvailability();
-};
+}
 ```
 
 ## Specifications

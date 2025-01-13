@@ -1,33 +1,17 @@
 ---
-title: RTCIceTransport.state
+title: "RTCIceTransport: state property"
+short-title: state
 slug: Web/API/RTCIceTransport/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Enumerated Type
-  - Enumeration
-  - ICE
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Transport
-  - Type
-  - WebRTC
-  - WebRTC API
-  - state
 browser-compat: api.RTCIceTransport.state
 ---
 
 {{APIRef("WebRTC")}}
 
-The read-only **{{domxref("RTCIceTransport")}}**
-property **`state`** returns the current state of the ICE
-transport, so you can determine the state of ICE gathering in which the ICE agent
-currently is operating.
+The **`state`** read-only property of the {{domxref("RTCIceTransport")}} interface returns the current state of the ICE transport, so you can determine the state of ICE gathering in which the ICE agent currently is operating.
 
-This differs from the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}},
-which only indicates whether or not ICE gathering is currently underway.
+This differs from the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}}, which only indicates whether or not ICE gathering is currently underway.
+It also differs from {{domxref("RTCPeerConnection.connectionState")}}, which aggregates the states across every {{domxref("RTCIceTransport")}} used by every {{domxref("RTCRtpSender")}} and every {{domxref("RTCRtpReceiver")}} on the entire connection.
 
 ## Value
 

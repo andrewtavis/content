@@ -2,11 +2,6 @@
 title: SVGTransformList
 slug: Web/API/SVGTransformList
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGTransformList
 ---
 
@@ -89,7 +84,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
           <li>readonly unsigned long <code>numberOfItems</code></li>
           <li>
             readonly unsigned long
-            <code>length</code> {{ non-standard_inline() }}
+            <code>length</code>
           </li>
         </ul>
       </td>
@@ -108,10 +103,10 @@ An `SVGTransformList` is indexable and can be accessed like an array.
 
 ## Instance properties
 
-| Name                                 | Type          | Description                      |
-| ------------------------------------ | ------------- | -------------------------------- |
-| `numberOfItems`                      | unsigned long | The number of items in the list. |
-| `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
+| Name                                                           | Type          | Description                      |
+| -------------------------------------------------------------- | ------------- | -------------------------------- |
+| {{domxref("SVGTransformList.numberOfItems", "numberOfItems")}} | unsigned long | The number of items in the list. |
+| {{domxref("SVGTransformList.length", "length")}}               | unsigned long | The number of items in the list. |
 
 ## Instance methods
 
@@ -126,7 +121,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
   <tbody>
     <tr>
       <td>
-        <code><strong>clear</strong>()</code>
+        <code><strong>{{domxref("SVGTransformList.clear", "clear")}}</strong>()</code>
       </td>
       <td><code>void</code></td>
       <td>
@@ -148,7 +143,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>initialize</strong>(in
+          ><strong>{{domxref("SVGTransformList.initialize", "initialize")}}</strong>(in
           {{ domxref("SVGTransform") }} <em>newItem</em>)</code
         >
       </td>
@@ -175,7 +170,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     </tr>
     <tr>
       <td>
-        <code><strong>getItem</strong>(in unsigned long <em>index</em>)</code>
+        <code><strong>{{domxref("SVGTransformList.getItem", "getItem")}}</strong>(in unsigned long <em>index</em>)</code>
       </td>
       <td>{{ domxref("SVGTransform") }}</td>
       <td>
@@ -198,7 +193,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>insertItemBefore</strong>(in
+          ><strong>{{domxref("SVGTransformList.insertItemBefore", "insertItemBefore")}}</strong>(in
           {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned
           long <em>index</em>)</code
         >
@@ -230,7 +225,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>replaceItem</strong>(in
+          ><strong>{{domxref("SVGTransformList.replaceItem", "replaceItem")}}</strong>(in
           {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned
           long <em>index</em>)</code
         >
@@ -264,7 +259,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>removeItem</strong>(in unsigned long <em>index</em>)</code
+          ><strong>{{domxref("SVGTransformList.removeItem", "removeItem")}}</strong>(in unsigned long <em>index</em>)</code
         >
       </td>
       <td>{{ domxref("SVGTransform") }}</td>
@@ -289,7 +284,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>appendItem</strong>(in
+          ><strong>{{domxref("SVGTransformList.appendItem", "appendItem")}}</strong>(in
           {{ domxref("SVGTransform") }} <em>newItem</em>)</code
         >
       </td>
@@ -315,7 +310,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>createSVGTransformFromMatrix</strong>(in
+          ><strong>{{domxref("SVGTransformList.createSVGTransformFromMatrix", "createSVGTransformFromMatrix")}}</strong>(in
           {{ domxref("DOMMatrix") }})</code
         >
       </td>
@@ -329,7 +324,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     </tr>
     <tr>
       <td>
-        <code><strong>consolidate</strong>()</code>
+        <code><strong>{{domxref("SVGTransformList.consolidate", "consolidate")}}</strong>()</code>
       </td>
       <td>{{ domxref("SVGTransform") }}</td>
       <td>
@@ -362,7 +357,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
 
 In this example we create a function that will apply three different transformations to the SVG element that has been clicked on. In order to do this we create a separate {{domxref("SVGTransform")}} object for each transformation — such as `translate`, `rotate`, and `scale`. We apply multiple transformation by appending the transform object to the `SVGTransformList` associated with an SVG element.
 
-```html
+```html-nolint
 <svg
   id="my-svg"
   viewBox="0 0 300 280"
@@ -376,16 +371,16 @@ In this example we create a function that will apply three different transformat
     <![CDATA[
       function transformMe(evt) {
         // svg root element to access the createSVGTransform() function
-        const svgroot = evt.target.parentNode;
+        const svgRoot = evt.target.parentNode;
         // SVGTransformList of the element that has been clicked on
         const tfmList = evt.target.transform.baseVal;
 
         // Create a separate transform object for each transform
-        const translate = svgroot.createSVGTransform();
+        const translate = svgRoot.createSVGTransform();
         translate.setTranslate(50,5);
-        const rotate = svgroot.createSVGTransform();
+        const rotate = svgRoot.createSVGTransform();
         rotate.setRotate(10,0,0);
-        const scale = svgroot.createSVGTransform();
+        const scale = svgRoot.createSVGTransform();
         scale.setScale(0.8,0.8);
 
         // apply the transformations by appending the SVGTransform objects to the SVGTransformList associated with the element

@@ -1,14 +1,8 @@
 ---
-title: MouseEvent()
+title: "MouseEvent: MouseEvent() constructor"
+short-title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
-page-type: web-api-instance-property
-tags:
-  - API
-  - Constructor
-  - DOM
-  - MouseEvent
-  - Reference
-  - events
+page-type: web-api-constructor
 browser-compat: api.MouseEvent.MouseEvent
 ---
 
@@ -27,7 +21,7 @@ new MouseEvent(type, options)
 
 - `type`
   - : A string with the name of the event.
-    It is case-sensitive and browsers set it to `dblclick`, `mousedown`, `mouseenter`, `mouseleave`, `mousemove`, `mouseout`, `mouseover`, or `mouseup`.
+    It is case-sensitive and browsers set it to `click`, `dblclick`, `mousedown`, `mouseenter`, `mouseleave`, `mousemove`, `mouseout`, `mouseover`, or `mouseup`.
 - `options` {{optional_inline}}
 
   - : An object that, _in addition of the properties defined in {{domxref("UIEvent/UIEvent", "UIEvent()")}}_, can have the following properties:

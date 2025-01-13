@@ -2,11 +2,6 @@
 title: SVGStringList
 slug: Web/API/SVGStringList
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStringList
 ---
 
@@ -301,6 +296,10 @@ An `SVGStringList` object can be designated as read only, which means that attem
     </tr>
   </tbody>
 </table>
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

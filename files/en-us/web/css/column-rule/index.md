@@ -2,12 +2,6 @@
 title: column-rule
 slug: Web/CSS/column-rule
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.column-rule
 ---
 
@@ -17,9 +11,13 @@ The **`column-rule`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS
 
 {{EmbedInteractiveExample("pages/css/column-rule.html")}}
 
-It is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) that sets the individual `column-rule-*` properties in a single, convenient declaration: {{Cssxref("column-rule-width")}}, {{Cssxref("column-rule-style")}}, and {{Cssxref("column-rule-color")}}.
+## Constituent properties
 
-> **Note:** As with all shorthand properties, any individual value that is not specified is set to its corresponding initial value (possibly overriding values previously set using non-shorthand properties).
+This property is a shorthand for the following CSS properties:
+
+- {{Cssxref("column-rule-color")}}
+- {{Cssxref("column-rule-style")}}
+- {{Cssxref("column-rule-width")}}
 
 ## Syntax
 
@@ -118,7 +116,7 @@ p.abc {
 
 ## See also
 
-- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - {{CSSXref("column-rule-style")}}
 - {{CSSXref("column-rule-width")}}
 - {{CSSXref("column-rule-color")}}

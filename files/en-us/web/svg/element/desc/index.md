@@ -2,16 +2,12 @@
 title: <desc>
 slug: Web/SVG/Element/desc
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Descriptive
 browser-compat: svg.elements.desc
 ---
 
 {{SVGRef}}
 
-The **`<desc>`** element provides an accessible, long-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).
+The **`<desc>`** [SVG](/en-US/docs/Web/SVG) element provides an accessible, long-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).
 
 Text in a `<desc>` element is not rendered as part of the graphic. If the element can be described by visible text, it is possible to reference that text with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute. If `aria-describedby` is used, it will take precedence over `<desc>`.
 
@@ -44,16 +40,7 @@ svg {
 
 This element only includes global attributes
 
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

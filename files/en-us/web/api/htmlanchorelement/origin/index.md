@@ -1,13 +1,8 @@
 ---
-title: HTMLAnchorElement.origin
+title: "HTMLAnchorElement: origin property"
+short-title: origin
 slug: Web/API/HTMLAnchorElement/origin
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLAnchorElement.origin
 ---
 
@@ -26,7 +21,7 @@ That is:
   explicitly specified);
 - for URL using `file:` scheme, the value is browser dependent;
 - for URL using the `blob:` scheme, the origin of the URL following
-  `blob:`. E.g `"blob:https://mozilla.org"` will have
+  `blob:`. E.g. `"blob:https://mozilla.org"` will have
   `"https://mozilla.org".`
 
 ## Value

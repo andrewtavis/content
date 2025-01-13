@@ -1,26 +1,17 @@
 ---
 title: declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL
-tags:
-  - MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Property
-  - declarativeNetRequest
-  - MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL
+page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The number of times {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} can be called within a period of {{WebExtAPIRef("declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL")}}.
 
 Its value is `20`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

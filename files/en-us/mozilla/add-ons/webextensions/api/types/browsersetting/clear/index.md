@@ -2,15 +2,6 @@
 title: clear()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Types
-  - WebExtensions
-  - clear
 ---
 
 {{AddonSidebar}}
@@ -61,9 +52,8 @@ clearing.then(onCleared);
 
 {{WebExtExamples}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

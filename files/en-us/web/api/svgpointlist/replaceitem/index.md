@@ -1,13 +1,8 @@
 ---
-title: SVGPointList.replaceItem()
+title: "SVGPointList: replaceItem() method"
+short-title: replaceItem()
 slug: Web/API/SVGPointList/replaceItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - replaceItem
-  - SVGPointList
 browser-compat: api.SVGPointList.replaceItem
 ---
 
@@ -55,10 +50,10 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 
 ```js
 let example = document.getElementById("example");
-let svgpoint = document.getElementById("svg").createSVGPoint();
-svgpoint.y = 10;
-svgpoint.x = 10;
-console.log(example.points.replaceItem(svgpoint,1));
+let svgPoint = document.getElementById("svg").createSVGPoint();
+svgPoint.y = 10;
+svgPoint.x = 10;
+console.log(example.points.replaceItem(svgPoint, 1));
 ```
 
 ## Specifications

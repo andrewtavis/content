@@ -2,12 +2,6 @@
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-bottom-style
 ---
 
@@ -17,7 +11,8 @@ The **`border-bottom-style`** [CSS](/en-US/docs/Web/CSS) property sets the line 
 
 {{EmbedInteractiveExample("pages/css/border-bottom-style.html")}}
 
-> **Note:** The specification doesn't define how borders of different styles connect in the corners.
+> [!NOTE]
+> The specification doesn't define how borders of different styles connect in the corners.
 
 ## Syntax
 
@@ -42,7 +37,7 @@ border-bottom-style: revert-layer;
 border-bottom-style: unset;
 ```
 
-The `border-bottom-style` property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.
+The `border-bottom-style` property is specified as a single {{cssxref("line-style")}} keyword value.
 
 ## Formal definition
 

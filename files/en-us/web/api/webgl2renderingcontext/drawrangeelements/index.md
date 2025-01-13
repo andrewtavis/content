@@ -1,17 +1,12 @@
 ---
-title: WebGL2RenderingContext.drawRangeElements()
+title: "WebGL2RenderingContext: drawRangeElements() method"
+short-title: drawRangeElements()
 slug: Web/API/WebGL2RenderingContext/drawRangeElements
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.drawRangeElements
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.drawRangeElements()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array

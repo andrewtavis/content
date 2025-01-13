@@ -2,20 +2,10 @@
 title: windows.Window
 slug: Mozilla/Add-ons/WebExtensions/API/windows/Window
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - Window
-  - Windows
 browser-compat: webextensions.api.windows.Window
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Information about a browser window.
 
@@ -56,7 +46,8 @@ Values of this type are `objects`. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#type-Window) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

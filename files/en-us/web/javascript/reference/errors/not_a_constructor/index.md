@@ -2,11 +2,6 @@
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
 ---
 
 {{jsSidebar("Errors")}}
@@ -17,7 +12,7 @@ constructor.
 
 ## Message
 
-```
+```plain
 TypeError: x is not a constructor (V8-based & Firefox & Safari)
 ```
 
@@ -74,10 +69,10 @@ function Car(make, model, year) {
 }
 ```
 
-Now you can create an object called `mycar` as follows:
+Now you can create an object called `myCar` as follows:
 
 ```js
-const mycar = new Car("Eagle", "Talon TSi", 1993);
+const myCar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 ### In Promises
@@ -117,4 +112,4 @@ const rejectAlways = () => {
 ## See also
 
 - [constructor](/en-US/docs/Glossary/Constructor)
-- [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new)
+- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)

@@ -2,19 +2,12 @@
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.includes
 ---
 
 {{JSRef}}
 
-The **`includes()`** method performs a case-sensitive search to determine whether one string may be found within another string, returning `true` or `false` as appropriate.
+The **`includes()`** method of {{jsxref("String")}} values performs a case-sensitive search to determine whether a given string may be found within this string, returning `true` or `false` as appropriate.
 
 {{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}
 
@@ -39,7 +32,7 @@ includes(searchString, position)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : If `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
+  - : Thrown if `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
 ## Description
 

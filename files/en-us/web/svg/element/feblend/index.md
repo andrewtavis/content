@@ -2,10 +2,6 @@
 title: <feBlend>
 slug: Web/SVG/Element/feBlend
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feBlend
 ---
 
@@ -18,16 +14,6 @@ The **`<feBlend>`** [SVG](/en-US/docs/Web/SVG) filter primitive composes two obj
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
 
 - {{SVGAttr("in")}}
 - {{SVGAttr("in2")}}
@@ -62,7 +48,7 @@ This element implements the {{domxref("SVGFEBlendElement")}} interface.
   </defs>
 
   <image
-    xlink:href="mdn_logo_only_color.png"
+    href="mdn_logo_only_color.png"
     x="10%"
     y="10%"
     width="80%"
@@ -85,6 +71,7 @@ This element implements the {{domxref("SVGFEBlendElement")}} interface.
 
 ## See also
 
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

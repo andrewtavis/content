@@ -2,25 +2,12 @@
 title: Intl.NumberFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - NumberFormat
-  - Prototype
-  - Reference
-  - formatRangeToParts
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 ---
 
 {{JSRef}}
 
-The **`Intl.Numberformat.prototype.formatRangeToParts()`** method enables locale-aware formatting of strings produced by `NumberFormat` formatters.
-
-It returns an {{jsxref("Array")}} of objects containing the locale-specific tokens from which it is possible to build custom strings while preserving the locale-specific parts.
-This makes it possible to provide locale-aware custom formatting ranges of number strings.
+The **`formatRangeToParts()`** method of {{jsxref("Intl.NumberFormat")}} instances returns an {{jsxref("Array")}} of objects containing the locale-specific tokens from which it is possible to build custom strings while preserving the locale-specific parts. This makes it possible to provide locale-aware custom formatting ranges of number strings.
 
 ## Syntax
 
@@ -31,11 +18,9 @@ formatRangeToParts(startRange, endRange)
 ### Parameters
 
 - `startRange`
-
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
-
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `formatRangeToParts()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
 - `endRange`
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format.
 
 ### Return value
 
@@ -92,7 +77,7 @@ Possible values for the `source` property include:
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if `startRange` is less than `endRange`, or either value is `NaN`.
+  - : Thrown if either `startRange` or `endRange` is `NaN` or an inconvertible string.
 - {{jsxref("TypeError")}}
   - : Thrown if either `startRange` or `endRange` is undefined.
 
@@ -150,5 +135,5 @@ console.log(formatter.formatRangeToParts(startRange, endRange));
 ## See also
 
 - {{jsxref("Intl.NumberFormat")}}
-- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format")}}
-- Formatting dates: {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
+- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
+- {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}

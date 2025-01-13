@@ -1,12 +1,7 @@
 ---
-title: '<hr>: The Thematic Break (Horizontal Rule) element'
+title: "<hr>: The Thematic Break (Horizontal Rule) element"
 slug: Web/HTML/Element/hr
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
 browser-compat: html.elements.hr
 ---
 
@@ -22,15 +17,15 @@ Historically, this has been presented as a horizontal rule or line. While it may
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `align` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the alignment of the rule on the page. If no value is specified, the default value is `left`.
-- {{htmlattrdef("color")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `color` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the color of the rule through color name or hexadecimal value.
-- {{htmlattrdef("noshade")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `noshade` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the rule to have no shading.
-- {{htmlattrdef("size")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `size` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the height, in pixels, of the rule.
-- {{htmlattrdef("width")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `width` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the length of the rule on the page through a pixel or percentage value.
 
 ## Example
@@ -61,12 +56,12 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -77,15 +72,15 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>It must have start tag, but must not have an end tag.</td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >flow content</a
-        >.
+        <ul>
+          <li>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">flow content</a></li>
+          <li><a href="/en-US/docs/Web/HTML/Element/select"><code>&lt;select></code></a> element</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -116,3 +111,4 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 ## See also
 
 - {{HTMLElement('p')}}
+- [`<hr>` in `<select>`](/en-US/docs/Web/HTML/Element/select#select_with_grouping_options)

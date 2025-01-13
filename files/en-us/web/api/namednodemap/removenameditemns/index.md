@@ -1,16 +1,14 @@
 ---
-title: NamedNodeMap.removeNamedItemNS()
+title: "NamedNodeMap: removeNamedItemNS() method"
+short-title: removeNamedItemNS()
 slug: Web/API/NamedNodeMap/removeNamedItemNS
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.removeNamedItemNS
 ---
 
 {{APIRef("DOM")}}
 
-The **`removedNamedItemNS()`** method of the {{domxref("NamedNodeMap")}} interface
+The **`removeNamedItemNS()`** method of the {{domxref("NamedNodeMap")}} interface
 removes the {{domxref("Attr")}} corresponding to the given namespace and local name from the map.
 
 ## Syntax
@@ -68,7 +66,7 @@ pre.textContent = result;
 
 {{EmbedLiveSample("Example", "100%", 120)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

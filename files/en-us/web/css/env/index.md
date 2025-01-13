@@ -2,22 +2,12 @@
 title: env()
 slug: Web/CSS/env
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Variables
-  - Draft
-  - Function
-  - Reference
-  - Variables
-  - env
-  - env()
 browser-compat: css.properties.custom-property.env
 ---
 
 {{CSSRef}}
 
-The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to insert the value of a user-agent defined environment variable into your CSS, in a similar fashion to the {{cssxref("var", "var()")}} function and [custom properties](/en-US/docs/Web/CSS/--*). The difference is that, as well as being user-agent defined rather than user-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared.
+The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to insert the value of a user-agent defined environment variable into your CSS, in a similar fashion to the {{cssxref("var", "var()")}} function and [custom properties](/en-US/docs/Web/CSS/--*). The difference is that, as well as being user-agent defined rather than author-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared.
 
 In addition, unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (e.g. in [Media query rules](/en-US/docs/Web/CSS/@media)). As the spec evolves, it may also be usable in other places such as selectors.
 
@@ -52,9 +42,10 @@ env(safe-area-inset-left, 1.4rem);
 - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
   - : The `keyboard-inset-*` variables provide information about the on-screen virtual keyboard's appearance. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport (the width and height insets are calculated from the other insets). To learn more, see the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
 
-> **Note:** Unlike other CSS properties, user agent-defined property names are case-sensitive.
+> [!NOTE]
+> Unlike other CSS properties, user agent-defined property names are case-sensitive.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -70,10 +61,8 @@ You can then use `env()` in your CSS:
 
 ```css
 body {
-  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
-      safe-area-inset-bottom,
-      20px
-    ) env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -149,10 +138,8 @@ The below example makes use of the optional second parameter of `env()`, which a
 p {
   width: 300px;
   border: 2px solid red;
-  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
-      safe-area-inset-bottom,
-      50px
-    ) env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px)
+    env(safe-area-inset-bottom, 50px) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 
@@ -165,7 +152,7 @@ p {
 padding: env(safe-area-inset-bottom, 50px);
 
 /* 50px because UA properties are case sensitive */
-padding: env(safe-area-inset-bottom, 50px);
+padding: env(Safe-area-inset-bottom, 50px);
 
 /* as if padding: '50px 20px' were set because x is not a valid environment variable */
 padding: env(x, 50px 20px);
@@ -176,7 +163,8 @@ padding: env(x, 50px, 20px);
 
 The syntax of the fallback, like that of custom properties, allows commas. But, if the property value doesn't support commas, the value is not valid.
 
-> **Note:** User agent properties are not reset by the [all](/en-US/docs/Web/CSS/all) property.
+> [!NOTE]
+> User agent properties are not reset by the [all](/en-US/docs/Web/CSS/all) property.
 
 ### Using env() to ensure content is not obscured by window control buttons in desktop PWAs
 
@@ -209,7 +197,8 @@ main {
 }
 ```
 
-> **Note:** Using `position:fixed` makes sure the header does not scroll with the rest of the content, and instead stays aligned with the window control buttons, even on device/browsers that support elastic overscroll (also known as rubber banding).
+> [!NOTE]
+> Using `position:fixed` makes sure the header does not scroll with the rest of the content, and instead stays aligned with the window control buttons, even on device/browsers that support elastic overscroll (also known as rubber banding).
 
 ## Specifications
 
@@ -222,9 +211,9 @@ main {
 ## See also
 
 - {{CSSxRef("var", "var(…)")}}
-- [CSS Custom Properties for Cascading Variables](/en-US/docs/Web/CSS/CSS_Variables)
-- [Custom Properties (--\*)](/en-US/docs/Web/CSS/--*)
+- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
+- [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
-- [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
-- [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
+- [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
+- [Display content in the title bar](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)

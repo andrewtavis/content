@@ -2,18 +2,8 @@
 title: Navigation
 slug: Web/API/Navigation
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - History
-  - Interface
-  - Landing
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation
 ---
 
@@ -31,6 +21,8 @@ The Navigation API only exposes history entries created in the current browsing 
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
+- {{domxref("Navigation.activation", "activation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("NavigationActivation")}} object containing information about the most recent cross-document navigation, which "activated" this Document.
 - {{domxref("Navigation.canGoBack", "canGoBack")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if it is possible to navigate backwards in the navigation history
     (i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the first one in the history entry list),
@@ -68,6 +60,8 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 ## Events
 
+_Inherits events from its parent, {{DOMxRef("EventTarget")}}._
+
 - {{domxref("Navigation/currententrychange_event", "currententrychange")}} {{Experimental_Inline}}
   - : Fired when the {{domxref("Navigation.currentEntry")}} has changed.
 - {{domxref("Navigation/navigate_event", "navigate")}} {{Experimental_Inline}}
@@ -88,7 +82,7 @@ async function backHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the first page');
+    displayBanner("You are on the first page");
   }
 }
 
@@ -98,7 +92,7 @@ async function forwardHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the last page');
+    displayBanner("You are on the last page");
   }
 }
 ```
@@ -108,29 +102,29 @@ async function forwardHandler() {
 ```js
 // On JS startup, get the key of the first loaded page
 // so the user can always go back there.
-const {key} = navigation.currentEntry;
+const { key } = navigation.currentEntry;
 backToHomeButton.onclick = () => navigation.traverseTo(key);
 
 // Navigate away, but the button will always work.
-await navigation.navigate('/another_url').finished;
+await navigation.navigate("/another_url").finished;
 ```
 
 ### Navigating and updating state
 
 ```js
-navigation.navigate(url, {state: newState});
+navigation.navigate(url, { state: newState });
 ```
 
 Or
 
 ```js
-navigation.reload({state: newState});
+navigation.reload({ state: newState });
 ```
 
 Or if the state is independent from a navigation or reload:
 
 ```js
-navigation.updateCurrentEntry({state: newState});
+navigation.updateCurrentEntry({ state: newState });
 ```
 
 ## Specifications

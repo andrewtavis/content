@@ -2,11 +2,6 @@
 title: Open source etiquette
 slug: MDN/Community/Open_source_etiquette
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
-  - open-source
 ---
 
 {{MDNSidebar}}
@@ -78,7 +73,7 @@ A lot of the work on MDN revolves around writing documentation and code examples
 Every fix is useful, no matter how small, and we won't turn any fix away. Nevertheless, try to make sure your fixes are productive. We'd like to advise against these kinds of contributions:
 
 - Updating code styling just because "you like that style better".
-- Updating language style "just because you like that style better".
+- Updating language style just because "you like that style better".
 - Changing pages from US English to British English.
 - Adding or removing a bunch of punctuation when there's not really anything wrong.
 - Changing the testing framework we are using for something else because you prefer it.

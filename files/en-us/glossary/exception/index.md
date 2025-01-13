@@ -2,10 +2,9 @@
 title: Exception
 slug: Glossary/Exception
 page-type: glossary-definition
-tags:
-  - Beginner
-  - CodingScripting
 ---
+
+{{GlossarySidebar}}
 
 An **exception** is a condition that interrupts normal code execution. In JavaScript {{glossary("syntax error", "syntax errors")}} are a very common source of exceptions.
 

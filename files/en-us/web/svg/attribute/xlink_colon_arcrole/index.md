@@ -2,11 +2,9 @@
 title: xlink:arcrole
 slug: Web/SVG/Attribute/xlink:arcrole
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.xlink.xlink_arcrole
+status:
+  - deprecated
+browser-compat: svg.global_attributes.xlink_arcrole
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
@@ -18,9 +16,7 @@ This contextual role can differ from the meaning of the resource when taken outs
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("cursor")}}
@@ -63,7 +59,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<iri>`
-  - : This value specifies an {{Glossary("IRI")}} reference that identifies some resource that describes the intended property.
+  - : This value specifies an [IRI](/en-US/docs/Web/SVG/Content_type#iri) reference that identifies some resource that describes the intended property.
 
 ## Specifications
 

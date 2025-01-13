@@ -2,12 +2,8 @@
 title: <strike>
 slug: Web/HTML/Element/strike
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.strike
 ---
 
@@ -15,20 +11,21 @@ browser-compat: html.elements.strike
 
 The **`<strike>`** [HTML](/en-US/docs/Web/HTML) element places a strikethrough (horizontal line) over text.
 
-> **Warning:** This element is deprecated in HTML 4 and XHTML 1, and obsoleted in the [HTML Living Standard](https://html.spec.whatwg.org/#strike). If semantically appropriate, i.e., if it represents _deleted_ content, use {{HTMLElement("del")}} instead. In all other cases use {{HTMLElement("s")}}.
+> [!WARNING]
+> This element is deprecated in HTML 4 and XHTML 1, and obsoleted in the [HTML Living Standard](https://html.spec.whatwg.org/multipage/obsolete.html#strike). If semantically appropriate, i.e., if it represents _deleted_ content, use {{HTMLElement("del")}} instead. In all other cases use {{HTMLElement("s")}}.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-## Example
+## Examples
 
 ```html
 &lt;strike&gt;: <strike>Today's Special: Salmon</strike> SOLD OUT<br />
 &lt;s&gt;: <s>Today's Special: Salmon</s> SOLD OUT
 ```
 
-The result of this code is:
+### Result
 
 {{EmbedLiveSample("Example")}}
 

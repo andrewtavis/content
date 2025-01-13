@@ -1,16 +1,14 @@
 ---
 title: "BroadcastChannel: message event"
+short-title: message
 slug: Web/API/BroadcastChannel/message_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
 browser-compat: api.BroadcastChannel.message_event
 ---
 
-{{APIRef}}
+{{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}
 
-The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a message arrives on that channel.
+The **`message`** event of the {{domxref("BroadcastChannel")}} interface fires when a message arrives on that channel.
 
 ## Syntax
 
@@ -44,7 +42,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-In this example there's a "sender" [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) that broadcasts the contents of a [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) when the user clicks a button. There are two "receiver" iframes that listen to the broadcast message and write the result into a [`<div>`](/en-US/docs/Web/HTML/Element/div) element.
+In this example there's a "sender" {{HTMLElement("iframe")}} that broadcasts the contents of a {{HTMLElement("textarea")}} when the user clicks a button. There are two "receiver" iframes that listen to the broadcast message and write the result into a {{HTMLElement("div")}} element.
 
 ### Sender
 
@@ -64,7 +62,9 @@ body {
 }
 
 h1 {
-  font: 1.6em "Fira Sans", sans-serif;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -109,7 +109,9 @@ body {
 }
 
 h1 {
-  font: 1.6em "Fira Sans", sans-serif;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
   margin-bottom: 1rem;
 }
 ```
@@ -137,7 +139,9 @@ body {
 }
 
 h1 {
-  font: 1.6em "Fira Sans", sans-serif;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
   margin-bottom: 1rem;
 }
 ```
@@ -167,4 +171,4 @@ channel.addEventListener("message", (event) => {
 
 ## See also
 
-- Related events: [`messageerror`](/en-US/docs/Web/API/BroadcastChannel/messageerror_event).
+- Related events: {{domxref("BroadcastChannel/messageerror_event", "messageerror")}}.

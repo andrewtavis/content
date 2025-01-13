@@ -2,11 +2,6 @@
 title: Web Audio API best practices
 slug: Web/API/Web_Audio_API/Best_practices
 page-type: guide
-tags:
-  - Audio
-  - Best practices
-  - Guide
-  - Web Audio API
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -21,7 +16,7 @@ When working with files, you are looking at either grabbing the file from an {{d
 
 Media elements have streaming support out of the box. The audio will start playing when the browser determines it can load the rest of the file before playing finishes. You can see an example of how to use this with the Web Audio API in the [Using the Web Audio API tutorial](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
-You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load ([this section of our advanced article](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample) shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.
+You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load ([this section of our advanced article](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#dial-up_—_loading_a_sound_sample) shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.
 
 If you're looking to work with audio from the user's camera or microphone you can access it via the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyze audio.
 
@@ -37,7 +32,7 @@ There is also the option of libraries, of which there are a few depending on you
 
 If you are looking for sound creation or a more instrument-based option, [tone.js](https://tonejs.github.io/) is a great library. It provides advanced scheduling capabilities, synths, and effects, and intuitive musical abstractions built on top of the Web Audio API.
 
-[R-audio](https://github.com/bbc/r-audio), from the [BBC's Research & Development department](https://medium.com/bbc-design-engineering/r-audio-declarative-reactive-and-flexible-web-audio-graphs-in-react-102c44a1c69c), is a library of React components aiming to provide a "more intuitive, declarative interface to Web Audio". If you're used to writing JSX it might be worth looking at.
+[R-audio](https://github.com/bbc/r-audio), from the [BBC's Research & Development department](https://medium.com/bbc-product-technology/r-audio-declarative-reactive-and-flexible-web-audio-graphs-in-react-102c44a1c69c), is a library of React components aiming to provide a "more intuitive, declarative interface to Web Audio". If you're used to writing JSX it might be worth looking at.
 
 ## Autoplay policy
 
@@ -49,28 +44,36 @@ But what does that mean in practice? A user gesture has been interpreted to mean
 
 When you create an audio context (either offline or online) it is created with a `state`, which can be `suspended`, `running`, or `closed`.
 
-When working with an {{domxref("AudioContext")}}, if you create the audio context from inside a `click` event the state should automatically be set to `running`. Here is a simple example of creating the context from inside a `click` event:
+When working with an {{domxref("AudioContext")}}, if you create the audio context from inside a `click` event the state should automatically be set to `running`. Here is an example of creating the context from inside a `click` event:
 
 ```js
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-  const audioCtx = new AudioContext();
-  // Do something with the audio context
-}, false);
+const button = document.querySelector("button");
+button.addEventListener(
+  "click",
+  () => {
+    const audioCtx = new AudioContext();
+    // Do something with the audio context
+  },
+  false,
+);
 ```
 
 If however, you create the context outside of a user gesture, its state will be set to `suspended` and it will need to be started after user interaction. We can use the same click event example here, test for the state of the context and start it, if it is suspended, using the [`resume()`](/en-US/docs/Web/API/AudioContext/resume) method.
 
 ```js
 const audioCtx = new AudioContext();
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-  // check if context is in suspended state (autoplay policy)
-  if (audioCtx.state === 'suspended') {
-    audioCtx.resume();
-  }
-}, false);
+button.addEventListener(
+  "click",
+  () => {
+    // check if context is in suspended state (autoplay policy)
+    if (audioCtx.state === "suspended") {
+      audioCtx.resume();
+    }
+  },
+  false,
+);
 ```
 
 You might instead be working with an {{domxref("OfflineAudioContext")}}, in which case you can resume the suspended audio context with the [`startRendering()`](/en-US/docs/Web/API/OfflineAudioContext/startRendering) method.
@@ -81,7 +84,7 @@ If your website or application contains sound, you should allow the user control
 
 If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a [demo of how to use it here](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100).
 
-As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`range input`](/en-US/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute.
+As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute.
 
 ## Setting AudioParam values
 

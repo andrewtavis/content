@@ -1,10 +1,7 @@
 ---
 title: regexp:replace()
 slug: Web/EXSLT/regexp/replace
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -35,10 +32,10 @@ The character flags are:
 - `i` - Case insensitive match
   - : If this flag is specified, the match is performed in a case insensitive fashion.
 
-### Returns
+### Return value
 
 The revised version of the string.
 
 ## Specifications
 
-[EXSLT - REGEXP:REPLACE](http://exslt.org/regexp/functions/replace/index.html)
+[EXSLT - REGEXP:REPLACE](https://exslt.github.io/regexp/functions/replace/index.html)

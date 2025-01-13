@@ -2,15 +2,8 @@
 title: element()
 slug: Web/CSS/element
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS images
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.image.element
 ---
 
@@ -32,6 +25,10 @@ where:
 
 - _id_
   - : The ID of an element to use as the background, specified using the HTML attribute #_id_ on the element.
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

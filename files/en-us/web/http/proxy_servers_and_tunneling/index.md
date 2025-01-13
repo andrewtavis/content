@@ -1,11 +1,7 @@
 ---
 title: Proxy servers and tunneling
 slug: Web/HTTP/Proxy_servers_and_tunneling
-tags:
-  - HTTP
-  - HTTP Tunneling
-  - Proxies
-  - Proxy
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -55,7 +51,7 @@ To provide information about the proxy itself (not about the client connecting t
 
 Tunneling transmits private network data and protocol information through public network by encapsulating the data. HTTP tunneling is using a protocol of higher level (HTTP) to transport a lower level protocol (TCP).
 
-The HTTP protocol specifies a request method called {{HTTPMethod("CONNECT")}}. It starts two-way communications with the requested resource and can be used to open a tunnel. This is how a client behind an HTTP proxy can access websites using SSL (i.e. HTTPS, port 443). Note, however, that not all proxy servers support the `CONNECT` method or limit it to port 443 only.
+The HTTP protocol specifies a request method called {{HTTPMethod("CONNECT")}}. It starts two-way communications with the requested resource and can be used to open a tunnel. This is how a client behind an HTTP proxy can access websites using TLS (i.e. HTTPS, port 443). Note, however, that not all proxy servers support the `CONNECT` method or limit it to port 443 only.
 
 See also the [HTTP tunnel article on Wikipedia](https://en.wikipedia.org/wiki/HTTP_tunnel).
 
@@ -78,9 +74,8 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-See [Proxy Auto-Configuration (PAC)](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) for more examples.
-
 ## See also
 
-- {{HTTPMethod("CONNECT")}}
-- [Proxy server on Wikipedia](https://en.wikipedia.org/wiki/Proxy_server)
+- [Proxy Auto-Configuration (PAC) file](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)
+- {{HTTPMethod("CONNECT")}} method
+- {{glossary("Proxy server")}}

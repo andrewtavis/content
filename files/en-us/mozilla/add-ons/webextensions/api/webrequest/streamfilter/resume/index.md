@@ -2,18 +2,10 @@
 title: webRequest.StreamFilter.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/resume
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.resume()
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.resume
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Resumes a request that was previously suspended through a call to {{WebExtAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}}.
 
@@ -52,14 +44,13 @@ function listener(details) {
       filter.resume();
       filter.disconnect();
     }, 1000);
-
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

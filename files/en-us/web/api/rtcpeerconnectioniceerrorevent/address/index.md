@@ -1,24 +1,12 @@
 ---
-title: RTCPeerConnectionIceErrorEvent.address
+title: "RTCPeerConnectionIceErrorEvent: address property"
+short-title: address
 slug: Web/API/RTCPeerConnectionIceErrorEvent/address
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - ICE
-  - IP
-  - Negotiation
-  - Networking
-  - Property
-  - RTCPeerConnectionIceErrorEvent
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
 browser-compat: api.RTCPeerConnectionIceErrorEvent.address
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnectionIceErrorEvent")}} property
 **`address`** is a string which indicates the local IP address

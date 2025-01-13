@@ -2,12 +2,6 @@
 title: backface-visibility
 slug: Web/CSS/backface-visibility
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.backface-visibility
 ---
 
@@ -68,7 +62,7 @@ This example shows a cube with transparent faces, and one with opaque faces.
   <tr>
     <td>
       <div class="container">
-        <div class="cube showbf">
+        <div class="cube show-bf">
           <div class="face front">1</div>
           <div class="face back">2</div>
           <div class="face right">3</div>
@@ -84,7 +78,7 @@ This example shows a cube with transparent faces, and one with opaque faces.
     </td>
     <td>
       <div class="container">
-        <div class="cube hidebf">
+        <div class="cube hide-bf">
           <div class="face front">1</div>
           <div class="face back">2</div>
           <div class="face right">3</div>
@@ -104,11 +98,11 @@ This example shows a cube with transparent faces, and one with opaque faces.
 ```css
 /* Classes that will show or hide the
    three back faces of the "cube" */
-.showbf div {
+.show-bf div {
   backface-visibility: visible;
 }
 
-.hidebf div {
+.hide-bf div {
   backface-visibility: hidden;
 }
 
@@ -143,33 +137,33 @@ This example shows a cube with transparent faces, and one with opaque faces.
 
 /* Define each face based on direction */
 .front {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 30%);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
+  background: rgb(0 255 0 / 100%);
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(196, 0, 0, 0.7);
+  background: rgb(196 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 196, 0.7);
+  background: rgb(0 0 196 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
+  background: rgb(196 196 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
+  background: rgb(196 0 196 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 
@@ -199,4 +193,4 @@ td {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

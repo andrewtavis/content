@@ -1,20 +1,10 @@
 ---
-title: Navigation.entries()
+title: "Navigation: entries() method"
+short-title: entries()
 slug: Web/API/Navigation/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - entries
-  - Experimental
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.entries
 ---
 
@@ -46,7 +36,7 @@ None.
 ### Return the number of entries in the history
 
 ```js
-let numOfEntries = Navigation.entries().length - 1;
+let numOfEntries = navigation.entries().length - 1;
 ```
 
 ### A smart back button
@@ -55,7 +45,10 @@ A page-supplied "back" button can take you back, even after reload, by inspectin
 
 ```js
 backButtonEl.addEventListener("click", () => {
-  if (navigation.entries()[navigation.currentEntry.index - 1]?.url === "/product-listing") {
+  if (
+    navigation.entries()[navigation.currentEntry.index - 1]?.url ===
+    "/product-listing"
+  ) {
     navigation.back();
   } else {
     // If the user arrived here in some other way

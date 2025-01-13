@@ -1,15 +1,8 @@
 ---
-title: HTMLInputElement.webkitEntries
+title: "HTMLInputElement: webkitEntries property"
+short-title: webkitEntries
 slug: Web/API/HTMLInputElement/webkitEntries
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - HTML DOM
-  - HTMLInputElement
-  - Property
-  - webkitEntries
 browser-compat: api.HTMLInputElement.webkitEntries
 ---
 
@@ -27,7 +20,8 @@ The array can only contain directories if the
 `true`. This means the `<input>` element was configured to
 let the user choose directories.
 
-> **Note:** This property is called `webkitEntries` in the specification due to its
+> [!NOTE]
+> This property is called `webkitEntries` in the specification due to its
 > origins as a Google Chrome-specific API. It's likely to be renamed someday.
 
 ## Value

@@ -1,14 +1,10 @@
 ---
 title: Use of color
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color
-tags:
-  - Accessibility
-  - WCAG
-  - color
-  - perceivable
+page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+{{AccessibilitySidebar}}
 
 While [color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) is often primarily an aesthetic choice, the _use of color_ on a website pertains to _using color to communicate information_. WCAG guideline 1.4.1 on the use of color requires that "color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element."
 
@@ -27,4 +23,4 @@ To accommodate users with color vision disorders ("color blindness"), be careful
 
 - [Understanding Success Criterion 1.4.1: Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
 - [Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
-- [Color and color contrast](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast) in the Accessibility tutorials
+- [Color and color contrast](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast) in the Accessibility tutorials

@@ -1,21 +1,7 @@
 ---
-title: '<abbr>: The Abbreviation element'
+title: "<abbr>: The Abbreviation element"
 slug: Web/HTML/Element/abbr
 page-type: html-element
-tags:
-  - Acronym
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-  - abbr
-  - abbreviation
-  - semantics
 browser-compat: html.elements.abbr
 ---
 
@@ -25,13 +11,13 @@ The **`<abbr>`** [HTML](/en-US/docs/Web/HTML) element represents an abbreviation
 
 When including an abbreviation or acronym, provide a full expansion of the term in plain text on first use, along with the `<abbr>` to mark up the abbreviation. This informs the user what the abbreviation or acronym means.
 
-The optional {{htmlattrxref("title")}} attribute can provide an expansion for the abbreviation or acronym when a full expansion is not present. This provides a hint to user agents on how to announce/display the content while informing all users what the abbreviation means. If present, `title` must contain this full description and nothing else.
+The optional [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute can provide an expansion for the abbreviation or acronym when a full expansion is not present. This provides a hint to user agents on how to announce/display the content while informing all users what the abbreviation means. If present, `title` must contain this full description and nothing else.
 
 {{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
 
 ## Attributes
 
-This element only supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes). The {{htmlattrxref("title")}} attribute has a specific semantic meaning when used with the `<abbr>` element; it _must_ contain a full human-readable description or expansion of the abbreviation. This text is often presented by browsers as a tooltip when the mouse cursor is hovered over the element.
+This element only supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes). The [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute has a specific semantic meaning when used with the `<abbr>` element; it _must_ contain a full human-readable description or expansion of the abbreviation. This text is often presented by browsers as a tooltip when the mouse cursor is hovered over the element.
 
 Each `<abbr>` element you use is independent of all others; providing a `title` for one does not automatically attach the same expansion text to others with the same content text.
 
@@ -41,7 +27,7 @@ Each `<abbr>` element you use is independent of all others; providing a `title` 
 
 It's certainly not required that all abbreviations be marked up using `<abbr>`. There are, though, a few cases where it's helpful to do so:
 
-- When an abbreviation is used and you want to provide an expansion or definition outside the flow of the document's content, use `<abbr>` with an appropriate {{htmlattrxref("title")}}.
+- When an abbreviation is used and you want to provide an expansion or definition outside the flow of the document's content, use `<abbr>` with an appropriate [`title`](/en-US/docs/Web/HTML/Global_attributes/title).
 - To define an abbreviation which may be unfamiliar to the reader, present the term using `<abbr>` and inline text providing the definition. Include a `title` attribute only when the inline expansion or definition is not available.
 - When an abbreviation's presence in the text needs to be semantically noted, the `<abbr>` element is useful. This can be used, in turn, for styling or scripting purposes.
 - You can use `<abbr>` in concert with {{HTMLElement("dfn")}} to establish definitions for terms which are abbreviations or acronyms. See the example [Defining an abbreviation](#defining_an_abbreviation) below.
@@ -52,9 +38,26 @@ In languages with [grammatical number](https://en.wikipedia.org/wiki/Grammatical
 
 ## Default styling
 
-The purpose of this element is purely for the convenience of the author and all browsers display it inline ({{cssxref('display')}}`: inline`) by default, though its default styling varies from one browser to another:
+The purpose of this element is purely for the convenience of the author and all browsers display it inline ({{cssxref("display", "display: inline")}}) by default, though its default styling varies from one browser to another:
 
 Some browsers add a dotted underline to the content of the element. Others add a dotted underline while converting the contents to small caps. Others may not style it differently than a {{HTMLElement("span")}} element. To control this styling, use {{cssxref('text-decoration')}} and {{cssxref('font-variant')}}.
+
+## Accessibility
+
+Spelling out the acronym or abbreviation in full the first time it is used on a page is beneficial for helping people understand it, especially if the content is technical or industry jargon.
+
+Only include a `title` if expanding the abbreviation or acronym in the text is not possible. Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
+
+```html
+<p>
+  JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight
+  data-interchange format.
+</p>
+```
+
+{{EmbedLiveSample("Accessibility")}}
+
+This is especially helpful for people who are unfamiliar with the terminology or concepts discussed in the content, people who are new to the language, and people with cognitive concerns.
 
 ## Examples
 
@@ -74,7 +77,7 @@ To mark up an abbreviation without providing an expansion or description, use `<
 
 ### Styling abbreviations
 
-You can use CSS to set a custom style to be used for abbreviations, as seen in this simple example.
+You can use CSS to set a custom style to be used for abbreviations, as seen in this basic example.
 
 #### HTML
 
@@ -96,7 +99,7 @@ abbr {
 
 ### Providing an expansion
 
-Adding a {{htmlattrxref("title")}} attribute lets you provide an expansion or definition for the abbreviation or acronym.
+Adding a [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute lets you provide an expansion or definition for the abbreviation or acronym.
 
 #### HTML
 
@@ -131,38 +134,21 @@ You can use `<abbr>` in tandem with {{HTMLElement("dfn")}} to more formally defi
 
 {{EmbedLiveSample("Defining_an_abbreviation", 600, 120)}}
 
-## Accessibility concerns
-
-Spelling out the acronym or abbreviation in full the first time it is used on a page is beneficial for helping people understand it, especially if the content is technical or industry jargon.
-
-Only include a `title` if expanding the abbreviation or acronym in the text is not possible. Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
-
-### Example
-
-```html
-<p>
-  JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight
-  data-interchange format.
-</p>
-```
-
-This is especially helpful for people who are unfamiliar with the terminology or concepts discussed in the content, people who are new to the language, and people with cognitive concerns.
-
 ## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content
       </td>
@@ -170,20 +156,20 @@ This is especially helpful for people who are unfamiliar with the terminology or
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >
       </td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >
       </td>
@@ -217,4 +203,4 @@ This is especially helpful for people who are unfamiliar with the terminology or
 
 ## See also
 
-- [Using the `<abbr>` element](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)
+- [Using the `<abbr>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations)

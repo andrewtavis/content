@@ -1,14 +1,8 @@
 ---
-title: KeyboardEvent.shiftKey
+title: "KeyboardEvent: shiftKey property"
+short-title: shiftKey
 slug: Web/API/KeyboardEvent/shiftKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.KeyboardEvent.shiftKey
 ---
 
@@ -17,6 +11,8 @@ browser-compat: api.KeyboardEvent.shiftKey
 The **`KeyboardEvent.shiftKey`** read-only property is a
 boolean value that indicates if the <kbd>shift</kbd> key was pressed
 (`true`) or not (`false`) when the event occurred.
+
+The pressing of the shift key may change the {{domxref("KeyboardEvent/key", "key")}} of the event too. For example, pressing <kbd>B</kbd> generates `key: "b"`, while simultaneously pressing <kbd>Shift</kbd> generates `key: "B"`.
 
 ## Value
 
@@ -45,7 +41,7 @@ A boolean value.
             "\n" +
             "ALT key pressed: " +
             e.altKey +
-            "\n"
+            "\n",
         );
       }
     </script>

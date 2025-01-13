@@ -1,19 +1,12 @@
 ---
-title: CustomElementRegistry.whenDefined()
+title: "CustomElementRegistry: whenDefined() method"
+short-title: whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 page-type: web-api-instance-method
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
-  - whenDefined
 browser-compat: api.CustomElementRegistry.whenDefined
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{APIRef("Web Components")}}
 
 The **`whenDefined()`** method of the
 {{domxref("CustomElementRegistry")}} interface returns a {{jsxref("Promise")}} that
@@ -32,7 +25,7 @@ whenDefined(name)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with the [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements)'s constructor when a custom element becomes defined with the given name. If a custom element has already been defined with the name, the promise will immediately fulfill.
+A {{jsxref("Promise")}} that fulfills with the [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements)'s constructor when a custom element becomes defined with the given name. If a custom element has already been defined with the name, the promise will immediately fulfill.
 
 The promise is rejected with a `SyntaxError` {{domxref("DOMException")}} if the name is not a [valid custom element name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).
 
@@ -61,9 +54,11 @@ const placeholder = container.querySelector(".menu-placeholder");
 const undefinedElements = container.querySelectorAll(":not(:defined)");
 
 async function removePlaceholder() {
-  const promises = [...undefinedElements].map((button) =>
-    customElements.whenDefined(button.localName)
+  // Filter the elements down to unique localNames
+  const tags = new Set(
+    [...undefinedElements].map((button) => button.localName),
   );
+  const promises = [...tags].map((tag) => customElements.whenDefined(tag));
 
   // Wait for all the children to be upgraded
   await Promise.all(promises);

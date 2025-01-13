@@ -1,18 +1,12 @@
 ---
-title: CanvasRenderingContext2D.textRendering
+title: "CanvasRenderingContext2D: textRendering property"
+short-title: textRendering
 slug: Web/API/CanvasRenderingContext2D/textRendering
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Experimental
 browser-compat: api.CanvasRenderingContext2D.textRendering
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`CanvasRenderingContext2D.textRendering`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) provides information to the rendering engine about what to optimize for when rendering text.
 

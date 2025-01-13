@@ -2,16 +2,14 @@
 title: Code examples
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
 
 On MDN, you'll see numerous code examples inserted throughout the pages to demonstrate usage of web platform features. This article discusses the different mechanisms available for adding code examples to pages, along with which ones you should use and when.
 
-> **Note:** If you want advice on the styling and linting of code as it appears on an MDN article, rather than the different ways of including code, see our [Code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+> [!NOTE]
+> If you want advice on the styling and linting of code as it appears on an MDN article, rather than the different ways of including code, see our [Code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
 ## What types of code example are available?
 
@@ -80,117 +78,6 @@ The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/main/kumascript
 
 Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) for more information.
 
-### Formatting live samples
-
-If you write a live sample in the "Examples" section, provide a descriptive H3 heading (`###`) for this live sample example. Ideally, write a short description of the example explaining the scenario and what you are hoping to demonstrate. Then add subsections with following H4 headings (`####`), in the order listed:
-
-- HTML
-- CSS
-- JavaScript
-- Result
-
-Write the code blocks in the respective subsections listed above.
-
-In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
-
-If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
-
-For example:
-
-````md
-## Examples
-
-### Styling a paragraph
-
-In this example, we're using CSS to style paragraphs that have the `fancy` class set.
-
-#### HTML
-
-```html
-<p>I'm not fancy.</p>
-
-<p class="fancy">But I am!</p>
-```
-
-#### CSS
-
-```css
-p.fancy {
-  color: red;
-}
-```
-
-#### Result
-
-\{{EmbedLiveSample("Styling a paragraph")}}
-
-Only the `<p>` element with `class="fancy"` will get styled `red`.
-````
-
-### Hidden code
-
-Sometimes you just want to display the static code block that is pertinent to the example rendered within a page. However you still need HTML, CSS and JavaScript to render such an example.
-
-To achieve this you can hide any code blocks that are not relevant with the `hidden` class. If you do this, omit the `### HTML/CSS/JavaScript` headings for the hidden code blocks.
-
-Using the example above but hiding the HTML code would look like this:
-
-````md
-## Examples
-
-### Styling a paragraph
-
-In this example, we're using CSS to style paragraphs that have the `fancy` class set.
-
-```html hidden
-<p>I'm not fancy.</p>
-
-<p class="fancy">But I am!</p>
-```
-
-#### CSS
-
-```css
-p.fancy {
-  color: red;
-}
-```
-
-#### Result
-
-\{{EmbedLiveSample("Styling a paragraph")}}
-
-Only the `<p>` element with `class="fancy"` will get styled `red`.
-````
-
-### Live example demo
-
-### Styling a paragraph
-
-In this example, we're using CSS to style paragraphs that have the `fancy` class set.
-
-#### HTML
-
-```html
-<p>I'm not fancy.</p>
-
-<p class="fancy">But I am!</p>
-```
-
-#### CSS
-
-```css
-p.fancy {
-  color: red;
-}
-```
-
-#### Result
-
-\{{EmbedLiveSample("Styling a paragraph")}}
-
-Only the `<p>` element with `class="fancy"` will get styled `red`.
-
 ## GitHub live samples
 
 GitHub live samples are inserted into the page using the [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) macro. An \\{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the **mdn** GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.
@@ -215,5 +102,5 @@ This looks like so when rendered:
 
 ### Tips for using GitHub live samples
 
-- You obviously need to get a suitable code sample onto the [MDN GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Using_Github_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for more advanced uses.
+- You obviously need to get a suitable code sample onto the [MDN GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for more advanced uses.
 - Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN [Code sample guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).

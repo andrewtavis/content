@@ -2,14 +2,6 @@
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
 page-type: web-api-overview
-tags:
-  - API
-  - Background Tasks API
-  - Guide
-  - IdleDeadline
-  - Overview
-  - cancelIdleCallback
-  - requestIdleCallback
 browser-compat: api.Window.requestIdleCallback
 ---
 
@@ -17,7 +9,8 @@ browser-compat: api.Window.requestIdleCallback
 
 The **Cooperative Scheduling of Background Tasks API** (also referred to as the Background Tasks API or the `requestIdleCallback()` API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.
 
-> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Concepts and usage
 
@@ -50,7 +43,7 @@ In this example, we'll take a look at how you can use {{domxref("window.requestI
 
 Below you'll find only the HTML and JavaScript for this example. The CSS is not shown, since it's not particularly crucial to understanding this functionality.
 
-### HTML content
+### HTML
 
 In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (`id="container"`) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (`id="logBox"`), which is used to display textual output.
 
@@ -106,7 +99,9 @@ body {
 }
 
 #log {
-  font: 12px "Courier", monospace;
+  font:
+    12px "Courier",
+    monospace;
   padding: 6px;
   overflow: auto;
   overflow-y: scroll;
@@ -154,7 +149,7 @@ body {
 }
 ```
 
-### JavaScript content
+### JavaScript
 
 Now that the document structure is defined, construct the JavaScript code that will do the work. The goal: to be able to add requests to call functions to a queue, with an idle callback that runs those functions whenever the system is idle for long enough a time to make progress.
 
@@ -375,7 +370,9 @@ function log(text) {
 
 First, we create a {{domxref("DocumentFragment")}} object named `logFragment` if one doesn't currently exist. This element is a pseudo-DOM into which we can insert elements without immediately changing the main DOM itself.
 
-We then create a new {{HTMLElement("div")}} element and set its contents to match the input `text`. Then we append the new element to the end of the pseudo-DOM in `logFragment`. `logFragment` will accumulate log entries until the next time `updateDisplay()` is called because the DOM for the changes.
+We then create a new {{HTMLElement("div")}} element and set its contents to match the input `text`.
+Then we append the new element to the end of the pseudo-DOM in `logFragment`.
+`logFragment` will accumulate log entries until the next time `updateDisplay()` is called, once the DOM is ready for the changes.
 
 ### Running tasks
 

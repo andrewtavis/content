@@ -2,20 +2,10 @@
 title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
-  - topSites
 browser-compat: webextensions.api.topSites.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets an array containing information about pages that the user has visited often and recently.
 
@@ -111,7 +101,8 @@ browser.topSites
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/topSites/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

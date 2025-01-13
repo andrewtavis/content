@@ -2,13 +2,6 @@
 title: Canvas tutorial
 slug: Web/API/Canvas_API/Tutorial
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Guide
-  - HTML
-  - Intermediate
-  - Web
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -41,7 +34,6 @@ Using the `<canvas>` element is not very difficult, but you do need a basic unde
 ## See also
 
 - [Canvas topic page](/en-US/docs/Web/API/Canvas_API)
-- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
 
 ## A note to contributors
 

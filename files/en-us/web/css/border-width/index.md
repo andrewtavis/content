@@ -2,12 +2,6 @@
 title: border-width
 slug: Web/CSS/border-width
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-width
 ---
 
@@ -72,7 +66,8 @@ The `border-width` property may be specified using one, two, three, or four valu
     - `medium`
     - `thick`
 
-> **Note:** Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
+> [!NOTE]
+> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
 
 ## Formal definition
 

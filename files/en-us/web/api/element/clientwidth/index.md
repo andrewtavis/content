@@ -1,13 +1,8 @@
 ---
-title: Element.clientWidth
+title: "Element: clientWidth property"
+short-title: clientWidth
 slug: Web/API/Element/clientWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientWidth
 ---
 
@@ -22,7 +17,8 @@ When `clientWidth` is used on the root element (the
 `<html>` element), (or on `<body>` if the document is
 in quirks mode), the viewport's width (excluding any scrollbar) is returned. [This is a special case of `clientWidth`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth).
 
-> **Note:** This property will round the value to an integer. If you need
+> [!NOTE]
+> This property will round the value to an integer. If you need
 > a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Value
@@ -36,10 +32,6 @@ A number.
 ## Specifications
 
 {{Specifications}}
-
-### Notes
-
-`clientWidth` was first introduced in the MS IE DHTML object model.
 
 ## Browser compatibility
 

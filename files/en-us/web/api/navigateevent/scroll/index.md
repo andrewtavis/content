@@ -1,19 +1,10 @@
 ---
-title: NavigateEvent.scroll()
+title: "NavigateEvent: scroll() method"
+short-title: scroll()
 slug: Web/API/NavigateEvent/scroll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - History
-  - Method
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.scroll
 ---
 
@@ -34,27 +25,29 @@ None.
 
 ### Return value
 
-`undefined`.
+None (`undefined`).
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the current {{domxref("Document")}} is not yet active, if the navigation was not intercepted using {{domxref("NavigateEvent.intercept", "intercept()")}}, or if the default scroll behavior has already occurred.
+  - : Thrown if the current {{domxref("Document")}} is not yet active, or if the navigation has been cancelled.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the event was dispatched by a {{domxref("EventTarget.dispatchEvent", "dispatchEvent()")}} call, rather than the user agent.
 
 ## Examples
 
 ### Handling scrolling using `scroll()`
 
-In this example of intercepting a navigation, the `handler()` function starts by fetching and rendering some article content, but then fetches and renders some secondary content afterwards. It makes sense to scroll the page to the main article content as soon as it is available so the user can interact with it, rather than waiting until the secondary content is also rendered. To achieve this, we have added a {{domxref("NavigateEvent.scroll", "scroll()")}} call between the two.
+In this example of intercepting a navigation, the `handler()` function starts by fetching and rendering some article content, but then fetches and renders some secondary content afterwards. It makes sense to scroll the page to the main article content as soon as it is available so the user can interact with it, rather than waiting until the secondary content is also rendered. To achieve this, we have added a `scroll()` call between the two.
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   if (shouldNotIntercept(navigateEvent)) {
     return;
   }
   const url = new URL(event.destination.url);
 
-  if (url.pathname.startsWith('/articles/')) {
+  if (url.pathname.startsWith("/articles/")) {
     event.intercept({
       async handler() {
         const articleContent = await getArticleContent(url.pathname);

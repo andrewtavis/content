@@ -2,20 +2,10 @@
 title: runtime.PlatformNaclArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformNaclArch
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - PlatformNaclArch
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
 browser-compat: webextensions.api.runtime.PlatformNaclArch
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The native client architecture. This may be different from arch on some platforms.
 
@@ -29,7 +19,8 @@ Values of this type are strings. Possible values are: `"arm"`, `"x86-32"`, `"x86
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-PlatformNaclArch) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-PlatformNaclArch) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

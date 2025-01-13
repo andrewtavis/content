@@ -1,18 +1,7 @@
 ---
 title: "Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'"
 slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
-tags:
-  - CORS
-  - CORSAllowOriginNotMatchingOrigin
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
+page-type: http-cors-error
 ---
 
 {{HTTPSidebar}}
@@ -38,15 +27,16 @@ configuration is typically found in a `.conf` file (`httpd.conf`
 and `apache.conf` are common names for these), or in an
 `.htaccess` file.
 
-> **Warning:** You must include the HTTPS or HTTP protocol as part of the origin.
+> [!WARNING]
+> You must include the HTTPS or HTTP protocol as part of the origin.
 
-```
+```apacheconf
 Header set Access-Control-Allow-Origin 'origin'
 ```
 
 For Nginx, the command to set up this header is:
 
-```
+```nginx
 add_header 'Access-Control-Allow-Origin' 'origin'
 ```
 

@@ -2,13 +2,6 @@
 title: <string>
 slug: Web/CSS/string
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.string
 ---
 
@@ -28,14 +21,14 @@ To output new lines, you must escape them with a line feed character such as `\A
 
 However, to get new lines, you must also set the {{cssxref("white-space")}} property to appropriate value.
 
-> **Note:** [HTML entities](/en-US/docs/Glossary/Entity) (such as `&nbsp;` or `&#8212;`) cannot be used in a CSS `<string>`.
+> **Note:** {{glossary("character reference", "Character references")}} (such as `&nbsp;` or `&#8212;`) cannot be used in a CSS `<string>`.
 
 ## Examples
 
 ### Examples of valid strings
 
 ```css
-/* Simple strings */
+/* Basic strings */
 "This string is demarcated by double quotes."
 'This string is demarcated by single quotes.'
 
@@ -67,4 +60,4 @@ awesome string"
 
 - [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Introduction to CSS: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

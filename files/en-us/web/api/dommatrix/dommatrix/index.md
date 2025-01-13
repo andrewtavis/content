@@ -1,18 +1,12 @@
 ---
-title: DOMMatrix()
+title: "DOMMatrix: DOMMatrix() constructor"
+short-title: DOMMatrix()
 slug: Web/API/DOMMatrix/DOMMatrix
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Geometry
-  - Geometry Interfaces
-  - Reference
-  - matrix
 browser-compat: api.DOMMatrix.DOMMatrix
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMMatrix`** constructor creates a new
 {{domxref("DOMMatrix")}} object which represents 4x4 matrices, suitable for 2D and 3D
@@ -39,7 +33,7 @@ new DOMMatrix(init)
 ## Examples
 
 This example creates a DOMMatrix to use as an argument for calling
-{{domxref("Point.matrixTransform()")}}.
+{{domxref("DOMPointReadOnly.matrixTransform()")}}.
 
 ```js
 const point = new DOMPoint(5, 4);
@@ -54,7 +48,7 @@ const matrix = new DOMMatrix([
   -Math.sin(angle) * scaleY,
   Math.cos(angle) * scaleY,
   translateX,
-  translateY
+  translateY,
 ]);
 const transformedPoint = point.matrixTransform(matrix);
 ```

@@ -1,10 +1,8 @@
 ---
-title: CharacterData.data
+title: "CharacterData: data property"
+short-title: data
 slug: Web/API/CharacterData/data
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
 browser-compat: api.CharacterData.data
 ---
 
@@ -15,6 +13,8 @@ The **`data`** property of the {{domxref("CharacterData")}} interface represent 
 ## Value
 
 A string with the character information contained in the {{domxref("CharacterData")}} node.
+
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `cd.data = null` is equivalent to `cd.data = ""`.
 
 ## Example
 
@@ -45,9 +45,9 @@ output.value = comment.data;
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.data = "This text has been set using 'textnode.data'.";
+textNode.data = "This text has been set using 'textNode.data'.";
 ```
 
 {{EmbedLiveSample("Setting_the_content_of_a_text_node_using_data", "100%", 50)}}

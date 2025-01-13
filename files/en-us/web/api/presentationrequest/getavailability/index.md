@@ -1,11 +1,14 @@
 ---
-title: PresentationRequest.getAvailability()
+title: "PresentationRequest: getAvailability() method"
+short-title: getAvailability()
 slug: Web/API/PresentationRequest/getAvailability
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.PresentationRequest.getAvailability
 ---
 
-{{DefaultAPISidebar("Presentation API")}}
+{{APIRef("Presentation API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 When the `getAvailability()` method is called, the user agent _MUST_ run the following steps:
 
@@ -50,6 +53,10 @@ When the `getAvailability()` method is called, the user agent _MUST_ run the fol
 8. Create a tuple (_A_, _presentationUrls_) and add it to the [set of availability objects](https://www.w3.org/TR/presentation-api/#dfn-set-of-availability-objects).
 9. Run the algorithm to [monitor the list of available presentation displays](https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays).
 10. [Resolve](https://www.w3.org/TR/presentation-api/#dfn-resolving-a-promise) _P_ with _A_.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

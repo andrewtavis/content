@@ -1,17 +1,12 @@
 ---
 title: "FontFaceSet: loading event"
+short-title: loading
 slug: Web/API/FontFaceSet/loading_event
 page-type: web-api-event
-tags:
-  - API
-  - Property
-  - Reference
-  - onloading
-  - FontFaceSet
 browser-compat: api.FontFaceSet.loading_event
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The `loading` event fires when the document begins loading fonts.
 

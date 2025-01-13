@@ -1,19 +1,11 @@
 ---
 title: declarativeNetRequest.setExtensionActionOptions
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/setExtensionActionOptions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Method
-  - declarativeNetRequest
-  - setExtensionActionOptions
+page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.setExtensionActionOptions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Configures whether the action count for tabs is displayed as the extension action's badge text and provides a way for the action count to be incremented.
 

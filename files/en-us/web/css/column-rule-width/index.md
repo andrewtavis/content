@@ -2,12 +2,6 @@
 title: column-rule-width
 slug: Web/CSS/column-rule-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.column-rule-width
 ---
 
@@ -90,7 +84,7 @@ p {
 
 ## See also
 
-- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - {{CSSXref("column-rule-style")}}
 - {{CSSXref("column-rule-color")}}
 - {{CSSXref("column-rule")}}

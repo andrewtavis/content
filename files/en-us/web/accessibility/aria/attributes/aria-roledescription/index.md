@@ -1,15 +1,11 @@
 ---
 title: aria-roledescription
 slug: Web/Accessibility/ARIA/Attributes/aria-roledescription
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-roledescription
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-roledescription
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-roledescription` attribute defines a human-readable, author-localized description for the role of an element.
 
@@ -17,7 +13,8 @@ The `aria-roledescription` attribute defines a human-readable, author-localized 
 
 Some assistive technologies (<abbr>AT</abbr>), such as screen readers, present the role of an element as part of the user experience. The `aria-roledescription` attribute provides a way to define a different human-readable name to be presented by AT as the role of an element.
 
-> **Note:** Only use aria-roledescription to clarify the purpose of non-interactive container roles and to provide a more specific description to a widget.
+> [!NOTE]
+> Only use aria-roledescription to clarify the purpose of non-interactive container roles and to provide a more specific description to a widget.
 
 Users depend on the presentation of known role name to understand the purpose of the element and, if it is a widget, how to interact with it. So, only use `aria-roledescription` to clarify the purpose of non-interactive container roles like `group` or `region` and to provide a more specific description to a widget.
 
@@ -59,7 +56,7 @@ In the previous examples, a screen reader user may hear "Quarterly Report, slide
 - `<string>`
   - : A non-empty string, an unconstrained value type, containing more than just white space.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaRoleDescription")}}
   - : The [`ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-roledescription` attribute.
@@ -74,11 +71,6 @@ Supported by all roles and by all base markup elements except for `role="generic
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

@@ -1,15 +1,11 @@
 ---
 title: "ARIA: timer role"
 slug: Web/Accessibility/ARIA/Roles/timer_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA widget
-  - Reference
-  - Role Timer
-  - timer
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#timer
 ---
+
+{{AccessibilitySidebar}}
 
 The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point. Assistive technologies will not announce updates to a timer as it has an implicit [aria-live](https://www.w3.org/TR/wai-aria/#aria-live) value of `off`.
 
@@ -50,12 +46,4 @@ If a time limit needs to be in place, for example, for security reasons, the use
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-- [`timer` example on Codepen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>
+- [`timer` example on CodePen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering

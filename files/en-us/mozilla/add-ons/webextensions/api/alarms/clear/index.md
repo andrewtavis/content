@@ -2,20 +2,10 @@
 title: alarms.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clear
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - clear
 browser-compat: webextensions.api.alarms.clear
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Cancels an alarm, given its name.
 
@@ -55,4 +45,5 @@ clearAlarm.then(onCleared);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.

@@ -2,10 +2,6 @@
 title: padding-inline
 slug: Web/CSS/padding-inline
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - recipe:css-shorthand-property
 browser-compat: css.properties.padding-inline
 ---
 
@@ -37,6 +33,7 @@ padding-inline: 5% 2%; /* relative to the nearest block container's width */
 padding-inline: inherit;
 padding-inline: initial;
 padding-inline: revert;
+padding-inline: revert-layer;
 padding-inline: unset;
 ```
 
@@ -51,7 +48,7 @@ The `padding-inline` property may be specified with one or two values. If one va
 
 ## Description
 
-Values for this property correspond to the {{cssxref("padding-top")}} and {{cssxref("padding-bottom")}}, or {{cssxref("padding-right")}}, and {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+The padding values specified by `padding-inline` can be equivalent to the {{cssxref("padding-top")}} and {{cssxref("padding-bottom")}} properties or the {{cssxref("padding-right")}} and {{cssxref("padding-left")}} properties, depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
 ## Formal definition
 
@@ -103,6 +100,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
