@@ -2,20 +2,10 @@
 title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Search
-  - WebExtensions
 browser-compat: webextensions.api.bookmarks.search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`bookmarks.search()`** function searches for bookmark tree nodes matching the given query.
 
@@ -104,7 +94,8 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-search) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-search) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

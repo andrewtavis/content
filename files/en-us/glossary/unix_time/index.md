@@ -2,9 +2,9 @@
 title: Unix time
 slug: Glossary/Unix_time
 page-type: glossary-definition
-tags:
-  - Glossary
 ---
+
+{{GlossarySidebar}}
 
 Unix time is a method to represent a timestamp, and is usually defined as the number of seconds since the beginning of the Unix epoch, which is January 1st, 1970, at midnight (UTC). Leap seconds are ignored.
 

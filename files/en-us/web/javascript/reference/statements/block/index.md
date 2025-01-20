@@ -1,18 +1,13 @@
 ---
-title: block
+title: Block statement
 slug: Web/JavaScript/Reference/Statements/block
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
 browser-compat: javascript.statements.block
 ---
 
 {{jsSidebar("Statements")}}
 
-A **block statement** is used to group zero or more statements. The block is delimited by a pair of braces ("curly brackets") and contains a list of zero or more statements and declarations.
+A **block statement** is used to group zero or more statements. The block is delimited by a pair of braces ("curly braces") and contains a list of zero or more statements and declarations.
 
 {{EmbedInteractiveExample("pages/js/statement-block.html", "taller")}}
 
@@ -75,7 +70,7 @@ console.log(c); // 1; does not throw SyntaxError
 
 Note that the block-scoped `const c = 2` _does not_ throw a `SyntaxError: Identifier 'c' has already been declared` because it can be declared uniquely within the block.
 
-In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks are scoped to that block and are hoisted.
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks are scoped to that block and are hoisted to the top of the block.
 
 ```js
 "use strict";

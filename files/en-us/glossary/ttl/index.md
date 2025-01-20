@@ -2,13 +2,9 @@
 title: TTL
 slug: Glossary/TTL
 page-type: glossary-definition
-tags:
-  - Caching
-  - Domain Name System
-  - Infrastructure
-  - Networking
-  - Performance
 ---
+
+{{GlossarySidebar}}
 
 Time To Live (TTL) can refer to either the lifetime of a packet in a network, or the expiry time of cached data.
 

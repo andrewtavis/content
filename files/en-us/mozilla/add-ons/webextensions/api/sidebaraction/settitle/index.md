@@ -2,21 +2,12 @@
 title: sidebarAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setTitle
-  - sidebarAction
 browser-compat: webextensions.api.sidebarAction.setTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Sets the sidebar's title. The title is displayed anywhere the browser lists available sidebars. For example, Firefox will show it in the "View > Sidebar" menu. It's also shown at the top o the sidebar when the sidebar is open.
+Sets the sidebar's title. The title is displayed anywhere the browser lists available sidebars. For example, Firefox will show it in the "View > Sidebar" menu. It's also shown at the top of the sidebar when the sidebar is open.
 
 ## Types of title
 
@@ -76,7 +67,7 @@ This code changes the title for the sidebar when the user clicks a browser actio
 let title = "A different title";
 
 function setTitleForTab(tab) {
-  browser.sidebarAction.setTitle({title, tabId: tab.id});
+  browser.sidebarAction.setTitle({ title, tabId: tab.id });
 }
 
 browser.browserAction.onClicked.addListener(setTitleForTab);
@@ -84,7 +75,8 @@ browser.browserAction.onClicked.addListener(setTitleForTab);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+> [!NOTE]
+> This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

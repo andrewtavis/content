@@ -1,22 +1,18 @@
 ---
 title: Sec-CH-UA-Full-Version
 slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version
-tags:
-  - Sec-CH-UA-Full-Version
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Deprecated
+page-type: http-header
+status:
+  - deprecated
 browser-compat: http.headers.Sec-CH-UA-Full-Version
 ---
 
 {{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}
 
-> **Note:** This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
+> [!NOTE]
+> This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
 
-The **`Sec-CH-UA-Full-Version`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's full version string.
+The HTTP **`Sec-CH-UA-Full-Version`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which provides the user-agent's full version string.
 
 <table class="properties">
   <tbody>
@@ -29,7 +25,7 @@ The **`Sec-CH-UA-Full-Version`** [user agent client hint](/en-US/docs/Web/HTTP/C
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>
 </table>
@@ -46,6 +42,8 @@ Sec-CH-UA-Full-Version: <version>
   - : A string containing the full version number, like "96.0.4664.93".
 
 ## Examples
+
+### Using Sec-CH-UA-Full-Version
 
 A server requests the `Sec-CH-UA-Full-Version` header by including the {{HTTPHeader("Accept-CH")}} in a _response_ to any request from the client, using the name of the desired header as a token:
 
@@ -79,6 +77,6 @@ Sec-CH-UA-Platform: "Windows"
 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

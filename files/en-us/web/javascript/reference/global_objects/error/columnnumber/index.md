@@ -1,16 +1,13 @@
 ---
-title: Error.prototype.columnNumber
+title: "Error: columnNumber"
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 page-type: javascript-instance-data-property
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
+status:
+  - non-standard
 browser-compat: javascript.builtins.Error.columnNumber
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{Non-standard_Header}}
 
 The **`columnNumber`** data property of an {{jsxref("Error")}} instance contains the column number in the line of the file that raised this error.
 

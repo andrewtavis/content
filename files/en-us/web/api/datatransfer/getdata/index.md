@@ -1,13 +1,8 @@
 ---
-title: DataTransfer.getData()
+title: "DataTransfer: getData() method"
+short-title: getData()
 slug: Web/API/DataTransfer/getData
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.getData
 ---
 
@@ -49,10 +44,10 @@ A string representing the drag data for the specified `format`. If the drag oper
 ## Examples
 
 This example shows the use of the {{domxref("DataTransfer")}} object's
-{{domxref("DataTransfer.getData()","getData()")}} and
+`getData()` and
 {{domxref("DataTransfer.setData()","setData()")}} methods.
 
-### HTML Content
+### HTML
 
 ```html
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -63,35 +58,36 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 ```
 
-### CSS Content
+### CSS
 
 ```css
-#div1, #div2 {
-    width:100px;
-    height:50px;
-    padding:10px;
-    border:1px solid #aaaaaa;
+#div1,
+#div2 {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
 }
 ```
 
 ### JavaScript
 
 ```js
-function allowDrop(allowdropevent) {
-    allowdropevent.target.style.color = 'blue';
-    allowdropevent.preventDefault();
+function allowDrop(allowDropEvent) {
+  allowDropEvent.target.style.color = "blue";
+  allowDropEvent.preventDefault();
 }
 
-function drag(dragevent) {
-    dragevent.dataTransfer.setData("text", dragevent.target.id);
-    dragevent.target.style.color = 'green';
+function drag(dragEvent) {
+  dragEvent.dataTransfer.setData("text", dragEvent.target.id);
+  dragEvent.target.style.color = "green";
 }
 
-function drop(dropevent) {
-    dropevent.preventDefault();
-    const data = dropevent.dataTransfer.getData("text");
-    dropevent.target.appendChild(document.getElementById(data));
-    document.getElementById("drag").style.color = 'black';
+function drop(dropEvent) {
+  dropEvent.preventDefault();
+  const data = dropEvent.dataTransfer.getData("text");
+  dropEvent.target.appendChild(document.getElementById(data));
+  document.getElementById("drag").style.color = "black";
 }
 ```
 

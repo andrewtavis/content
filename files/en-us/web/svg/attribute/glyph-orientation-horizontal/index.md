@@ -2,11 +2,9 @@
 title: glyph-orientation-horizontal
 slug: Web/SVG/Attribute/glyph-orientation-horizontal
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.glyph-orientation-horizontal
+status:
+  - deprecated
+browser-compat: svg.global_attributes.glyph-orientation-horizontal
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
@@ -17,11 +15,11 @@ When the reference orientation direction is horizontal and the `glyph-orientatio
 
 This attribute is applied only to text written in a horizontal {{SVGAttr("writing-mode")}}.
 
-> **Note:** As a presentation attribute, `glyph-orientation-horizontal` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `glyph-orientation-horizontal` can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
 - {{SVGElement("tref")}}
@@ -35,7 +33,7 @@ You can use this attribute with the following SVG elements:
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Angle"
+          ><a href="/en-US/docs/Web/SVG/Content_type#angle"
             >&#x3C;angle></a
           ></code
         >

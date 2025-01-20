@@ -1,20 +1,13 @@
 ---
-title: '<head>: The Document Metadata (Header) element'
+title: "<head>: The Document Metadata (Header) element"
 slug: Web/HTML/Element/head
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-  - Web
 browser-compat: html.elements.head
 ---
 
 {{HTMLSidebar}}
 
-The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable information ({{glossary("metadata")}}) about the document, like its [title](/en-US/docs/Web/HTML/Element/title), [scripts](/en-US/docs/Web/HTML/Element/script), and [style sheets](/en-US/docs/Web/HTML/Element/style).
+The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable information ({{glossary("metadata")}}) about the document, like its [title](/en-US/docs/Web/HTML/Element/title), [scripts](/en-US/docs/Web/HTML/Element/script), and [style sheets](/en-US/docs/Web/HTML/Element/style). There can be only one `<head>` element in an HTML document.
 
 > **Note:** `<head>` primarily holds information for machine processing, not human-readability. For human-visible information, like top-level headings and listed authors, see the {{HTMLElement("header")}} element.
 
@@ -22,13 +15,13 @@ The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("profile")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `profile` {{deprecated_inline}}
   - : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
 
-## Example
+## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -44,7 +37,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -55,7 +48,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       <td>
         <p>
           If the document is an {{HTMLElement("iframe")}}
-          {{htmlattrxref("srcdoc", "iframe")}} document, or if title
+          <a href="/en-US/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a> document, or if title
           information is available from a higher level protocol (like the
           subject line in HTML email), zero or more elements of metadata
           content.

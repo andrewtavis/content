@@ -2,19 +2,8 @@
 title: WebXR Device API
 slug: Web/API/WebXR_Device_API
 page-type: web-api-overview
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Graphics
-  - Overview
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.xr
 ---
 
@@ -204,10 +193,10 @@ The following guides and tutorials are a great resource to learn how to comprehe
       <td><a href="https://immersive-web.github.io/depth-sensing/"><strong>WebXR Depth Sensing Module</strong></a>
       (<a href="https://github.com/immersive-web/depth-sensing">Source</a>,
        <a href="https://github.com/immersive-web/depth-sensing/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/depth-sensing/blob/master/explainer.md">Explainer</a>)</td>
+       <a href="https://github.com/immersive-web/depth-sensing/blob/main/explainer.md">Explainer</a>)</td>
     </tr>
     <tr>
-      <td><a href="https://immersive-web.github.io/dom-overlays"><strong>WebXR DOM Overlays Module</strong></a>
+      <td><a href="https://immersive-web.github.io/dom-overlays/"><strong>WebXR DOM Overlays Module</strong></a>
       (<a href="https://github.com/immersive-web/dom-overlays">Source</a>,
        <a href="https://github.com/immersive-web/dom-overlays/issues">Issues</a>,
        <a href="https://github.com/immersive-web/dom-overlays/blob/master/explainer.md">Explainer</a>)</td>
@@ -225,7 +214,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
        <a href="https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md">Explainer</a>)</td>
     </tr>
     <tr>
-      <td><a href="https://immersive-web.github.io/hit-test"><strong>WebXR Hit Test Module</strong></a>
+      <td><a href="https://immersive-web.github.io/hit-test/"><strong>WebXR Hit Test Module</strong></a>
       (<a href="https://github.com/immersive-web/hit-test">Source</a>,
        <a href="https://github.com/immersive-web/hit-test/issues">Issues</a>,
        <a href="https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md">Explainer</a>)</td>
@@ -240,7 +229,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
       <td><a href="https://immersive-web.github.io/lighting-estimation/"><strong>WebXR Lighting Estimation API</strong></a>
       (<a href="https://github.com/immersive-web/lighting-estimation">Source</a>,
        <a href="https://github.com/immersive-web/lighting-estimation/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md">Explainer</a>)</td>
+       <a href="https://github.com/immersive-web/lighting-estimation/blob/main/lighting-estimation-explainer.md">Explainer</a>)</td>
     </tr>
   </tbody>
 </table>
@@ -251,8 +240,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
 
 ## See also
 
-- [Graphics on the web](/en-US/docs/Web/Guide/Graphics)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Drawing graphics](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [WebGL API](/en-US/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
 - [Canvas API](/en-US/docs/Web/API/Canvas_API): 2D drawing for the web
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)

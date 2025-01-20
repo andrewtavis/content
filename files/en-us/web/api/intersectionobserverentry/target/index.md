@@ -1,16 +1,8 @@
 ---
-title: IntersectionObserverEntry.target
+title: "IntersectionObserverEntry: target property"
+short-title: target
 slug: Web/API/IntersectionObserverEntry/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Property
-  - Reference
-  - target
 browser-compat: api.IntersectionObserverEntry.target
 ---
 
@@ -36,7 +28,7 @@ In this simple example, each targeted element's {{cssxref("opacity")}} is set to
 ```js
 function intersectionCallback(entries) {
   entries.forEach((entry) => {
-    entry.target.opacity = entry.intersectionRatio;
+    entry.target.style.opacity = entry.intersectionRatio;
   });
 }
 ```

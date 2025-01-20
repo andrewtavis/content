@@ -2,16 +2,12 @@
 title: <animate>
 slug: Web/SVG/Element/animate
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Animation
 browser-compat: svg.elements.animate
 ---
 
 {{SVGRef}}
 
-The SVG **`<animate>`** element provides a way to animate an attribute of an element over time.
+The **`<animate>`** [SVG](/en-US/docs/Web/SVG) element provides a way to animate an attribute of an element over time.
 
 ## Example
 
@@ -38,28 +34,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## Attributes
-
-### Animation Attributes
-
-- [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes)
-  - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-- [Animation value attributes](/en-US/docs/Web/SVG/Attribute#animation_value_attributes)
-  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
-- [Other Animation attributes](/en-US/docs/Web/SVG/Attribute#animation_attributes)
-  - : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
-- [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
-  - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
-
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
 ## Usage notes
 

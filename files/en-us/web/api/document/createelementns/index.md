@@ -1,12 +1,8 @@
 ---
-title: Document.createElementNS()
+title: "Document: createElementNS() method"
+short-title: createElementNS()
 slug: Web/API/Document/createElementNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createElementNS
 ---
 
@@ -38,7 +34,7 @@ createElementNS(namespaceURI, qualifiedName, options)
   - : An optional `ElementCreationOptions` object containing a single property named `is`, whose value is the tag name for a custom element previously defined using `customElements.define()`.
     For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/),
     some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
-    See [Extending native HTML elements](https://web.dev/web-components/) for more information on how to use this parameter.
+    See [Extending native HTML elements](https://web.dev/articles/web-components) for more information on how to use this parameter.
 
     The new element will be given an `is` attribute whose value is the custom element's tag name. Custom elements are an experimental feature only available in some browsers.
 
@@ -65,7 +61,7 @@ The new {{DOMxRef("Element")}}.
 ## Examples
 
 This creates a new `<div>` element in the {{Glossary("XHTML")}} namespace and
-appends it to the vbox element. Although this is not an extremely useful [XUL](/en-US/docs/Mozilla/Tech/XUL) document, it does demonstrate the use of
+appends it to the vbox element. Although this is not an extremely useful XUL document, it does demonstrate the use of
 elements from two different namespaces within a single document:
 
 ```xml
@@ -77,15 +73,15 @@ elements from two different namespaces within a single document:
 
 <script type="application/javascript"><![CDATA[
  let container;
- let newdiv;
- let txtnode;
+ let newDiv;
+ let textNode;
 
  function init(){
    container = document.getElementById("ContainerBox");
-   newdiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
-   txtnode = document.createTextNode("This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.");
-   newdiv.appendChild(txtnode);
-   container.appendChild(newdiv);
+   newDiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
+   textNode = document.createTextNode("This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.");
+   newDiv.appendChild(textNode);
+   container.appendChild(newDiv);
  }
 
 ]]></script>
@@ -99,7 +95,8 @@ elements from two different namespaces within a single document:
 </page>
 ```
 
-> **Note:** The example given above uses inline script which is not recommended in XHTML
+> [!NOTE]
+> The example given above uses inline script which is not recommended in XHTML
 > documents. This particular example is actually an XUL document with embedded XHTML,
 > however, the recommendation still applies.
 

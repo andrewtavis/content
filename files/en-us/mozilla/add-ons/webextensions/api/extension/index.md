@@ -2,14 +2,6 @@
 title: extension
 slug: Mozilla/Add-ons/WebExtensions/API/extension
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Interface
-  - Reference
-  - WebExtensions
 browser-compat: webextensions.api.extension
 ---
 
@@ -63,7 +55,8 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -2,21 +2,12 @@
 title: AmbientLightSensor
 slug: Web/API/AmbientLightSensor
 page-type: web-api-interface
-tags:
-  - API
-  - Ambient Light Sensor API
-  - AmbientLightSensor
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AmbientLightSensor
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`AmbientLightSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) returns the current light level or illuminance of the ambient light around the hosting device.
 
@@ -33,7 +24,7 @@ This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permi
 
 ## Instance properties
 
-- {{domxref('AmbientLightSensor.illuminance')}} {{Experimental_Inline}}
+- {{domxref('AmbientLightSensor.illuminance')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the current light level in [lux](https://en.wikipedia.org/wiki/Lux) of the ambient light level around the hosting device.
 
 ## Instance methods

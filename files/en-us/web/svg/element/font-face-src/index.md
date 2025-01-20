@@ -2,13 +2,8 @@
 title: <font-face-src>
 slug: Web/SVG/Element/font-face-src
 page-type: svg-element
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Font
+status:
+  - deprecated
 browser-compat: svg.elements.font-face-src
 ---
 
@@ -19,16 +14,6 @@ The **`<font-face-src>`** [SVG](/en-US/docs/Web/SVG) element corresponds to the 
 ## Usage context
 
 {{svginfo}}
-
-## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
-
-None.
 
 ## DOM Interface
 

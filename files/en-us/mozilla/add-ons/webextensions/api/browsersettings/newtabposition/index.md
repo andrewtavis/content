@@ -2,19 +2,10 @@
 title: browserSettings.newTabPosition
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPosition
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - newTabPosition
 browser-compat: webextensions.api.browserSettings.newTabPosition
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to control the position of newly opened tabs relative to already open tabs.
 

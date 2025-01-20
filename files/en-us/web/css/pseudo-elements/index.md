@@ -2,29 +2,16 @@
 title: Pseudo-elements
 slug: Web/CSS/Pseudo-elements
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Pseudo-element
-  - Reference
-  - Selectors
-spec-urls: https://www.w3.org/TR/CSS22/selector.html#pseudo-element-selectors
+spec-urls:
+  - https://drafts.csswg.org/css-pseudo/
+  - https://drafts.csswg.org/css-position-4/
+  - https://drafts.csswg.org/css-shadow-parts/
+  - https://w3c.github.io/webvtt/
 ---
 
 {{CSSRef}}
 
-A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, {{CSSxRef("::first-line")}} can be used to change the font of the first line of a paragraph.
-
-```css
-/* The first line of every <p> element. */
-p::first-line {
-  color: blue;
-  text-transform: uppercase;
-}
-```
-
-> **Note:** In contrast to pseudo-elements, {{CSSxRef("pseudo-classes")}} can be used to style an element based on its _state_.
+A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s).
 
 ## Syntax
 
@@ -34,11 +21,26 @@ selector::pseudo-element {
 }
 ```
 
-You can use only one pseudo-element in a selector. It must appear after the simple selectors in the statement.
+For example, {{CSSxRef("::first-line")}} can be used to change the font of the first line of a paragraph.
 
-> **Note:** As a rule, double colons (`::`) should be used instead of a single colon (`:`). This distinguishes pseudo-classes from pseudo-elements. However, since this distinction was not present in older versions of the W3C spec, most browsers support both syntaxes for the original pseudo-elements.
+```css
+/* The first line of every <p> element. */
+p::first-line {
+  color: blue;
+  text-transform: uppercase;
+}
+```
 
-## Alphabetical index
+Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-elements from [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that use a single colon (`:`) in their notation.
+
+Pseudo-elements do not exist independently. The element of which a pseudo-element is a part is called its _originating element_. A pseudo-element must appear after all the other components in the [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector. The last element in the selector is the originating element of the pseudo-element. For example, you can select a paragraph's first line using `p::first-line` but not the first-line's children. So `p::first-line > *` is invalid.
+
+A pseudo-element can be selected based on the current state of the originating element. For example, `p:hover::first-line` selects the first line (pseudo-element) of a paragraph when the paragraph itself is being hovered (pseudo-class).
+
+> [!NOTE]
+> When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
+
+## List of pseudo-elements
 
 Pseudo-elements defined by a set of CSS specifications include the following:
 
@@ -53,18 +55,21 @@ B
 
 C
 
-- {{CSSxRef("::cue")}}
-- {{CSSxRef("::cue-region")}}
+- {{CSSxRef("::cue")}} (and {{CSSxRef("::cue", "::cue()")}})
 
 F
 
+- {{CSSxRef("::file-selector-button")}}
 - {{CSSxRef("::first-letter")}}
 - {{CSSxRef("::first-line")}}
-- {{CSSxRef("::file-selector-button")}}
 
 G
 
-- {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::grammar-error")}}
+
+H
+
+- {{CSSxRef("::highlight()")}}
 
 M
 
@@ -79,60 +84,30 @@ S
 
 - {{CSSxRef("::selection")}}
 - {{CSSxRef("::slotted", "::slotted()")}}
-- {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::spelling-error")}}
 
 T
 
 - {{CSSxRef("::target-text")}} {{Experimental_Inline}}
 
+V
+
+- {{cssxref("::view-transition")}}
+- {{cssxref("::view-transition-image-pair()")}}
+- {{cssxref("::view-transition-group()")}}
+- {{cssxref("::view-transition-new()")}}
+- {{cssxref("::view-transition-old()")}}
+
+> [!NOTE]
+> Browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
+
 ## Specifications
 
 {{Specifications}}
 
-## Browser compatibility
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Browser</th>
-      <th>Lowest Version</th>
-      <th>Support of</th>
-    </tr>
-    <tr>
-      <td rowspan="2">Internet Explorer</td>
-      <td>8.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>9.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">Firefox (Gecko)</td>
-      <td>1.0 (1.0)</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>1.0 (1.5)</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">Opera</td>
-      <td>4.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>Safari (WebKit)</td>
-      <td>1.0 (85)</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## See also
 
+- [CSS pseudo-element](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

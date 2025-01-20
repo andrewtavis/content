@@ -1,20 +1,10 @@
 ---
 title: Handling media support issues in web content
 slug: Web/Media/Formats/Support_issues
-tags:
-  - Audio
-  - Guide
-  - HTMLAudioElement
-  - HTMLMediaElement
-  - HTMLVideoElement
-  - Intermediate
-  - Media
-  - Sources
-  - Video
-  - WebRTC
-  - fallbacks
-  - sound
+page-type: guide
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 One of the realities of working with audio and video presentation and manipulation on the web is that there are a number of media formats available, of varying degrees of popularity and with a variety of capabilities. The availability of choices is good for the user, in that they can choose the format that suits their needs best. There is a drawback, however: because there are so many to choose from, with so many different kinds of licenses and design principles involved, each web browser developer is left to its own devices when deciding which media file types and codecs to support.
 
@@ -46,13 +36,14 @@ Once your image has been converted to progressive form, you can use it as usual.
 
 When using a progressive image, the data is stored in such a way that the browser is able to render a low-quality representation of the image as soon as possible, then update the image as it loads—or after it's finished loading—to present it in full quality.
 
-> **Note:** Progressive (or interlaced) images are inherently slightly larger than the non-progressive versions of the same images. Whether the interlacing will benefit your users is up to you to determine.
+> [!NOTE]
+> Progressive (or interlaced) images are inherently slightly larger than the non-progressive versions of the same images. Whether the interlacing will benefit your users is up to you to determine.
 
 ## Specifying multiple sources
 
 ## Checking compatibility in JavaScript
 
-{{domxref("HTMLMediaElement.canPlayType")}} and {{domxref("MediaSource.isTypeSupported")}}…
+{{domxref("HTMLMediaElement.canPlayType")}} and {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}}…
 
 ## Detecting playback errors
 

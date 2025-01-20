@@ -2,19 +2,10 @@
 title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - ExtensionInfo
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - management
 browser-compat: webextensions.api.management.ExtensionInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An `ExtensionInfo` object contains information about an add-on.
 
@@ -86,7 +77,8 @@ It is an object with the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#type-ExtensionInfo) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

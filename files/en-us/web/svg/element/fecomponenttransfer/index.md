@@ -2,10 +2,6 @@
 title: <feComponentTransfer>
 slug: Web/SVG/Element/feComponentTransfer
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feComponentTransfer
 ---
 
@@ -13,23 +9,13 @@ browser-compat: svg.elements.feComponentTransfer
 
 The **`<feComponentTransfer>`** [SVG](/en-US/docs/Web/SVG) filter primitive performs color-component-wise remapping of data for each pixel. It allows operations like brightness adjustment, contrast adjustment, color balance or thresholding.
 
-The calculations are performed on non-premultiplied color values. The colors are modified by changing each channel (R, G, B, and A) to the result of what the children {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncA")}} return.
+The calculations are performed on non-premultiplied color values. The colors are modified by changing each channel (R, G, B, and A) to the result of what the children {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncA")}} return. If more than one of the same element is provided, the last one specified is used, and if no element is supplied to modify one of the channels, the effect is the same is if an identity transformation had been given for that channel.
 
 ## Usage context
 
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
 
 - {{SVGAttr("in")}}
 
@@ -159,6 +145,7 @@ rect {
 
 ## See also
 
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}

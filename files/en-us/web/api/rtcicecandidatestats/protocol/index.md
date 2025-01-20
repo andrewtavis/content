@@ -1,22 +1,9 @@
 ---
-title: RTCIceCandidateStats.protocol
+title: "RTCIceCandidateStats: protocol property"
+short-title: protocol
 slug: Web/API/RTCIceCandidateStats/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Media
-  - Property
-  - Protocol
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - Transport
-  - WebRTC
-  - WebRTC API
-browser-compat: api.RTCIceCandidateStats.protocol
+browser-compat: api.RTCStatsReport.type_local-candidate.protocol
 ---
 
 {{APIRef("WebRTC")}}

@@ -2,9 +2,6 @@
 title: Attribution and copyright licensing
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -17,19 +14,20 @@ This section covers the types of content we provide and the copyrights and licen
 
 ### Documentation
 
-> **Note:** The content on MDN Web Docs has been prepared with the contributions of authors from both inside and outside Mozilla. Unless otherwise indicated, the content is available under the terms of the [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 or any later version.
+> [!NOTE]
+> The content on MDN Web Docs has been prepared with the contributions of authors from both inside and outside Mozilla. Unless otherwise indicated, the content is available under the terms of the [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 or any later version.
 
 Your reuse of the content here is published under the same license as the original content—CC-BY-SA v2.5 or any later version. When reusing the content on MDN Web Docs, you need to ensure that attribution is given to the original content as well as to "Mozilla Contributors". Include a hyperlink (online) or URL (in print) to the specific page of the content being sourced. For example, to provide attribution for _this_ article, you can write:
 
 > [Attributions and copyright licensing](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license) by [Mozilla Contributors](/en-US/docs/MDN/Community/Roles_teams#contributor) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/). <!--need to revisit the contributors.txt link-->
 
-In the above example, "Mozilla Contributors" links to the history of the cited page. See [Best practices for attribution](https://wiki.creativecommons.org/wiki/Marking/Users) for further explanation.
+In the above example, "Mozilla Contributors" links to the history of the cited page. See [Recommended practices for attribution](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) for further explanation.
 
 ### Code samples
 
 Code samples added on or after August 20, 2010 are in the [public domain CC0](https://creativecommons.org/publicdomain/zero/1.0/). No licensing notice is necessary but if you need one, you can use: `Any copyright is dedicated to the Public Domain: https://creativecommons.org/publicdomain/zero/1.0/`
 
-Code samples added before August 20, 2010 are available under the [MIT license](https://opensource.org/licenses/mit-license.php); you should insert the following attribution information into the MIT template: "© \<date of last wiki page revision> \<name of person who put it in the wiki>".
+Code samples added before August 20, 2010 are available under the [MIT license](https://opensource.org/license/mit); you should insert the following attribution information into the MIT template: "© \<date of last wiki page revision> \<name of person who put it in the wiki>".
 
 Since the launch of the new Yari MDN platform on December 14 2020, there is currently no way to determine which one you need. We are working on this and will update this content soon. <!--do we still need this here?-->
 
@@ -37,7 +35,8 @@ Since the launch of the new Yari MDN platform on December 14 2020, there is curr
 
 If you wish to contribute to MDN Web Docs, you agree that your documentation is available under the Attribution-ShareAlike license (or occasionally an alternative license already specified by the page you are editing) and that your code samples are available under [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) (a Public Domain dedication).
 
-> **Warning:** No new pages may be created using alternate licenses.
+> [!WARNING]
+> No new pages may be created using alternate licenses.
 
 **Copyright for contributed materials remains with the author unless the author assigns it to someone else.**
 
@@ -55,7 +54,8 @@ If we receive a pull request and discover that it contains plagiarized content, 
 
 ### If you want to reuse or republish content
 
-> **Note:** Unless there is a good reason to republish the content, we will probably say "no".
+> [!NOTE]
+> Unless there is a good reason to republish the content, we will probably say "no".
 > The MDN writing team's decision is final.
 
 If someone wants to donate an article to MDN that they previously published on their blog or it makes sense to copy a complex reference sheet to MDN, there may be justification for republishing it. For these cases, discuss your plan with the MDN team beforehand:

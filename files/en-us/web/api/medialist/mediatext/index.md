@@ -1,14 +1,8 @@
 ---
-title: MediaList.mediaText
+title: "MediaList: mediaText property"
+short-title: mediaText
 slug: Web/API/MediaList/mediaText
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - MediaList
-  - Property
-  - Reference
-  - mediaText
 browser-compat: api.MediaList.mediaText
 ---
 
@@ -30,10 +24,7 @@ different queries separated by commas, e.g. `screen, print`. Note that the
 `mediaText` will immediately update the behavior of the
 document.
 
-Also note that is you try to set
-`mediaText` to `null`, it will be treated as an empty
-string, i.e. the value will be set to
-`""`.
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `ml.mediaText = null` is equivalent to `ml.mediaText = ""`.
 
 ## Examples
 

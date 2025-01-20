@@ -1,12 +1,8 @@
 ---
-title: UIEvent()
+title: "UIEvent: UIEvent() constructor"
+short-title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - UIEvent
 browser-compat: api.UIEvent.UIEvent
 ---
 
@@ -14,7 +10,8 @@ browser-compat: api.UIEvent.UIEvent
 
 The **`UIEvent()`** constructor creates a new {{domxref("UIEvent")}} object.
 
-> **Note:** If you construct a synthetic event using this constructor, that event will not be _trusted_, for security reasons.
+> [!NOTE]
+> If you construct a synthetic event using this constructor, that event will not be _trusted_, for security reasons.
 > Only browser-generated `UIEvent` objects are trusted and only trusted events trigger default actions.
 
 ## Syntax

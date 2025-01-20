@@ -2,12 +2,6 @@
 title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - hasOwn
-  - Polyfill
 browser-compat: javascript.builtins.Object.hasOwn
 ---
 
@@ -47,7 +41,7 @@ Unlike the {{jsxref("Operators/in", "in")}} operator, this
 method does not check for the specified property in the object's prototype chain.
 
 It is recommended over {{jsxref("Object.prototype.hasOwnProperty()")}} because
-it works for objects created using `Object.create(null)` and with objects that
+it works for [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) and with objects that
 have overridden the inherited `hasOwnProperty()` method. While it is possible to
 workaround these problems by calling `Object.prototype.hasOwnProperty()` on an
 external object, `Object.hasOwn()` is more intuitive.
@@ -143,8 +137,7 @@ if (Object.hasOwn(foo, "bar")) {
 }
 ```
 
-It can also be used to test objects created using
-{{jsxref("Object.create()","Object.create(null)")}}. These do
+It can also be used with [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). These do
 not inherit from `Object.prototype`, and so `hasOwnProperty()` is inaccessible.
 
 ```js
@@ -171,4 +164,4 @@ if (Object.hasOwn(foo, "prop")) {
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

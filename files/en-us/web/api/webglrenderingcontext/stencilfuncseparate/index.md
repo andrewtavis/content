@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.stencilFuncSeparate()
+title: "WebGLRenderingContext: stencilFuncSeparate() method"
+short-title: stencilFuncSeparate()
 slug: Web/API/WebGLRenderingContext/stencilFuncSeparate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilFuncSeparate
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.stencilFuncSeparate()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the front and/or back
@@ -76,8 +71,7 @@ gl.stencilFuncSeparate(gl.FRONT, gl.LESS, 0.2, 1110011);
 ```
 
 To get the current stencil function, reference value, or other stencil information,
-query the following constants with {{domxref("WebGLRenderingContext.getParameter",
-  "getParameter()")}}.
+query the following constants with {{domxref("WebGLRenderingContext.getParameter", "getParameter()")}}.
 
 ```js
 gl.getParameter(gl.STENCIL_FUNC);

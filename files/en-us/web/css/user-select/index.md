@@ -2,14 +2,6 @@
 title: user-select
 slug: Web/CSS/user-select
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Property
-  - Reference
-  - Selection
-  - recipe:css-property
-  - user-select
 browser-compat: css.properties.user-select
 ---
 
@@ -26,7 +18,6 @@ The **`user-select`** [CSS](/en-US/docs/Web/CSS) property controls whether the u
 user-select: none;
 user-select: auto;
 user-select: text;
-user-select: contain;
 user-select: all;
 
 /* Global values */
@@ -48,21 +39,17 @@ user-select: unset;
   - : The used value of `auto` is determined as follows:
 
     - On the `::before` and `::after` pseudo elements, the used value is `none`
-    - If the element is an editable element, the used value is `contain`
+    - If the used value of `user-select` on the parent of this element is `none`, the used value is `none`
     - Otherwise, if the used value of `user-select` on the parent of this element is `all`, the used value is `all`
-    - Otherwise, if the used value of `user-select` on the parent of this element is `none`, the used value is `none`
     - Otherwise, the used value is `text`
 
 - `text`
   - : The text can be selected by the user.
 - `all`
   - : The content of the element shall be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants. If a double-click or context-click occurred in sub-elements, the highest ancestor with this value will be selected.
-- `contain`
-  - : Enables selection to start within the element; however, the selection will be contained by the bounds of that element.
-- `element` {{non-standard_inline}} (IE-specific alias)
-  - : Same as `contain`. Supported only in Internet Explorer.
 
-> **Note:** CSS UI 4 [renames `user-select: element` to `contain`](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+> [!NOTE]
+> The [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface) module defines a `contain` value for the `user-select` property to enable selection to start within the element to be contained by the bounds of that element, however, this is not supported in any browsers.
 
 ## Formal definition
 
@@ -87,18 +74,14 @@ user-select: unset;
 ```css
 .unselectable {
   -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10+ */
   user-select: none;
 }
 
 .all {
   -webkit-user-select: all;
-  -ms-user-select: all;
   user-select: all;
 }
 ```
-
-> **Note:** `-webkit-user-select: all;` doesn't work in Safari; use only "none" or "text", or else it will allow typing in the `<html>` container. See the [browser compatibility table](#browser-compatibility) for up-to-date information.
 
 ### Result
 
@@ -114,6 +97,5 @@ user-select: unset;
 
 ## See also
 
-- [Polyfill for `user-select: contain`](https://github.com/github/user-select-contain-polyfill)
 - {{Cssxref("::selection")}} pseudo-element
 - The JavaScript {{domxref("Selection")}} object

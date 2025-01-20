@@ -1,10 +1,8 @@
 ---
-title: NamedNodeMap.setNamedItem()
+title: "NamedNodeMap: setNamedItem() method"
+short-title: setNamedItem()
 slug: Web/API/NamedNodeMap/setNamedItem
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.setNamedItem
 ---
 
@@ -67,7 +65,7 @@ pre.textContent = result;
 
 {{EmbedLiveSample("Example", "100%", 160)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

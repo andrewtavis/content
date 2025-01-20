@@ -2,20 +2,10 @@
 title: downloads.InterruptReason
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - InterruptReason
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
 browser-compat: webextensions.api.downloads.InterruptReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `InterruptReason` type of the {{WebExtAPIRef("downloads")}} API defines a set of possible reasons why a download was interrupted.
 
@@ -70,7 +60,8 @@ Miscellaneous:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-InterruptReason) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-InterruptReason) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

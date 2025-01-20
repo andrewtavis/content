@@ -1,19 +1,8 @@
 ---
-title: Element.outerHTML
+title: "Element: outerHTML property"
+short-title: outerHTML
 slug: Web/API/Element/outerHTML
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - NeedsMobileBrowserCompatibility
-  - Parsing
-  - Property
-  - Reference
-  - Serialization
-  - Serializing
-  - outerHTML
 browser-compat: api.Element.outerHTML
 ---
 
@@ -35,6 +24,8 @@ containing an HTML serialization of the `element` and its descendants.
 Setting the value of `outerHTML` replaces the element and all of its
 descendants with a new DOM tree constructed by parsing the specified
 `htmlString`.
+
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.outerHTML = null` is equivalent to `elt.outerHTML = ""`.
 
 ### Exceptions
 
@@ -96,13 +87,12 @@ console.log(container.firstElementChild.nodeName); // logs "P"
 
 ## Notes
 
-If the element has no parent element, setting its `outerHTML` property will
-not change it or its descendants. Many browsers will also throw an exception. For
-example:
+If the element has no parent node, setting its `outerHTML` property will not change it
+or its descendants. For example:
 
 ```js
 const div = document.createElement("div");
-div.outerHTML = "<div class=\"test\">test</div>";
+div.outerHTML = '<div class="test">test</div>';
 console.log(div.outerHTML); // output: "<div></div>"
 ```
 

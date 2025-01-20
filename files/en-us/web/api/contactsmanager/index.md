@@ -2,19 +2,14 @@
 title: ContactsManager
 slug: Web/API/ContactsManager
 page-type: web-api-interface
-tags:
-  - Contact Picker API
-  - Contacts
-  - Interface
-  - PWA
-  - contact picker
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContactsManager
 ---
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-The **`ContactsManager`** interface of the {{domxref('Contact Picker API')}} allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
+The **`ContactsManager`** interface of the [Contact Picker API](/en-US/docs/Web/API/Contact_Picker_API) allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 
 The `ContactsManager` is available through the global {{domxref('navigator.contacts')}} property.
 
@@ -92,5 +87,5 @@ async function getContacts() {
 
 ## See also
 
-- [A Contact Picker for the Web](https://web.dev/contact-picker/)
+- [A Contact Picker for the Web](https://developer.chrome.com/docs/capabilities/web-apis/contact-picker)
 - [A Contact Picker demo on glitch](https://contact-picker.glitch.me/)

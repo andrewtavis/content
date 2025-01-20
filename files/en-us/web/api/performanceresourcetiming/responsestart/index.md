@@ -1,16 +1,12 @@
 ---
-title: PerformanceResourceTiming.responseStart
+title: "PerformanceResourceTiming: responseStart property"
+short-title: responseStart
 slug: Web/API/PerformanceResourceTiming/responseStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.responseStart
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`responseStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the first byte of the response from the server, cache, or local resource.
 

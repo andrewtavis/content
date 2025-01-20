@@ -1,19 +1,13 @@
 ---
-title: HighlightRegistry.size
+title: "HighlightRegistry: size property"
+short-title: size
 slug: Web/API/HighlightRegistry/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - CSS Custom Highlight API
-  - Reference
-  - size
-  - Experimental
 browser-compat: api.HighlightRegistry.size
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-get-map.prototype.size
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The **`size`** property returns the number of {{domxref("Highlight")}} objects in the {{domxref("HighlightRegistry")}}.
 

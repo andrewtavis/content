@@ -2,12 +2,6 @@
 title: 'TypeError: property "x" is non-configurable and can''t be deleted'
 slug: Web/JavaScript/Reference/Errors/Cant_delete
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - TypeError
 ---
 
 {{jsSidebar("Errors")}}
@@ -17,7 +11,7 @@ when it was attempted to delete a property, but that property is [non-configurab
 
 ## Message
 
-```
+```plain
 TypeError: Cannot delete property 'x' of #<Object> (V8-based)
 TypeError: property "x" is non-configurable and can't be deleted (Firefox)
 TypeError: Unable to delete property. (Safari)
@@ -72,6 +66,6 @@ delete Math.PI; // TypeError
 
 ## See also
 
-- [delete operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.freeze()")}}

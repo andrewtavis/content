@@ -1,18 +1,12 @@
 ---
 title: 2D maze game with device orientation
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-tags:
-  - Canvas
-  - Device Orientation API
-  - Game Development
-  - HTML
-  - Phaser
-  - Vibration API
+page-type: guide
 ---
 
 {{GamesSidebar}}
 
-In this tutorial we'll go through the process of building an HTML mobile game that uses the [Device Orientation](/en-US/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes) and [Vibration](/en-US/docs/Web/API/Vibration_API) **APIs** to enhance the gameplay and is built using the [Phaser](https://phaser.io/) framework. Basic JavaScript knowledge is recommended to get the most from this tutorial.
+In this tutorial we'll go through the process of building an HTML mobile game that uses the [Device Orientation](/en-US/docs/Web/API/Device_orientation_events) and [Vibration](/en-US/docs/Web/API/Vibration_API) **APIs** to enhance the gameplay and is built using the [Phaser](https://phaser.io/) framework. Basic JavaScript knowledge is recommended to get the most from this tutorial.
 
 ## Example game
 
@@ -22,7 +16,7 @@ By the end of the tutorial you will have a fully functional demo game: [Cyber Or
 
 ## Phaser framework
 
-[Phaser](https://phaser.io/) is a framework for building desktop and mobile HTML games. It's quite new, but growing rapidly thanks to the passionate community involved in the development process. You can check it out [on GitHub](https://github.com/photonstorm/phaser) where it's open sourced, read the [online documentation](https://phaser.io/docs/) and go through the big collection of [examples](https://phaser.io/examples). The Phaser framework provides you with a set of tools that will speed up development and help handle generic tasks needed to complete the game, so you can focus on the game idea itself.
+[Phaser](https://phaser.io/) is a framework for building desktop and mobile HTML games. It's quite new, but growing rapidly thanks to the passionate community involved in the development process. You can check it out [on GitHub](https://github.com/phaserjs/phaser) where it's open sourced, read the [online documentation](https://phaser.io/docs/) and go through the big collection of [examples](https://labs.phaser.io/). The Phaser framework provides you with a set of tools that will speed up development and help handle generic tasks needed to complete the game, so you can focus on the game idea itself.
 
 ## Starting with the project
 
@@ -34,14 +28,14 @@ You can open the index file in your favorite browser to launch the game and try 
 
 - `img`: All the images that we will use in the game.
 - `src`: The JavaScript files with all the source code of the game defined inside.
-- `audio:` The sound files used in the game.
+- `audio`: The sound files used in the game.
 
 ## Setting up the Canvas
 
 We will be rendering our game on Canvas, but we won't do it manually — this will be taken care of by the framework. Let's set it up: our starting point is the `index.html` file with the following content. You can create this yourself if you want to follow along:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -89,7 +83,8 @@ The line above will initialize the Phaser instance — the arguments are the wid
 
 The important thing to remember is that the framework is setting up helpful methods to speed up a lot of things like image manipulation or assets management, which would be a lot harder to do manually.
 
-> **Note:** You can read the [Building Monster Wants Candy](https://gamedevelopment.tutsplus.com/tutorials/getting-started-with-phaser-building-monster-wants-candy--cms-21723) article for the in-depth introduction to the basic Phaser-specific functions and methods.
+> [!NOTE]
+> You can read the [Building Monster Wants Candy](https://webdesign.tutsplus.com/getting-started-with-phaser-building-monster-wants-candy--cms-21723t) article for the in-depth introduction to the basic Phaser-specific functions and methods.
 
 Back to game states: the line below is adding a new state called `Boot` to the game:
 
@@ -141,12 +136,12 @@ Ball.Preloader.prototype = {
     this.preloadBg = this.add.sprite(
       (Ball._WIDTH - 297) * 0.5,
       (Ball._HEIGHT - 145) * 0.5,
-      "preloaderBg"
+      "preloaderBg",
     );
     this.preloadBar = this.add.sprite(
       (Ball._WIDTH - 158) * 0.5,
       (Ball._HEIGHT - 50) * 0.5,
-      "preloaderBar"
+      "preloaderBar",
     );
     this.load.setPreloadSprite(this.preloadBar);
 
@@ -187,7 +182,7 @@ Ball.MainMenu.prototype = {
       this,
       2,
       0,
-      1
+      1,
     );
     this.startButton.anchor.set(0.5, 0);
     this.startButton.input.useHandCursor = true;
@@ -224,7 +219,7 @@ Ball.Howto.prototype = {
       0,
       "screen-howtoplay",
       this.startGame,
-      this
+      this,
     );
   },
   startGame() {
@@ -330,8 +325,6 @@ The more you tilt the device, the more force is applied to the ball, therefore t
 
 ![An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen.](cyber-orb-flame-orientation.png)
 
-> **Note:** To find out more about implementing device orientation and what raw code would look like, read [Keep it level: responding to device orientation changes](/en-US/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes).
-
 #### Adding the hole
 
 The main objective in the game is to move the ball from the starting position to the ending position: a hole in the ground. Implementation looks very similar to the part where we created the ball, and it's also added in the `create()` function of our `Game` state:
@@ -406,14 +399,14 @@ this.physics.arcade.collide(
   this.borderGroup,
   this.wallCollision,
   null,
-  this
+  this,
 );
 this.physics.arcade.collide(
   this.ball,
   this.levels[this.level - 1],
   this.wallCollision,
   null,
-  this
+  this,
 );
 ```
 
@@ -469,13 +462,13 @@ this.timerText = this.game.add.text(
   15,
   15,
   `Time: ${this.timer}`,
-  this.fontBig
+  this.fontBig,
 );
 this.totalTimeText = this.game.add.text(
   120,
   30,
   `Total time: ${this.totalTimer}`,
-  this.fontSmall
+  this.fontSmall,
 );
 ```
 

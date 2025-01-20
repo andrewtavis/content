@@ -2,19 +2,10 @@
 title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getPanel
-  - sidebarAction
 browser-compat: webextensions.api.sidebarAction.getPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets a URL to the HTML document that defines the sidebar's contents.
 
@@ -48,7 +39,7 @@ let gettingPanel = browser.sidebarAction.getPanel(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the URL for the panel's document. This will be a fully qualified URL, such as:
 
-```
+```url
 moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
 ```
 
@@ -71,7 +62,8 @@ gettingPanel.then(onGot);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+> [!NOTE]
+> This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

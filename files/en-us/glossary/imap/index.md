@@ -2,11 +2,9 @@
 title: IMAP
 slug: Glossary/IMAP
 page-type: glossary-definition
-tags:
-  - Beginner
-  - Infrastructure
-  - MailNews
 ---
+
+{{GlossarySidebar}}
 
 IMAP (Internet Message Access Protocol) is a {{Glossary("protocol")}} used to retrieve and store emails. More recent than {{Glossary("POP")}}, IMAP allows folders and rules on the server.
 
@@ -17,5 +15,6 @@ Mark Crispin initially developed IMAP in 1986 as _Interim Mail Access Protocol_.
 ## See also
 
 - {{RFC(3501)}}
-- {{Glossary("POP")}}
+- Related glossary terms:
+  - {{Glossary("POP")}}
 - [IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol) on Wikipedia

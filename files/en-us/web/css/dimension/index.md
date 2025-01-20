@@ -2,14 +2,6 @@
 title: <dimension>
 slug: Web/CSS/dimension
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - dimension
-  - unit
-  - value
 browser-compat: css.types.dimension
 ---
 
@@ -56,5 +48,5 @@ The syntax of `<dimension>` is a {{CSSxRef("&lt;number&gt;")}} immediately follo
 ## See also
 
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
-- [Learn to style HTML using CSS](/en-US/docs/Learn/CSS)
+- [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
 - CSS distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), and resolutions ({{CSSxRef("&lt;resolution&gt;")}})

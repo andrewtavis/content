@@ -2,15 +2,6 @@
 title: topSites
 slug: Mozilla/Add-ons/WebExtensions/API/topSites
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - topSites
 browser-compat: webextensions.api.topSites
 ---
 
@@ -38,7 +29,8 @@ To use the topSites API you must have the "topSites" [API permission](/en-US/doc
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/topSites/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

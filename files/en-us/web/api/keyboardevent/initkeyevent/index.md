@@ -1,20 +1,17 @@
 ---
-title: KeyboardEvent.initKeyEvent()
+title: "KeyboardEvent: initKeyEvent() method"
+short-title: initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - KeyboardEvent
-  - Method
-  - Reference
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 ---
 
 {{APIRef("UI Events")}}
 
-> **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
+> [!WARNING]
+> Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
 >
 > The method has been removed from the DOM specification and is not supported by any current browser.
 > Firefox hides this method behind the preference (`dom.keyboardevent.init_key_event.enabled`) from version 93 and plans to remove it shortly afterwards.
@@ -61,8 +58,7 @@ initKeyEvent (type, bubbles, cancelable, view,
     generated is a combination of keys containing the <kbd>Meta</kbd> key.
 - `keyCode`
   - : An `unsigned long` representing the virtual key code value of the key
-    which was pressed, otherwise `0`. See {{ domxref("KeyboardEvent.keyCode")
-    }} for the list of key codes.
+    which was pressed, otherwise `0`. See {{domxref("KeyboardEvent.keyCode")}} for the list of key codes.
 - `charCode`
   - : An `unsigned long` representing the Unicode character associated with
     the pressed key otherwise `0`.
@@ -74,20 +70,22 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const event = document.createEvent('KeyboardEvent'); // create a key event
+const event = document.createEvent("KeyboardEvent"); // create a key event
 // define the event
-event.initKeyEvent("keypress",       // typeArg,
-                   true,             // canBubbleArg,
-                   true,             // cancelableArg,
-                   null,             // viewArg, Specifies UIEvent.view. This value may be null.
-                   false,            // ctrlKeyArg,
-                   false,            // altKeyArg,
-                   false,            // shiftKeyArg,
-                   false,            // metaKeyArg,
-                    9,               // keyCodeArg,
-                    0);              // charCodeArg);
+event.initKeyEvent(
+  "keypress", // typeArg,
+  true, // canBubbleArg,
+  true, // cancelableArg,
+  null, // viewArg, Specifies UIEvent.view. This value may be null.
+  false, // ctrlKeyArg,
+  false, // altKeyArg,
+  false, // shiftKeyArg,
+  false, // metaKeyArg,
+  9, // keyCodeArg,
+  0,
+); // charCodeArg);
 
-document.getElementById('blah').dispatchEvent(event);
+document.getElementById("blah").dispatchEvent(event);
 ```
 
 ## Specifications

@@ -2,16 +2,6 @@
 title: devtools.panels.ExtensionSidebarPane
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Extensions
-  - Type
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - devtools.panels.ExtensionSidebarPane
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane
 ---
 
@@ -45,7 +35,8 @@ To create an `ExtensionSidebarPane`, call the [`browser.devtools.panels.elements
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

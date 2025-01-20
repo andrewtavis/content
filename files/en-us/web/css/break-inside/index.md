@@ -2,14 +2,6 @@
 title: break-inside
 slug: Web/CSS/break-inside
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fragmentation
-  - CSS Multi-column Layout
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.break-inside
 ---
 
@@ -56,7 +48,7 @@ Once forced breaks have been applied, soft breaks may be added if needed, but no
   - : Avoids any page break within the principal box.
 - `avoid-column`
   - : Avoids any column break within the principal box.
-- `avoid-region` {{experimental_inline}}
+- `avoid-region`
   - : Avoids any region break within the principal box.
 
 ## Page break aliases
@@ -100,7 +92,7 @@ By default, it is possible for you to get a break between the image and its capt
 
   <figure>
     <img
-      src="https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png" />
+      src="https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png" />
     <figcaption>The Firefox logo — fox wrapped around the world</figcaption>
   </figure>
 
@@ -184,5 +176,5 @@ article {
 
 ## See also
 
-- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - [Breaking Boxes With CSS Fragmentation](https://www.smashingmagazine.com/2019/02/css-fragmentation/)

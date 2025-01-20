@@ -2,20 +2,10 @@
 title: history.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/history/TransitionType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - TransitionType
-  - Type
-  - WebExtensions
 browser-compat: webextensions.api.history.TransitionType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This describes how the browser navigated to a particular page. For example, "link" means that the browser navigated to the page because the user clicked a link.
 
@@ -52,7 +42,8 @@ Values of this type are strings. Possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#type-TransitionType) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#type-TransitionType) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

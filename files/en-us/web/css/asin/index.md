@@ -2,14 +2,6 @@
 title: asin()
 slug: Web/CSS/asin
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - asin
 browser-compat: css.types.asin
 ---
 
@@ -29,7 +21,7 @@ transform: rotate(asin(pi / 5));
 transform: rotate(asin(e / 3));
 ```
 
-### Parameter
+### Parameters
 
 The `asin(number)` function accepts only one value as its parameter.
 
@@ -43,7 +35,7 @@ The inverse sine of an `number` will always return an {{cssxref("&lt;angle&gt;")
 - If `number` is less than `-1` or greater than `1`, the result is `NaN`.
 - If `number` is `0⁻`, the result is `0⁻`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

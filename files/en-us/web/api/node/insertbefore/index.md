@@ -1,10 +1,8 @@
 ---
-title: Node.insertBefore()
+title: "Node: insertBefore() method"
+short-title: insertBefore()
 slug: Web/API/Node/insertBefore
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.insertBefore
 ---
 
@@ -20,7 +18,8 @@ before appending it to the specified new parent.)
 
 This means that a node cannot be in two locations of the document simultaneously.
 
-> **Note:** The {{domxref("Node.cloneNode()")}} can be used to make a copy
+> [!NOTE]
+> The {{domxref("Node.cloneNode()")}} can be used to make a copy
 > of the node before appending it under the new parent. Note that the copies made with
 > `cloneNode()` will not be automatically kept in sync.
 
@@ -44,7 +43,7 @@ insertBefore(newNode, referenceNode)
     node's child nodes.
     > **Note:** `referenceNode` is **not** an optional parameter.
     > You must explicitly pass a {{domxref("Node")}} or `null`.
-    > Failing to provide it or passing invalid values may [behave](https://bugs.chromium.org/p/chromium/issues/detail?id=419780) [differently](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) in different browser versions.
+    > Failing to provide it or passing invalid values may [behave](https://crbug.com/419780) [differently](https://bugzil.la/119489) in different browser versions.
 
 ### Return value
 
@@ -109,14 +108,15 @@ Pre-insert validity
 </script>
 ```
 
-> **Note:** There is no `insertAfter()` method.
+> [!NOTE]
+> There is no `insertAfter()` method.
 > It can be emulated by combining the `insertBefore` method
 > with {{domxref("Node.nextSibling")}}.
 >
 > In the previous example, `sp1` could be inserted after `sp2` using:
 >
 > ```js
-> parentDiv.insertBefore(sp1, sp2.nextSibling)
+> parentDiv.insertBefore(sp1, sp2.nextSibling);
 > ```
 >
 > If `sp2` does not have a next sibling, then it must be the last child —
@@ -130,15 +130,15 @@ Insert an element before the first child element, using the
 
 ```js
 // Get the parent element
-let parentElement = document.getElementById('parentElement')
+let parentElement = document.getElementById("parentElement");
 // Get the parent's first child
-let theFirstChild = parentElement.firstChild
+let theFirstChild = parentElement.firstChild;
 
 // Create a new element
-let newElement = document.createElement("div")
+let newElement = document.createElement("div");
 
 // Insert the new element before the first child
-parentElement.insertBefore(newElement, theFirstChild)
+parentElement.insertBefore(newElement, theFirstChild);
 ```
 
 When the element does not have a first child, then `firstChild` is

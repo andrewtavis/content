@@ -1,27 +1,16 @@
 ---
-title: NavigationHistoryEntry.index
+title: "NavigationHistoryEntry: index property"
+short-title: index
 slug: Web/API/NavigationHistoryEntry/index
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - index
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry.index
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`index`** read-only property of the
-{{domxref("NavigationHistoryEntry")}} interface returns the index of the history entry in the history entries list (that is, the list returned by {{domxref("Navigation.entries()")}}), or `-1` if the entry does not appear in the list.
+The **`index`** read-only property of the {{domxref("NavigationHistoryEntry")}} interface returns the index of the history entry in the history entries list (that is, the list returned by {{domxref("Navigation.entries()")}}), or `-1` if the entry does not appear in the list or if current document is not fully active.
 
 ## Value
 

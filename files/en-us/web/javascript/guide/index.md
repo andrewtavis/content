@@ -2,10 +2,6 @@
 title: JavaScript Guide
 slug: Web/JavaScript/Guide
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -70,38 +66,44 @@ Overview: [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
 
 ## Expressions and operators
 
-Overview: [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+Overview: [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
-- [Assignment](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators) & [Comparisons](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators)
-- [Arithmetic operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators)
-- [Bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators) & [logical operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators)
-- [Conditional (ternary) operator](</en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_(ternary)_operator>)
+- [Assignment](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) & [Comparisons](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)
+- [Arithmetic operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators)
+- [Bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [logical operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
+- [Conditional (ternary) operator](</en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_(ternary)_operator>)
 
-## Numbers and dates
+## Numbers and strings
 
-Overview: [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+Overview: [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [Number literals](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
-- [`Number` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
-- [`Math` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
-- [`Date` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
+- [Numbers](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#numbers)
+- [`Number` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#number_object)
+- [`Math` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#math_object)
+- [Strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#strings)
+- [`String` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#string_object)
+- [Template literals](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#template_literals)
 
-## Text formatting
+## Representing dates & times
 
-Overview: [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+Overview: [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times)
 
-- [String literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_literals)
-- [`String` object](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
-- [Template literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_literals)
-- [Internationalization](/en-US/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [`Date` object](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#date_object)
+
+## Regular expressions
+
+Overview: [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+
+- [Creating a regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#creating_a_regular_expression)
+- [Writing a regular expression pattern](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#writing_a_regular_expression_pattern)
+  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 
 ## Indexed collections
 
 Overview: [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
-
-- [Arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
-- [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 
 ## Keyed collections
 
@@ -114,21 +116,21 @@ Overview: [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections
 
 ## Working with objects
 
-Overview: [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+Overview: [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
 
-- [Objects and properties](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)
-- [Creating objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
-- [Defining methods](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
-- [Getter and setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [Objects and properties](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties)
+- [Creating objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects)
+- [Defining methods](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_methods)
+- [Getter and setter](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
 
 ## Using classes
 
-Overview: [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+Overview: [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 
-- [Declaring a class](/en-US/docs/Web/JavaScript/Guide/Using_Classes#declaring_a_class)
-- [Various class features](/en-US/docs/Web/JavaScript/Guide/Using_Classes#constructor)
-- [Extends and inheritance](/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
-- [Why classes?](/en-US/docs/Web/JavaScript/Guide/Using_Classes#why_classes)
+- [Declaring a class](/en-US/docs/Web/JavaScript/Guide/Using_classes#declaring_a_class)
+- [Various class features](/en-US/docs/Web/JavaScript/Guide/Using_classes#constructor)
+- [Extends and inheritance](/en-US/docs/Web/JavaScript/Guide/Using_classes#extends_and_inheritance)
+- [Why classes?](/en-US/docs/Web/JavaScript/Guide/Using_classes#why_classes)
 
 ## Promises
 
@@ -140,13 +142,25 @@ Overview: [Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 - [Composition](/en-US/docs/Web/JavaScript/Guide/Using_promises#composition)
 - [Timing](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing)
 
+## Typed arrays
+
+Overview: [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+
 ## Iterators and generators
 
-Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
 
-- [Iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators)
-- [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables)
-- [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions)
+- [Iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators)
+- [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterables)
+- [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions)
+
+## Internationalization
+
+Overview: [Internationalization](/en-US/docs/Web/JavaScript/Guide/Internationalization)
+
+- [Date and time formatting](/en-US/docs/Web/JavaScript/Guide/Internationalization#date_and_time_formatting)
+- [Number formatting](/en-US/docs/Web/JavaScript/Guide/Internationalization#number_formatting)
+- [Collation](/en-US/docs/Web/JavaScript/Guide/Internationalization#collation)
 
 ## Meta programming
 

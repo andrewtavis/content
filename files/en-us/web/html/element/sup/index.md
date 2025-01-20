@@ -1,16 +1,7 @@
 ---
-title: '<sup>: The Superscript element'
+title: "<sup>: The Superscript element"
 slug: Web/HTML/Element/sup
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
 browser-compat: html.elements.sup
 ---
 
@@ -32,23 +23,9 @@ For example, to style the [wordmark](https://en.wikipedia.org/wiki/Wordmark) of 
 
 Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
-- Displaying exponents, such as "x
-
-  <sup>3</sup>
-
-  ." It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See [Exponents](#exponents) under [Examples](#examples) below.
-
-- Displaying [superior lettering](https://en.wikipedia.org/wiki/Superior_letter), which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M
-
-  <sup>lle</sup>
-
-  "); this is an acceptable use case. See [Superior lettering](#superior_lettering) for examples.
-
-- Representing ordinal numbers, such as "4
-
-  <sup>th</sup>
-
-  " instead of "fourth." See [Ordinal numbers](#ordinal_numbers) for examples.
+- Displaying exponents, such as "x<sup>3</sup>". It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See [Exponents](#exponents) under [Examples](#examples) below.
+- Displaying [superior lettering](https://en.wikipedia.org/wiki/Superior_letter), which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M<sup>lle</sup>"; this is an acceptable use case. See [Superior lettering](#superior_lettering) for examples.
+- Representing ordinal numbers, such as "4<sup>th</sup>" instead of "fourth." See [Ordinal numbers](#ordinal_numbers) for examples.
 
 ## Examples
 
@@ -63,7 +40,7 @@ Exponents, or powers of a number, are among the most common uses of superscripte
 </p>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Exponents", 650, 80)}}
 
@@ -75,7 +52,7 @@ Superior lettering is not technically the same thing as superscript. However, it
 <p>Robert a présenté son rapport à M<sup>lle</sup> Bernard.</p>
 ```
 
-The resulting output:
+#### Result
 
 {{EmbedLiveSample("Superior_lettering", 650, 80)}}
 
@@ -93,7 +70,7 @@ Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbre
 </ul>
 ```
 
-The output:
+#### Result
 
 {{EmbedLiveSample("Ordinal_numbers", 650, 160)}}
 
@@ -103,15 +80,15 @@ The output:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -119,20 +96,20 @@ The output:
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -140,8 +117,9 @@ The output:
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">superscript</a
+          ></code
         >
       </td>
     </tr>

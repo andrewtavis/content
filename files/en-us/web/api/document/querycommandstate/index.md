@@ -1,13 +1,11 @@
 ---
-title: Document.queryCommandState()
+title: "Document: queryCommandState() method"
+short-title: queryCommandState()
 slug: Web/API/Document/queryCommandState
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.queryCommandState
 ---
 
@@ -23,7 +21,8 @@ queryCommandState(command)
 
 ### Parameters
 
-`command` is a command from {{domxref("Document.execCommand()")}}
+- `command`
+  - : A command from {{domxref("Document.execCommand()")}}
 
 ### Return value
 
@@ -67,7 +66,7 @@ function makeBold() {
       break;
   }
   document.querySelector("#output").textContent = `Output: ${message}`;
-  document.execCommand('bold');
+  document.execCommand("bold");
 }
 ```
 

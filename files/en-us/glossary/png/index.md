@@ -2,12 +2,9 @@
 title: PNG
 slug: Glossary/PNG
 page-type: glossary-definition
-tags:
-  - Beginner
-  - Composing
-  - Infrastructure
-  - PNG
 ---
+
+{{GlossarySidebar}}
 
 **PNG** (Portable Network Graphics) is a graphics file format that supports lossless data compression.
 

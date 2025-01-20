@@ -1,16 +1,7 @@
 ---
 title: Firefox 3.5 for developers
 slug: Mozilla/Firefox/Releases/3.5
-tags:
-  - CSS
-  - Firefox
-  - Firefox 3.5
-  - Gecko
-  - Gecko 1.9.1
-  - HTML
-  - JavaScript
-  - Storage
-  - XUL
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -19,22 +10,22 @@ tags:
 
 ## New developer features in Firefox 3.5
 
-### For web site and application developers
+### For website and application developers
 
 #### HTML 5 support
 
-- [Using audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : Firefox 3.5 adds support for the HTML 5 [`audio`](/en-US/docs/Web/HTML/Element/audio) and [`video`](/en-US/docs/Web/HTML/Element/video) elements.
 - Offline resources in Firefox
   - : Firefox 3.5 now fully supports the HTML 5 offline resource specification.
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-  - : The HTML 5 drag and drop API allows support for dragging and dropping items within and between web sites. This also provides a simpler API for use by extensions and Mozilla-based applications.
+  - : The HTML 5 drag and drop API allows support for dragging and dropping items within and between websites. This also provides a simpler API for use by extensions and Mozilla-based applications.
 
 #### Newly-supported CSS features
 
 - [Downloadable fonts support](/en-US/docs/Web/CSS/@font-face)
   - : The new {{ cssxref("@font-face") }} @rule lets web pages provide downloadable fonts, so that sites can be rendered exactly as the page author expects.
-- [CSS media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
   - : Firefox 3.5 now supports CSS media queries, which enhance support for media-dependent style sheets.
 - {{ cssxref("::before") }} and {{ cssxref("::after") }} updated to CSS 2.1
   - : The `::before` and `::after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
@@ -68,7 +59,7 @@ tags:
   - : These new CSS features were added to facilitate theming.
 - New values for `-moz-appearance`
   - : The `-moz-win-glass` and `-moz-mac-unified-toolbar` values have been added to `-moz-appearance`.
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Firefox 3.5 supports CSS transforms. See {{ cssxref("transform", "-moz-transform") }} and {{ cssxref("transform-origin", "-moz-transform-origin") }} for details.
 - {{ cssxref(":nth-child") }}
 
@@ -94,7 +85,7 @@ tags:
   - : Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.
 - [Using geolocation](/en-US/docs/Web/API/Geolocation_API)
   - : Firefox 3.5 supports the Geolocation API, which allows web applications to obtain information about the user's current location if a provider for that information is installed and enabled.
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
   - : The selectors API allows querying a document to locate the elements that match a given selection rule.
 - [Mouse gesture events](https://web.archive.org/web/20210724051233/https://developer.mozilla.org/en-US/docs/Web/Events/Mouse_gesture_events)
   - : Firefox 3.5 supports mouse gesture events such as trackpad swipes.
@@ -114,18 +105,18 @@ tags:
 - Using native JSON
   - : Firefox 3.5 has native support for [JSON](/en-US/docs/Glossary/JSON).
 - New trim methods on the String object
-  - : The [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) object now has [`trim()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim), [`trimLeft()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart), and [`trimRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd) methods.
+  - : The [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) object now has [`trim()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim), [`trimLeft()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart), and [`trimRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd) methods.
 
 #### Networking
 
 - Cross-site access controls for HTTP
   - : In Firefox 3.5, it's now possible for HTTP requests, including those made by [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest), to work across domains if the server supports it.
-- [Progress events for `XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [Progress events for `XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
   - : Progress events are now offered to enable extensions to monitor the progress of requests.
 - Improved Synchronous `XMLHttpRequest` support
-  - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) and [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) are now suppressed during a synchronous `XMLHttpRequest`.
+  - : [DOM Timeout](https://bugzil.la/340345) and [Input Events](https://bugzil.la/333198) are now suppressed during a synchronous `XMLHttpRequest`.
 - Controlling DNS prefetching
-  - : Firefox 3.5 provides DNS prefetching, whereby it performs domain name resolution ahead of time for links included in the current page, in order to save time when links are actually clicked. This article describes how you can tune your web site to disable prefetching, or to adjust how prefetching operates.
+  - : Firefox 3.5 provides DNS prefetching, whereby it performs domain name resolution ahead of time for links included in the current page, in order to save time when links are actually clicked. This article describes how you can tune your website to disable prefetching, or to adjust how prefetching operates.
 
 #### New Canvas features
 
@@ -136,7 +127,7 @@ tags:
 - [`createImageData()`](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas#creating_an_imagedata_object)
   - : The canvas method `createImageData()` is now supported, allowing code to specifically create an `ImageData` object instead of requiring it to be done automatically. This can improve performance of other `ImageData` methods by preventing them from having to create the object.
 - `moz-opaque` attribute
-  - : Added the {{htmlattrxref("moz-opaque", "canvas")}} attribute, which lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. See also {{domxref("HTMLCanvasElement.mozOpaque")}}.
+  - : Added the [`moz-opaque`](/en-US/docs/Web/HTML/Element/canvas#moz-opaque) attribute, which lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. See also {{domxref("HTMLCanvasElement.mozOpaque")}}.
 
 #### New SVG features
 
@@ -204,7 +195,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 ### User experience
 
 - Location aware browsing
-  - : If you choose, you may allow Firefox 3.5 to share information about your current location with web sites. Firefox 3.5 can use information about the network you're connected to in order to share your location. Of course, it asks for your permission before doing so, to ensure your privacy.
+  - : If you choose, you may allow Firefox 3.5 to share information about your current location with websites. Firefox 3.5 can use information about the network you're connected to in order to share your location. Of course, it asks for your permission before doing so, to ensure your privacy.
 - Open audio and video support
   - : Firefox 3.5 supports embedded video and audio using the open Ogg format, as well as WAV for audio. No plugins, no confusing error messages about needing to install something or other that turns out not to be available on your platform anyway.
 - Local data storage
@@ -226,4 +217,4 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ## See also
 
-{{Firefox_for_developers('3')}}
+{{Firefox_for_developers}}

@@ -2,20 +2,10 @@
 title: webNavigation.onCreatedNavigationTarget
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCreatedNavigationTarget
-  - webNavigation
 browser-compat: webextensions.api.webNavigation.onCreatedNavigationTarget
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a new window, or a new tab in an existing window, is created to host the target of a navigation. For example, this event is sent when:
 
@@ -39,7 +29,7 @@ browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -50,15 +40,15 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
       - : `object`. Details about the navigation event. See the [details](#details_2) section for more information.
 
 - `filter` {{optional_inline}}
-  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event will fire for all transitions. Note that `filter` is not supported in Firefox.
+  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event fires for all transitions. Note that `filter` is not supported in Firefox.
 
 ## Additional objects
 
@@ -66,8 +56,8 @@ Events have three functions:
 
 - `sourceFrameId`
   - : `integer`. ID of the frame from which the navigation is initiated. `0` indicates that the frame is the tab's top-level browsing context, not a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation is initiated from a nested iframe. Frame IDs are unique for a given tab and process.
-- `sourceProcessId`
-  - : `integer`. The ID of the process from which the navigation is initiated.
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process the navigation originated from.
 - `sourceTabId`
   - : `integer`. The ID of the tab from which the navigation is initiated. For example, if the user opens a link in a new tab, this will be the ID of the tab containing the link.
 - `tabId`
@@ -89,12 +79,8 @@ Logs the target URL, source Tab ID, and source frame ID for `onCreatedNavigation
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCreatedNavigationTarget(details) {
   console.log(`onCreatedNavigationTarget: ${details.url}`);
@@ -102,12 +88,16 @@ function logOnCreatedNavigationTarget(details) {
   console.log(details.sourceFrameId);
 }
 
-browser.webNavigation.onCreatedNavigationTarget.addListener(logOnCreatedNavigationTarget, filter);
+browser.webNavigation.onCreatedNavigationTarget.addListener(
+  logOnCreatedNavigationTarget,
+  filter,
+);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

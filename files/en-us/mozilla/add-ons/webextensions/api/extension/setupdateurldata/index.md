@@ -2,20 +2,10 @@
 title: extension.setUpdateUrlData()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/setUpdateUrlData
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - setUpdateUrlData
 browser-compat: webextensions.api.extension.setUpdateUrlData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets parameters for the extension's update URL. This value is ignored for extensions that are hosted in the browser vendor's store.
 
@@ -40,7 +30,8 @@ browser.extension.setUpdateUrlData(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-setUpdateUrlData) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#method-setUpdateUrlData) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

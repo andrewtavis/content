@@ -1,9 +1,14 @@
 ---
-title: InputDeviceCapabilities()
+title: "InputDeviceCapabilities: InputDeviceCapabilities() constructor"
+short-title: InputDeviceCapabilities()
 slug: Web/API/InputDeviceCapabilities/InputDeviceCapabilities
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.InputDeviceCapabilities.InputDeviceCapabilities
 ---
+
+{{APIRef("Input Device Capabilities API")}}{{SeeCompatTable}}
 
 The `InputDeviceCapabilities()` constructor creates a new
 {{domxref("InputDeviceCapabilities")}} object provides information about the physical
@@ -16,10 +21,6 @@ new InputDeviceCapabilities()
 new InputDeviceCapabilities(InputDeviceCapabilitiesInit)
 ```
 
-### Returns
-
-An instance of the {{domxref("InputDeviceCapabilities")}} interface.
-
 ### Parameters
 
 - `InputDeviceCapabilitiesInit` {{optional_inline}}
@@ -29,6 +30,10 @@ An instance of the {{domxref("InputDeviceCapabilities")}} interface.
 
     - `fireTouchEvents`: A boolean value that indicates
       whether the device dispatches touch events.
+
+### Return value
+
+An instance of the {{domxref("InputDeviceCapabilities")}} interface.
 
 ## Specifications
 

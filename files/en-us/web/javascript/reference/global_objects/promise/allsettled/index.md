@@ -2,14 +2,6 @@
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Promise
-  - Reference
-  - allSettled
-  - asynchronous
-  - Polyfill
 browser-compat: javascript.builtins.Promise.allSettled
 ---
 
@@ -17,7 +9,7 @@ browser-compat: javascript.builtins.Promise.allSettled
 
 The **`Promise.allSettled()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
 
-{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
+{{EmbedInteractiveExample("pages/js/promise-allsettled.html", "taller")}}
 
 ## Syntax
 
@@ -83,8 +75,8 @@ Promise.allSettled([
 ## See also
 
 - [Polyfill of `Promise.allSettled` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
-- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
-- [Graceful asynchronous programming with promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
+- [Graceful asynchronous programming with promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}
 - {{jsxref("Promise.any()")}}

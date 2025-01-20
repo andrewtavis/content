@@ -2,20 +2,10 @@
 title: events.Rule
 slug: Mozilla/Add-ons/WebExtensions/API/events/Rule
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Rule
-  - Type
-  - WebExtensions
-  - events
 browser-compat: webextensions.api.events.Rule
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Description of a declarative rule for handling events.
 
@@ -40,7 +30,8 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/events/#type-Rule) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events#type-Rule) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

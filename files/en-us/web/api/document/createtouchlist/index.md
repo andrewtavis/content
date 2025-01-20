@@ -1,17 +1,11 @@
 ---
-title: Document.createTouchList()
+title: "Document: createTouchList() method"
+short-title: createTouchList()
 slug: Web/API/Document/createTouchList
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Method
-  - Mobile
-  - createTouchList
-  - touch
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.createTouchList
 ---
 
@@ -24,7 +18,7 @@ The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef(
 ```js-nolint
 createTouchList(touch1)
 createTouchList(touch1, touch2)
-createTouchList(touch1, touch2, /* … ,*/ touchN)
+createTouchList(touch1, touch2, /* …, */ touchN)
 ```
 
 ### Parameters
@@ -42,7 +36,7 @@ createTouchList(touch1, touch2, /* … ,*/ touchN)
 
 ## Examples
 
-This example illustrates using the {{DOMxRef("Document.createTouchList()")}} method to
+This example illustrates using the `Document.createTouchList()` method to
 create {{DOMxRef("TouchList")}} objects.
 
 In following code snippet, some {{DOMxRef("Touch")}} objects are created for the

@@ -2,19 +2,11 @@
 title: Microdata
 slug: Web/HTML/Microdata
 page-type: guide
-tags:
-  - Composing
-  - Example
-  - HTML
-  - Microdata
-  - Reference
-  - SEO
-  - Search
 ---
 
 {{HTMLSidebar}}
 
-Microdata is part of the {{glossary("WHATWG")}} HTML Standard and is used to nest metadata within existing content on web pages. Search engines and web crawlers can extract and process microdata from a web page and use it to provide a richer browsing experience for users. Search engines benefit greatly from direct access to this structured data because it allows search engines to understand the information on web pages and provide more relevant results to users. Microdata uses a supporting vocabulary to describe an item and name-value pairs to assign values to its properties. Microdata is an attempt to provide a simpler way of annotating HTML elements with machine-readable tags than the similar approaches of using RDFa and classic microformats.
+Microdata is part of the {{glossary("WHATWG")}} HTML Standard and is used to nest metadata within existing content on web pages. Search engines and web crawlers can extract and process microdata from a web page and use it to provide a richer browsing experience for users. Search engines benefit greatly from direct access to this structured data because it allows search engines to understand the information on web pages and provide more relevant results to users. Microdata uses a supporting vocabulary to describe an item and name-value pairs to assign values to its properties. Microdata is an attempt to provide a declarative way of annotating HTML elements with machine-readable tags than the similar approaches of using RDFa and classic microformats.
 
 At a high level, microdata consists of a group of name-value pairs. The groups are called items, and each name-value pair is a property. Items and properties are represented by regular elements.
 
@@ -23,11 +15,12 @@ At a high level, microdata consists of a group of name-value pairs. The groups a
 
 ## Vocabularies
 
-Google and other major search engines support the [Schema.org](https://schema.org) vocabulary for structured data. This vocabulary defines a standard set of type names and property names, for example, [Schema.org Music Event](https://schema.org/MusicEvent) indicates a concert performance, with [`startDate`](https://schema.org/startDate) and [`location`](https://schema.org/location) properties to specify the concert's key details. In this case, [Schema.org Music Event](https://schema.org/MusicEvent) would be the URL used by `itemtype` and `startDate` and location would be `itemprop`'s that [Schema.org Music Event](https://schema.org/MusicEvent) defines.
+Google and other major search engines support the [Schema.org](https://schema.org/) vocabulary for structured data. This vocabulary defines a standard set of type names and property names, for example, [Schema.org Music Event](https://schema.org/MusicEvent) indicates a concert performance, with [`startDate`](https://schema.org/startDate) and [`location`](https://schema.org/location) properties to specify the concert's key details. In this case, [Schema.org Music Event](https://schema.org/MusicEvent) would be the URL used by `itemtype` and `startDate` and location would be `itemprop`'s that [Schema.org Music Event](https://schema.org/MusicEvent) defines.
 
-> **Note:** More about itemtype attributes can be found at <https://schema.org/Thing>.
+> [!NOTE]
+> More about itemtype attributes can be found at <https://schema.org/Thing>.
 
-Microdata vocabularies provide the semantics or meaning of an _`Item`_. Web developers can design a custom vocabulary or use vocabularies available on the web, such as the widely used [schema.org](https://schema.org) vocabulary. A collection of commonly used markup vocabularies are provided by Schema.org.
+Microdata vocabularies provide the semantics or meaning of an _`Item`_. Web developers can design a custom vocabulary or use vocabularies available on the web, such as the widely used [schema.org](https://schema.org/) vocabulary. A collection of commonly used markup vocabularies are provided by Schema.org.
 
 Commonly used vocabularies:
 
@@ -60,7 +53,7 @@ In some cases, search engines covering specific regions may provide locally-spec
 
 [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) – The `itemscope` attribute (usually) works along with [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) to specify that the HTML contained in a block is about a particular item. The `itemscope` attribute creates the _`Item`_ and defines the scope of the itemtype associated with it. The `itemtype` attribute is a valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context.
 
-[`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) – Specifies the URL of the vocabulary that will be used to define `itemprop`'s (item properties) in the data structure. The [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) attribute is used to set the scope of where in the data structure the vocabulary set by `itemtype will be active.
+[`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) – Specifies the URL of the vocabulary that will be used to define `itemprop`'s (item properties) in the data structure. The [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) attribute is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 
 ## Example
 
@@ -72,7 +65,7 @@ In some cases, search engines covering specific regions may provide locally-spec
   <span itemprop="operatingSystem">ANDROID</span><br />
   <link
     itemprop="applicationCategory"
-    href="https://schema.org/GameApplication" />
+    href="https://schema.org/SoftwareApplication" />
 
   <div
     itemprop="aggregateRating"
@@ -114,7 +107,7 @@ In some cases, search engines covering specific regions may provide locally-spec
     <tr>
       <td>itemprop</td>
       <td>applicationCategory</td>
-      <td>GameApplication (https://schema.org/GameApplication)</td>
+      <td>SoftwareApplication (https://schema.org/SoftwareApplication)</td>
     </tr>
     <tr>
       <td rowspan="3">itemscope</td>
@@ -153,11 +146,8 @@ In some cases, search engines covering specific regions may provide locally-spec
 
 {{ EmbedLiveSample('HTML', '', '100') }}
 
-> **Note:** A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data). Try it on the HTML shown above.
-
-## Browser compatibility
-
-Supported in Firefox 16. Removed in Firefox 49.
+> [!NOTE]
+> A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data). Try it on the HTML shown above.
 
 ## See also
 

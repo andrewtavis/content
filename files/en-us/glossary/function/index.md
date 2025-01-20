@@ -2,13 +2,9 @@
 title: Function
 slug: Glossary/Function
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - IIFE
-  - Immediately Invoked Function Expressions (IIFE)
-  - Intro
-  - JavaScript
 ---
+
+{{GlossarySidebar}}
 
 A **function** is a code snippet that can be called by other code or by itself, or a {{Glossary("variable")}} that refers to the function. When a function is called, {{Glossary("Argument", "arguments")}} are passed to the function as input, and the function can optionally return a value. A function in {{glossary("JavaScript")}} is also an {{glossary("object")}}.
 
@@ -69,11 +65,11 @@ function loop(x) {
 // Arrow function
 const loop2 = (x) => {
   if (x >= 10) return;
-  loop(x + 1);
+  loop2(x + 1);
 };
 ```
 
-An **Immediately Invoked Function Expressions** ({{glossary("IIFE")}}) is a function that is called directly after the function is loaded into the browser's compiler. The way to identify an IIFE is by locating the extra left and right parenthesis at the end of the function's definition.
+An **Immediately Invoked Function Expression** ({{glossary("IIFE")}}) is a function that is called directly after the function is loaded into the browser's compiler. The way to identify an IIFE is by locating the extra left and right parenthesis at the end of the function's definition.
 
 Function expressions, named or anonymous, can be called immediately.
 

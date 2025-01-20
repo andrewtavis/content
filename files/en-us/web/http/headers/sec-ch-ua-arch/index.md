@@ -1,20 +1,15 @@
 ---
 title: Sec-CH-UA-Arch
 slug: Web/HTTP/Headers/Sec-CH-UA-Arch
-tags:
-  - Sec-CH-UA-Arch
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA-Arch
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`Sec-CH-UA-Arch`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's underlying CPU architecture, such as ARM or x86.
+The HTTP **`Sec-CH-UA-Arch`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which contains the user-agent's underlying CPU architecture, such as ARM or x86.
 
 This might be used by a server, for example, to select and offer the correct binary format of an executable for a user to download.
 
@@ -29,7 +24,7 @@ This might be used by a server, for example, to select and offer the correct bin
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>
 </table>
@@ -46,6 +41,8 @@ Sec-CH-UA-Arch: <arch>
   - : A string indicating the underlying platform architecture, such as: `"x86"`, `"ARM"`, `"[arm64-v8a, armeabi-v7a, armeabi]"`.
 
 ## Examples
+
+### Using Sec-CH-UA-Arch
 
 A server requests the `Sec-CH-UA-Arch` header by including the {{HTTPHeader("Accept-CH")}} in a response to some request from the client, using the name of the desired header as a token:
 
@@ -81,6 +78,6 @@ Note above that the [low entropy headers](/en-US/docs/Web/HTTP/Client_hints#low_
 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

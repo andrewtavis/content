@@ -1,18 +1,15 @@
 ---
-title: MathML attribute reference
+title: Attributes
 slug: Web/MathML/Attribute
-tags:
-  - MathML
-  - MathML Reference
+page-type: landing-page
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/MathML")}}
-</section>
+{{MathMLRef}}
 
-This is an alphabetical list of MathML attributes. More details for each attribute are available on relevant [MathML element pages](/en-US/docs/Web/MathML/Element) and on the [global attributes page](/en-US/docs/Web/MathML/Global_attributes). The [values](/en-US/docs/Web/MathML/Attribute/Values) page also describes some notes on common values used by MathML attributes.
+This is an alphabetical list of MathML attributes. More details for each attribute are available on relevant [MathML element pages](/en-US/docs/Web/MathML/Element) and on the [global attributes page](/en-US/docs/Web/MathML/Global_attributes). The [values](/en-US/docs/Web/MathML/Values) page also describes some notes on common values used by MathML attributes.
 
-> **Note:** As explained on the main [MathML](/en-US/docs/Web/MathML) page, MDN uses [MathML Core](https://w3c.github.io/mathml-core/) as a reference specification. However, legacy features that are still implemented by some browsers are also documented. You can find further details for these and other features in [MathML 4](https://w3c.github.io/mathml/).
+> [!NOTE]
+> As explained on the main [MathML](/en-US/docs/Web/MathML) page, MDN uses [MathML Core](https://w3c.github.io/mathml-core/) as a reference specification. However, legacy features that are still implemented by some browsers are also documented. You can find further details for these and other features in [MathML 4](https://w3c.github.io/mathml/).
 
 <table class="standard-table">
   <thead>
@@ -29,7 +26,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("mo") }}
       </td>
       <td>
-         A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the operator should be treated as an accent when used as an under- or over-script.
+         A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the operator should be treated as an accent when used as an under- or over-script.
       </td>
     </tr>
     <tr>
@@ -39,7 +36,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("munderover") }}
       </td>
       <td>
-         A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the under script should be treated as an accent.
+         A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the under script should be treated as an accent.
       </td>
     </tr>
     <tr>
@@ -49,7 +46,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("munderover") }}
       </td>
       <td>
-         A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the over script should be treated as an accent.
+         A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the over script should be treated as an accent.
       </td>
     </tr>
     <tr>
@@ -121,7 +118,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>depth</code></td>
       <td>{{ MathMLElement("mpadded") }}</td>
       <td>
-       A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the desired depth (below the baseline).
+       A {{cssxref("length-percentage")}} indicating the desired depth (below the baseline).
       </td>
     </tr>
     <tr>
@@ -147,7 +144,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><a href="/en-US/docs/Web/MathML/Global_attributes">All MathML elements</a></td>
       <td>
         <p>
-        A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether to set the
+        A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether to set the
         <a href="/en-US/docs/Web/CSS/math-style">math-style</a>
         to <code>normal</code> (if true) or <code>compact</code> (otherwise).
         </p>
@@ -157,7 +154,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>fence</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether the operator is a fence (such as
+        A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether the operator is a fence (such as
         parentheses). There is no visual effect for this attribute.
       </td>
     </tr>
@@ -213,7 +210,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("mspace") }}
       </td>
       <td>
-        A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the desired height (above the baseline).
+        A {{cssxref("length-percentage")}} indicating the desired height (above the baseline).
       </td>
     </tr>
     <tr>
@@ -229,7 +226,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
     <tr>
       <td><code>linethickness</code></td>
       <td>{{ MathMLElement("mfrac") }}</td>
-      <td>A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the thickness of the horizontal fraction line.</td>
+      <td>A {{cssxref("length-percentage")}} indicating the thickness of the horizontal fraction line.</td>
     </tr>
     <tr>
       <td><code>lspace</code></td>
@@ -237,7 +234,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("mo") }}
       </td>
       <td>
-        A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating amount of space before the operator.
+        A {{cssxref("length-percentage")}} indicating amount of space before the operator.
       </td>
     </tr>
     <tr>
@@ -246,7 +243,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("mpadded") }}
       </td>
       <td>
-        A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the horizontal location of the positioning point of the child content with respect to the positioning point of the element.
+        A {{cssxref("length-percentage")}} indicating the horizontal location of the positioning point of the child content with respect to the positioning point of the element.
       </td>
     </tr>
     <tr>
@@ -274,7 +271,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>mathsize</code></td>
       <td><a href="/en-US/docs/Web/MathML/Global_attributes">All MathML elements</a></td>
       <td>
-        A <a href="/en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> used as a <a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a> for the element.
+        A {{cssxref("length-percentage")}} used as a <a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a> for the element.
       </td>
     </tr>
     <tr>
@@ -285,18 +282,18 @@ This is an alphabetical list of MathML attributes. More details for each attribu
     <tr>
       <td><code>maxsize</code></td>
       <td>{{ MathMLElement("mo") }}</td>
-      <td>A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the maximum size of the operator when it is stretchy.</td>
+      <td>A {{cssxref("length-percentage")}} indicating the maximum size of the operator when it is stretchy.</td>
     </tr>
     <tr>
       <td><code>minsize</code></td>
       <td>{{ MathMLElement("mo") }}</td>
-      <td>A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the minimum size of the operator when it is stretchy.</td>
+      <td>A {{cssxref("length-percentage")}} indicating the minimum size of the operator when it is stretchy.</td>
     </tr>
     <tr>
       <td><code>movablelimits</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether attached under- and overscripts move to sub- and superscript positions when <a href="/en-US/docs/Web/CSS/math-style">math-style</a> is set to <code>compact</code>.
+        A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether attached under- and overscripts move to sub- and superscript positions when <a href="/en-US/docs/Web/CSS/math-style">math-style</a> is set to <code>compact</code>.
       </td>
     </tr>
     <tr>
@@ -347,7 +344,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
     <tr>
       <td><code>rspace</code></td>
       <td>{{ MathMLElement("mo") }}</td>
-      <td>A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the amount of space after the operator.</td>
+      <td>A {{cssxref("length-percentage")}} indicating the amount of space after the operator.</td>
     </tr>
     <tr>
       <td><code>rquote</code> {{deprecated_inline}}</td>
@@ -388,7 +385,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>separator</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-      A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether
+      A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether
         the operator is a separator (such as commas).
          There is no visual effect for this attribute.
       </td>
@@ -405,7 +402,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>stretchy</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the operator stretches to the size of the adjacent element.
+        A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the operator stretches to the size of the adjacent element.
       </td>
     </tr>
     <tr>
@@ -416,7 +413,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("mmultiscripts") }}
       </td>
       <td>
-        A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the minimum amount to shift the baseline of the subscript down.
+        A {{cssxref("length-percentage")}} indicating the minimum amount to shift the baseline of the subscript down.
       </td>
     </tr>
     <tr>
@@ -427,20 +424,20 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("mmultiscripts") }}
       </td>
       <td>
-        A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the minimum amount to shift the baseline of the superscript up.
+        A {{cssxref("length-percentage")}} indicating the minimum amount to shift the baseline of the superscript up.
       </td>
     </tr>
     <tr>
       <td><code>symmetric</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether a stretchy operator should be vertically symmetric around the imaginary math axis (centered fraction line).
+        A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether a stretchy operator should be vertically symmetric around the imaginary math axis (centered fraction line).
       </td>
     </tr>
     <tr>
       <td><code>voffset</code></td>
       <td>{{ MathMLElement("mpadded") }}</td>
-      <td>A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the vertical location of the positioning point of the child content with respect to the positioning point of the element.
+      <td>A {{cssxref("length-percentage")}} indicating the vertical location of the positioning point of the child content with respect to the positioning point of the element.
 </td>
     </tr>
     <tr>
@@ -451,7 +448,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("mtable") }}
       </td>
       <td>
-        A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the desired width.
+        A {{cssxref("length-percentage")}} indicating the desired width.
       </td>
     </tr>
     <tr>

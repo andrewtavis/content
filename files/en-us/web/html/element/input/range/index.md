@@ -2,17 +2,6 @@
 title: <input type="range">
 slug: Web/HTML/Element/input/range
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - Input
-  - Range
-  - Reference
-  - Web
-  - slider
 browser-compat: html.elements.input.type_range
 ---
 
@@ -30,14 +19,14 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
 
 There is no pattern validation available; however, the following forms of automatic validation are performed:
 
-- If the {{htmlattrxref("value", "input")}} is set to something which can't be converted into a valid floating-point number, validation fails because the input is suffering from a bad input.
-- The value won't be less than {{htmlattrxref("min", "input")}}. The default is 0.
-- The value won't be greater than {{htmlattrxref("max", "input")}}. The default is 100.
-- The value will be a multiple of {{htmlattrxref("step", "input")}}. The default is 1.
+- If the [`value`](/en-US/docs/Web/HTML/Element/input#value) is set to something which can't be converted into a valid floating-point number, validation fails because the input is suffering from a bad input.
+- The value won't be less than [`min`](/en-US/docs/Web/HTML/Element/input#min). The default is 0.
+- The value won't be greater than [`max`](/en-US/docs/Web/HTML/Element/input#max). The default is 100.
+- The value will be a multiple of [`step`](/en-US/docs/Web/HTML/Element/input#step). The default is 1.
 
 ### Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
+The [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
 
 ```js
 defaultValue =
@@ -52,43 +41,46 @@ If an attempt is made to set the value lower than the minimum, it is set to the 
 
 In addition to the attributes shared by all {{HTMLElement("input")}} elements, range inputs offer the following attributes.
 
+> [!NOTE]
+> The following input attributes do not apply to the input range: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, and `src`. Any of these attributes, if included, will be ignored.
+
 ### list
 
-The value of the `list` attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The value of the `list` attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
 See the [adding tick marks](#adding_tick_marks) below for an example of how the options on a range are denoted in supported browsers.
 
 ### max
 
-The greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute isn't a number, then the element has no maximum value.
+The greatest value in the range of permitted values. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute isn't a number, then the element has no maximum value.
 
 This value must be greater than or equal to the value of the [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute. See the HTML [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute.
 
 ### min
 
-The lowest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
+The lowest value in the range of permitted values. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
 This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the HTML [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute.
 
-> **Note:** If the `min` and `max` values are equal or the `max` value is lower than the `min` value the user will not be able to interact with the range.
+> [!NOTE]
+> If the `min` and `max` values are equal or the `max` value is lower than the `min` value the user will not be able to interact with the range.
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to. Only values that match the specified stepping interval ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, or an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to. Only values that match the specified stepping interval ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Element/input#value) otherwise, or an appropriate default value if neither of those is provided) are valid.
 
-The `step` attribute can also be set to the `any` string value. This `step` value means that no stepping interval is implied and any value is allowed in the specified range (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to the `any` value](#setting_step_to_the_any_value) example for how this works in supported browsers.
+The `step` attribute can also be set to the `any` string value. This `step` value means that no stepping interval is implied and any value is allowed in the specified range (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to the `any` value](#setting_step_to_any) example for how this works in supported browsers.
 
-> **Note:** When the value entered by a user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round off the value to the nearest valid value, preferring to round numbers up when there are two equally close options.
+> [!NOTE]
+> When the value entered by a user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round off the value to the nearest valid value, preferring to round numbers up when there are two equally close options.
 
 The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
-## Non-standard Attributes
+## Non-standard attributes
 
 ### orient
 
 Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
-
-> **Note:** The following input attributes do not apply to the input range: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, and `src`. Any of these attributes, if included, will be ignored.
 
 ## Examples
 
@@ -105,7 +97,7 @@ As a rule, if the user is more likely to be interested in the percentage of the 
 
 ### Specifying the minimum and maximum
 
-By default, the minimum is 0 and the maximum is 100. If that's not what you want, you can easily specify different bounds by changing the values of the {{htmlattrxref("min", "input")}} and/or {{htmlattrxref("max", "input")}} attributes. These can be any floating-point value.
+By default, the minimum is 0 and the maximum is 100. If that's not what you want, you can easily specify different bounds by changing the values of the [`min`](/en-US/docs/Web/HTML/Element/input#min) and/or [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes. These can be any floating-point value.
 
 For example, to ask the user for a value between -10 and 10, you can use:
 
@@ -117,7 +109,7 @@ For example, to ask the user for a value between -10 and 10, you can use:
 
 ### Setting the value's granularity
 
-By default, the granularity, is 1, meaning that the value is always an integer. You can change the {{htmlattrxref("step")}} attribute to control the granularity. For example, If you need a value to be halfway between 5 and 10 you should set the value of `step` to 0.5:
+By default, the granularity is 1, meaning the value is always an integer. To control the granularity, you can change the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute. For example, If you need a value to be halfway between 5 and 10, you should set the value of `step` to 0.5:
 
 #### Setting the step attribute
 
@@ -127,9 +119,9 @@ By default, the granularity, is 1, meaning that the value is always an integer. 
 
 {{EmbedLiveSample("Setting_the_step_attribute", 600, 40)}}
 
-#### Setting step to "any"
+#### Setting step to `any`
 
-If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of `any` for the {{htmlattrxref("step", "input")}} attribute:
+If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of `any` for the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute:
 
 ##### HTML
 
@@ -141,12 +133,12 @@ If you want to accept any value regardless of how many decimal places it extends
 ##### JavaScript
 
 ```js
-const value = document.querySelector("#value")
-const input = document.querySelector("#pi_input")
-value.textContent = input.value
+const value = document.querySelector("#value");
+const input = document.querySelector("#pi_input");
+value.textContent = input.value;
 input.addEventListener("input", (event) => {
-  value.textContent = event.target.value
-})
+  value.textContent = event.target.value;
+});
 ```
 
 {{EmbedLiveSample("Setting_step_to_any", 600, 75)}}
@@ -155,7 +147,7 @@ This example lets the user select any value between 0 and π without any restric
 
 ### Adding tick marks
 
-To add tick marks to a range control, include the `list` attribute, giving it the `id` of a {{HTMLElement("datalist")}} element which defines a series of tick marks on the control. Each point is represented using an {{HTMLElement("option")}} element with its {{htmlattrxref("value", "option")}} set to the range's value at which a mark should be drawn.
+To add tick marks to a range control, include the `list` attribute, giving it the `id` of a {{HTMLElement("datalist")}} element which defines a series of tick marks on the control. Each point is represented using an {{HTMLElement("option")}} element with its [`value`](/en-US/docs/Web/HTML/Element/option#value) set to the range's value at which a mark should be drawn.
 
 #### HTML
 
@@ -180,7 +172,8 @@ To add tick marks to a range control, include the `list` attribute, giving it th
 
 To help you from repeating code you can reuse that same {{HTMLElement("datalist")}} for multiple `<input type="range">` elements, and other {{HTMLElement("input")}} types.
 
-> **Note:** If you also want to [show the labels](#adding_labels) as in the example below then you would need a `datalist` for each range input.
+> [!NOTE]
+> If you also want to [show the labels](#adding_labels) as in the example below then you would need a `datalist` for each range input.
 
 #### HTML
 
@@ -192,6 +185,8 @@ To help you from repeating code you can reuse that same {{HTMLElement("datalist"
 <p>
   <label for="temp2">Temperature for room 2:</label>
   <input type="range" id="temp2" name="temp2" list="values" />
+</p>
+
 <p>
   <label for="temp3">Temperature for room 3:</label>
   <input type="range" id="temp3" name="temp3" list="values" />
@@ -258,92 +253,25 @@ input[type="range"] {
 
 By default, browsers render range inputs as sliders with the knob sliding left and right.
 
-To create a vertical range, wherein the knob slides up and down, set the CSS {{cssxref('appearance')}} property to `slider-vertical` and include the non-standard `orient` attribute for Firefox.
+To create a vertical range wherein the thumb slides up and down, set the {{cssxref("writing-mode")}} property with a value of either `vertical-rl` or `vertical-lr`:
 
-#### Horizontal range control
-
-Consider this range control:
-
-```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1" />
+```html hidden
+<input type="range" min="0" max="10" value="8" />
 ```
-
-{{EmbedLiveSample("Horizontal_range_control", 200, 40)}}
-
-This control is horizontal (at least on most if not all major browsers; others might vary).
-
-#### Using the appearance property
-
-The {{cssxref('appearance')}} property has a non-standard value of `slider-vertical` that, well, makes sliders vertical.
-
-We use the same HTML as in the previous examples:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" />
-```
-
-We target just the inputs with a type of range:
 
 ```css
 input[type="range"] {
-  appearance: slider-vertical;
+  writing-mode: vertical-lr;
 }
 ```
 
-{{EmbedLiveSample("Using_the_appearance_property", 200, 200)}}
+This causes the range slider to render vertically:
 
-#### Using the orient attribute
+{{EmbedLiveSample("Creating vertical range controls", 200, 200)}}
 
-In Firefox only, there is a non-standard `orient` property.
+You can also set the CSS {{cssxref('appearance')}} property to the non-standard `slider-vertical` value if you want to support older versions of Chrome and Safari, and include the non-standard `orient="vertical"` attribute to support older versions of Firefox.
 
-Use similar HTML as in the previous examples, we add the attribute with a value of `vertical`:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
-```
-
-{{EmbedLiveSample("Using_the_orient_attribute", 200, 200)}}
-
-#### writing-mode: bt-lr
-
-The {{cssxref('writing-mode')}} property should generally not be used to alter text direction for internationalization or localization purposes, but can be used for special effects.
-
-We use the same HTML as in the previous examples:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" />
-```
-
-We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right:
-
-```css
-input[type="range"] {
-  writing-mode: bt-lr;
-}
-```
-
-{{EmbedLiveSample("writing-mode_bt-lr", 200, 40)}}
-
-#### Putting it all together
-
-As each of the above examples works in different browsers, you can put all of them in a single example to make it work cross browser:
-
-We keep the `orient` attribute with a value of `vertical` for Firefox:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
-```
-
-We target just the `input`s with a `type` of `range` and `orient` set to `vertical`, changing the `writing-mode` from the default to `bt-lr`, or bottom-to-top and left-to-right, for pre-Blink versions of Edge, and add `appearance: slider-vertical` which is supported in Blink and Webkit browsers:
-
-```css
-input[type="range"][orient="vertical"] {
-  writing-mode: bt-lr;
-  appearance: slider-vertical;
-}
-```
-
-{{EmbedLiveSample("Putting_it_all_together", 200, 200)}}
+See [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls) for examples.
 
 ## Technical summary
 
@@ -362,23 +290,25 @@ input[type="range"][orient="vertical"] {
       <td><strong>Events</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("max", "input")}},
-        {{htmlattrxref("min", "input")}}, and
-        {{htmlattrxref("step", "input")}}
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#min"><code>min</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code>list</code>, <code>value</code>, and <code>valueAsNumber</code>
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsNumber</code>
       </td>
     </tr>
     <tr>
@@ -411,10 +341,10 @@ input[type="range"][orient="vertical"] {
 
 ## See also
 
-- [HTML Forms](/en-US/docs/Learn/Forms)
+- [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
 - [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input/)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

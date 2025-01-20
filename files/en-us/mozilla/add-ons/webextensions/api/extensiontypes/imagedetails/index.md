@@ -2,20 +2,10 @@
 title: extensionTypes.ImageDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDetails
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - extensionTypes
 browser-compat: webextensions.api.extensionTypes.ImageDetails
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Details about the format, quality, area and scale of a captured image.
 
@@ -47,7 +37,8 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-ImageDetails) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes#type-ImageDetails) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

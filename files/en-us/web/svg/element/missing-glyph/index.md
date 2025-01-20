@@ -2,12 +2,8 @@
 title: <missing-glyph>
 slug: Web/SVG/Element/missing-glyph
 page-type: svg-element
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Container
+status:
+  - deprecated
 browser-compat: svg.elements.missing-glyph
 ---
 
@@ -20,15 +16,6 @@ The **`<missing-glyph>`** [SVG](/en-US/docs/Web/SVG) element's content is render
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
 
 - {{SVGAttr("d")}} {{Deprecated_Inline}}
 - {{SVGAttr("horiz-adv-x")}} {{Deprecated_Inline}}

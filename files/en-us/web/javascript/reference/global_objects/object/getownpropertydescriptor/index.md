@@ -2,11 +2,6 @@
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
 ---
 
@@ -69,7 +64,7 @@ A _property descriptor_ is a record with some of the following attributes:
 
 ## Examples
 
-### Using Object.getOwnPropertyDescriptor
+### Using Object.getOwnPropertyDescriptor()
 
 ```js
 let o, d;

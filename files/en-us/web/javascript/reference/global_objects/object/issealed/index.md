@@ -2,19 +2,12 @@
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
 browser-compat: javascript.builtins.Object.isSealed
 ---
 
 {{JSRef}}
 
-The **`Object.isSealed()`** static method determines if an object is
-sealed.
+The **`Object.isSealed()`** static method determines if an object is [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal).
 
 {{EmbedInteractiveExample("pages/js/object-issealed.html")}}
 
@@ -36,7 +29,7 @@ A {{jsxref("Boolean")}} indicating whether or not the given object is sealed.
 ## Description
 
 Returns `true` if the object is sealed, otherwise `false`. An
-object is sealed if it is not {{jsxref("Object.isExtensible", "extensible", "", 1)}} and
+object is sealed if it is not {{jsxref("Object/isExtensible", "extensible", "", 1)}} and
 if all its properties are non-configurable and therefore not removable (but not
 necessarily non-writable).
 

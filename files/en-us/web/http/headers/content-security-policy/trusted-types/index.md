@@ -1,12 +1,9 @@
 ---
 title: "CSP: trusted-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
-tags:
-  - CSP
-  - Directive
-  - HTTP
-  - Security
-  - Experimental
+page-type: http-csp-directive
+status:
+  - experimental
 browser-compat: http.headers.Content-Security-Policy.trusted-types
 ---
 
@@ -26,7 +23,7 @@ Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicat
 ```
 
 - \<policyName>
-  - : A valid policy name consists only of alphanumeric characters, or one of "`-#=_/@.%`". A star (`*`) as a policy name instructs the user agent to allow any unique policy name ('`allow-duplicates`' may relax that further).
+  - : A valid policy name consists only of alphanumeric characters, or one of `-#=_/@.%`. A star (`*`) as a policy name instructs the user agent to allow any unique policy name (`allow-duplicates` may relax that further).
 - `'none'`
   - : Disallows creating any Trusted Type policy (same as not specifying any _\<policyName>_).
 - `'allow-duplicates'`
@@ -56,6 +53,6 @@ if (typeof trustedTypes !== "undefined") {
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)
 - Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
 - [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill)

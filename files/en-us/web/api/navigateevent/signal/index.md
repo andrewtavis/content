@@ -1,21 +1,10 @@
 ---
-title: NavigateEvent.signal
+title: "NavigateEvent: signal property"
+short-title: signal
 slug: Web/API/NavigateEvent/signal
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - signal
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.signal
 ---
 
@@ -30,23 +19,24 @@ An {{domxref("AbortSignal")}} object.
 
 ## Examples
 
-The general idea here is that the `signal` property can be passed to an associated {{domxref("fetch()")}} operation so that if the navigation is cancelled, the `fetch()` operation can be safely aborted, avoiding wasting bandwidth on fetches that are no longer needed.
+The general idea here is that the `signal` property can be passed to an associated {{domxref("Window/fetch", "fetch()")}} operation so that if the navigation is cancelled, the `fetch()` operation can be safely aborted, avoiding wasting bandwidth on fetches that are no longer needed.
 
 ```js
 navigation.addEventListener("navigate", (event) => {
-  event.intercept({ async handler() {
+  event.intercept({
+    async handler() {
+      // ...
 
-    // ...
+      await fetch(`/img/some-image.jpg`, { signal: event.signal });
 
-    await fetch(`/img/some-image.jpg`, { signal: event.signal });
-
-    // ...
-
-  } });
+      // ...
+    },
+  });
 });
 ```
 
-> **Note:** See [Example: next/previous buttons](https://github.com/WICG/navigation-api#example-nextprevious-buttons) for a more detailed example.
+> [!NOTE]
+> See [Example: next/previous buttons](https://github.com/WICG/navigation-api#example-nextprevious-buttons) for a more detailed example.
 
 ## Specifications
 

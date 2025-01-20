@@ -1,11 +1,7 @@
 ---
 title: Namespaces in IMSC
 slug: Related/IMSC/Namespaces
-tags:
-  - IMSC
-  - Namespaces
-  - TTML
-  - XML
+page-type: guide
 ---
 
 This article covers the subject of XML namespaces, giving you enough information to recognize their usage in IMSC, and be able to use it effectively.
@@ -133,7 +129,8 @@ By defining `xmlns:tts="http://www.w3.org/ns/ttml#styling` on the `<tt>` element
 
 Much more readable, isn't it?
 
-> **Note:** The namespace/prefix match is only a document-wide agreement. Theoretically you can use another prefix than `tts` to bind the styling namespace. It is completely legal to define `xmlns:foo="http://www.w3.org/ns/ttml#styling"` and then write `<p foo:color="yellow">`. But it makes your IMSC document much more readable if you use the official prefixes listed in [namespace section](https://www.w3.org/TR/ttml-imsc1.0.1/#namespaces) of the IMSC standard.
+> [!NOTE]
+> The namespace/prefix match is only a document-wide agreement. Theoretically you can use another prefix than `tts` to bind the styling namespace. It is completely legal to define `xmlns:foo="http://www.w3.org/ns/ttml#styling"` and then write `<p foo:color="yellow">`. But it makes your IMSC document much more readable if you use the official prefixes listed in [namespace section](https://www.w3.org/TR/ttml-imsc1.0.1/#namespaces) of the IMSC standard.
 
 <section id="Quick_links">
   <ol>

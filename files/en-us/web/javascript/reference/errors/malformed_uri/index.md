@@ -2,11 +2,6 @@
 title: "URIError: malformed URI sequence"
 slug: Web/JavaScript/Reference/Errors/Malformed_URI
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - URIError
 ---
 
 {{jsSidebar("Errors")}}
@@ -16,7 +11,7 @@ wasn't successful.
 
 ## Message
 
-```
+```plain
 URIError: URI malformed (V8-based)
 URIError: malformed URI sequence (Firefox)
 URIError: String contained an illegal UTF-16 sequence. (Safari)

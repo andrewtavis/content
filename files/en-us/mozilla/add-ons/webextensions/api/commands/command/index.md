@@ -2,20 +2,10 @@
 title: Command
 slug: Mozilla/Add-ons/WebExtensions/API/commands/Command
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Command
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - commands
 browser-compat: webextensions.api.commands.Command
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Information about a command. This contains the information specified for the command in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
@@ -38,4 +28,5 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API.

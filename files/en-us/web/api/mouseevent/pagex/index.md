@@ -1,19 +1,8 @@
 ---
-title: MouseEvent.pageX
+title: "MouseEvent: pageX property"
+short-title: pageX
 slug: Web/API/MouseEvent/pageX
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - Mouse Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-  - events
-  - pageX
 browser-compat: api.MouseEvent.pageX
 ---
 
@@ -25,15 +14,15 @@ This includes any portion of the document not currently visible.
 Being based on the edge of the document as it is, this property takes into account any horizontal scrolling of the page.
 For example, if the page is scrolled such that 200 pixels of the left side of the document are scrolled out of view, and the mouse is clicked 100 pixels inward from the left edge of the view, the value returned by `pageX` will be 300.
 
-Originally, this property was defined as a `long` integer. The [CSSOM View Module](/en-US/docs/Web/CSS/CSSOM_View) redefined it as a
+Originally, this property was defined as a `long` integer. The [CSSOM View Module](/en-US/docs/Web/CSS/CSSOM_view) redefined it as a
 `double` float. See the [Browser compatibility](#browser_compatibility) section for
 details.
 
-See [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#page) for additional information about coordinates specified in this fashion.
+See [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#page) for additional information about coordinates specified in this fashion.
 
 ## Value
 
-A floating-point number of pixels from the left edge of the _document_ at which the mouse was clicked, regardless of any scrolling or viewport positioning that may be in effect.
+A `double` floating-point number of pixels from the left edge of the _document_ at which the mouse was clicked, regardless of any scrolling or viewport positioning that may be in effect.
 
 This property was originally specified in the Touch Events specification as a long integer, but was redefined in the CSSOM View Module to be a double-precision
 floating-point number to allow for subpixel precision.
@@ -45,7 +34,7 @@ See [Browser compatibility](#browser_compatibility) to learn which browsers have
 
 ### Showing the mouse position relative to page origin
 
-Let's take a look at a simple example that shows you the mouse's position relative to the page's origin.
+Let's take a look at an example that shows you the mouse's position relative to the page's origin.
 Since this example is presented in an {{HTMLElement("iframe")}}, that top-left corner is the top-left corner of the frame, not the browser window.
 
 #### HTML
@@ -73,7 +62,12 @@ The CSS used for this example is shown below.
   border: 2px solid darkblue;
   background-color: blue;
   color: white;
-  font: 16px "Zilla", "Open Sans", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Zilla",
+    "Open Sans",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
@@ -107,7 +101,7 @@ Try this out here:
 
 ### More examples
 
-You can also see an example that demonstrates [how to access the mouse position](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#example) information in every available coordinate system.
+You can also see an example that demonstrates [how to access the mouse position](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#example) information in every available coordinate system.
 
 ## Specifications
 
@@ -122,3 +116,4 @@ Prior to being added to the CSSOM View specification, `pageX` and `pageY` were a
 ## See also
 
 - {{domxref("MouseEvent.pageY")}}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

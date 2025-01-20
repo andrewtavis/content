@@ -1,22 +1,20 @@
 ---
 title: translate
 slug: Web/XPath/Functions/translate
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `translate` function evaluates a string and a set of characters to translate and returns the translated string.
 
-### Syntax
+## Syntax
 
 ```plain
 translate(string, abc, XYZ)
 ```
 
-### Arguments
+### Parameters
 
 - `string`
   - : The string to evaluate.
@@ -25,11 +23,11 @@ translate(string, abc, XYZ)
 - `XYZ`
   - : The string of characters used for replacement. The first character in `XYZ` will replace every occurrence of the first character in `abc` that appears in `string`.
 
-### Returns
+### Return value
 
 The translated string.
 
-### Notes
+## Description
 
 XPath notes that the translate function is not a sufficient solution for case conversion in all languages. A future version of XPath may provide additional functions for case conversion.
 
@@ -58,15 +56,15 @@ Example
 Output
 
 ```plain
-The quick red fox.
+The quick red fdx.
 ```
 
 - If `XYZ` contains more characters than `abc`, the extra characters are ignored.
 
-### Defined
+## Specifications
 
 [XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-translate)
 
-### Gecko support
+## Gecko support
 
 Supported.

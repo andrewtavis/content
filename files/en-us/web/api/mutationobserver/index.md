@@ -2,24 +2,12 @@
 title: MutationObserver
 slug: Web/API/MutationObserver
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Interface
-  - MutationObserver
-  - NeedsContent
-  - NeedsUpdate
-  - Reference
-  - mutation
-  - observers
-  - resize
 browser-compat: api.MutationObserver
 ---
 
 {{APIRef("DOM WHATWG")}}
 
-The {{domxref("MutationObserver")}} interface provides the ability to watch for changes being made to the [DOM](/en-US/docs/Web/API/Document_Object_Model) tree. It is designed as a replacement for the older [Mutation Events](/en-US/docs/Web/API/MutationEvent) feature, which was part of the DOM3 Events specification.
+The **`MutationObserver`** interface provides the ability to watch for changes being made to the [DOM](/en-US/docs/Web/API/Document_Object_Model) tree. It is designed as a replacement for the older [Mutation Events](/en-US/docs/Web/API/MutationEvent) feature, which was part of the DOM3 Events specification.
 
 ## Constructor
 
@@ -45,7 +33,7 @@ The following example was adapted from [this blog post](https://hacks.mozilla.or
 
 ```js
 // Select the node that will be observed for mutations
-const targetNode = document.getElementById('some-id');
+const targetNode = document.getElementById("some-id");
 
 // Options for the observer (which mutations to observe)
 const config = { attributes: true, childList: true, subtree: true };
@@ -53,9 +41,9 @@ const config = { attributes: true, childList: true, subtree: true };
 // Callback function to execute when mutations are observed
 const callback = (mutationList, observer) => {
   for (const mutation of mutationList) {
-    if (mutation.type === 'childList') {
-      console.log('A child node has been added or removed.');
-    } else if (mutation.type === 'attributes') {
+    if (mutation.type === "childList") {
+      console.log("A child node has been added or removed.");
+    } else if (mutation.type === "attributes") {
       console.log(`The ${mutation.attributeName} attribute was modified.`);
     }
   }

@@ -1,10 +1,7 @@
 ---
 title: str:split()
 slug: Web/EXSLT/str/split
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -24,7 +21,7 @@ str:split(string, pattern)
 - `pattern`
   - : The pattern indicating where to split the string.
 
-### Returns
+### Return value
 
 A node-set of `token` elements, each containing one token from the `string`.
 
@@ -45,7 +42,7 @@ Returns a node set like:
 
 ## Specifications
 
-[EXSLT - STR:SPLIT](http://exslt.org/str/functions/split/index.html)
+[EXSLT - STR:SPLIT](https://exslt.github.io/str/functions/split/index.html)
 
 ## See also
 

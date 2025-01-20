@@ -1,16 +1,7 @@
 ---
-title: '<time>: The (Date) Time element'
+title: "<time>: The (Date) Time element"
 slug: Web/HTML/Element/time
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
 browser-compat: html.elements.time
 ---
 
@@ -30,7 +21,7 @@ It may represent one of the following:
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : This attribute indicates the time and/or date of the element and must be in one of the formats described below.
 
 ## Usage notes
@@ -43,50 +34,133 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 ### Valid datetime values
 
-- a valid year string
-  - : `2011`
-- a valid month string
-  - : `2011-11`
-- a valid date string
-  - : `2011-11-18`
-- a valid yearless date string
-  - : `11-18`
-- a valid week string
-  - : `2011-W47`
-- a valid time string
-
-  - : `14:54`
-
-    `14:54:39`
-
-    `14:54:39.929`
-
-- a valid local date and time string
-
-  - : `2011-11-18T14:54:39.929`
-
-    `2011-11-18 14:54:39.929`
-
-- a valid global date and time string
-
-  - : `2011-11-18T14:54:39.929Z`
-
-    `2011-11-18T14:54:39.929-0400`
-
-    `2011-11-18T14:54:39.929-04:00`
-
-    `2011-11-18 14:54:39.929Z`
-
-    `2011-11-18 14:54:39.929-0400`
-
-    `2011-11-18 14:54:39.929-04:00`
-
-- a valid duration string
-  - : `PT4H18M3S`
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">Description</th>
+      <th scope="col">Microsyntax</th>
+      <th scope="col">Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Valid month string</td>
+      <td><code><em>YYYY</em>-<em>MM</em></code></td>
+      <td><code>2011-11</code>, <code>2013-05</code></td>
+    </tr>
+    <tr>
+      <td>Valid date string</td>
+      <td><code><em>YYYY</em>-<em>MM</em>-<em>DD</em></code></td>
+      <td><code>1887-12-01</code></td>
+    </tr>
+    <tr>
+      <td>Valid yearless date string</td>
+      <td><code><em>MM</em>-<em>DD</em></code></td>
+      <td><code>11-12</code></td>
+    </tr>
+    <tr>
+      <td>Valid time string</td>
+      <td>
+        <code><em>HH</em>:<em>MM</em></code><br />
+        <code><em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
+        <code><em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code>
+      </td>
+      <td>
+        <code>23:59</code><br />
+        <code>12:15:47</code><br />
+        <code>12:15:52.998</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Valid local date and time string</td>
+      <td>
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em><em>HH</em>:<em>MM</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em> <em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em> <em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code>
+      </td>
+      <td>
+        <code>2013-12-25 11:12</code><br />
+        <code>1972-07-25 13:43:07</code><br />
+        <code>1941-03-15 07:06:23.678</code><br />
+        <code>2013-12-25T11:12</code><br />
+        <code>1972-07-25T13:43:07</code><br />
+        <code>1941-03-15T07:06:23.678</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Valid time-zone offset string</td>
+      <td>
+        <code>Z</code><br />
+        <code>+<em>HHMM</em></code><br />
+        <code>+<em>HH</em>:<em>MM</em></code><br />
+        <code>-<em>HHMM</em></code><br />
+        <code>-<em>HH</em>:<em>MM</em></code>
+      </td>
+      <td>
+        <code>Z</code><br />
+        <code>+0200</code><br />
+        <code>+04:30</code><br />
+        <code>-0300</code><br />
+        <code>-08:00</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Valid global date and time string</td>
+      <td style="max-width:12em">
+        Any combination of a valid local date and time string followed by a
+        valid time-zone offset string
+      </td>
+      <td>
+        <code>2013-12-25 11:12+0200</code><br />
+        <code>1972-07-25 13:43:07+04:30</code><br />
+        <code>1941-03-15 07:06:23.678Z</code><br />
+        <code>2013-12-25T11:12-08:00</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Valid week string</td>
+      <td><code><em>YYYY</em>-W<em>WW</em></code></td>
+      <td><code>2013-W46</code></td>
+    </tr>
+    <tr>
+      <td>Four or more ASCII digits</td>
+      <td><code><em>YYYY</em></code></td>
+      <td><code>2013</code>, <code>0001</code></td>
+    </tr>
+    <tr>
+      <td>Valid duration string</td>
+      <td>
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S<br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XX</em>S</code><br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XXX</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>XX</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>XXX</em>S</code><br />
+        <code><em>w</em>w <em>d</em>d <em>h</em>h <em>m</em>m <em>s</em>s</code>
+      </td>
+      <td>
+        <code>P12DT7H12M13S</code><br />
+        <code>P12DT7H12M13.3S</code><br />
+        <code>P12DT7H12M13.45S</code><br />
+        <code>P12DT7H12M13.455S</code><br />
+        <code>PT7H12M13S</code><br />
+        <code>PT7H12M13.2S</code><br />
+        <code>PT7H12M13.56S</code><br />
+        <code>PT7H12M13.999S</code><br />
+        <code>7d 5h 24m 13s</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Examples
 
-### Simple example
+### Basic example
 
 #### HTML
 
@@ -94,9 +168,9 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 <p>The concert starts at <time datetime="2018-07-07T20:00:00">20:00</time>.</p>
 ```
 
-#### Output
+#### Result
 
-{{EmbedLiveSample('Simple_example', 250, 80)}}
+{{EmbedLiveSample('Basic_example', 250, 80)}}
 
 ### `datetime` example
 
@@ -108,7 +182,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 </p>
 ```
 
-#### Output
+#### Result
 
 {{EmbedLiveSample('datetime_example', 250, 80)}}
 
@@ -118,15 +192,15 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -134,20 +208,20 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -155,8 +229,9 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">time</a
+          ></code
         >
       </td>
     </tr>

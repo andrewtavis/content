@@ -2,11 +2,9 @@
 title: Origin
 slug: Glossary/Origin
 page-type: glossary-definition
-tags:
-  - Security
-  - WebMechanics
-  - origin
 ---
+
+{{GlossarySidebar}}
 
 Web content's **origin** is defined by the _scheme_ (protocol), _hostname_ (domain), and _port_ of the {{Glossary("URL")}} used to access it. Two objects have the same origin only when the scheme, hostname, and port all match.
 
@@ -43,5 +41,6 @@ These are not same origin because they use different ports:
 ## See also
 
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
-- {{Glossary("Site")}}
+- Related glossary terms:
+  - {{Glossary("Site")}}
 - [HTML specification: origin](https://html.spec.whatwg.org/multipage/origin.html#origin)

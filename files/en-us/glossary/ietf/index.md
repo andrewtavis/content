@@ -2,11 +2,9 @@
 title: IETF
 slug: Glossary/IETF
 page-type: glossary-definition
-tags:
-  - IETF
-  - Infrastructure
-  - Internet
 ---
+
+{{GlossarySidebar}}
 
 The Internet Engineering Task Force (**IETF**) is a worldwide organization that drafts {{glossary('specification','specifications')}} governing the mechanisms behind the {{glossary("Internet")}}, especially the {{glossary("TCP")}}/{{glossary("IPv6","IP")}} or Internet {{glossary("Protocol")}} Suite.
 

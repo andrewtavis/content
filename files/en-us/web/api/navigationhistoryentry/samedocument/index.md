@@ -1,27 +1,16 @@
 ---
-title: NavigationHistoryEntry.sameDocument
+title: "NavigationHistoryEntry: sameDocument property"
+short-title: sameDocument
 slug: Web/API/NavigationHistoryEntry/sameDocument
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - sameDocument
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry.sameDocument
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`sameDocument`** read-only property of the
-{{domxref("NavigationHistoryEntry")}} interface returns `true` if this history entry is for the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
+The **`sameDocument`** read-only property of the {{domxref("NavigationHistoryEntry")}} interface returns `true` if this history entry is for the same `document` as the current {{domxref("Document")}} value and current document is fully active, or `false` otherwise.
 
 ## Value
 

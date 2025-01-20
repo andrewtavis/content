@@ -1,17 +1,12 @@
 ---
-title: WebGL2RenderingContext.copyTexSubImage3D()
+title: "WebGL2RenderingContext: copyTexSubImage3D() method"
+short-title: copyTexSubImage3D()
 slug: Web/API/WebGL2RenderingContext/copyTexSubImage3D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.copyTexSubImage3D
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.copyTexSubImage3D()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) copies pixels from the current

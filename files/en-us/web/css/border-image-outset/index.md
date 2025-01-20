@@ -2,12 +2,6 @@
 title: border-image-outset
 slug: Web/CSS/border-image-outset
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-image-outset
 ---
 
@@ -104,5 +98,6 @@ The `border-image-outset` property may be specified as one, two, three, or four 
 
 ## See also
 
-- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
-- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)

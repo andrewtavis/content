@@ -1,25 +1,14 @@
 ---
-title: MediaKeySystemAccess.getConfiguration()
+title: "MediaKeySystemAccess: getConfiguration() method"
+short-title: getConfiguration()
 slug: Web/API/MediaKeySystemAccess/getConfiguration
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Media
-  - MediaKeySystemAccess
-  - Method
-  - NeedsExample
-  - Reference
-  - Video
-  - getConfiguration
 browser-compat: api.MediaKeySystemAccess.getConfiguration
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The `MediaKeySystemAccess.getConfiguration()` method returns an object with the supported combination of
-the following configuration options:
+The **`getConfiguration()`** method of the {{domxref("MediaKeySystemAccess")}} interface returns an object with the supported combination of the following configuration options:
 
 - `initDataTypes` {{ReadOnlyInline}}
   - : Returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.

@@ -1,18 +1,7 @@
 ---
-title: '<var>: The Variable element'
+title: "<var>: The Variable element"
 slug: Web/HTML/Element/var
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-  - var
-  - variable
 browser-compat: html.elements.var
 ---
 
@@ -56,25 +45,28 @@ var {
 
 ### Basic example
 
-Here's a simple example, using `<var>` to denote variable names in a mathematical equation.
+Here's a basic example, using `<var>` to denote variable names in a mathematical equation.
 
 ```html
 <p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
 ```
 
-The output:
+#### Result
 
 {{EmbedLiveSample("Basic_example", 650,80)}}
 
 ### Overriding the default style
 
-Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered using bold Courier if it's available, otherwise it falls back to the default monospace font.
+Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered in bold, using Courier if it's available, otherwise it falls back to the default monospace font.
 
 #### CSS
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 
@@ -91,7 +83,7 @@ This HTML uses `<var>` to enclose the names of two variables.
 
 #### Result
 
-{{EmbedLiveSample("Overriding_the_default_style", 650, 120)}}
+{{EmbedLiveSample("Overriding_the_default_style", 650, 140)}}
 
 ## Technical summary
 
@@ -99,15 +91,15 @@ This HTML uses `<var>` to enclose the names of two variables.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -115,20 +107,20 @@ This HTML uses `<var>` to enclose the names of two variables.
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

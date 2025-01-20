@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.isPointInStroke()
+title: "CanvasRenderingContext2D: isPointInStroke() method"
+short-title: isPointInStroke()
 slug: Web/API/CanvasRenderingContext2D/isPointInStroke
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.isPointInStroke
 ---
 
@@ -103,7 +98,7 @@ canvas.addEventListener("mousemove", (event) => {
   const isPointInStroke = ctx.isPointInStroke(
     ellipse,
     event.offsetX,
-    event.offsetY
+    event.offsetY,
   );
   ctx.strokeStyle = isPointInStroke ? "green" : "red";
 

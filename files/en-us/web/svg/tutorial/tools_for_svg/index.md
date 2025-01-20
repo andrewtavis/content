@@ -2,12 +2,9 @@
 title: Tools for SVG
 slug: Web/SVG/Tutorial/Tools_for_SVG
 page-type: guide
-tags:
-  - Intermediate
-  - NeedsUpdate
-  - SVG
-  - Tools
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
 
@@ -39,7 +36,7 @@ Together with [Apache FOP](https://xmlgraphics.apache.org/fop/) Batik can transf
 
 ### Other renderers
 
-Several projects exist that can create a raster image from an SVG source. [ImageMagick](https://imagemagick.org/) is one of the most famous command-line image processing tools. The Gnome library [rsvg](https://wiki.gnome.org/Projects/LibRsvg) is used by the Wikipedia to raster their SVG graphics. Usage of headless browsers such as SlimerJS and PhantomJS are also popular for this purpose, as the image produced is closer to what the SVG will look like in the browser.
+Several projects exist that can create a raster image from an SVG source. [ImageMagick](https://imagemagick.org/) is one of the most famous command-line image processing tools. The GNOME library [rsvg](https://wiki.gnome.org/Projects/LibRsvg) is used by the Wikipedia to raster their SVG graphics. Usage of headless browsers such as SlimerJS and PhantomJS are also popular for this purpose, as the image produced is closer to what the SVG will look like in the browser.
 
 ## Snap.svg
 

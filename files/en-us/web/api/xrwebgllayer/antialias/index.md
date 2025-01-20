@@ -1,32 +1,14 @@
 ---
-title: XRWebGLLayer.antialias
+title: "XRWebGLLayer: antialias property"
+short-title: antialias
 slug: Web/API/XRWebGLLayer/antialias
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Drawing
-  - Graphics
-  - Quality
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - anti-aliasing
-  - antialias
-  - appearance
-  - augmented
-  - rendering
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.antialias
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`antialias`** is a Boolean value which is `true`
@@ -56,7 +38,7 @@ method.
 Since this is a read-only property, you can set the anti-aliasing mode only when
 initially creating the `XRWebGLLayer`, by specifying the `antialias`
 property in the {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}}
-constructor's `layerInit` configuration object.
+constructor's `options` configuration object.
 
 ## Examples
 
@@ -86,4 +68,3 @@ if (!glLayer.antialias) {
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}

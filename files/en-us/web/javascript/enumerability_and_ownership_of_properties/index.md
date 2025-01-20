@@ -2,12 +2,9 @@
 title: Enumerability and ownership of properties
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
 Every property in JavaScript objects can be classified by three factors:
 
@@ -19,7 +16,7 @@ _Enumerable properties_ are those properties whose internal enumerable flag is s
 
 Ownership of properties is determined by whether the property belongs to the object directly and not to its prototype chain.
 
-All properties, enumerable or not, string or symbol, own or inherited, can be accessed with [dot notation or bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). In this section, we will focus on JavaScript means that visit a group of object properties one-by-one.
+All properties, enumerable or not, string or symbol, own or inherited, can be accessed with [dot notation or bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). In this section, we will focus on the means provided by JavaScript to visit a group of object properties one-by-one.
 
 ## Querying object properties
 
@@ -58,14 +55,14 @@ Note that this is not the most efficient algorithm for all cases, but useful for
 
 ```js
 const SimplePropertyRetriever = {
-  getOwnEnumerables(obj) {
+  getOwnEnumProps(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
     // Or could use for...in filtered with Object.hasOwn or just this: return Object.keys(obj);
   },
-  getOwnNonenumerables(obj) {
+  getOwnNonEnumProps(obj) {
     return this._getPropertyNames(obj, true, false, this._notEnumerable);
   },
-  getOwnEnumerablesAndNonenumerables(obj) {
+  getOwnProps(obj) {
     return this._getPropertyNames(
       obj,
       true,
@@ -74,13 +71,13 @@ const SimplePropertyRetriever = {
     );
     // Or just use: return Object.getOwnPropertyNames(obj);
   },
-  getPrototypeEnumerables(obj) {
+  getPrototypeEnumProps(obj) {
     return this._getPropertyNames(obj, false, true, this._enumerable);
   },
-  getPrototypeNonenumerables(obj) {
+  getPrototypeNonEnumProps(obj) {
     return this._getPropertyNames(obj, false, true, this._notEnumerable);
   },
-  getPrototypeEnumerablesAndNonenumerables(obj) {
+  getPrototypeProps(obj) {
     return this._getPropertyNames(
       obj,
       false,
@@ -88,14 +85,14 @@ const SimplePropertyRetriever = {
       this._enumerableAndNotEnumerable,
     );
   },
-  getOwnAndPrototypeEnumerables(obj) {
+  getOwnAndPrototypeEnumProps(obj) {
     return this._getPropertyNames(obj, true, true, this._enumerable);
     // Or could use unfiltered for...in
   },
-  getOwnAndPrototypeNonenumerables(obj) {
+  getOwnAndPrototypeNonEnumProps(obj) {
     return this._getPropertyNames(obj, true, true, this._notEnumerable);
   },
-  getOwnAndPrototypeEnumerablesAndNonenumerables(obj) {
+  getOwnAndPrototypeEnumAndNonEnumProps(obj) {
     return this._getPropertyNames(
       obj,
       true,

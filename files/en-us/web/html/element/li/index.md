@@ -1,12 +1,7 @@
 ---
-title: '<li>: The List Item element'
+title: "<li>: The List Item element"
 slug: Web/HTML/Element/li
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
 browser-compat: html.elements.li
 ---
 
@@ -20,9 +15,9 @@ The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("value")}}
-  - : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. The **value** attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
-- {{htmlattrdef("type")}} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `value`
+  - : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. This attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
+- `type` {{Deprecated_inline}}
 
   - : This character attribute indicates the numbering type:
 
@@ -34,7 +29,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This type overrides the one used by its parent {{HTMLElement("ol")}} element, if any.
 
-    > **Note:** This attribute has been deprecated; use the CSS {{cssxref("list-style-type")}} property instead.
+    > [!NOTE]
+    > This attribute has been deprecated; use the CSS {{cssxref("list-style-type")}} property instead.
 
 ## Examples
 
@@ -50,6 +46,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 </ol>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Ordered_list")}}
 
 ### Ordered list with a custom value
@@ -61,6 +59,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
   <li>fifth item</li>
 </ol>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Ordered_list_with_a_custom_value")}}
 
@@ -74,6 +74,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 </ul>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Unordered_list")}}
 
 ## Technical summary
@@ -82,7 +84,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -91,7 +93,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -100,7 +102,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
       <th scope="row">Tag omission</th>
       <td>
         The end tag can be omitted if the list item is immediately followed by
-        another {{HTMLElement("li")}} element, or if there is no more
+        another <code>&lt;li&gt;</code> element, or if there is no more
         content in its parent element.
       </td>
     </tr>
@@ -116,7 +118,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role"
             >listitem</a
           ></code
         >
@@ -158,5 +160,5 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 - CSS properties that may be specially useful to style the `<li>` element:
 
   - the {{cssxref("list-style")}} property, to choose the way the ordinal is displayed,
-  - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), to handle complex nested lists,
+  - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), to handle complex nested lists,
   - the {{cssxref("margin")}} property, to control the indent of the list item.

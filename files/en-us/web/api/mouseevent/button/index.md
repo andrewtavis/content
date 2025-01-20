@@ -1,15 +1,8 @@
 ---
-title: MouseEvent.button
+title: "MouseEvent: button property"
+short-title: button
 slug: Web/API/MouseEvent/button
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MouseEvent.button
 ---
 
@@ -22,7 +15,8 @@ As such, it is not reliable for events such as {{domxref("Element/mouseenter_eve
 
 Users may change the configuration of buttons on their pointing device so that if an event's button property is zero, it may not have been caused by the button that is physically left–most on the pointing device; however, it should behave as if the left button was clicked in the standard button layout.
 
-> **Note:** Do not confuse this property with the {{domxref("MouseEvent.buttons")}} property, which indicates which buttons are pressed for all mouse events types.
+> [!NOTE]
+> Do not confuse this property with the {{domxref("MouseEvent.buttons")}} property, which indicates which buttons are pressed for all mouse events types.
 
 ## Value
 
@@ -55,18 +49,18 @@ Others may have many buttons mapped to different functions and button values.
 ### JavaScript
 
 ```js
-let button = document.querySelector('#button');
-button.addEventListener('mouseup', (e) => {
-  let log = document.querySelector('#log');
+let button = document.querySelector("#button");
+button.addEventListener("mouseup", (e) => {
+  let log = document.querySelector("#log");
   switch (e.button) {
     case 0:
-      log.textContent = 'Left button clicked.';
+      log.textContent = "Left button clicked.";
       break;
     case 1:
-      log.textContent = 'Middle button clicked.';
+      log.textContent = "Middle button clicked.";
       break;
     case 2:
-      log.textContent = 'Right button clicked.';
+      log.textContent = "Right button clicked.";
       break;
     default:
       log.textContent = `Unknown button code: ${e.button}`;

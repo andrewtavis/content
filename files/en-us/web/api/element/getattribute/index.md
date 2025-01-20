@@ -1,13 +1,8 @@
 ---
-title: Element.getAttribute()
+title: "Element: getAttribute() method"
+short-title: getAttribute()
 slug: Web/API/Element/getAttribute
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.getAttribute
 ---
 
@@ -17,8 +12,9 @@ The **`getAttribute()`** method of the
 {{domxref("Element")}} interface returns the value of a specified attribute on the
 element.
 
-If the given attribute does not exist, the value returned will
-either be `null` or `""` (the empty string); see [Non-existing attributes](#non-existing_attributes) for details.
+If the given attribute does not exist, the value returned will be `null`.
+
+If you need to inspect the {{domxref("Attr")}} node's properties, you can use the {{domxref("Element.getAttributeNode()", "getAttributeNode()")}} method instead.
 
 ## Syntax
 
@@ -28,11 +24,12 @@ getAttribute(attributeName)
 
 ### Parameters
 
-- `attributeName` is the name of the attribute whose value you want to get.
+- `attributeName`
+  - : The name of the attribute whose value you want to get.
 
 ### Return value
 
-A string containing the value of `attributeName`.
+A string containing the value of `attributeName` if the attribute exists, otherwise `null`.
 
 ## Examples
 
@@ -43,13 +40,13 @@ A string containing the value of `attributeName`.
 
 ```js
 // in a console
-const div1 = document.getElementById('div1');
+const div1 = document.getElementById("div1");
 //=> <div id="div1">Hi Champ!</div>
 
-const exampleAttr = div1.getAttribute('id');
+const exampleAttr = div1.getAttribute("id");
 //=> "div1"
 
-const align = div1.getAttribute('align')
+const align = div1.getAttribute("align");
 //=> null
 ```
 
@@ -60,10 +57,6 @@ const align = div1.getAttribute('align')
 When called on an HTML element in a DOM flagged as an HTML document,
 `getAttribute()` lower-cases its argument before proceeding.
 
-### Non-existing attributes
-
-All modern web browsers return `null` when the specified attribute does not exist on the specified element.
-
 ### Retrieving nonce values
 
 For security reasons, [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script
@@ -71,7 +64,7 @@ sources, such as CSS selectors, and `.getAttribute("nonce")` calls are
 hidden.
 
 ```js example-bad
-let nonce = script.getAttribute('nonce');
+let nonce = script.getAttribute("nonce");
 // returns empty string
 ```
 
@@ -89,3 +82,10 @@ let nonce = script.nonce;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

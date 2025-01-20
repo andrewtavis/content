@@ -1,14 +1,8 @@
 ---
-title: BiquadFilterNode.Q
+title: "BiquadFilterNode: Q property"
+short-title: Q
 slug: Web/API/BiquadFilterNode/Q
 page-type: web-api-instance-property
-tags:
-  - API
-  - BiquadFilterNode
-  - Property
-  - Q
-  - Reference
-  - Web Audio API
 browser-compat: api.BiquadFilterNode.Q
 ---
 
@@ -22,7 +16,8 @@ It is a dimensionless value with a default value of `1` and a nominal range of `
 
 An {{domxref("AudioParam")}}.
 
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Examples
 

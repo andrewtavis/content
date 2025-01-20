@@ -2,18 +2,14 @@
 title: min-content
 slug: Web/CSS/min-content
 page-type: css-keyword
-tags:
-  - CSS
-  - Keyword
-  - Reference
-  - min-content
-  - sizing
 browser-compat: css.properties.width.min-content
 ---
 
 {{CSSRef}}
 
-The `min-content` sizing keyword represents the intrinsic minimum width of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.
+The `min-content` sizing keyword represents the minimum {{glossary("intrinsic size")}} of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.
+
+The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function can be used to enable animations to and from `min-content`.
 
 ## Syntax
 
@@ -26,13 +22,6 @@ block-size: min-content;
 
 /* used in grid tracks */
 grid-template-columns: 200px 1fr min-content;
-
-/* Global values */
-min-content: inherit;
-min-content: initial;
-min-content: revert;
-min-content: revert-layer;
-min-content: unset;
 ```
 
 ## Examples
@@ -104,3 +93,8 @@ min-content: unset;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- Related sizing keywords: {{cssxref("max-content")}}, {{cssxref("fit-content")}}
+- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module

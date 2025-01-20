@@ -1,14 +1,11 @@
 ---
-title: DataTransfer.addElement()
+title: "DataTransfer: addElement() method"
+short-title: addElement()
 slug: Web/API/DataTransfer/addElement
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Non-standard
-  - Reference
-  - drag and drop
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: api.DataTransfer.addElement
 ---
 
@@ -19,7 +16,8 @@ to the given element. This element will be the element to which {{domxref("HTMLE
 {{domxref("HTMLElement/dragend_event", "dragend")}} events are fired, and not the default target (the node that was
 dragged).
 
-> **Note:** This method is Firefox-specific.
+> [!NOTE]
+> This method is Firefox-specific.
 
 ## Syntax
 
@@ -41,8 +39,7 @@ None ({{jsxref("undefined")}}).
 This example shows the use of the `addElement()` method
 
 ```js
-function change_drag_node(event, node)
-{
+function change_drag_node(event, node) {
   const dt = event.dataTransfer;
   dt.addElement(node);
 }

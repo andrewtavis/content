@@ -1,15 +1,13 @@
 ---
 title: "Permissions-Policy: geolocation"
 slug: Web/HTTP/Headers/Permissions-Policy/geolocation
-tags:
-  - Permissions Policy
-  - Geolocation
-  - HTTP
-  - header
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.geolocation
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `geolocation` directive controls whether the current document is allowed to

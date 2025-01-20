@@ -2,21 +2,14 @@
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - indexOf
 browser-compat: javascript.builtins.String.indexOf
 ---
 
 {{JSRef}}
 
-The **`indexOf()`** method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the first occurrence of the specified substring. Given a second argument: a number, the method returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
+The **`indexOf()`** method of {{jsxref("String")}} values searches this string and returns the index of the first occurrence of the specified substring. It takes an optional starting position and returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html")}}
+{{EmbedInteractiveExample("pages/js/string-indexof.html", "taller")}}
 
 ## Syntax
 
@@ -72,7 +65,7 @@ Strings are zero-indexed: The index of a string's first character is `0`, and th
 
 ```js
 "Blue Whale".indexOf("Blue"); // returns  0
-"Blue Whale".indexOf("Blute"); // returns -1
+"Blue Whale".indexOf("Wale"); // returns -1
 "Blue Whale".indexOf("Whale", 0); // returns  5
 "Blue Whale".indexOf("Whale", 5); // returns  5
 "Blue Whale".indexOf("Whale", 7); // returns -1
@@ -95,7 +88,7 @@ When checking if a specific substring occurs within a string, the correct way to
 
 ```js
 "Blue Whale".indexOf("Blue") !== -1; // true; found 'Blue' in 'Blue Whale'
-"Blue Whale".indexOf("Bloe") !== -1; // false; no 'Bloe' in 'Blue Whale'
+"Blue Whale".indexOf("Wale") !== -1; // false; no 'Wale' in 'Blue Whale'
 ```
 
 ## Examples
@@ -117,7 +110,7 @@ console.log(str.indexOf("new")); // 6
 The following example defines two string variables.
 
 The variables contain the same string, except that the second string contains uppercase
-letters. The first {{domxref("console.log()")}} method displays `19`. But
+letters. The first {{domxref("console/log_static", "console.log()")}} method displays `19`. But
 because the `indexOf()` method is case sensitive, the string
 `"cheddar"` is not found in `myCapString`, so the second
 `console.log()` method displays `-1`.

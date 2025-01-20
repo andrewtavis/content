@@ -2,14 +2,6 @@
 title: devtools.network
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - devtools.network
 browser-compat: webextensions.api.devtools.network
 ---
 
@@ -29,7 +21,7 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 - [`devtools.network.onNavigated`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated)
   - : Fired when the user navigates the inspected window to a new page.
 - [`devtools.network.onRequestFinished`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished)
-  - : Fired when the a network request has finished and its details are available to the extension.
+  - : Fired when the network request has finished and its details are available to the extension.
 
 ## Browser compatibility
 
@@ -37,7 +29,8 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/docs/extensions/reference/devtools_network/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/docs/extensions/reference/api/devtools/network) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

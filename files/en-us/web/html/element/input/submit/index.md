@@ -2,20 +2,6 @@
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
 page-type: html-element
-tags:
-  - Element
-  - Form Button
-  - Form input
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - Submit Form
-  - button
-  - form
-  - submit
-  - submit button
 browser-compat: html.elements.input.type_submit
 ---
 
@@ -25,7 +11,7 @@ browser-compat: html.elements.input.type_submit
 
 ## Value
 
-An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise.
+An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise. The `value` provides the {{glossary("accessible description")}} for the button.
 
 ### Setting the value attribute
 
@@ -51,7 +37,7 @@ In addition to the attributes shared by all {{HTMLElement("input")}} elements, `
 
 ### formaction
 
-A string indicating the URL to which to submit the data. This takes precedence over the {{htmlattrxref("action", "form")}} attribute on the {{HTMLElement("form")}} element that owns the {{HTMLElement("input")}}.
+A string indicating the URL to which to submit the data. This takes precedence over the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute on the {{HTMLElement("form")}} element that owns the {{HTMLElement("input")}}.
 
 This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and {{HTMLElement("button")}} elements.
 
@@ -60,24 +46,24 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 A string that identifies the encoding method to use when submitting the form data to the server. There are three permitted values:
 
 - `application/x-www-form-urlencoded`
-  - : This, the default value, sends the form data as a string after URL encoding the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
+  - : This, the default value, sends the form data as a string after {{Glossary("Percent-encoding", "percent-encoding")}} the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
 - `multipart/form-data`
   - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of [`type`](/en-US/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
 - `text/plain`
   - : Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.
 
-If specified, the value of the `formenctype` attribute overrides the owning form's {{htmlattrxref("action", "form")}} attribute.
+If specified, the value of the `formenctype` attribute overrides the owning form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute.
 
 This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and {{HTMLElement("button")}} elements.
 
 ### formmethod
 
-A string indicating the HTTP method to use when submitting the form's data; this value overrides any {{htmlattrxref("method", "form")}} attribute given on the owning form. Permitted values are:
+A string indicating the HTTP method to use when submitting the form's data; this value overrides any [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute given on the owning form. Permitted values are:
 
 - `get`
-  - : A URL is constructed by starting with the URL given by the `formaction` or {{htmlattrxref("action", "form")}} attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's {{htmlattrxref("enctype", "form")}} attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only ASCII characters and have no side effects. This is the default value.
+  - : A URL is constructed by starting with the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only {{Glossary("ASCII")}} characters and have no side effects. This is the default value.
 - `post`
-  - : The form's data is included in the body of the request that is sent to the URL given by the `formaction` or {{htmlattrxref("action", "form")}} attribute using an HTTP {{HTTPMethod("post")}} method. This method supports complex data and file attachments.
+  - : The form's data is included in the body of the request that is sent to the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute using an HTTP {{HTTPMethod("post")}} method. This method supports complex data and file attachments.
 - `dialog`
   - : This method is used to indicate that the button closes the dialog with which the input is associated, and does not transmit the form data at all.
 
@@ -85,13 +71,13 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 
 ### formnovalidate
 
-A Boolean attribute which, if present, specifies that the form should not be validated before submission to the server. This overrides the value of the {{htmlattrxref("novalidate", "form")}} attribute on the element's owning form.
+A Boolean attribute which, if present, specifies that the form should not be validated before submission to the server. This overrides the value of the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute on the element's owning form.
 
 This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and {{HTMLElement("button")}} elements.
 
 ### formtarget
 
-A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}). A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.
+A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}). A value specified here overrides any target given by the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute on the {{HTMLElement("form")}} that owns this input.
 
 In addition to the actual names of tabs, windows, or inline frames, there are a few special keywords that can be used:
 
@@ -112,9 +98,9 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 
 If you choose to use `<button>` elements to create the buttons in your form, keep this in mind: If the `<button>` is inside a {{HTMLElement("form")}}, that button will be treated as the "submit" button. So you should be in the habit of expressly specifying which button is the submit button.
 
-### A simple submit button
+### A basic submit button
 
-We'll begin by creating a form with a simple submit button:
+We'll begin by creating a form with a basic submit button:
 
 ```html
 <form>
@@ -130,11 +116,11 @@ We'll begin by creating a form with a simple submit button:
 
 This renders like so:
 
-{{EmbedLiveSample("A_simple_submit_button", 650, 100)}}
+{{EmbedLiveSample("A_basic_submit_button", 650, 100)}}
 
 Try entering some text into the text field, and then submitting the form.
 
-Upon submitting, the data name/value pair gets sent to the server. In this instance, the string will be `text=usertext`, where "usertext" is the text entered by the user, encoded to preserve special characters. Where and how the data is submitted depends on the configuration of the `<form>`; see [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) for more details.
+Upon submitting, the data name/value pair gets sent to the server. In this instance, the string will be `text=user-text`, where "user-text" is the text entered by the user, encoded to preserve special characters. Where and how the data is submitted depends on the configuration of the `<form>`; see [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) for more details.
 
 ### Adding a keyboard shortcut to a submit button
 
@@ -172,7 +158,8 @@ To disable a submit button, specify the [`disabled`](/en-US/docs/Web/HTML/Attrib
 
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.
 
-> **Note:** See the [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button) page for more ideas about enabling and disabling buttons.
+> [!NOTE]
+> See the [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button) page for more ideas about enabling and disabling buttons.
 
 ## Validation
 
@@ -180,7 +167,7 @@ Submit buttons don't participate in constraint validation; they have no real val
 
 ## Examples
 
-We've included simple examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."
+We've included basic examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."
 
 ## Technical Summary
 
@@ -231,8 +218,6 @@ We've included simple examples above. There isn't really anything more to say ab
 ## See also
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-- [Forms and buttons](/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
-- [Forms (accessibility)](/en-US/docs/Web/Accessibility/ARIA/forms)
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [Forms and buttons](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#actual_buttons)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - The {{HTMLElement("button")}} element
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

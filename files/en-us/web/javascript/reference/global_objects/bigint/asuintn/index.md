@@ -2,12 +2,6 @@
 title: BigInt.asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 page-type: javascript-static-method
-tags:
-  - BigInt
-  - JavaScript
-  - Method
-  - Reference
-  - asUintN
 browser-compat: javascript.builtins.BigInt.asUintN
 ---
 
@@ -78,5 +72,5 @@ BigInt.asUintN(64, max + 1n); // 0n
 
 ## See also
 
-- {{JSxRef("BigInt")}}
-- {{JSxRef("BigInt.asIntN()")}}
+- {{jsxref("BigInt")}}
+- {{jsxref("BigInt.asIntN()")}}

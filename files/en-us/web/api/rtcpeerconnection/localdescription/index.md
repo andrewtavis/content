@@ -1,20 +1,14 @@
 ---
-title: RTCPeerConnection.localDescription
+title: "RTCPeerConnection: localDescription property"
+short-title: localDescription
 slug: Web/API/RTCPeerConnection/localDescription
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - WebRTC
-  - localDescription
 browser-compat: api.RTCPeerConnection.localDescription
 ---
 
 {{APIRef("WebRTC")}}
 
-The read-only property **`RTCPeerConnection.localDescription`** returns an {{domxref("RTCSessionDescription")}} describing the session for the local end of the connection.
+The **`localDescription`** read-only property of the {{domxref("RTCPeerConnection")}} interface returns an {{domxref("RTCSessionDescription")}} describing the session for the local end of the connection.
 If it has not yet been set, this is `null`.
 
 ## Syntax
@@ -37,8 +31,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.localDescription;
 if (sd) {
   alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
-}
-else {
+} else {
   alert("No local session yet.");
 }
 ```
@@ -53,11 +46,6 @@ else {
 
 ## See also
 
-- {{domxref("RTCPeerConnection.setLocalDescription()")}},
-  {{domxref("RTCPeerConnection.pendingLocalDescription")}},
-  {{domxref("RTCPeerConnection.currentLocalDescription")}}
-- {{domxref("RTCPeerConnection.setRemoteDescription()")}},
-  {{domxref("RTCPeerConnection.remoteDescription")}},
-  {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
-  {{domxref("RTCPeerConnection.currentRemoteDescription")}}
+- {{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.currentLocalDescription")}}
+- {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

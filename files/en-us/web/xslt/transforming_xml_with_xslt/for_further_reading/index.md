@@ -1,13 +1,10 @@
 ---
 title: For further reading
 slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
-tags:
-  - NeedsContent
-  - NeedsHelp
-  - Transforming_XML_with_XSLT
-  - XML
-  - XSLT
+page-type: guide
 ---
+
+{{XsltSidebar}}
 
 [« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
@@ -64,7 +61,7 @@ tags:
 
 ### Articles
 
-- [Hands-on XSL](https://www.ibm.com/developerworks/library/x-hands-on-xsl/) by Don R. Day
+- [Hands-on XSL](https://developer.ibm.com/technologies/web-development/) by Don R. Day
 - [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/index.html) by G. Ken Holman
 
 ### Tutorials/Examples
@@ -75,7 +72,7 @@ tags:
 
 ### Other
 
-- [Extensible Stylesheet Language (XSL)](http://xml.coverpages.org/xsl.html)
+- [Extensible Stylesheet Language (XSL)](https://xml.coverpages.org/xsl.html)
 - **XSL-List**
 
   - **Subscribe**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>

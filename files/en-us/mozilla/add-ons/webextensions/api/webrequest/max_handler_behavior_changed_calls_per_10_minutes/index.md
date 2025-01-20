@@ -1,18 +1,7 @@
 ---
 title: webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/webRequest/MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
+slug: Mozilla/Add-ons/WebExtensions/API/webRequest/MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
 ---
 
@@ -28,7 +17,8 @@ This property is read-only.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#property-MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#property-MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

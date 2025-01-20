@@ -1,19 +1,13 @@
 ---
 title: "ARIA: switch role"
 slug: Web/Accessibility/ARIA/Roles/switch_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-  - On/Off
-  - Reference
-  - Switch
-  - a11y
-  - toggle
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#switch
   - https://w3c.github.io/html-aria/#index-aria-switch
 ---
+
+{{AccessibilitySidebar}}
 
 The ARIA **`switch`** role is functionally identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except that instead of representing "checked" and "unchecked" states, which are fairly generic in meaning, the `switch` role represents the states "on" and "off."
 
@@ -65,7 +59,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated ARIA roles, states, and properties
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute
-  - : The `aria-checked` attribute is **required** when using the `switch` role, as it represents the current state of the widget that the `switch` role is applied to. A value of `true` represents the "on" state; `false` represents the "off" state; a value of `mixed` is not supported by the switch role, and is treated as `false`. The default value is `false`.
+  - : The `aria-checked` attribute is **required** when using the `switch` role, as it represents the current state of the widget that the `switch` role is applied to. A value of `true` represents the "on" state; `false` represents the "off" state; a value of `mixed` is not supported by the switch role, and is treated as `false`.
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute
   - : The `aria-readonly` attribute is supported by the `switch` role. It indicates whether the widget's state is editable by the user. A value of `false` means that the user _can_ change the widget's state; a value of `true` means that the user _cannot_ change the widget's state. The default value is `false`.
 
@@ -88,7 +82,8 @@ The assistive technology, if it supports the `switch` role, responds by doing th
 
 - Screen readers should announce the element as a switch, optionally providing instructions as to how to activate the switch.
 
-> **Note:** There are varying opinions on how assistive technologies should handle this role; the above is a suggested practice and may differ from other sources.
+> [!NOTE]
+> There are varying opinions on how assistive technologies should handle this role; the above is a suggested practice and may differ from other sources.
 
 ## Examples
 
@@ -146,7 +141,10 @@ button.switch {
   line-height: 20px;
   vertical-align: middle;
   text-align: center;
-  font: 12px "Open Sans", "Arial", serif;
+  font:
+    12px "Open Sans",
+    "Arial",
+    serif;
 }
 
 button.switch span {
@@ -166,7 +164,10 @@ button.switch span {
 }
 
 label.switch {
-  font: 16px "Open Sans", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Arial",
+    sans-serif;
   line-height: 20px;
   vertical-align: middle;
   user-select: none;
@@ -190,11 +191,3 @@ The result looks like this:
 - [ARIA: checkbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

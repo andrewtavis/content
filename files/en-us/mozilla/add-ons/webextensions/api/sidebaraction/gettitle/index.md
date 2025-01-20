@@ -2,19 +2,10 @@
 title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getTitle
-  - sidebarAction
 browser-compat: webextensions.api.sidebarAction.getTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the sidebar's title.
 
@@ -61,9 +52,9 @@ This code switches the title between "this" and "that" each time the user clicks
 ```js
 function toggleTitle(title) {
   if (title === "this") {
-    browser.sidebarAction.setTitle({title: "that"});
+    browser.sidebarAction.setTitle({ title: "that" });
   } else {
-    browser.sidebarAction.setTitle({title: "this"});
+    browser.sidebarAction.setTitle({ title: "this" });
   }
 }
 
@@ -75,7 +66,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+> [!NOTE]
+> This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

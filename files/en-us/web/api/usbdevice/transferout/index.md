@@ -1,21 +1,14 @@
 ---
-title: USBDevice.transferOut()
+title: "USBDevice: transferOut() method"
+short-title: transferOut()
 slug: Web/API/USBDevice/transferOut
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - transferOut
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.transferOut
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`transferOut()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves with a

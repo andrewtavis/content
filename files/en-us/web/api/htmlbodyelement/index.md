@@ -2,12 +2,6 @@
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLBodyElement
 ---
 
@@ -44,7 +38,8 @@ The {{domxref("HTMLElement")}} events are inherited.
 
 The following {{domxref("Window")}} `onXYZ` event handler properties are also available as aliases targeting the `window` object. However, it is advised to listen to them on the `window` object directly rather than on `HTMLBodyElement`.
 
-> **Note:** Using `addEventListener()` on `HTMLBodyElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
+> [!NOTE]
+> Using `addEventListener()` on `HTMLBodyElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
 
 - {{domxref("window.afterprint_event", "HTMLBodyElement.onafterprint")}}
   - : Fired after the associated document has started printing or the print preview has been closed.

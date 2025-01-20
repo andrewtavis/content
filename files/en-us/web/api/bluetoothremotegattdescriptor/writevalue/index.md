@@ -1,21 +1,14 @@
 ---
-title: BluetoothRemoteGATTDescriptor.writeValue()
+title: "BluetoothRemoteGATTDescriptor: writeValue() method"
+short-title: writeValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/writeValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothGattDescriptor
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - writeValue()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTDescriptor.writeValue
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTDescriptor.writeValue()`**
 method sets the value property to the bytes contained in

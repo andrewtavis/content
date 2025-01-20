@@ -1,18 +1,11 @@
 ---
-title: SpeechRecognitionEvent.emma
+title: "SpeechRecognitionEvent: emma property"
+short-title: emma
 slug: Web/API/SpeechRecognitionEvent/emma
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionEvent
-  - Web Speech API
-  - emma
-  - recognition
-  - speech
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.SpeechRecognitionEvent.emma
 ---
 
@@ -23,7 +16,8 @@ The **`emma`** read-only property of the
 MultiModal Annotation markup language (EMMA) — XML — representation of the
 result.
 
-> **Note:** EMMA is defined in the specification [EMMA: Extensible MultiModal Annotation markup language](https://www.w3.org/TR/emma/). You can see multiple EMMA examples in the spec.
+> [!NOTE]
+> EMMA is defined in the specification [EMMA: Extensible MultiModal Annotation markup language](https://www.w3.org/TR/emma/). You can see multiple EMMA examples in the spec.
 
 ## Value
 
@@ -40,7 +34,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.emma);
-}
+};
 ```
 
 ## Browser compatibility

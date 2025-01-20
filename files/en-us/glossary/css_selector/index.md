@@ -2,13 +2,9 @@
 title: Selector (CSS)
 slug: Glossary/CSS_Selector
 page-type: glossary-definition
-tags:
-  - CSS
-  - CSS Selector
-  - CodingScripting
-  - HTML
-  - Selector
 ---
+
+{{GlossarySidebar}}
 
 A **CSS selector** is the part of a CSS rule that describes what elements in a document the rule will match. The matching elements will have the rule's specified style applied to them.
 
@@ -30,7 +26,11 @@ div.warning {
 }
 
 #customized {
-  font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+  font:
+    16px Lucida Grande,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -60,7 +60,7 @@ The resulting page content is styled like this:
 
 ## See also
 
-- [Learn more about CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) in our introduction to CSS.
+- [Learn more about CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) in our introduction to CSS.
 - Basic selectors
 
   - [Type selectors](/en-US/docs/Web/CSS/Type_selectors) `elementname`
@@ -76,8 +76,8 @@ The resulting page content is styled like this:
 
 - Combinators
 
-  - [Adjacent sibling selectors](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
-  - [General sibling selectors](/en-US/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+  - [Next-sibling selectors](/en-US/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [Subsequent-sibling selectors](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [Child selectors](/en-US/docs/Web/CSS/Child_combinator) `A > B`
   - [Descendant selectors](/en-US/docs/Web/CSS/Descendant_combinator) `A B`
 

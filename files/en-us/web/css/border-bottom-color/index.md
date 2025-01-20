@@ -2,18 +2,12 @@
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-bottom-color
 ---
 
 {{CSSRef}}
 
-The **`border-bottom-color`** CSS property sets the color of an element's bottom [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-bottom")}}.
+The **`border-bottom-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's bottom [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-bottom")}}.
 
 {{EmbedInteractiveExample("pages/css/border-bottom-color.html")}}
 
@@ -23,8 +17,8 @@ The **`border-bottom-color`** CSS property sets the color of an element's bottom
 /* <color> values */
 border-bottom-color: red;
 border-bottom-color: #ffbb00;
-border-bottom-color: rgb(255, 0, 0);
-border-bottom-color: hsl(100deg 50% 25% / 0.75);
+border-bottom-color: rgb(255 0 0);
+border-bottom-color: hsl(100deg 50% 25% / 75%);
 border-bottom-color: currentcolor;
 border-bottom-color: transparent;
 
@@ -58,10 +52,10 @@ The `border-bottom-color` property is specified as a single value.
 #### HTML
 
 ```html
-<div class="mybox">
+<div class="my-box">
   <p>
     This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
+    <span class="red-text">red</span>.
   </p>
 </div>
 ```
@@ -69,13 +63,13 @@ The `border-bottom-color` property is specified as a single value.
 #### CSS
 
 ```css
-.mybox {
+.my-box {
   border: solid 0.3em gold;
   border-bottom-color: red;
   width: auto;
 }
 
-.redtext {
+.red-text {
   color: red;
 }
 ```

@@ -2,20 +2,10 @@
 title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - show
 browser-compat: webextensions.api.downloads.show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`show()`** function of the {{WebExtAPIRef("downloads")}} API shows the downloaded file in its containing folder in the underlying platform's file manager.
 
@@ -56,16 +46,16 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length > 0) {
-      latestDownloadId = downloadItems[0].id;
-      let showing = browser.downloads.show(latestDownloadId);
-      showing.then(onShowing, onError);
-    }
+  if (downloadItems.length > 0) {
+    latestDownloadId = downloadItems[0].id;
+    let showing = browser.downloads.show(latestDownloadId);
+    showing.then(onShowing, onError);
   }
+}
 
 let searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(openDownload, onError);
@@ -73,7 +63,8 @@ searching.then(openDownload, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-show) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-show) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

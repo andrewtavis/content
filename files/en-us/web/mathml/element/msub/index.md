@@ -1,11 +1,7 @@
 ---
 title: <msub>
 slug: Web/MathML/Element/msub
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.msub
 ---
 
@@ -20,9 +16,10 @@ It uses the following syntax: `<msub> base subscript </msub>`.
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following deprecated attribute:
 
 - `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum amount to shift the baseline of the subscript down.
+  - : A {{cssxref("length-percentage")}} indicating the minimum amount to shift the baseline of the subscript down.
 
-> **Note:** For the `subscriptshift` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
+> [!NOTE]
+> For the `subscriptshift` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 
@@ -35,7 +32,20 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </math>
 ```
 
-{{ EmbedLiveSample('msub_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples')}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

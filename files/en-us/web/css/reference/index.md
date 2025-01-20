@@ -2,12 +2,6 @@
 title: CSS reference
 slug: Web/CSS/Reference
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
-  - "l10n:priority"
 ---
 
 {{CSSRef}}
@@ -50,7 +44,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/Syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (ASCII) [text-based](https://www.w3.org/TR/css-syntax-3/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://www.w3.org/TR/cssom/#introduction).
+For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/Syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely ({{Glossary("ASCII")}}) [text-based](https://www.w3.org/TR/css-syntax-3/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://www.w3.org/TR/cssom/#introduction).
 
 ### At-rule syntax
 
@@ -58,13 +52,17 @@ As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web
 
 ## Index
 
-> **Note:** The property names in this index do **not** include the JavaScript names which do differ from the CSS standard names.
+> [!NOTE]
+> This index does not include SVG-exclusive presentation attributes, which can be used as CSS properties on [SVG](/en-US/docs/Web/SVG) elements.
+
+> [!NOTE]
+> The property names in this index do **not** include the JavaScript names which do differ from the CSS standard names.
 
 {{CSS_Ref}}
 
 ## Selectors
 
-The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), which allow styles to be conditional based on various features of elements within the DOM.
+The following are the various [selectors](/en-US/docs/Web/CSS/CSS_selectors), which allow styles to be conditional based on various features of elements within the DOM.
 
 ### Basic selectors
 
@@ -85,9 +83,9 @@ The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), wh
 
 Combinators are selectors that establish a relationship between two or more simple selectors, such as "`A` is a child of `B`" or "`A` is adjacent to `B`", creating a complex selector.
 
-- [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
+- [Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - : Specifies that the elements selected by both `A` and `B` have the same parent and that the element selected by `B` immediately follows the element selected by `A` horizontally.
-- [General sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+- [Subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - : Specifies that the elements selected by both `A` and `B` share the same parent and that the element selected by `A` comes before—but not necessarily immediately before—the element selected by `B`.
 - [Child combinator](/en-US/docs/Web/CSS/Child_combinator) `A > B`
   - : Specifies that the element selected by `B` is the direct child of the element selected by `A`.
@@ -103,9 +101,9 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`
   - : Represents entities that are not included in HTML.
 
-> **Callout:**
+> [!CALLOUT]
 >
-> See also [Selectors in the Selectors Level 4 specification](https://www.w3.org/TR/selectors/#overview).
+> See also [selectors in the Selectors specification](https://drafts.csswg.org/selectors/) and the [pseudo-element specification](https://drafts.csswg.org/css-pseudo/).
 
 ## Concepts
 
@@ -115,8 +113,8 @@ Combinators are selectors that establish a relationship between two or more simp
 - [At-rules](/en-US/docs/Web/CSS/At-rule)
 - [Cascade](/en-US/docs/Web/CSS/Cascade)
 - [Comments](/en-US/docs/Web/CSS/Comments)
-- [Descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>)
-- [Inheritance](/en-US/docs/Web/CSS/inheritance)
+- [Descriptor](/en-US/docs/Glossary/CSS_Descriptor)
+- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
 - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
@@ -134,13 +132,13 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ### Layout
 
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
-- [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [Containing block](/en-US/docs/Web/CSS/Containing_block)
 - [Layout mode](/en-US/docs/Web/CSS/Layout_mode)
-- [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
@@ -148,13 +146,14 @@ Combinators are selectors that establish a relationship between two or more simp
 ### Major object types
 
 - {{DOMxRef("Document.styleSheets")}}
-- `{{DOMxRef("StyleSheetList", "styleSheets", "", 1)}}[i].{{DOMxRef("CSSRuleList", "cssRules", "", 1)}}`
-- `cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}` (selector & style)
-- `cssRules[i].{{DOMxRef("CSSStyleRule.selectorText", "selectorText", "", 1)}}`
 - {{DOMxRef("HTMLElement.style")}}
-- `HTMLElement.style.{{DOMxRef("CSSStyleDeclaration.cssText", "cssText", "", 1)}}` (just style)
 - {{DOMxRef("Element.className")}}
 - {{DOMxRef("Element.classList")}}
+- {{DOMxRef("StyleSheetList")}}
+- {{DOMxRef("CSSRuleList")}}
+- {{DOMxRef("CSSRule")}}
+- {{DOMxRef("CSSStyleRule")}}
+- {{DOMxRef("CSSStyleDeclaration")}}
 
 ### Important methods
 
@@ -165,7 +164,6 @@ Combinators are selectors that establish a relationship between two or more simp
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) (prefixed with `-moz-`)
 - [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions) (mostly prefixed with `-webkit-`)
-- [Microsoft CSS extensions](/en-US/docs/Web/CSS/Microsoft_Extensions) (prefixed with `-ms-`)
 
 ## External Links
 

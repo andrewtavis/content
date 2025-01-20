@@ -2,10 +2,8 @@
 title: hanging
 slug: Web/SVG/Attribute/hanging
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.hanging
 ---
 
@@ -25,7 +23,7 @@ You can use this attribute with the following SVG elements:
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Number"
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></code
         >

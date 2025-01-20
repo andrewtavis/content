@@ -2,21 +2,12 @@
 title: text-indent
 slug: Web/CSS/text-indent
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Indent
-  - Layout
-  - Reference
-  - recipe:css-property
-  - text-indent
 browser-compat: css.properties.text-indent
 ---
 
 {{CSSRef}}
 
-The **`text-indent`** CSS property sets the length of empty space (indentation) that is put before lines of text in a block.
+The **`text-indent`** [CSS](/en-US/docs/Web/CSS) property sets the length of empty space (indentation) that is put before lines of text in a block.
 
 {{EmbedInteractiveExample("pages/css/text-indent.html")}}
 
@@ -67,7 +58,7 @@ text-indent: unset;
 
 ## Examples
 
-### Simple indent
+### Basic indent
 
 #### HTML
 
@@ -93,13 +84,13 @@ p {
 
 #### Result
 
-{{ EmbedLiveSample('Simple_indent','100%','100%') }}
+{{ EmbedLiveSample('Basic_indent','100%','100%') }}
 
 ### Skipping indentation on the first paragraph
 
 A common typographic practice when paragraph indentation is present is to skip the indentation for the first paragraph. As the _The Chicago Manual of Style_ puts it, "the first line of text following a subhead may begin flush left or be indented by the usual paragraph indention."
 
-Treating first paragraphs differently from subsequent paragraphs can be done using the [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), as in the following example:
+Treating first paragraphs differently from subsequent paragraphs can be done using the [next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator), as in the following example:
 
 #### HTML
 
@@ -200,7 +191,7 @@ p {
 
 ## See also
 
-- [Learn to style HTML using CSS](/en-US/docs/Learn/CSS)
+- [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
 - Related CSS properties:
 
   - [`text-justify`](/en-US/docs/Web/CSS/text-justify)
@@ -210,5 +201,5 @@ p {
   - [`text-transform`](/en-US/docs/Web/CSS/text-transform)
   - {{cssxref('hanging-punctuation')}}
 
-- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) CSS module
-- [CSS Text module](/en-US/docs/Web/CSS/CSS_Text)
+- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_text_decoration) CSS module
+- [CSS Text module](/en-US/docs/Web/CSS/CSS_text)

@@ -2,20 +2,10 @@
 title: Gyroscope
 slug: Web/API/Gyroscope
 page-type: web-api-interface
-tags:
-  - API
-  - Generic Sensor API
-  - Gyroscope
-  - Gyroscope API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.Gyroscope
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`Gyroscope`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides on each reading the angular velocity of the device along all three axes.
 
@@ -50,9 +40,9 @@ _`Gyroscope` doesn't have own events. However, it inherits events from its paren
 The gyroscope is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
-let gyroscope = new Gyroscope({frequency: 60});
+let gyroscope = new Gyroscope({ frequency: 60 });
 
-gyroscope.addEventListener('reading', (e) => {
+gyroscope.addEventListener("reading", (e) => {
   console.log(`Angular velocity along the X-axis ${gyroscope.x}`);
   console.log(`Angular velocity along the Y-axis ${gyroscope.y}`);
   console.log(`Angular velocity along the Z-axis ${gyroscope.z}`);

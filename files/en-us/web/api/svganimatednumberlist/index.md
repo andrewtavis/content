@@ -2,12 +2,6 @@
 title: SVGAnimatedNumberList
 slug: Web/API/SVGAnimatedNumberList
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimatedNumberList
 ---
 
@@ -66,6 +60,10 @@ The `SVGAnimatedNumber` interface is used for attributes which take a list of nu
 ## Instance methods
 
 The `SVGAnimatedNumberList` interface do not provide any specific methods.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

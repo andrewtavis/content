@@ -1,15 +1,11 @@
 ---
-title: "aria-labelledby"
+title: aria-labelledby
 slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-labelledby
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-labelledby
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-labelledby` attribute identifies the element (or elements) that labels the element it is applied to.
 
@@ -27,7 +23,8 @@ The purpose of `aria-labelledby` is the same as that of `aria-label`. It provide
 
 The `aria-labelledby` and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attributes both reference other elements to calculate text alternatives. `aria-labelledby` should reference brief text that provides the element with an accessible name. `aria-describedby` is used to reference longer content that provides a description. If there is no element in the DOM that provides a brief label appropriate for an accessible name for an interactive element, use `aria-label` to define the accessible name for an interactive element.
 
-> **Note:** While in U.S. English the attribute would be assumed to be spelled "labeledby", the "labelledby" spelling has been established and is the spelling used in accessibility APIs.
+> [!NOTE]
+> While in American English, "labeled" is spelled with one "l", the "labelledby" spelling has been established and is the spelling used in accessibility APIs.
 
 The following example uses `aria-labelledby` to provide an accessible name for a checkbox input by using the text content of a sibling element:
 
@@ -63,7 +60,7 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
    In this example, that accessible name is "Yellow".
 
-2. The `aria-labelledby` property takes as value a space-separated id reference list, which means you can combine more than one element into a single accessible name. You can include the {{htmlattrxref('id')}} of the element itself to reference its own content.
+2. The `aria-labelledby` property takes as value a space-separated id reference list, which means you can combine more than one element into a single accessible name. You can include the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the element itself to reference its own content.
 
    ```html
    <h2 id="attr" class="article-title">13 ARIA attributes you need to know</h2>
@@ -79,13 +76,14 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
 4. The `aria-labelledby` property ignores repeated `id`s in its value. If an element is referenced more than one time, only the first reference is processed. `aria-labelledby="attr attr rm13 rm13">` is treated as `aria-labelledby="attr rm13">`
 
-5. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content as all other users, you can include content from elements with the HTML {{htmlattrxref('hidden')}} attribute, CSS [`display: none`](/en-US/docs/Web/CSS/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/visibility) in the calculated name string.
+5. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content as all other users, you can include content from elements with the HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, CSS [`display: none`](/en-US/docs/Web/CSS/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/visibility) in the calculated name string.
 
 6. The `aria-labelledby` property incorporates the value of input elements. If the value references an `<input>`, the current value of the form control is included in the calculated name string, changing if the value is updated.
 
 7. The `aria-labelledby` property cannot be chained. If an element with `aria-labelledby` references another element that also has `aria-labelledby`, the `aria-labelledby` attribute on the referenced element is ignored.
 
-> **Warning:** Because calculating the name of an element with `aria-labelledby` can be complex and reference hidden content, testing with assistive technologies to ensure the expected name is presented to users is very important.
+> [!WARNING]
+> Because calculating the name of an element with `aria-labelledby` can be complex and reference hidden content, testing with assistive technologies to ensure the expected name is presented to users is very important.
 
 ## Values
 
@@ -98,35 +96,30 @@ Used in almost all roles **except** roles that can not be provided an accessible
 
 The `aria-labelledby` attribute is **NOT** supported in:
 
-- [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/code_role)
-- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/caption_role)
-- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/deletion_role)
-- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/emphasis_role)
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)
-- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/_role)
+- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role)
-- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/paragraph_role)
+- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role)
-- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/strong_role)
-- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/supscript_role)
-- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/superscript_role)
+- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
 - [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
-- [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/time_role)
+- [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 
 ## Specifications
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('label')}} element
 - HTML {{HTMLElement('legend')}} element
 - HTML {{HTMLElement('caption')}} element
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

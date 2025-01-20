@@ -1,13 +1,7 @@
 ---
-title: '<ruby>: The Ruby Annotation element'
+title: "<ruby>: The Ruby Annotation element"
 slug: Web/HTML/Element/ruby
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
 browser-compat: html.elements.ruby
 ---
 
@@ -19,19 +13,49 @@ The term _ruby_ originated as [a unit of measurement used by typesetters](<https
 
 {{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+### Example 1: Character
+
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+#### Result
+
+{{EmbedLiveSample('Example 1: Character')}}
+
+### Example 2: Word
+
+```html
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```
+
+#### Result
+
+{{EmbedLiveSample('Example 1: Word')}}
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -39,20 +63,20 @@ The term _ruby_ originated as [a unit of measurement used by typesetters](<https
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -75,29 +99,6 @@ The term _ruby_ originated as [a unit of measurement used by typesetters](<https
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-### Example 1: Character
-
-```html
-<ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
-```
-
-### Example 2: Word
-
-```html
-<ruby>
-  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
-</ruby>
-```
 
 ## Specifications
 

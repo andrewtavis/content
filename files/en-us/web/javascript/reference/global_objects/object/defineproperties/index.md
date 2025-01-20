@@ -2,11 +2,6 @@
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
 browser-compat: javascript.builtins.Object.defineProperties
 ---
 
@@ -53,8 +48,7 @@ Object.defineProperties(obj, props)
         **Defaults to {{jsxref("undefined")}}.**
     - `writable`
       - : `true` if and only if the value associated with the property may be
-        changed with an {{jsxref("Operators#assignment_operators", "assignment operator",
-        "", 1)}}.
+        changed with an {{jsxref("Operators", "assignment operator", "assignment_operators", 1)}}.
         **Defaults to `false`.**
 
     An accessor descriptor also has the following optional keys:

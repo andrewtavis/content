@@ -2,19 +2,10 @@
 title: bookmarks.BookmarkTreeNodeType
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - BookmarkTreeNodeType
-  - Bookmarks
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
 browser-compat: webextensions.api.bookmarks.BookmarkTreeNodeType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`bookmarks.BookmarkTreeNodeType`** type is used to describe whether a node in the bookmark tree is a bookmark, a folder, or a separator.
 

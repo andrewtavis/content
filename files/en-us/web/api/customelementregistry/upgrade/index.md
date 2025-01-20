@@ -1,19 +1,12 @@
 ---
-title: CustomElementRegistry.upgrade()
+title: "CustomElementRegistry: upgrade() method"
+short-title: upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
 page-type: web-api-instance-method
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Upgrade
-  - Web Components
-  - custom elements
 browser-compat: api.CustomElementRegistry.upgrade
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{APIRef("Web Components")}}
 
 The **`upgrade()`** method of the
 {{domxref("CustomElementRegistry")}} interface upgrades all shadow-containing custom

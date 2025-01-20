@@ -1,18 +1,11 @@
 ---
-title: AudioWorkletProcessor.process()
+title: "AudioWorkletProcessor: process() method"
+short-title: process()
 slug: Web/API/AudioWorkletProcessor/process
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Experimental
-  - Method
-  - Process
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletProcessor.process
+status:
+  - experimental
+spec-urls: https://webaudio.github.io/web-audio-api/#process
 ---
 
 {{APIRef("Web Audio API")}}
@@ -31,7 +24,8 @@ corresponding {{domxref("AudioWorkletNode")}}. In other words, every time a new 
 audio is ready for your processor to manipulate, your `process()` function is
 invoked to do so.
 
-> **Note:** Currently, audio data blocks are always 128 frames
+> [!NOTE]
+> Currently, audio data blocks are always 128 frames
 > long—that is, they contain 128 32-bit floating-point samples for each of the inputs'
 > channels. However, plans are already in place to revise the specification to allow the
 > size of the audio blocks to be changed depending on circumstances (for example, if the
@@ -137,7 +131,8 @@ The 3 most common types of audio node are:
    _tail-time_ equal to its {{domxref("DelayNode.delayTime", "delayTime")}}
    property.
 
-> **Note:** An absence of the `return` statement means that the method returns `undefined`, and as this is a falsy value, it is like returning `false`.
+> [!NOTE]
+> An absence of the `return` statement means that the method returns `undefined`, and as this is a falsy value, it is like returning `false`.
 > Omitting an explicit `return` statement may cause hard-to-detect problems for your nodes.
 
 ### Exceptions
@@ -200,7 +195,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 
 ## Browser compatibility
 
-{{Compat}}
+This is not a method provided by browsers, but a callback method that must be written in client code.
 
 ## See also
 

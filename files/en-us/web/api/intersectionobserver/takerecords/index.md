@@ -1,16 +1,8 @@
 ---
-title: IntersectionObserver.takeRecords()
+title: "IntersectionObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
 page-type: web-api-instance-method
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - NeedsExample
-  - Reference
-  - takeRecords
 browser-compat: api.IntersectionObserver.takeRecords
 ---
 
@@ -23,7 +15,8 @@ has experienced an intersection change since the last time the intersections wer
 checked, either explicitly through a call to this method or implicitly by an automatic
 call to the observer's callback.
 
-> **Note:** If you use the callback to monitor these changes, you don't
+> [!NOTE]
+> If you use the callback to monitor these changes, you don't
 > need to call this method. Calling this method clears the pending intersection list, so
 > the callback will not be run.
 

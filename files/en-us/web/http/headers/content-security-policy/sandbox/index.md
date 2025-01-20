@@ -1,13 +1,7 @@
 ---
 title: "CSP: sandbox"
 slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Sandbox
-  - Security
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.sandbox
 ---
 
@@ -15,7 +9,7 @@ browser-compat: http.headers.Content-Security-Policy.sandbox
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`sandbox`** directive enables a sandbox for the requested
-resource similar to the {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}}
+resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox)
 attribute. It applies restrictions to a page's actions including preventing popups,
 preventing the execution of plugins and scripts, and enforcing a same-origin policy.
 
@@ -50,9 +44,7 @@ Content-Security-Policy: sandbox <value>;
 where `<value>` can optionally be one of the following values:
 
 - `allow-downloads`
-  - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#attr-download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
-- `allow-downloads-without-user-activation` {{experimental_inline}}
-  - : Allows for downloads to occur without a gesture from the user.
+  - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
 - `allow-forms`
   - : Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
 - `allow-modals`
@@ -78,7 +70,10 @@ where `<value>` can optionally be one of the following values:
 - `allow-top-navigation-by-user-activation`
   - : Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
 - `allow-top-navigation-to-custom-protocols`
-  - : Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
+  - : Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
+
+> [!NOTE]
+> The `allow-top-navigation` and related values only make sense for embedded documents (such as child iframes). For standalone documents, these values have no effect, as the top-level browsing context is the document itself.
 
 ## Examples
 
@@ -97,5 +92,5 @@ Content-Security-Policy: sandbox allow-scripts;
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{htmlattrxref("sandbox", "iframe")}} attribute on {{HTMLElement("iframe")}}
+- [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute on {{HTMLElement("iframe")}}
   elements

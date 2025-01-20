@@ -2,9 +2,6 @@
 title: dy
 slug: Web/SVG/Attribute/dy
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dy
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dy
@@ -17,7 +14,6 @@ The **`dy`** attribute indicates a shift along the y-axis on the position of an 
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('feDropShadow')}}
 - {{SVGElement('feOffset')}}
 - {{SVGElement('glyphRef')}}
@@ -60,36 +56,6 @@ line {
 
 {{EmbedLiveSample("Example", '100%', 200)}}
 
-## altGlyph
-
-> **Warning:** As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('altGlyph')}}, if it contains a single value, `dy` defines a shift along the y-axis for all alternate glyph.
-
-If there are multiple values, `dy` defines a shift along the y-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        List of
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
 ## feDropShadow
 
 For {{SVGElement('feDropShadow')}}, `dy` defines the y offset of the dropped shadow. The unit used to resolve the value of the attribute is set by the {{SVGAttr('primitiveUnits')}} attribute of the {{SVGElement('filter')}} element.
@@ -100,7 +66,7 @@ For {{SVGElement('feDropShadow')}}, `dy` defines the y offset of the dropped sha
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -125,7 +91,7 @@ For {{SVGElement('feOffset')}}, `dy` defines the y offset of the filter input gr
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -142,7 +108,8 @@ For {{SVGElement('feOffset')}}, `dy` defines the y offset of the filter input gr
 
 ## glyphRef
 
-> **Warning:** As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('glyphRef')}}, `dy` defines the y offset of the glyph, in the font metric system.
 
@@ -152,7 +119,7 @@ For {{SVGElement('glyphRef')}}, `dy` defines the y offset of the glyph, in the f
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -178,10 +145,17 @@ If there are multiple values, `dy` defines a shift along the y-axis for each ind
     <tr>
       <th scope="row">Value</th>
       <td>
-        List of
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        List of (<strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
       </td>
     </tr>
     <tr>
@@ -237,7 +211,8 @@ line {
 
 ## tref
 
-> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('tref')}}, if it contains a single value, `dy` defines a shift along the y-axis for all glyphs.
 
@@ -248,10 +223,17 @@ If there are multiple values, `dy` defines a shift along the y-axis for each ind
     <tr>
       <th scope="row">Value</th>
       <td>
-        List of
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        List of (<strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
       </td>
     </tr>
     <tr>
@@ -276,10 +258,17 @@ If there are multiple values, `dy` defines a shift along the y-axis for each ind
     <tr>
       <th scope="row">Value</th>
       <td>
-        List of
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        List of (<strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
       </td>
     </tr>
     <tr>

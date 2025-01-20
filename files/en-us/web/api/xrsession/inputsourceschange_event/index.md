@@ -1,20 +1,14 @@
 ---
-title: 'XRSession: inputsourceschange event'
+title: "XRSession: inputsourceschange event"
+short-title: inputsourceschange
 slug: Web/API/XRSession/inputsourceschange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - WebXR
-  - XR
-  - XRInputSources
-  - XRSession
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.inputsourceschange_event
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`inputsourceschange`** event is sent to an {{domxref("XRSession")}} when the set of available WebXR input devices changes.
 
@@ -23,9 +17,9 @@ The **`inputsourceschange`** event is sent to an {{domxref("XRSession")}} when t
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('inputsourceschange', (event) => { })
+addEventListener("inputsourceschange", (event) => {});
 
-oninputsourceschange = (event) => { }
+oninputsourceschange = (event) => {};
 ```
 
 ## Event type

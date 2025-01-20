@@ -2,11 +2,6 @@
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Math.pow
 ---
 
@@ -14,7 +9,11 @@ browser-compat: javascript.builtins.Math.pow
 
 The **`Math.pow()`** static method returns the value of a base raised to a power. That is
 
-<math display="block"><semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚙𝚘𝚠</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo>,</mo><mi>𝚢</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi>x</mi><mi>y</mi></msup></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.pow}(x, y)} = x^y</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚙𝚘𝚠</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo>,</mo><mi>𝚢</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi>x</mi><mi>y</mi></msup></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.pow}(x, y)} = x^y</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 {{EmbedInteractiveExample("pages/js/math-pow.html")}}
 
@@ -53,7 +52,7 @@ Because `pow()` is a static method of `Math`, use it as `Math.pow()`, rather tha
 ### Using Math.pow()
 
 ```js
-// Simple cases
+// Basic cases
 Math.pow(7, 2); // 49
 Math.pow(7, 3); // 343
 Math.pow(2, 10); // 1024
@@ -119,4 +118,4 @@ Math.pow(1, NaN); // NaN
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.sqrt()")}}
-- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Exponentiation (`**`)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)

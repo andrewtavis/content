@@ -2,21 +2,10 @@
 title: RTCErrorEvent
 slug: Web/API/RTCErrorEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Error
-  - Error Handling
-  - ICE
-  - Interface
-  - RTCErrorEvent
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - rtc
 browser-compat: api.RTCErrorEvent
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The WebRTC API's **`RTCErrorEvent`** interface represents an error sent to a WebRTC object. It's based on the standard {{domxref("Event")}} interface, but adds RTC-specific information describing the error, as shown below.
 

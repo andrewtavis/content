@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.getRenderbufferParameter()
+title: "WebGLRenderingContext: getRenderbufferParameter() method"
+short-title: getRenderbufferParameter()
 slug: Web/API/WebGLRenderingContext/getRenderbufferParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getRenderbufferParameter
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getRenderbufferParameter()`**
 method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information

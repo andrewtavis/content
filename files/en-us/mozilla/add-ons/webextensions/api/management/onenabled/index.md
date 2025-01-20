@@ -2,18 +2,10 @@
 title: management.onEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onEnabled
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onEnabled
 browser-compat: webextensions.api.management.onEnabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The event listener called when the `enabled` event is fired, indicating that an add-on is now enabled.
 
@@ -29,7 +21,7 @@ browser.management.onEnabled.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -40,9 +32,9 @@ Events have three functions:
 
 ### Parameters
 
-- `function`
+- `listener`
 
-  - : Callback function that will be called when this event occurs. The function will be passed the following argument:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `info`
       - : [`ExtensionInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): info about the add-on that was enabled.
@@ -63,7 +55,8 @@ browser.management.onEnabled.addListener((info) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#event-onEnabled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#event-onEnabled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

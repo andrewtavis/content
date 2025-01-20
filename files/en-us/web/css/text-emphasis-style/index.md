@@ -2,12 +2,6 @@
 title: text-emphasis-style
 slug: Web/CSS/text-emphasis-style
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.text-emphasis-style
 ---
 
@@ -25,10 +19,8 @@ text-emphasis-style: none; /* No emphasis marks */
 
 /* <string> values */
 text-emphasis-style: "x";
-text-emphasis-style: "点";
 text-emphasis-style: "\25B2";
 text-emphasis-style: "*";
-text-emphasis-style: "foo"; /* Should NOT be used. It may be computed to or rendered as 'f' only */
 
 /* Keyword values */
 text-emphasis-style: filled;

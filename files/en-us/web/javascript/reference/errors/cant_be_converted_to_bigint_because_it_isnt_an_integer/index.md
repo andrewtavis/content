@@ -2,11 +2,6 @@
 title: "RangeError: x can't be converted to BigInt because it isn't an integer"
 slug: Web/JavaScript/Reference/Errors/Cant_be_converted_to_BigInt_because_it_isnt_an_integer
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
 ---
 
 {{jsSidebar("Errors")}}
@@ -15,7 +10,7 @@ The JavaScript exception "x can't be converted to BigInt because it isn't an int
 
 ## Message
 
-```
+```plain
 RangeError: The number 1.5 cannot be converted to a BigInt because it is not an integer (V8-based & Firefox)
 RangeError: Not an integer (Safari)
 ```
@@ -47,5 +42,5 @@ const a = BigInt(1);
 
 ## See also
 
-- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
-- [`Number.isInteger`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
+- [`BigInt()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`Number.isInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)

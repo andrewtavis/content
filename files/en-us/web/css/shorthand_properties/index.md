@@ -2,14 +2,6 @@
 title: Shorthand properties
 slug: Web/CSS/Shorthand_properties
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - Shorthand Properties
-  - properties
-  - shorthand
 ---
 
 {{CSSRef}}
@@ -103,10 +95,12 @@ line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
 
-This 5 statements can be shortened to the following:
+These 5 statements can be shortened to the following:
 
 ```css
-font: italic bold 0.8em/1.2 Arial, sans-serif;
+font:
+  italic bold 0.8em/1.2 Arial,
+  sans-serif;
 ```
 
 This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal`, `font-size-adjust: none`, and `font-stretch: normal`.
@@ -174,71 +168,91 @@ Just like margins and paddings, the inset values are ordered clockwise - top, ri
 
 CSS provides a universal shorthand property, {{cssxref("all")}}, which applies its value to every property in the document. Its purpose is to change the properties' inheritance model.
 
-See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) or [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade) for more information about how inheritance works in CSS.
+See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) or [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade) for more information about how inheritance works in CSS.
+
+## Shorthand properties
+
+- {{cssxref("all")}}
+- {{cssxref("animation")}}
+- {{cssxref("animation-range")}}
+- {{cssxref("background")}}
+- {{cssxref("border")}}
+- {{cssxref("border-block")}}
+- {{cssxref("border-block-end")}}
+- {{cssxref("border-block-start")}}
+- {{cssxref("border-bottom")}}
+- {{cssxref("border-color")}}
+- {{cssxref("border-image")}}
+- {{cssxref("border-inline")}}
+- {{cssxref("border-inline-end")}}
+- {{cssxref("border-inline-start")}}
+- {{cssxref("border-left")}}
+- {{cssxref("border-radius")}}
+- {{cssxref("border-right")}}
+- {{cssxref("border-style")}}
+- {{cssxref("border-top")}}
+- {{cssxref("border-width")}}
+- {{cssxref("column-rule")}}
+- {{cssxref("columns")}}
+- {{cssxref("contain-intrinsic-size")}}
+- {{cssxref("container")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("font")}}
+- {{cssxref("font-synthesis")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("gap")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-area")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-template")}}
+- {{cssxref("inset")}}
+- {{cssxref("inset-block")}}
+- {{cssxref("inset-inline")}}
+- {{cssxref("list-style")}}
+- {{cssxref("margin")}}
+- {{cssxref("margin-block")}}
+- {{cssxref("margin-inline")}}
+- {{cssxref("mask")}}
+- {{cssxref("mask-border")}}
+- {{cssxref("offset")}}
+- {{cssxref("outline")}}
+- {{cssxref("overflow")}}
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("padding")}}
+- {{cssxref("padding-block")}}
+- {{cssxref("padding-inline")}}
+- {{cssxref("place-content")}}
+- {{cssxref("place-items")}}
+- {{cssxref("place-self")}}
+- {{cssxref("position-try")}}
+- {{cssxref("scroll-margin")}}
+- {{cssxref("scroll-margin-block")}}
+- {{cssxref("scroll-margin-inline")}}
+- {{cssxref("scroll-padding")}}
+- {{cssxref("scroll-padding-block")}}
+- {{cssxref("scroll-padding-inline")}}
+- {{cssxref("scroll-timeline")}}
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-emphasis")}}
+- {{cssxref("text-wrap")}}
+- {{cssxref("transition")}}
+- {{cssxref("view-timeline")}}
+- {{cssxref("-webkit-text-stroke")}}
+- {{cssxref("-webkit-border-before")}}
+- {{cssxref("-webkit-mask-box-image")}}
 
 ## See also
 
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
-- Shorthand properties:
-  - {{cssxref("all")}}
-  - {{cssxref("animation")}}
-  - {{cssxref("background")}}
-  - {{cssxref("border")}}
-  - {{cssxref("border-block-end")}}
-  - {{cssxref("border-block-start")}}
-  - {{cssxref("border-bottom")}}
-  - {{cssxref("border-color")}}
-  - {{cssxref("border-image")}}
-  - {{cssxref("border-inline-end")}}
-  - {{cssxref("border-inline-start")}}
-  - {{cssxref("border-left")}}
-  - {{cssxref("border-radius")}}
-  - {{cssxref("border-right")}}
-  - {{cssxref("border-style")}}
-  - {{cssxref("border-top")}}
-  - {{cssxref("border-width")}}
-  - {{cssxref("column-rule")}}
-  - {{cssxref("columns")}}
-  - {{cssxref("contain-intrinsic-size")}}
-  - {{cssxref("flex")}}
-  - {{cssxref("flex-flow")}}
-  - {{cssxref("font")}}
-  - {{cssxref("gap")}}
-  - {{cssxref("grid")}}
-  - {{cssxref("grid-area")}}
-  - {{cssxref("grid-column")}}
-  - {{cssxref("grid-row")}}
-  - {{cssxref("grid-template")}}
-  - {{cssxref("inset")}}
-  - {{cssxref("list-style")}}
-  - {{cssxref("margin")}}
-  - {{cssxref("mask")}}
-  - {{cssxref("offset")}}
-  - {{cssxref("outline")}}
-  - {{cssxref("overflow")}}
-  - {{cssxref("padding")}}
-  - {{cssxref("place-content")}}
-  - {{cssxref("place-items")}}
-  - {{cssxref("place-self")}}
-  - {{cssxref("scroll-margin")}}
-  - {{cssxref("scroll-padding")}}
-  - {{cssxref("scroll-timeline")}}
-  - {{cssxref("text-decoration")}}
-  - {{cssxref("text-emphasis")}}
-  - {{cssxref("transition")}}
+- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+- [At-rules](/en-US/docs/Web/CSS/At-rule)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
+- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)

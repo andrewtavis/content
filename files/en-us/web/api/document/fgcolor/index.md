@@ -1,15 +1,10 @@
 ---
-title: Document.fgColor
+title: "Document: fgColor property"
+short-title: fgColor
 slug: Web/API/Document/fgColor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.fgColor
 ---
 
@@ -20,7 +15,7 @@ the current document.
 
 ## Value
 
-A string representing the color as a word (e.g., "red") or hexadecimal value (e.g., "`#ff0000`").
+A string representing the color as a word (e.g., `"red"`) or hexadecimal value (e.g., `"#ff0000"`).
 
 ## Examples
 
@@ -38,6 +33,10 @@ in hexadecimal).
 (e.g., `document.body.style.color = "red"`).
 
 Another alternative is `document.body.text`, although this is [deprecated in HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-text) in favor of the CSS alternative above.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

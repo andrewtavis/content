@@ -2,12 +2,6 @@
 title: animation-duration
 slug: Web/CSS/animation-duration
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.animation-duration
 ---
 
@@ -23,6 +17,7 @@ It is often convenient to use the shorthand property {{ cssxref("animation") }} 
 
 ```css
 /* Single animation */
+animation-duration: auto; /* Default */
 animation-duration: 6s;
 animation-duration: 120ms;
 
@@ -40,7 +35,11 @@ animation-duration: unset;
 
 ### Values
 
-- `{{cssxref("&lt;time&gt;")}}`
+- `auto`
+
+  - : For time-based animations, `auto` is equivalent to a value of `0s` (see below). For [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), `auto` fills the entire timeline with the animation.
+
+- {{cssxref("&lt;time&gt;")}}
 
   - : The time that an animation takes to complete one cycle. This may be specified in either seconds (`s`) or milliseconds (`ms`). The value must be positive or zero and the unit is required.
 
@@ -50,9 +49,14 @@ animation-duration: unset;
     - If `animation-fill-mode` is set to `forwards` or `both`, the last frame of the animation will be displayed, as defined by `animation-direction`, after the `animation-delay` expires.
     - If `animation-fill-mode` is set to `none`, the animation will have no visible effect.
 
-> **Note:** Negative values are invalid, causing the declaration to be ignored. Some early, prefixed, implementations may consider them as identical to `0s`.
+> [!NOTE]
+> Negative values are invalid, causing the declaration to be ignored. Some early, prefixed, implementations may consider them as identical to `0s`.
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> [!NOTE]
+> When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
+
+> [!NOTE]
+> When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), specifying an `animation-duration` value in seconds or milliseconds doesn't really make sense. In tests, it seemed to have no effect on scroll progress timeline animations, while on view progress timeline animations it seemed to push the animation to happen nearer the end of the timeline. However, Firefox requires an `animation-duration` to be set for it to successfully apply the animation. You are therefore advised to set `animation-duration` to `1ms` so that animations will work in Firefox, but the effect is not altered too much by it.
 
 ## Formal definition
 
@@ -105,7 +109,7 @@ Hover over the rectangle to start the animation.
 
 {{EmbedLiveSample("Setting animation duration","100%","250")}}
 
-See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more examples.
+See [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for more examples.
 
 ## Specifications
 
@@ -117,6 +121,6 @@ See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) fo
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
 - Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

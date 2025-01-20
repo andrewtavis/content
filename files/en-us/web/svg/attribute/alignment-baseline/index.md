@@ -2,23 +2,20 @@
 title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.alignment-baseline
+browser-compat: svg.global_attributes.alignment-baseline
 ---
 
 {{SVGRef}}
 
 The **`alignment-baseline`** attribute specifies how an object is aligned with respect to its parent. This property specifies which baseline of this element is to be aligned with the corresponding baseline of the parent. For example, this allows alphabetic baselines in Roman text to stay aligned across font size changes. It defaults to the baseline with the same name as the computed value of the `alignment-baseline` property.
 
-> **Note:** As a presentation attribute `alignment-baseline` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, {{cssxref("alignment-baseline")}} can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("tspan")}}
-- {{SVGElement("tref")}}
-- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 
 ## Usage notes
@@ -51,7 +48,7 @@ You can use this attribute with the following SVG elements:
 - `auto` {{deprecated_inline}}
   - : The value is the dominant-baseline of the script to which the character belongs - i.e., use the dominant-baseline of the parent.
 - `baseline`
-  - : Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box's corresponding {{Glossary("baseline")}} to that of its parent.
+  - : Uses the {{svgattr("dominant-baseline")}} choice of the parent. Matches the box's corresponding {{Glossary("baseline/typography", "baseline")}} to that of its parent.
 - `before-edge` {{deprecated_inline}}
   - : The alignment-point of the object being aligned is aligned with the "before-edge" baseline of the parent text content element.
 - `text-bottom`
@@ -60,7 +57,8 @@ You can use this attribute with the following SVG elements:
 
   - : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.
 
-    > **Note:** This keyword may be mapped to `text-top`.
+    > [!NOTE]
+    > This keyword may be mapped to `text-top`.
 
 - `middle`
   - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.
@@ -74,7 +72,8 @@ You can use this attribute with the following SVG elements:
 
   - : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.
 
-    > **Note:** This keyword may be mapped to `text-bottom`.
+    > [!NOTE]
+    > This keyword may be mapped to `text-bottom`.
 
 - `ideographic`
   - : Matches the box's ideographic character face under-side baseline to that of its parent.
@@ -146,4 +145,4 @@ For object alignment in other elements (such as {{SVGElement("text")}}), see {{S
 
 ## See also
 
-- {{cssxref("CSS_Box_Alignment#baseline_alignment", "CSS alignment-baseline")}}
+- [CSS baseline alignment](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment#baseline_alignment)

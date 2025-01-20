@@ -2,11 +2,6 @@
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Math.tan
 ---
 
@@ -31,7 +26,8 @@ Math.tan(x)
 
 The tangent of `x`. If `x` is {{jsxref("Infinity")}}, `-Infinity`, or {{jsxref("NaN")}}, returns {{jsxref("NaN")}}.
 
-> **Note:** Due to floating point precision, it's not possible to obtain the exact value π/2, so the result is always finite if not `NaN`.
+> [!NOTE]
+> Due to floating point precision, it's not possible to obtain the exact value π/2, so the result is always finite if not `NaN`.
 
 ## Description
 

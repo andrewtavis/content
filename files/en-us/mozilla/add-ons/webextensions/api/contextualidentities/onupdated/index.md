@@ -2,19 +2,10 @@
 title: contextualIdentities.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - contextualIdentities
-  - onUpdated
 browser-compat: webextensions.api.contextualIdentities.onUpdated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the properties of a contextual identity, such as its name, icon, or color, are changed. Contextual identities may be updated by extensions using the `contextualIdentities` API, or directly by the user, using the browser's user interface.
 
@@ -39,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `changeInfo`
       - : `object`. An object that contains a single property, `contextualIdentity`, which is a {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} object representing the identity whose properties were updated.

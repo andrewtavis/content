@@ -2,15 +2,10 @@
 title: CompressionStream
 slug: Web/API/CompressionStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - CompressionStream
 browser-compat: api.CompressionStream
 ---
 
-{{APIRef("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
 The **`CompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for compressing a stream of data.
 
@@ -32,7 +27,7 @@ In this example a stream is compressed using gzip compression.
 
 ```js
 const compressedReadableStream = inputReadableStream.pipeThrough(
-  new CompressionStream("gzip")
+  new CompressionStream("gzip"),
 );
 ```
 

@@ -1,19 +1,12 @@
 ---
-title: WebGLRenderingContext.bufferData()
+title: "WebGLRenderingContext: bufferData() method"
+short-title: bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Buffer
-  - Graphics
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bufferData
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.bufferData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) initializes and creates the
 buffer object's data store.
@@ -21,15 +14,8 @@ buffer object's data store.
 ## Syntax
 
 ```js-nolint
-// WebGL1
-bufferData(target, usage)
 bufferData(target, size, usage)
 bufferData(target, srcData, usage)
-
-// WebGL2
-bufferData(target, usage, srcOffset)
-bufferData(target, srcData, usage, srcOffset)
-bufferData(target, srcData, usage, srcOffset, length)
 ```
 
 ### Parameters
@@ -42,7 +28,6 @@ bufferData(target, srcData, usage, srcOffset, length)
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
-
       - : Buffer used for element indices.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
@@ -84,41 +69,35 @@ bufferData(target, srcData, usage, srcOffset, length)
       - : The contents are intended to be specified
         once by the application, and used at most a few times as the source for
         WebGL drawing and image specification commands.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
-        1)}}, the following values are available additionally:
 
-      - `gl.STATIC_READ`
-        - : The contents are intended to be
-          specified once by reading data from WebGL, and queried many times
-          by the application.
-      - `gl.DYNAMIC_READ`
-        - : The contents are intended to be
-          respecified repeatedly by reading data from WebGL, and queried
-          many times by the application.
-      - `gl.STREAM_READ`
-        - : The contents are intended to be
-          specified once by reading data from WebGL, and queried at most a
-          few times by the application
-      - `gl.STATIC_COPY`
-        - : The contents are intended to be
-          specified once by reading data from WebGL, and used many times as
-          the source for WebGL drawing and image specification commands.
-      - `gl.DYNAMIC_COPY`
-        - : The contents are intended to be
-          respecified repeatedly by reading data from WebGL, and used many
-          times as the source for WebGL drawing and image specification
-          commands.
-      - `gl.STREAM_COPY`
-        - : The contents are intended to be
-          specified once by reading data from WebGL, and used at most a few
-          times as the source for WebGL drawing and image specification
-          commands.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
 
-- `srcOffset`
-  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
-    the buffer.
-- `length` {{optional_inline}}
-  - : A {{domxref("WebGL_API/Types", "GLuint")}} defaulting to 0.
+    - `gl.STATIC_READ`
+      - : The contents are intended to be
+        specified once by reading data from WebGL, and queried many times
+        by the application.
+    - `gl.DYNAMIC_READ`
+      - : The contents are intended to be
+        respecified repeatedly by reading data from WebGL, and queried
+        many times by the application.
+    - `gl.STREAM_READ`
+      - : The contents are intended to be
+        specified once by reading data from WebGL, and queried at most a
+        few times by the application
+    - `gl.STATIC_COPY`
+      - : The contents are intended to be
+        specified once by reading data from WebGL, and used many times as
+        the source for WebGL drawing and image specification commands.
+    - `gl.DYNAMIC_COPY`
+      - : The contents are intended to be
+        respecified repeatedly by reading data from WebGL, and used many
+        times as the source for WebGL drawing and image specification
+        commands.
+    - `gl.STREAM_COPY`
+      - : The contents are intended to be
+        specified once by reading data from WebGL, and used at most a few
+        times as the source for WebGL drawing and image specification
+        commands.
 
 ### Return value
 
@@ -137,8 +116,8 @@ None ({{jsxref("undefined")}}).
 ### Using bufferData
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
@@ -173,6 +152,7 @@ const sizeInBytes = dataArray.length * dataArray.BYTES_PER_ELEMENT;
 
 ## See also
 
+- {{domxref("WebGL2RenderingContext.bufferData()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}
 - {{domxref("WebGLRenderingContext.bufferSubData()")}}
 - Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

@@ -1,14 +1,8 @@
 ---
-title: BiquadFilterNode.detune
+title: "BiquadFilterNode: detune property"
+short-title: detune
 slug: Web/API/BiquadFilterNode/detune
 page-type: web-api-instance-property
-tags:
-  - API
-  - BiquadFilterNode
-  - Property
-  - Reference
-  - Web Audio API
-  - detune
 browser-compat: api.BiquadFilterNode.detune
 ---
 
@@ -20,7 +14,8 @@ The `detune` property of the {{ domxref("BiquadFilterNode") }} interface is an [
 
 An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}.
 
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Examples
 

@@ -1,25 +1,16 @@
 ---
-title: NavigationCurrentEntryChangeEvent()
+title: "NavigationCurrentEntryChangeEvent: NavigationCurrentEntryChangeEvent() constructor"
+short-title: NavigationCurrentEntryChangeEvent()
 slug: Web/API/NavigationCurrentEntryChangeEvent/NavigationCurrentEntryChangeEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationCurrentEntryChangeEvent.NavigationCurrentEntryChangeEvent
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`NavigationCurrentEntryChangeEvent()`** constructor creates a new
-{{domxref("NavigationCurrentEntryChangeEvent")}} object.
+The **`NavigationCurrentEntryChangeEvent()`** constructor creates a new {{domxref("NavigationCurrentEntryChangeEvent")}} object.
 
 ## Syntax
 
@@ -35,8 +26,8 @@ new NavigationCurrentEntryChangeEvent(type, init)
   - : An object containing the following properties:
     - `destination`
       - : A {{domxref("NavigationHistoryEntry")}} object representing the location being navigated to.
-    - `navigationType`
-      - : The type of the navigation that resulted in the change. Possible values — `push`, `reload`, `replace`, and `traverse`.
+    - `navigationType` {{optional_inline}}
+      - : The type of the navigation that resulted in the change. Possible values are `push`, `reload`, `replace`, and `traverse`. Defaults to `null`.
 
 ## Examples
 

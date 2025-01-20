@@ -1,11 +1,7 @@
 ---
 title: Set Window Rect
 slug: Web/WebDriver/Commands/SetWindowRect
-tags:
-  - Command
-  - Reference
-  - Set Window Rect
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.SetWindowRect
 ---
 

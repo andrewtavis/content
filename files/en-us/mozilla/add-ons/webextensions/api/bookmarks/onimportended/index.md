@@ -2,20 +2,10 @@
 title: bookmarks.onImportEnded
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onImportEnded
 browser-compat: webextensions.api.bookmarks.onImportEnded
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the browser has finished importing a set of bookmarks.
 
@@ -31,7 +21,7 @@ browser.bookmarks.onImportEnded.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,8 +32,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-  - : Function that will be called when this event occurs. It's passed no parameters.
+- `listener`
+  - : The function called when this event occurs. It's passed no parameters.
 
 ## Browser compatibility
 
@@ -70,7 +60,8 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#event-onImportEnded) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#event-onImportEnded) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

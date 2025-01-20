@@ -2,19 +2,10 @@
 title: browsingData.removeFormData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeDownloads
 browser-compat: webextensions.api.browsingData.removeFormData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Clears data that the browser has saved for autofilling forms.
 
@@ -86,7 +77,8 @@ browser.browsingData.removeFormData({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

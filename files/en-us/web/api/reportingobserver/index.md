@@ -2,23 +2,16 @@
 title: ReportingObserver
 slug: Web/API/ReportingObserver
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - Reporting API
-  - ReportingObserver
 browser-compat: api.ReportingObserver
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The `ReportingObserver` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) allows you to collect and access reports.
 
 ## Constructor
 
-- {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}} {{Experimental_Inline}}
+- {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}}
   - : Creates a new `ReportingObserver` object instance, which can be used to collect and access reports.
 
 ## Instance properties
@@ -27,11 +20,11 @@ _This interface has no properties defined on it._
 
 ## Instance methods
 
-- {{domxref("ReportingObserver.disconnect()")}} {{Experimental_Inline}}
+- {{domxref("ReportingObserver.disconnect()")}}
   - : Stops a reporting observer that had previously started observing from collecting reports.
-- {{domxref("ReportingObserver.observe()")}} {{Experimental_Inline}}
+- {{domxref("ReportingObserver.observe()")}}
   - : Instructs a reporting observer to start collecting reports in its report queue.
-- {{domxref("ReportingObserver.takeRecords()")}} {{Experimental_Inline}}
+- {{domxref("ReportingObserver.takeRecords()")}}
   - : Returns the current list of reports contained in the observer's report queue, and empties the queue.
 
 ## Events
@@ -44,9 +37,9 @@ In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-ap
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
@@ -63,15 +56,9 @@ Later on in the example we deliberately use the deprecated version of {{domxref(
 
 ```js
 if (navigator.mozGetUserMedia) {
-  navigator.mozGetUserMedia(
-    constraints,
-    success,
-    failure);
+  navigator.mozGetUserMedia(constraints, success, failure);
 } else {
-  navigator.getUserMedia(
-    constraints,
-    success,
-    failure);
+  navigator.getUserMedia(constraints, success, failure);
 }
 ```
 
@@ -79,7 +66,8 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ![image of a jolly bearded man with various stats displayed below it about a deprecated feature](reporting_api_example.png)
 
-> **Note:** If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
+> [!NOTE]
+> If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
 
 ## Specifications
 

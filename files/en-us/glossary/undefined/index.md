@@ -2,11 +2,9 @@
 title: Undefined
 slug: Glossary/Undefined
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - JavaScript
-  - NeedsContent
 ---
+
+{{GlossarySidebar}}
 
 **`undefined`** is a {{Glossary("primitive")}} value automatically assigned to {{glossary("variable", "variables")}} that have just been declared, or to formal {{Glossary("Argument","arguments")}} for which there are no actual arguments.
 

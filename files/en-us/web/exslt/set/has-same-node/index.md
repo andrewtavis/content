@@ -1,10 +1,7 @@
 ---
 title: set:has-same-node()
 slug: Web/EXSLT/set/has-same-node
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -24,10 +21,10 @@ set:has-same-node(nodeSet1, nodeSet2)
 - `nodeSet2`
   - : The second node set to check.
 
-### Returns
+### Return value
 
 `true` if the two node-sets have any nodes in common; otherwise `false`.
 
 ## Specifications
 
-[EXSLT - SET:HAS-SAME-NODE](http://exslt.org/set/functions/has-same-node/index.html)
+[EXSLT - SET:HAS-SAME-NODE](https://exslt.github.io/set/functions/has-same-node/index.html)

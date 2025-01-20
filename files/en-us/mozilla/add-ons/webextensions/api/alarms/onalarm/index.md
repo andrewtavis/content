@@ -2,20 +2,10 @@
 title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - onAlarm
 browser-compat: webextensions.api.alarms.onAlarm
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when any alarm set by the extension goes off.
 
@@ -42,7 +32,7 @@ Events have three functions:
 
 - `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `alarm`
       - : {{WebExtAPIRef('alarms.Alarm')}}. The alarm that fired. Use `Alarm.name` to figure out which alarm fired.
@@ -65,4 +55,5 @@ browser.alarms.onAlarm.addListener(handleAlarm);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.

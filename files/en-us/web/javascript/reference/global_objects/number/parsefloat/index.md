@@ -2,12 +2,6 @@
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - Polyfill
 browser-compat: javascript.builtins.Number.parseFloat
 ---
 
@@ -26,7 +20,7 @@ Number.parseFloat(string)
 ### Parameters
 
 - `string`
-  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading {{glossary("whitespace")}} in this argument is ignored.
+  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading {{Glossary("whitespace")}} in this argument is ignored.
 
 ### Return value
 
@@ -38,7 +32,7 @@ Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted
 
 ### Number.parseFloat vs. parseFloat
 
-This method has the same functionality as the global {{jsxref("parseFloat", "parseFloat()")}} function:
+This method has the same functionality as the global {{jsxref("parseFloat()")}} function:
 
 ```js
 Number.parseFloat === parseFloat; // true
@@ -46,7 +40,7 @@ Number.parseFloat === parseFloat; // true
 
 Its purpose is modularization of globals.
 
-See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
+See {{jsxref("parseFloat()")}} for more detail and examples.
 
 ## Specifications
 
@@ -59,5 +53,5 @@ See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
 ## See also
 
 - [Polyfill of `Number.parseFloat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- {{jsxref("Number")}}: The object this method belongs to.
-- The global {{jsxref("parseFloat", "parseFloat()")}} method.
+- {{jsxref("Number")}}
+- {{jsxref("parseFloat()")}}

@@ -2,20 +2,10 @@
 title: idle.setDetectionInterval()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - setDetectionInterval
 browser-compat: webextensions.api.idle.setDetectionInterval
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the interval, in seconds, used to determine when the system is in an idle state for {{WebExtAPIRef("idle.onStateChanged")}} events. The default interval is 60 seconds.
 
@@ -46,7 +36,8 @@ browser.idle.setDetectionInterval(15);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/idle/#method-setDetectionInterval) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle#method-setDetectionInterval) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

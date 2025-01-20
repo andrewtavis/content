@@ -1,14 +1,8 @@
 ---
-title: Safely inserting external content into a page
+title: Safely insert external content into a page
+short-title: Insert external content
 slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
 page-type: guide
-tags:
-  - Add-ons
-  - Beginner
-  - Extensions
-  - How-to
-  - Security
-  - WebExtensions
 ---
 
 {{AddonSidebar}}
@@ -72,12 +66,12 @@ For production use, [DOMPurify](https://github.com/cure53/DOMPurify) comes as a 
 "content_scripts": [
   {
     "matches" : ["<all_urls>"],
-    "js": ["purify.min.js", "myinjectionscript.js"]
+    "js": ["purify.min.js", "my-injection-script.js"]
   }
 ]
 ```
 
-Then, in myinjectionscript.js you can read the external HTML, sanitize it, and add it to a page's DOM:
+Then, in `my-injection-script.js` you can read the external HTML, sanitize it, and add it to a page's DOM:
 
 ```js
 let elem = document.createElement("div");

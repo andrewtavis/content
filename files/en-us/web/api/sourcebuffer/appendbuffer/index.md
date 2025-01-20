@@ -1,22 +1,12 @@
 ---
-title: SourceBuffer.appendBuffer()
+title: "SourceBuffer: appendBuffer() method"
+short-title: appendBuffer()
 slug: Web/API/SourceBuffer/appendBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source Extensions
-  - Method
-  - Reference
-  - SourceBuffer
-  - Video
-  - appendBuffer
 browser-compat: api.SourceBuffer.appendBuffer
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`appendBuffer()`** method of the
 {{domxref("SourceBuffer")}} interface appends media segment data from an

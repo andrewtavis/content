@@ -2,13 +2,6 @@
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Layout
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.text-decoration-style
 ---
 
@@ -52,8 +45,8 @@ text-decoration-style: unset;
   - : Draws a dashed line.
 - wavy
   - : Draws a wavy line.
-- \-moz-none {{ non-standard_inline }}
-  - : Draws no line. Use {{ cssxref("text-decoration-line") }}`: none` instead.
+- \-moz-none
+  - : Draws no line. Use {{cssxref("text-decoration-line", "text-decoration-line: none")}} instead.
 
 ## Formal definition
 
@@ -87,7 +80,7 @@ The following creates a red wavy underline:
 
 #### Results
 
-{{ EmbedLiveSample('Setting_a_wavy_underline', '', '', '') }}
+{{EmbedLiveSample('Setting_a_wavy_underline')}}
 
 ## Specifications
 

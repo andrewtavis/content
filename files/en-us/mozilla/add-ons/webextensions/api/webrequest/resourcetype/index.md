@@ -2,20 +2,10 @@
 title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - ResourceType
-  - Type
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.ResourceType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This type is a string, which represents the context in which a resource was fetched in a web request.
 
@@ -34,7 +24,7 @@ Values of this type are strings. Possible values are:
 - `image`
   - : Resources loaded to be rendered as image, except for `imageset` on browsers that support that type (see browser compatibility below).
 - `imageset`
-  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's {{htmlattrxref("srcset", "img")}} attribute.
+  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute.
 - `main_frame`
   - : Top-level documents loaded into a tab.
 - `media`
@@ -49,7 +39,7 @@ Values of this type are strings. Possible values are:
   - : Requests sent by plugins.
 - `ping`
 
-  - : Requests sent to the URL given in a hyperlink's {{htmlattrxref("ping", "a")}} attribute, when the hyperlink is followed.
+  - : Requests sent to the URL given in a hyperlink's [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute, when the hyperlink is followed.
 
     Browsers that don't have a dedicated `beacon` type (see browser compatibility below), also label requests sent through the Beacon API as `ping`.
 
@@ -80,7 +70,8 @@ Values of this type are strings. Possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

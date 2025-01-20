@@ -2,15 +2,11 @@
 title: Using Touch Events
 slug: Web/API/Touch_events/Using_Touch_Events
 page-type: guide
-tags:
-  - Guide
-  - TouchEvent
-  - touch
 ---
 
 {{DefaultAPISidebar("Touch Events")}}
 
-Today, most Web content is designed for keyboard and mouse input. However, devices with touch screens (especially portable devices) are mainstream and Web applications can either directly process touch-based input by using {{domxref("Touch_events","Touch Events")}} or the application can use _interpreted mouse events_ for the application input. A disadvantage to using mouse events is that they do not support concurrent user input, whereas touch events support multiple simultaneous inputs (possibly at different locations on the touch surface), thus enhancing user experiences.
+Today, most Web content is designed for keyboard and mouse input. However, devices with touch screens (especially portable devices) are mainstream and Web applications can either directly process touch-based input by using [touch events](/en-US/docs/Web/API/TouchEvent) or the application can use _interpreted mouse events_ for the application input. A disadvantage to using mouse events is that they do not support concurrent user input, whereas touch events support multiple simultaneous inputs (possibly at different locations on the touch surface), thus enhancing user experiences.
 
 The touch events interfaces support application specific single and multi-touch interactions such as a two-finger gesture. A multi-touch interaction starts when a finger (or stylus) first touches the contact surface. Other fingers may subsequently touch the surface and optionally move across the touch surface. The interaction ends when the fingers are removed from the surface. During this interaction, an application receives touch events during the start, move, and end phases. The application may apply its own semantics to the touch inputs.
 
@@ -45,20 +41,20 @@ An application may consider different factors when defining the semantics of a g
 
 The touch list(s) an application uses depends on the semantics of the application's _gestures_. For example, if an application supports a single touch (tap) on one element, it would use the {{domxref("TouchEvent.targetTouches","targetTouches")}} list in the {{domxref("Element/touchstart_event", "touchstart")}} event handler to process the touch point in an application-specific manner. If an application supports two-finger swipe for any two touch points, it will use the {{domxref("TouchEvent.changedTouches","changedTouches")}} list in the {{domxref("Element/touchmove_event", "touchmove")}} event handler to determine if two touch points had moved and then implement the semantics of that gesture in an application-specific manner.
 
-Browsers typically dispatch _emulated_ mouse and click events when there is only a single active touch point. Multi-touch interactions involving two or more active touch points will usually only generate touch events. To prevent the emulated mouse events from being sent, use the {{domxref("Event.preventDefault()","preventDefault()")}} method in the touch event handlers. For more information about the interaction between mouse and touch events, see {{domxref("Touch_events.Supporting_both_TouchEvent_and_MouseEvent", "Supporting both TouchEvent and MouseEvent")}}.
+Browsers typically dispatch _emulated_ mouse and click events when there is only a single active touch point. Multi-touch interactions involving two or more active touch points will usually only generate touch events. To prevent the emulated mouse events from being sent, use the {{domxref("Event.preventDefault()","preventDefault()")}} method in the touch event handlers. If you want to interact with both mouse and touches, use {{domxref("Pointer events", "", "", "nocode")}} instead.
 
 ## Basic steps
 
-This section contains a basic usage of using the above interfaces. See the {{domxref("Touch_events","Touch Events Overview")}} for a more detailed example.
+This section contains a basic usage of using the above interfaces. See the [touch events overview](/en-US/docs/Web/API/Touch_events) for a more detailed example.
 
 Register an event handler for each touch event type.
 
 ```js
 // Register touch event handlers
-someElement.addEventListener('touchstart', process_touchstart, false);
-someElement.addEventListener('touchmove', process_touchmove, false);
-someElement.addEventListener('touchcancel', process_touchcancel, false);
-someElement.addEventListener('touchend', process_touchend, false);
+someElement.addEventListener("touchstart", process_touchstart, false);
+someElement.addEventListener("touchmove", process_touchmove, false);
+someElement.addEventListener("touchcancel", process_touchcancel, false);
+someElement.addEventListener("touchend", process_touchend, false);
 ```
 
 Process an event in an event handler, implementing the application's gesture semantics.
@@ -68,10 +64,18 @@ Process an event in an event handler, implementing the application's gesture sem
 function process_touchstart(ev) {
   // Use the event's data to call out to the appropriate gesture handlers
   switch (ev.touches.length) {
-    case 1: handle_one_touch(ev); break;
-    case 2: handle_two_touches(ev); break;
-    case 3: handle_three_touches(ev); break;
-    default: gesture_not_supported(ev); break;
+    case 1:
+      handle_one_touch(ev);
+      break;
+    case 2:
+      handle_two_touches(ev);
+      break;
+    case 3:
+      handle_three_touches(ev);
+      break;
+    default:
+      gesture_not_supported(ev);
+      break;
   }
 }
 ```
@@ -80,13 +84,17 @@ Access the attributes of a touch point.
 
 ```js
 // Create touchstart handler
-someElement.addEventListener('touchstart', (ev) => {
-  // Iterate through the touch points that were activated
-  // for this element and process each event 'target'
-  for (let i = 0; i < ev.targetTouches.length; i++) {
-    process_target(ev.targetTouches[i].target);
-  }
-}, false);
+someElement.addEventListener(
+  "touchstart",
+  (ev) => {
+    // Iterate through the touch points that were activated
+    // for this element and process each event 'target'
+    for (let i = 0; i < ev.targetTouches.length; i++) {
+      process_target(ev.targetTouches[i].target);
+    }
+  },
+  false,
+);
 ```
 
 Prevent the browser from processing _emulated mouse events_.
@@ -126,8 +134,8 @@ The implementation status of pointer events in browsers is [relatively high](htt
 
 The following documents describe how to use touch events and include example code:
 
-- {{domxref("Touch_events","Touch Events Overview")}}
-- [Implement Custom Gestures](https://web.dev/add-touch-to-your-site/)
+- [Touch events overview](/en-US/docs/Web/API/Touch_events)
+- [Implement Custom Gestures](https://web.dev/articles/add-touch-to-your-site)
 - [Add touch screen support to your website (The easy way)](https://www.codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx)
 
 Touch event demonstrations:

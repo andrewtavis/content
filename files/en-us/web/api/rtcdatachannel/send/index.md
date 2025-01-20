@@ -1,19 +1,8 @@
 ---
-title: RTCDataChannel.send()
+title: "RTCDataChannel: send() method"
+short-title: send()
 slug: Web/API/RTCDataChannel/send
 page-type: web-api-instance-method
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Method
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - datachannel
-  - send
 browser-compat: api.RTCDataChannel.send
 ---
 
@@ -27,7 +16,8 @@ creating the underlying transport channel. Data sent before connecting is buffer
 possible (or an error occurs if it's not possible), and is also buffered if sent while
 the connection is closing or closed.
 
-> **Note:** Different browsers have different limitations on the size of the message you can
+> [!NOTE]
+> Different browsers have different limitations on the size of the message you can
 > send. Specifications exist to define how to automatically fragment large messages, but
 > not all browsers implement them, and those that do have various additional
 > restrictions. This will get less complicated over time, but for now, if you have
@@ -80,9 +70,9 @@ const dc = pc.createDataChannel("BackChannel");
 
 function sendMessage(msg) {
   const obj = {
-    "message": msg,
-    "timestamp": new Date()
-  }
+    message: msg,
+    timestamp: new Date(),
+  };
   dc.send(JSON.stringify(obj));
 }
 ```

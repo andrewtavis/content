@@ -2,11 +2,6 @@
 title: Equality (==)
 slug: Web/JavaScript/Reference/Operators/Equality
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.equality
 ---
 
@@ -43,7 +38,7 @@ The equality operators (`==` and `!=`) provide the [IsLooselyEqual](/en-US/docs/
    - If one of the operands is a Symbol but the other is not, return `false`.
    - If one of the operands is a Boolean but the other is not, [convert the boolean to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion): `true` is converted to 1, and `false` is converted to 0. Then compare the two operands loosely again.
    - Number to String: [convert the string to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). Conversion failure results in `NaN`, which will guarantee the equality to be `false`.
-   - Number to BigInt: compare by their numeric value. If the number is ±Infinity or `NaN`, return `false`.
+   - Number to BigInt: compare by their mathematical value. If the number is ±Infinity or `NaN`, return `false`.
    - String to BigInt: convert the string to a BigInt using the same algorithm as the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) constructor. If conversion fails, return `false`.
 
 Loose equality is _symmetric_: `A == B` always has identical semantics to `B == A` for any values of `A` and `B` (except for the order of applied conversions).
@@ -118,7 +113,7 @@ console.log(string4 == string4); // true
 ### Comparing Dates and strings
 
 ```js
-const d = new Date("December 17, 1995 03:24:00");
+const d = new Date("1995-12-17T03:24:00");
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
 console.log(d == s); //true
 ```
@@ -145,6 +140,6 @@ c == d; // true
 
 ## See also
 
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [Strict inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [Inequality (`!=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality (`===`)](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Strict inequality (`!==`)](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

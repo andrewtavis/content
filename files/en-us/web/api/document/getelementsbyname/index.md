@@ -1,14 +1,8 @@
 ---
-title: Document.getElementsByName()
+title: "Document: getElementsByName() method"
+short-title: getElementsByName()
 slug: Web/API/Document/getElementsByName
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML
-  - Method
-  - Reference
 browser-compat: api.Document.getElementsByName
 ---
 
@@ -36,7 +30,7 @@ A live {{domxref("NodeList")}} collection, meaning it automatically updates as n
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Example: using document.getElementsByName</title>

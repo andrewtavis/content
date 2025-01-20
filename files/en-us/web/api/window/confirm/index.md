@@ -1,14 +1,8 @@
 ---
-title: Window.confirm()
+title: "Window: confirm() method"
+short-title: confirm()
 slug: Web/API/Window/confirm
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - confirm
 browser-compat: api.Window.confirm
 ---
 
@@ -21,12 +15,13 @@ Under some conditions — for example, when the user switches tabs — the brows
 ## Syntax
 
 ```js-nolint
+confirm()
 confirm(message)
 ```
 
 ### Parameters
 
-- `message`
+- `message` {{optional_inline}}
   - : A string you want to display in the confirmation dialog.
 
 ### Return value

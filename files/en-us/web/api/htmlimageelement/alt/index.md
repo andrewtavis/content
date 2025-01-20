@@ -1,20 +1,8 @@
 ---
-title: HTMLImageElement.alt
+title: "HTMLImageElement: alt property"
+short-title: alt
 slug: Web/API/HTMLImageElement/alt
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - Text
-  - alt
-  - alternate
-  - fallback
 browser-compat: api.HTMLImageElement.alt
 ---
 
@@ -24,8 +12,8 @@ The {{domxref("HTMLImageElement")}} property **`alt`** provides fallback (altern
 
 This may be the case because of an error, because the user has disabled the loading of images, or because the image hasn't finished loading yet.
 
-Perhaps the most important reason to use the `alt` property is to support [accessibility](/en-US/docs/Web/Accessibility), as the `alt` text may be used by screen readers and other assistive technologies to help differently-abled users make full use of your content.
-It will be read aloud or sent to the touch device, for example, to support visually impaired users.
+Perhaps the most important reason to use the `alt` property is to support [accessibility](/en-US/docs/Web/Accessibility), as the `alt` text may be used by screen readers and other assistive technologies to help people with a disability make full use of your content.
+It will be read aloud or sent to a braille output device, for example, to support blind or visually impaired users.
 
 > **Think of it like this:** When choosing `alt` strings for your images, imagine what you would say when reading the page to someone over the phone without mentioning that there's an image on the page.
 
@@ -61,7 +49,7 @@ In the HTML for this example, shown below, the {{HTMLElement("img")}} element in
 ```html
 <div class="container">
   <div class="left-margin">
-    <img src="/files/16861/margin-flourish.svg" alt="" />
+    <img src="margin-flourish.svg" alt="" />
   </div>
   <div class="contents">
     <p>
@@ -96,11 +84,14 @@ p {
 .container {
   width: 100vh;
   height: 95vh;
-  font: 16px Arial, Helvetica, sans-serif;
+  font:
+    16px Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .left-margin {
-  background-color: rgb(241, 240, 237);
+  background-color: rgb(241 240 237);
   width: 9em;
   height: 100%;
   float: left;
@@ -116,7 +107,7 @@ p {
 }
 
 .contents {
-  background-color: rgb(241, 240, 235);
+  background-color: rgb(241 240 235);
   height: 100%;
   margin-left: 2em;
   padding-top: 1em;
@@ -137,17 +128,18 @@ In other words, it should be the same text you would use in a textual button to 
 For example, in the snippet of HTML below, a toolbar which uses icon images as link labels provides `alt` attributes for each giving a textual label to use instead of the icon when the icons cannot be or are intentionally not used.
 
 ```html
-<li class="toolbar" aria-role="toolbar">
-  <a href="songs.html" aria-role="button">
-    <img src="songicon.svg" alt="Songs">
+<li class="toolbar" role="toolbar">
+  <a href="songs.html" role="button">
+    <img src="songicon.svg" alt="Songs" />
   </a>
-  <a href="albums.html" aria-role="button">
-    <img src="albumicon.svg" alt="Albums"></a>
-  <a href="artists.html" aria-role="button">
-    <img src="artisticon.svg" alt="Artists">
+  <a href="albums.html" role="button">
+    <img src="albumicon.svg" alt="Albums"
+  /></a>
+  <a href="artists.html" role="button">
+    <img src="artisticon.svg" alt="Artists" />
   </a>
-  <a href="playlists.html" aria-role="button">
-    <img src="playlisticon.svg" alt="Playlists">
+  <a href="playlists.html" role="button">
+    <img src="playlisticon.svg" alt="Playlists" />
   </a>
 </li>
 ```
@@ -170,7 +162,7 @@ Logos (such as corporate or brand logos) and informational icons should use the 
 That is, if an image is a corporate logo, the `alt` text should be the name of the company.
 If the image is an icon representing a status or other information, the text should be the name of that state.
 
-For example, if an image is a badge that's shown on a page to indicate that the content of the page is new and has been updated recently, the corresponding `alt` text might be "`Updated Recently"` or even "`Updated on 27 August 2019"`.
+For example, if an image is a badge that's shown on a page to indicate that the content of the page is new and has been updated recently, the corresponding `alt` text might be `"Updated Recently"` or even `"Updated on 27 August 2019"`.
 
 In this example, a starburst image with the word "New!" is used to indicate that an article is about something new (and probably supposedly also exciting).
 The `alt` attribute is set to `New Page!` to allow that text to be displayed in place of the image if the image isn't available.
@@ -235,7 +227,11 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
 
 .contents {
   margin-top: 1em;
-  font: 16px Arial, Helvetica, Verdana, sans-serif;
+  font:
+    16px Arial,
+    Helvetica,
+    Verdana,
+    sans-serif;
 }
 ```
 
@@ -246,7 +242,7 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
 ### Other images
 
 Images showing objects or scenes should have `alt` text describing what's seen in the image.
-A photo of a yellow teapot might literally have its `alt` attribute set to "`A yellow teapot"`.
+A photo of a yellow teapot might literally have its `alt` attribute set to `"A yellow teapot"`.
 
 ## Specifications
 

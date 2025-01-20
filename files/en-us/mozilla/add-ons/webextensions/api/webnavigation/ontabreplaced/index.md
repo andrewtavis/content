@@ -2,20 +2,10 @@
 title: webNavigation.onTabReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onTabReplaced
-  - webNavigation
 browser-compat: webextensions.api.webNavigation.onTabReplaced
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.
 
@@ -32,7 +22,7 @@ browser.webNavigation.onTabReplaced.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -43,9 +33,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
       - : `object`. See the [details](#details_2) section for more information.
@@ -77,7 +67,8 @@ browser.webNavigation.onTabReplaced.addListener(logOnTabReplaced);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onTabReplaced) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onTabReplaced) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

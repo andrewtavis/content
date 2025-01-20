@@ -1,26 +1,17 @@
 ---
 title: declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/GETMATCHEDRULES_QUOTA_INTERVAL
-tags:
-  - GETMATCHEDRULES_QUOTA_INTERVAL
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Property
-  - declarativeNetRequest
-  - GETMATCHEDRULES_QUOTA_INTERVAL
+page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The time interval within which {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}} {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} calls can be made, specified in minutes. Additional calls fail immediately and result in a promise rejection. Calls associated with a user gesture are exempt from the quota.
 
 Its value is `10`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

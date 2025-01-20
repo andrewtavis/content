@@ -2,20 +2,10 @@
 title: events.UrlFilter
 slug: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - UrlFilter
-  - WebExtensions
-  - events
 browser-compat: webextensions.api.events.UrlFilter
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Describes various criteria for filtering URLs. If all of the criteria specified in the filter's properties match the URL, then the filter matches. Filters are often provided to API methods in an [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of UrlFilters. For example, [webNavigation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation) listeners can be added with a filter which is an object with a single `url` property that is an [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of UrlFilters, e.g. `{url:[UrlFilter, UrlFilter, …]}`. If any filter within the Array of UrlFilters matches, then it is considered a match for the Array. Effectively, the criteria specified within a single filter are AND'ed together, while all of the individual filters within an Array are OR'ed.
 
@@ -72,12 +62,12 @@ However, note that these last two patterns will not match the last component of 
   - : `string`. Matches if the URL (without fragment identifier) is equal to a specified string. Port numbers are stripped from the URL if they match the default port number.
 - `urlMatches` {{optional_inline}}
 
-  - : `string`. Matches if the URL (without fragment identifier) matches a specified [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). Port numbers are stripped from the URL if they match the default port number.
+  - : `string`. Matches if the URL (without fragment identifier) matches a specified [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). Port numbers are stripped from the URL if they match the default port number.
 
     - For example: `urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` matches `https://mozilla.org/`, `https://developer.mozilla.org/`, but not `https://developer.fakemozilla.org/`.
 
 - `originAndPathMatches` {{optional_inline}}
-  - : `string`. Matches if the URL without query segment and fragment identifier matches a specified [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). Port numbers are stripped from the URL if they match the default port number.
+  - : `string`. Matches if the URL without query segment and fragment identifier matches a specified [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). Port numbers are stripped from the URL if they match the default port number.
 - `urlPrefix` {{optional_inline}}
 
   - : `string`. Matches if the URL (without fragment identifier) starts with a specified string. Port numbers are stripped from the URL if they match the default port number.
@@ -104,7 +94,8 @@ However, note that these last two patterns will not match the last component of 
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events#type-UrlFilter) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

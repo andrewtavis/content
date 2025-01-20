@@ -2,19 +2,15 @@
 title: ":-moz-only-whitespace"
 slug: Web/CSS/:-moz-only-whitespace
 page-type: css-pseudo-class
-tags:
-  - ":-moz-only-whitespace"
-  - CSS
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-only-whitespace
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-> **Note:** In [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), the {{CSSxRef(":empty")}} selector was changed to act like `:-moz-only-whitespace`, but no browser currently supports this yet.
+> [!NOTE]
+> In [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), the {{CSSxRef(":empty")}} selector was changed to act like `:-moz-only-whitespace`, but no browser currently supports this yet.
 
 The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements that only contain text nodes that only contain {{Glossary("whitespace")}}. (This includes elements with empty text nodes and elements with no child nodes.)
 
@@ -28,7 +24,7 @@ The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 
 ## Examples
 
-### Simple :-moz-only-whitespace example
+### Basic :-moz-only-whitespace example
 
 #### HTML
 
@@ -50,7 +46,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Simple_-moz-only-whitespace_example', '100%', 50)}}
+{{EmbedLiveSample('Basic_-moz-only-whitespace_example', '100%', 50)}}
 
 ## Specifications
 
@@ -62,5 +58,5 @@ Briefly defined as `:blank` in [Selectors Level 4](https://drafts.csswg.org/sele
 
 ## See also
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}}
 - {{CSSxRef(":empty")}}

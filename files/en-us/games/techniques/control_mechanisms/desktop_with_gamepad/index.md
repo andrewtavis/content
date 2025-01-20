@@ -1,14 +1,7 @@
 ---
 title: Desktop gamepad controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_gamepad
-tags:
-  - Controls
-  - Desktop
-  - Gamepad API
-  - Gamepads
-  - Games
-  - JavaScript
-  - controllers
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -111,7 +104,8 @@ function draw() {
 
 In this case, we are checking the four D-Pad buttons (0-3) and the A button (11).
 
-> **Note:** Please remember that different devices may have different key mappings, i.e. the D-Pad Right button have an index of 3 on the wireless XBox 360, but may have a different one on another device.
+> [!NOTE]
+> Please remember that different devices may have different key mappings, i.e. the D-Pad Right button have an index of 3 on the wireless XBox 360, but may have a different one on another device.
 
 You could also create a helper function that would assign proper names to the listed buttons, so for example instead of checking out if `gamepadButtonPressedHandler(3)` is pressed, you could do a more descriptive check: `gamepadButtonPressedHandler('DPad-Right')`.
 
@@ -352,9 +346,9 @@ if (gamepadAPI.buttonPressed("B")) {
 }
 ```
 
-## The paused and gameover states
+## The paused and game-over states
 
-We already learned how to control the whole lifecycle of the game: pausing the gameplay, restarting it, or getting back to the main menu. It works smooth on mobile and desktop, and adding gamepad controls is just as straightforward — in the `update()` function, we check to see if the current state status is `paused` — if so, the relevant actions are enabled:
+We already learned how to control the whole lifecycle of the game: pausing the gameplay, restarting it, or getting back to the main menu. It works smooth on mobile and desktop, and adding gamepad controls is just as straightforward — in the `update()` function, we check to see if the current state status is "paused" — if so, the relevant actions are enabled:
 
 ```js
 if (GamepadAPI.buttons.pressed("Start")) {
@@ -366,7 +360,7 @@ if (GamepadAPI.buttons.pressed("Back")) {
 }
 ```
 
-Similarly, when the `gameover` state status is active, then we can allow the user to restart the game instead of continuing it:
+Similarly, when the "game-over" state status is active, then we can allow the user to restart the game instead of continuing it:
 
 ```js
 if (GamepadAPI.buttons.pressed("Start")) {

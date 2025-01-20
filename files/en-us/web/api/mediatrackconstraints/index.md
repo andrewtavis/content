@@ -2,22 +2,7 @@
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
 page-type: web-api-interface
-tags:
-  - API
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Reference
-  - Screen Sharing
-  - Screen Sharing API
-  - Sharing
-  - WebRTC
-  - screen
-browser-compat: api.MediaTrackConstraints
+spec-urls: https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -140,7 +125,7 @@ Some combination—but not necessarily all—of the following properties will ex
 ### Instance properties of video tracks
 
 - {{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}}
-  - : A [`ConstrainDouble`](#constraindouble) specifying the video aspect ratio or range of aspect ratios which are acceptable and/or required.
+  - : A [`ConstrainDouble`](#constraindouble) specifying the video {{glossary("aspect ratio")}} or range of aspect ratios which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.facingMode", "facingMode")}}
   - : A [`ConstrainDOMString`](#constraindomstring) object specifying a facing or an array of facings which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.frameRate", "frameRate")}}
@@ -168,6 +153,7 @@ These constraints apply to the `video` property of the object passed into {{domx
       - : The stream contains a single window selected by the user for sharing.
 
 - {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}
+
   - : A [`ConstrainBoolean`](#constrainboolean) value which may contain a single Boolean value or a set of them, indicating whether or not to allow the user to choose source surfaces which do not directly correspond to display areas. These may include backing buffers for windows to allow capture of window contents that are hidden by other windows in front of them, or buffers containing larger documents that need to be scrolled through to see the entire contents in their windows.
 
 - {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} {{Experimental_Inline}}
@@ -176,10 +162,6 @@ These constraints apply to the `video` property of the object passed into {{domx
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

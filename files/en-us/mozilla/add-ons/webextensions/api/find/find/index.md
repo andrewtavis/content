@@ -2,18 +2,10 @@
 title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
 browser-compat: webextensions.api.find.find
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Searches for text in a tab.
 
@@ -31,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js-nolint
 browser.find.find(
-  queryphrase,       // string
+  queryPhrase,       // string
   options            // optional object
 )
 ```
@@ -54,7 +46,8 @@ browser.find.find(
       - : `boolean`. If `true`, the search distinguishes between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume". Defaults to `false`.
     - `tabId`
       - : `integer`. ID of the tab to search. Defaults to the active tab.
-- `queryphrase`
+
+- `queryPhrase`
   - : `string`. The text to search for.
 
 ### Return value
@@ -191,7 +184,7 @@ function getNodes() {
     document,
     window.NodeFilter.SHOW_TEXT,
     null,
-    false
+    false,
   );
   const nodes = [];
   while ((node = walker.nextNode())) {

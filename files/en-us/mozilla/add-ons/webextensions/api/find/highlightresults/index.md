@@ -2,19 +2,10 @@
 title: find.highlightResults()
 slug: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
-  - highlightResults
 browser-compat: webextensions.api.find.highlightResults
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Highlights the results of a previous call to {{WebExtAPIRef("find.find()")}}.
 

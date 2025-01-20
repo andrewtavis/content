@@ -1,20 +1,8 @@
 ---
-title: RTCRtpSender.replaceTrack()
+title: "RTCRtpSender: replaceTrack() method"
+short-title: replaceTrack()
 slug: Web/API/RTCRtpSender/replaceTrack
 page-type: web-api-instance-method
-tags:
-  - Audio
-  - Media
-  - Method
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - replace
-  - replaceTrack
-  - track
 browser-compat: api.RTCRtpSender.replaceTrack
 ---
 
@@ -31,7 +19,7 @@ not require negotiation.
 Among the use cases for `replaceTrack()` is the common need to switch
 between the rear- and front-facing cameras on a phone. With `replaceTrack()`,
 you can have a track object for each camera and switch between the two as needed. See
-the example [Switching cameras](#switching_cameras) below.
+the example [switching video cameras](#switching_video_cameras) below.
 
 ## Syntax
 
@@ -98,27 +86,34 @@ negotiation and thus fail `replaceTrack()`:
 ### Switching video cameras
 
 ```js
-// example to change video camera, suppose selected value saved into window.selectedCamera
-
-navigator.mediaDevices
-  .getUserMedia({
-    video: {
-      deviceId: {
-        exact: window.selectedCamera
-      }
-    }
-  })
-  .then((stream) => {
-    const [videoTrack] = stream.getVideoTracks();
-    PCs.forEach((pc) => {
-      const sender = pc.getSenders().find((s) => s.track.kind === videoTrack.kind);
-      console.log('Found sender:', sender);
-      sender.replaceTrack(videoTrack);
+const localConnection = new RTCPeerConnection();
+const remoteConnection = new RTCPeerConnection();
+// Configuring these to use the WebRTC API can be explored at
+// https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample
+const connections = [localConnection, remoteConnection];
+function setCamera(selectedCamera) {
+  navigator.mediaDevices
+    .getUserMedia({
+      video: {
+        deviceId: {
+          exact: selectedCamera,
+        },
+      },
+    })
+    .then((stream) => {
+      const [videoTrack] = stream.getVideoTracks();
+      connections.forEach((pc) => {
+        const sender = pc
+          .getSenders()
+          .find((s) => s.track.kind === videoTrack.kind);
+        console.log("Found sender:", sender);
+        sender.replaceTrack(videoTrack);
+      });
+    })
+    .catch((err) => {
+      console.error(`Error happened: ${err}`);
     });
-  })
-  .catch((err) => {
-    console.error(`Error happened: ${err}`);
-  });
+}
 ```
 
 ## Specifications

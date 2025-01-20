@@ -1,17 +1,12 @@
 ---
-title: TextDecoder.encoding
+title: "TextDecoder: encoding property"
+short-title: encoding
 slug: Web/API/TextDecoder/encoding
 page-type: web-api-instance-property
-tags:
-  - API
-  - Encoding
-  - Property
-  - Read-only
-  - TextDecoder
 browser-compat: api.TextDecoder.encoding
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextDecoder.encoding`** read-only property returns a string containing the name of the decoding algorithm used by the specific decoder object.
 

@@ -2,12 +2,9 @@
 title: Mixin
 slug: Glossary/Mixin
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - Method
-  - Mixin
-  - Property
 ---
+
+{{GlossarySidebar}}
 
 A _mixin_ is a {{Glossary("class")}} (interface, in WebAPI spec terms) in which some or all of its {{Glossary("method", "methods")}} and/or {{Glossary("property", "properties")}} are unimplemented, requiring that another {{Glossary("class")}} or {{Glossary("interface")}} provide the missing implementations.
 

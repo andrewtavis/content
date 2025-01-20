@@ -2,20 +2,10 @@
 title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - get
 browser-compat: webextensions.api.alarms.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets an alarm, given its name.
 
@@ -57,4 +47,5 @@ getAlarm.then(gotAlarm);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.

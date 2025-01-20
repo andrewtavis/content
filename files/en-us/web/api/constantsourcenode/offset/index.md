@@ -1,15 +1,8 @@
 ---
-title: ConstantSourceNode.offset
+title: "ConstantSourceNode: offset property"
+short-title: offset
 slug: Web/API/ConstantSourceNode/offset
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - ConstantSourceNode
-  - Media
-  - Property
-  - Read-only
-  - Web Audio API
 browser-compat: api.ConstantSourceNode.offset
 ---
 
@@ -19,7 +12,8 @@ The read-only `offset` property of the {{ domxref("ConstantSourceNode") }}
 interface returns a {{domxref("AudioParam")}} object indicating the numeric [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) value which is always returned
 by the source when asked for the next sample.
 
-> **Note:** While the `AudioParam` named `offset` is read-only, the
+> [!NOTE]
+> While the `AudioParam` named `offset` is read-only, the
 > `value` property within is not. So you can change the value of
 > `offset` by setting the value of
 > `ConstantSourceNode.offset.value`:

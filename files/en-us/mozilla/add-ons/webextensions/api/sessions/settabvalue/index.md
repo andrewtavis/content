@@ -2,19 +2,10 @@
 title: sessions.setTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - sessions
-  - setTabValue
 browser-compat: webextensions.api.sessions.setTabValue
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Stores a key/value pair to associate with a given tab. You can subsequently retrieve this value using {{WebExtAPIRef("sessions.getTabValue")}}.
 
@@ -55,7 +46,10 @@ Set a value on the active tab when the user selects a menu item. Note that you'l
 
 ```js
 async function setOnActiveTab() {
-  let tabArray = await browser.tabs.query({currentWindow: true, active: true});
+  let tabArray = await browser.tabs.query({
+    currentWindow: true,
+    active: true,
+  });
   let tabId = tabArray[0].id;
   await browser.sessions.setTabValue(tabId, "my-key", "my-value");
 }
@@ -63,7 +57,7 @@ async function setOnActiveTab() {
 browser.menus.create({
   id: "my-item",
   title: "my item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(setOnActiveTab);

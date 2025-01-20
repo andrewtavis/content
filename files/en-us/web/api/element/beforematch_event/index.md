@@ -1,9 +1,10 @@
 ---
 title: "Element: beforematch event"
+short-title: beforematch
 slug: Web/API/Element/beforematch_event
 page-type: web-api-event
-tags:
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Element.beforematch_event
 ---
 
@@ -39,7 +40,7 @@ The HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute acc
 
 In this example we have:
 
-- Two {{HTMLElement("div")}} elements. The first is not hidden, while the second has `hidden="until-found"`and `id="until-found-box"` attributes.
+- Two {{HTMLElement("div")}} elements. The first is not hidden, while the second has `hidden="until-found"` and `id="until-found-box"` attributes.
 - A link whose target is the `"until-found-box"` fragment.
 
 We also have some JavaScript that listens for the `beforematch` event firing on the hidden until found element. The event handler changes the text content of the box.
@@ -82,7 +83,7 @@ div {
 const untilFound = document.querySelector("#until-found-box");
 untilFound.addEventListener(
   "beforematch",
-  () => (untilFound.textContent = "I've been revealed!")
+  () => (untilFound.textContent = "I've been revealed!"),
 );
 ```
 

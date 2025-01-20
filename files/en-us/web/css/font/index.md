@@ -2,12 +2,6 @@
 title: font
 slug: Web/CSS/font
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.font
 ---
 
@@ -33,6 +27,23 @@ This property is a shorthand for the following CSS properties:
 
 ## Syntax
 
+```css-nolint
+/* font-size font-family */
+font: 1.2em "Fira Sans", sans-serif;
+
+/* font-size/line height font-family */
+font: 1.2em/2 "Fira Sans", sans-serif;
+
+/* font-style font-weight font-size font-family */
+font: italic bold 1.2em "Fira Sans", sans-serif;
+
+/* font-stretch font-variant font-size font-family */
+font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
+
+/* system font */
+font: caption;
+```
+
 The `font` property may be specified as either a single keyword, which will select a system font, or as a shorthand for various font-related properties.
 
 If `font` is specified as a system keyword, it must be one of: `caption`, `icon`, `menu`, `message-box`, `small-caption`, `status-bar`.
@@ -52,10 +63,10 @@ If `font` is specified as a shorthand for several font-related properties, then:
   - {{cssxref("&lt;font-stretch&gt;")}}
   - {{cssxref("&lt;line-height&gt;")}}
 
-- `font-style`, `font-variant` and `font-weight` must precede `font-size`
-- `font-variant` may only specify the values defined in CSS 2.1, that is `normal` and `small-caps`
+- `font-style`, `font-variant` and `font-weight` must precede `font-size`.
+- `font-variant` may only specify the values defined in CSS 2.1, that is `normal` and `small-caps`.
 - `font-stretch` may only be a single keyword value.
-- `line-height` must immediately follow `font-size`, preceded by "/", like this: "`16px/3`"
+- `line-height` must immediately follow `font-size`, preceded by "/", like this: `16px/3`.
 - `font-family` must be the last value specified.
 
 ### Values
@@ -463,8 +474,7 @@ function getCheckedValue(radioName) {
 }
 
 function setCss() {
-  getProperties();
-  injectCss(shortText);
+  injectCss(getProperties());
 }
 
 function injectCss(cssFragment) {
@@ -494,4 +504,4 @@ setCss();
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

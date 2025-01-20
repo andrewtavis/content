@@ -2,20 +2,10 @@
 title: history.getVisits()
 slug: Mozilla/Add-ons/WebExtensions/API/history/getVisits
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getVisits
 browser-compat: webextensions.api.history.getVisits
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Retrieves information about all visits to the given URL.
 
@@ -62,7 +52,7 @@ function listVisits(historyItems) {
   if (historyItems.length) {
     console.log(`URL ${historyItems[0].url}`);
     const gettingVisits = browser.history.getVisits({
-      url: historyItems[0].url
+      url: historyItems[0].url,
     });
     gettingVisits.then(gotVisits);
   }
@@ -71,7 +61,7 @@ function listVisits(historyItems) {
 let searching = browser.history.search({
   text: "",
   startTime: 0,
-  maxResults: 1
+  maxResults: 1,
 });
 
 searching.then(listVisits);
@@ -79,7 +69,8 @@ searching.then(listVisits);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#method-getVisits) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#method-getVisits) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

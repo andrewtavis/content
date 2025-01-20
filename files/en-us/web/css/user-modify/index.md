@@ -2,21 +2,20 @@
 title: user-modify
 slug: Web/CSS/user-modify
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - CSS:WebKit Extensions
-  - Deprecated
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.user-modify
 ---
 
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`user-modify`** property has no effect in Firefox. It was originally planned to determine whether or not the content of an element can be edited by a user.
+
+> [!WARNING]
+> This property has been replaced by the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -31,10 +30,6 @@ user-modify: revert;
 user-modify: unset;
 ```
 
-> **Warning:** This property has been replaced by the {{HTMLAttrxRef("contenteditable")}} attribute.
-
-## Syntax
-
 The `-moz-user-modify` property is specified as one of the keyword values from the list below.
 
 ### Values
@@ -43,18 +38,17 @@ The `-moz-user-modify` property is specified as one of the keyword values from t
   - : Default value. Contents are read-only.
 - `read-write`
   - : The user is able to read and write contents.
-- `read-write-plaintext-only` {{Non-standard_Inline}} {{Deprecated_Inline}}
+- `read-write-plaintext-only`
   - : Same as `read-write`, but rich text formatting will be lost.
 - `write-only`
   - : The user is able to edit the content, but not to read it.
 
-## Formal definition
-
-{{CSSInfo}}
-
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+user-modify =
+  read-only | read-write | read-write-plaintext-only | write-only
+```
 
 ## Examples
 
@@ -85,4 +79,4 @@ Not part of any standard.
 
 - {{CSSxRef("-moz-user-focus")}}
 - {{CSSxRef("-moz-user-input")}}
-- {{CSSxRef("-moz-user-select")}}
+- {{CSSxRef("user-select", "-moz-user-select")}}

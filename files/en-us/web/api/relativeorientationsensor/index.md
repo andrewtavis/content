@@ -2,21 +2,10 @@
 title: RelativeOrientationSensor
 slug: Web/API/RelativeOrientationSensor
 page-type: web-api-interface
-tags:
-  - API
-  - Generic Sensor API
-  - Interface
-  - Orientation Sensor API
-  - OrientationSensor
-  - Reference
-  - RelativeOrientationSensor
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.RelativeOrientationSensor
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`RelativeOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation without regard to the Earth's reference coordinate system.
 
@@ -47,18 +36,19 @@ _No specific events; inherits events from its ancestor, {{domxref('Sensor')}}._
 
 The following example, which is loosely based on [Intel's Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/), instantiates an `RelativeOrientationSensor` with a frequency of 60 times a second.
 
-> **Note:** The Intel demo this is based on uses the `AbsoluteOrientationSensor`. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
+> [!NOTE]
+> The Intel demo this is based on uses the `AbsoluteOrientationSensor`. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
 
 ```js
-const options = { frequency: 60, referenceFrame: 'device' };
+const options = { frequency: 60, referenceFrame: "device" };
 const sensor = new RelativeOrientationSensor(options);
 
-sensor.addEventListener('reading', () => {
+sensor.addEventListener("reading", () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', (error) => {
-  if (event.error.name === 'NotReadableError') {
+sensor.addEventListener("error", (error) => {
+  if (event.error.name === "NotReadableError") {
     console.log("Sensor is not available.");
   }
 });
@@ -71,16 +61,17 @@ Using orientation sensors requires requesting permissions for multiple device se
 
 ```js
 const sensor = new RelativeOrientationSensor();
-Promise.all([navigator.permissions.query({ name: "accelerometer" }),
-             navigator.permissions.query({ name: "gyroscope" })])
-       .then((results) => {
-         if (results.every((result) => result.state === "granted")) {
-           sensor.start();
-           // ...
-         } else {
-           console.log("No permissions to use RelativeOrientationSensor.");
-         }
-   });
+Promise.all([
+  navigator.permissions.query({ name: "accelerometer" }),
+  navigator.permissions.query({ name: "gyroscope" }),
+]).then((results) => {
+  if (results.every((result) => result.state === "granted")) {
+    sensor.start();
+    // ...
+  } else {
+    console.log("No permissions to use RelativeOrientationSensor.");
+  }
+});
 ```
 
 ## Specifications

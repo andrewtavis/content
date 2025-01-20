@@ -2,11 +2,9 @@
 title: Using files from web applications
 slug: Web/API/File_API/Using_files_from_web_applications
 page-type: guide
-tags:
-  - File API
 ---
 
-{{APIRef("File API")}}
+{{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
 
 Using the File API, web content can ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` element or by drag and drop.
 
@@ -25,7 +23,7 @@ The `multiple` attribute on the `input` element allows the user to select multip
 Accessing the first selected file using a classical DOM selector:
 
 ```js
-const selectedFile = document.getElementById('input').files[0];
+const selectedFile = document.getElementById("input").files[0];
 ```
 
 ### Accessing selected file(s) on a change event
@@ -48,16 +46,7 @@ The {{DOMxRef("FileList")}} object provided by the DOM lists all of the files se
 const numFiles = fileList.length;
 ```
 
-Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array:
-
-```js
-for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
-  const file = fileList[i];
-  // …
-}
-```
-
-This loop iterates over all the files in the file list.
+Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array.
 
 There are three attributes provided by the {{DOMxRef("File")}} object that contain useful information about the file.
 
@@ -73,7 +62,7 @@ There are three attributes provided by the {{DOMxRef("File")}} object that conta
 The following example shows a possible use of the `size` property:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -117,7 +106,7 @@ The following example shows a possible use of the `size` property:
           ];
           const exponent = Math.min(
             Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-            units.length - 1
+            units.length - 1,
           );
           const approx = numberOfBytes / 1024 ** exponent;
           const output =
@@ -127,10 +116,11 @@ The following example shows a possible use of the `size` property:
                   units[exponent]
                 } (${numberOfBytes} bytes)`;
 
-          document.getElementById("fileNum").textContent = uploadInput.files.length;
+          document.getElementById("fileNum").textContent =
+            uploadInput.files.length;
           document.getElementById("fileSize").textContent = output;
         },
-        false
+        false,
       );
     </script>
   </body>
@@ -159,11 +149,15 @@ The code that handles the `click` event can look like this:
 const fileSelect = document.getElementById("fileSelect");
 const fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener("click", (e) => {
-  if (fileElem) {
-    fileElem.click();
-  }
-}, false);
+fileSelect.addEventListener(
+  "click",
+  (e) => {
+    if (fileElem) {
+      fileElem.click();
+    }
+  },
+  false,
+);
 ```
 
 You can style the {{HTMLElement("button")}} however you wish.
@@ -188,11 +182,13 @@ and this CSS:
 
 ```css
 .visually-hidden {
-  position: absolute !important;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   height: 1px;
-  width: 1px;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 input.visually-hidden:is(:focus, :focus-within) + label {
@@ -258,7 +254,9 @@ function handleFiles(files) {
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
 
-    if (!file.type.startsWith('image/')){ continue }
+    if (!file.type.startsWith("image/")) {
+      continue;
+    }
 
     const img = document.createElement("img");
     img.classList.add("obj");
@@ -266,13 +264,15 @@ function handleFiles(files) {
     preview.appendChild(img); // Assuming that "preview" is the div output where the content will be displayed.
 
     const reader = new FileReader();
-    reader.onload = (e) => { img.src = e.target.result; };
+    reader.onload = (e) => {
+      img.src = e.target.result;
+    };
     reader.readAsDataURL(file);
   }
 }
 ```
 
-Here our loop handling the user-selected files looks at each file's `type` attribute to see if its MIME type begins with the string "`image/`"). For each file that is an image, we create a new `img` element. CSS can be used to establish any pretty borders or shadows and to specify the size of the image, so that doesn't need to be done here.
+Here our loop handling the user-selected files looks at each file's `type` attribute to see if its MIME type begins with `image/`). For each file that is an image, we create a new `img` element. CSS can be used to establish any pretty borders or shadows and to specify the size of the image, so that doesn't need to be done here.
 
 Each image has the CSS class `obj` added to it, making it easy to find in the DOM tree. We also add a `file` attribute to each image specifying the {{DOMxRef("File")}} for the image; this will let us fetch the images for actual upload later. We use {{DOMxRef("Node.appendChild()")}} to add the new thumbnail to the preview area of our document.
 
@@ -280,7 +280,7 @@ Next, we establish the {{DOMxRef("FileReader")}} to handle asynchronously loadin
 
 ## Using object URLs
 
-The DOM {{DOMxRef("URL.createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL()")}} methods let you create simple URL strings that can be used to reference any data that can be referred to using a DOM {{DOMxRef("File")}} object, including local files on the user's computer.
+The DOM {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create simple URL strings that can be used to reference any data that can be referred to using a DOM {{DOMxRef("File")}} object, including local files on the user's computer.
 
 When you have a {{DOMxRef("File")}} object you'd like to reference by URL from HTML, you can create an object URL for it like this:
 
@@ -288,7 +288,7 @@ When you have a {{DOMxRef("File")}} object you'd like to reference by URL from H
 const objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-The object URL is a string identifying the {{DOMxRef("File")}} object. Each time you call {{DOMxRef("URL.createObjectURL()")}}, a unique object URL is created even if you've created an object URL for that file already. Each of these must be released. While they are released automatically when the document is unloaded, if your page uses them dynamically you should release them explicitly by calling {{DOMxRef("URL.revokeObjectURL()")}}:
+The object URL is a string identifying the {{DOMxRef("File")}} object. Each time you call {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, a unique object URL is created even if you've created an object URL for that file already. Each of these must be released. While they are released automatically when the document is unloaded, if your page uses them dynamically you should release them explicitly by calling {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}:
 
 ```js
 URL.revokeObjectURL(objectURL);
@@ -319,23 +319,29 @@ The `handleFiles()` method follows:
 
 ```js
 const fileSelect = document.getElementById("fileSelect"),
-    fileElem = document.getElementById("fileElem"),
-    fileList = document.getElementById("fileList");
+  fileElem = document.getElementById("fileElem"),
+  fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener("click", (e) => {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // prevent navigation to "#"
-}, false);
+fileSelect.addEventListener(
+  "click",
+  (e) => {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // prevent navigation to "#"
+  },
+  false,
+);
 
 fileElem.addEventListener("change", handleFiles, false);
 
 function handleFiles() {
+  fileList.textContent = "";
   if (!this.files.length) {
-    fileList.innerHTML = "<p>No files selected!</p>";
+    const p = document.createElement("p");
+    p.textContent = "No files selected!";
+    fileList.appendChild(p);
   } else {
-    fileList.innerHTML = "";
     const list = document.createElement("ul");
     fileList.appendChild(list);
     for (let i = 0; i < this.files.length; i++) {
@@ -347,10 +353,10 @@ function handleFiles() {
       img.height = 60;
       img.onload = () => {
         URL.revokeObjectURL(img.src);
-      }
+      };
       li.appendChild(img);
       const info = document.createElement("span");
-      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} bytes`;
+      info.textContent = `${this.files[i].name}: ${this.files[i].size} bytes`;
       li.appendChild(info);
     }
   }
@@ -367,9 +373,9 @@ If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is `null`, we se
 
    1. Create a new list item ({{HTMLElement("li")}}) element and insert it into the list.
    2. Create a new image ({{HTMLElement("img")}}) element.
-   3. Set the image's source to a new object URL representing the file, using {{DOMxRef("URL.createObjectURL()")}} to create the blob URL.
+   3. Set the image's source to a new object URL representing the file, using {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} to create the blob URL.
    4. Set the image's height to 60 pixels.
-   5. Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxRef("URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
+   5. Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
    6. Append the new list item to the list.
 
 Here is a live demo of the code above:
@@ -378,7 +384,12 @@ Here is a live demo of the code above:
 
 ## Example: Uploading a user-selected file
 
-Another thing you might want to do is let the user upload the selected file or files (such as the images selected using the previous example) to a server. This can be done asynchronously very easily.
+This example shows how to let the user upload files (such as the images selected using the previous example) to a server.
+
+> [!NOTE]
+> It's usually preferable to make HTTP requests using the [Fetch API](/en-US/docs/Web/API/Fetch_API) instead of {{domxref("XMLHttpRequest")}}. However, in this case we want to show the user the upload progress, and this feature is still not supported by the Fetch API, so the example uses `XMLHttpRequest`.
+>
+> Work to track standardization of progress notifications using the Fetch API is at <https://github.com/whatwg/fetch/issues/607>.
 
 ### Creating the upload tasks
 
@@ -394,7 +405,7 @@ function sendFiles() {
 }
 ```
 
-Line 2 fetches a {{DOMxRef("NodeList")}}, called `imgs`, of all the elements in the document with the CSS class `obj`. In our case, these will be all of the image thumbnails. Once we have that list, it's trivial to go through it and create a new `FileUpload` instance for each. Each of these handles uploading the corresponding file.
+`document.querySelectorAll` fetches a {{DOMxRef("NodeList")}} of all the elements in the document with the CSS class `obj`. In our case, these will be all of the image thumbnails. Once we have that list, it's trivial to go through it and create a new `FileUpload` instance for each. Each of these handles uploading the corresponding file.
 
 ### Handling the upload process for a file
 
@@ -408,20 +419,31 @@ function FileUpload(img, file) {
   this.xhr = xhr;
 
   const self = this;
-  this.xhr.upload.addEventListener("progress", (e) => {
-        if (e.lengthComputable) {
-          const percentage = Math.round((e.loaded * 100) / e.total);
-          self.ctrl.update(percentage);
-        }
-      }, false);
+  this.xhr.upload.addEventListener(
+    "progress",
+    (e) => {
+      if (e.lengthComputable) {
+        const percentage = Math.round((e.loaded * 100) / e.total);
+        self.ctrl.update(percentage);
+      }
+    },
+    false,
+  );
 
-  xhr.upload.addEventListener("load", (e) => {
-          self.ctrl.update(100);
-          const canvas = self.ctrl.ctx.canvas;
-          canvas.parentNode.removeChild(canvas);
-      }, false);
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
-  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
+  xhr.upload.addEventListener(
+    "load",
+    (e) => {
+      self.ctrl.update(100);
+      const canvas = self.ctrl.ctx.canvas;
+      canvas.parentNode.removeChild(canvas);
+    },
+    false,
+  );
+  xhr.open(
+    "POST",
+    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+  );
+  xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {
     xhr.send(evt.target.result);
   };
@@ -431,19 +453,24 @@ function FileUpload(img, file) {
 function createThrobber(img) {
   const throbberWidth = 64;
   const throbberHeight = 6;
-  const throbber = document.createElement('canvas');
-  throbber.classList.add('upload-progress');
-  throbber.setAttribute('width', throbberWidth);
-  throbber.setAttribute('height', throbberHeight);
+  const throbber = document.createElement("canvas");
+  throbber.classList.add("upload-progress");
+  throbber.setAttribute("width", throbberWidth);
+  throbber.setAttribute("height", throbberHeight);
   img.parentNode.appendChild(throbber);
-  throbber.ctx = throbber.getContext('2d');
-  throbber.ctx.fillStyle = 'orange';
+  throbber.ctx = throbber.getContext("2d");
+  throbber.ctx.fillStyle = "orange";
   throbber.update = (percent) => {
-    throbber.ctx.fillRect(0, 0, throbberWidth * percent / 100, throbberHeight);
+    throbber.ctx.fillRect(
+      0,
+      0,
+      (throbberWidth * percent) / 100,
+      throbberHeight,
+    );
     if (percent === 100) {
-      throbber.ctx.fillStyle = 'green';
+      throbber.ctx.fillStyle = "green";
     }
-  }
+  };
   throbber.update(0);
   return throbber;
 }
@@ -471,7 +498,7 @@ if (isset($_FILES['myFile'])) {
     move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
     exit;
 }
-?><!DOCTYPE html>
+?><!doctype html>
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
@@ -524,7 +551,7 @@ if (isset($_FILES['myFile'])) {
 
 Object URLs can be used for other things than just images! They can be used to display embedded PDF files or any other resources that can be displayed by the browser.
 
-In Firefox, to have the PDF appear embedded in the iframe (rather than proposed as a downloaded file), the preference `pdfjs.disabled` must be set to `false` {{non-standard_inline()}}.
+In Firefox, to have the PDF appear embedded in the iframe (rather than proposed as a downloaded file), the preference `pdfjs.disabled` must be set to `false`.
 
 ```html
 <iframe id="viewer"></iframe>
@@ -534,8 +561,8 @@ And here is the change of the `src` attribute:
 
 ```js
 const obj_url = URL.createObjectURL(blob);
-const iframe = document.getElementById('viewer');
-iframe.setAttribute('src', obj_url);
+const iframe = document.getElementById("viewer");
+iframe.setAttribute("src", obj_url);
 URL.revokeObjectURL(obj_url);
 ```
 
@@ -544,7 +571,7 @@ URL.revokeObjectURL(obj_url);
 You can manipulate files of other formats the same way. Here is how to preview uploaded video:
 
 ```js
-const video = document.getElementById('video');
+const video = document.getElementById("video");
 const obj_url = URL.createObjectURL(blob);
 video.src = obj_url;
 video.play();
@@ -558,4 +585,4 @@ URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

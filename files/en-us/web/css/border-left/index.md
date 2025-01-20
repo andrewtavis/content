@@ -2,12 +2,6 @@
 title: border-left
 slug: Web/CSS/border-left
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-left
 ---
 
@@ -115,5 +109,5 @@ div {
 - {{cssxref("border")}}
 - {{cssxref("border-block")}}
 - {{cssxref("outline")}}
-- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
-- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

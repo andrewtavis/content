@@ -2,19 +2,10 @@
 title: browsingData.settings()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Settings
-  - WebExtensions
-  - browsingData
 browser-compat: webextensions.api.browsingData.settings
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Browsers have a built-in "Clear History" feature, which enables the user to clear various types of browsing data. This has a UI that enables the user to select what type of data to remove (e.g. history, downloads, …) and how far back in time to remove data.
 
@@ -71,7 +62,8 @@ browser.browsingData.settings().then(onGotSettings, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

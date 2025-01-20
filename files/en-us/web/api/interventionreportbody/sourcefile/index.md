@@ -1,22 +1,19 @@
 ---
-title: InterventionReportBody.sourceFile
+title: "InterventionReportBody: sourceFile property"
+short-title: sourceFile
 slug: Web/API/InterventionReportBody/sourceFile
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - sourceFile
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.sourceFile
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`sourceFile`** read-only property of the {{domxref("InterventionReportBody")}} interface returns the path to the source file where the intervention occurred.
 
-> **Note:** This property can be used with {{domxref("InterventionReportBody.lineNumber")}} and {{domxref("InterventionReportBody.columnNumber")}} to locate the column and line in the file where the feature is used.
+> [!NOTE]
+> This property can be used with {{domxref("InterventionReportBody.lineNumber")}} and {{domxref("InterventionReportBody.columnNumber")}} to locate the column and line in the file where the feature is used.
 
 ## Value
 
@@ -28,9 +25,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];

@@ -1,13 +1,8 @@
 ---
-title: HTMLIFrameElement.referrerPolicy
+title: "HTMLIFrameElement: referrerPolicy property"
+short-title: referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLIFrameElement
-  - Property
-  - Reference
-  - Referrer Policy
 browser-compat: api.HTMLIFrameElement.referrerPolicy
 ---
 
@@ -15,7 +10,7 @@ browser-compat: api.HTMLIFrameElement.referrerPolicy
 
 The
 **`HTMLIFrameElement.referrerPolicy`**
-property reflects the HTML {{htmlattrxref("referrerpolicy","iframe")}} attribute of the
+property reflects the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/iframe#referrerpolicy) attribute of the
 {{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
 resource.
 
@@ -50,7 +45,8 @@ resource.
 
   - : Send a full URL when performing a same-origin or cross-origin request.
 
-    > **Note:** This policy will leak origins and paths from TLS-protected resources
+    > [!NOTE]
+    > This policy will leak origins and paths from TLS-protected resources
     > to insecure origins. Carefully consider the impact of this setting.
 
 ## Examples

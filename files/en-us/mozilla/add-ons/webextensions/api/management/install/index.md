@@ -2,19 +2,10 @@
 title: management.install()
 slug: Mozilla/Add-ons/WebExtensions/API/management/install
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - Theme
-  - WebExtensions
-  - install
-  - management
 browser-compat: webextensions.api.management.install
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Installs and enables a theme extension from the given URL.
 
@@ -49,10 +40,10 @@ Cycle through a list of themes:
 "use strict";
 
 const themes = [
-  "https://addons.mozilla.org/firefox/downloads/file/1063216/insightscare-1.0-fx.xpi",
-  "https://addons.mozilla.org/firefox/downloads/file/1063419/orange_roses-1.0-fx.xpi",
-  "https://addons.mozilla.org/firefox/downloads/file/1062647/sticktoyourguns-2.0-fx.xpi",
-  "https://addons.mozilla.org/firefox/downloads/file/0/bad_url.xpi",
+  "https://addons.mozilla.org/en-US/firefox/downloads/file/1063216/insightscare-1.0-fx.xpi",
+  "https://addons.mozilla.org/en-US/firefox/downloads/file/1063419/orange_roses-1.0-fx.xpi",
+  "https://addons.mozilla.org/en-US/firefox/downloads/file/1062647/sticktoyourguns-2.0-fx.xpi",
+  "https://addons.mozilla.org/en-US/firefox/downloads/file/0/bad_url.xpi",
 ];
 
 let current;

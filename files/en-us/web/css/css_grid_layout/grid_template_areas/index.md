@@ -1,16 +1,12 @@
 ---
 title: Grid template areas
-slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 page-type: guide
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
 ---
 
 {{CSSRef}}
 
-In the [previous guide](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) we looked at grid lines, and how to position items against those lines. When you use CSS Grid Layout you always have lines, and this can be a straightforward way to place items on your grid. However, there is an alternate method to use for positioning items on the grid which you can use alone or in combination with line-based placement. This method involves placing our items using named template areas, and we will find out exactly how this method works. You will see very quickly why we sometimes call this the ascii-art method of grid layout!
+In the [previous guide](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement), we looked at grid lines and how to position items against those lines. When you use CSS grid layout, you always have lines, and this can be a straightforward way to place items on your grid. However, there is an alternate method to use for positioning items on the grid which you can use alone or in combination with line-based placement. This method involves placing our items using named template areas, and we will find out exactly how this method works. You will see very quickly why we sometimes call this the ascii-art method of grid layout!
 
 ## Naming a grid area
 
@@ -24,7 +20,7 @@ You have already encountered the {{cssxref("grid-area")}} property. This is the 
 
 What we are doing here when defining all four lines, is defining the area by specifying the lines that enclose that area.
 
-![The Grid Area defined by lines](4_area.png)
+![The grid area defined by lines](4_area.png)
 
 We can also define an area by giving it a name and then specify the location of that area in the value of the {{cssxref("grid-template-areas")}} property. You can choose what you would like to name your area. For example, if I wish to create the layout shown below I can identify four main areas.
 
@@ -103,7 +99,7 @@ Using this method we do not need to specify anything at all on the individual gr
 
 ## Leaving a grid cell empty
 
-We have completely filled our grid with areas in this example, leaving no white space. However you can leave grid cells empty with this method of layout. To leave a cell empty use the full stop character, '`.`'. If I want to only display the footer directly under the main content I would need to leave the three cells underneath the sidebar empty.
+We have completely filled our grid with areas in this example, leaving no white space. However you can leave grid cells empty with this method of layout. To leave a cell empty use the full stop character, `.`. If I want to only display the footer directly under the main content I would need to leave the three cells underneath the sidebar empty.
 
 ```css
 .header {
@@ -432,7 +428,7 @@ These can quickly become difficult to read for other developers, or even your fu
 
 Before using any shorthand it is worth remembering that shorthands not only enable the setting of many properties in one go, they also act to **reset things** to their initial values that you do not, or cannot set in the shorthand. Therefore if you use a shorthand, be aware that it may reset things you have applied elsewhere.
 
-The two shorthands for the grid container are the Explicit Grid Shorthand `grid-template` and the Grid Definition Shorthand `grid`.
+The two shorthands for the grid container are the Explicit grid shorthand `grid-template` and the grid definition shorthand `grid`.
 
 ### `grid-template`
 
@@ -442,7 +438,7 @@ The {{cssxref("grid-template")}} property sets the following properties:
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-areas")}}
 
-The property is referred to as the Explicit Grid Shorthand because it is setting those things that you control when you define an explicit grid, and not those which impact any implicit row or column tracks that might be created.
+The property is referred to as the Explicit grid shorthand because it is setting those things that you control when you define an explicit grid, and not those which impact any implicit row or column tracks that might be created.
 
 The following code creates a layout using {{cssxref("grid-template")}} that is the same as the layout created earlier in this guide.
 
@@ -485,6 +481,6 @@ You can use this syntax in the exact same way as the {{cssxref("grid-template")}
 }
 ```
 
-We will revisit the other functionality offered by this shorthand later in these guides when we take a look at auto placement and the grid-auto-flow property.
+We will revisit the other functionality offered by this shorthand later in these guides when we take a look at auto placement and the `grid-auto-flow` property.
 
 If you have worked through these initial guides you now should be in a position to create grid layouts using line-based placement or named areas. Take some time to build some common layout patterns using grid, while there are lots of new terms to learn, the syntax is relatively straightforward. As you develop examples, you are likely to come up with some questions and use cases for things we haven't covered yet. In the rest of these guides we will be looking at some more of the detail included in the specification – in order that you can begin to create advanced layouts with it.

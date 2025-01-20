@@ -2,12 +2,6 @@
 title: border-right-style
 slug: Web/CSS/border-right-style
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-right-style
 ---
 
@@ -17,7 +11,8 @@ The **`border-right-style`** [CSS](/en-US/docs/Web/CSS) property sets the line s
 
 {{EmbedInteractiveExample("pages/css/border-right-style.html")}}
 
-> **Note:** The specification doesn't define how borders of different styles connect in the corners.
+> [!NOTE]
+> The specification doesn't define how borders of different styles connect in the corners.
 
 ## Syntax
 
@@ -42,7 +37,7 @@ border-right-style: revert-layer;
 border-right-style: unset;
 ```
 
-The `border-right-style` property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.
+The `border-right-style` property is specified as a single {{cssxref("line-style")}} keyword value.
 
 ## Formal definition
 

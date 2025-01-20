@@ -2,19 +2,10 @@
 title: sidebarAction.setPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setPanel
-  - sidebarAction
 browser-compat: webextensions.api.sidebarAction.setPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the sidebar's panel: that is, the HTML document that defines the content of this sidebar.
 
@@ -74,9 +65,9 @@ let thatPanel = browser.runtime.getURL("/that.html");
 
 function toggle(panel) {
   if (panel === thisPanel) {
-    browser.sidebarAction.setPanel({panel: thatPanel});
+    browser.sidebarAction.setPanel({ panel: thatPanel });
   } else {
-    browser.sidebarAction.setPanel({panel: thisPanel});
+    browser.sidebarAction.setPanel({ panel: thisPanel });
   }
 }
 
@@ -91,7 +82,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+> [!NOTE]
+> This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

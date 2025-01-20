@@ -1,11 +1,7 @@
 ---
 title: <munderover>
 slug: Web/MathML/Element/munderover
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.munderover
 ---
 
@@ -20,9 +16,9 @@ It uses the following syntax: `<munderover> base underscript overscript </munder
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `accent`
-  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the over script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the over script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 - `accentunder`
-  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the under script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the under script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 
 ## Examples
 
@@ -44,6 +40,19 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ```
 
 {{ EmbedLiveSample('munderover_example', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

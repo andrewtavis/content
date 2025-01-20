@@ -1,14 +1,8 @@
 ---
-title: CSSKeyframesRule.appendRule()
+title: "CSSKeyframesRule: appendRule() method"
+short-title: appendRule()
 slug: Web/API/CSSKeyframesRule/appendRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Method
-  - Reference
 browser-compat: api.CSSKeyframesRule.appendRule
 ---
 
@@ -39,7 +33,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 After appending another rule with `appendRule` the `cssRules` property returns a {{domxref("CSSRuleList")}} containing two rules.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

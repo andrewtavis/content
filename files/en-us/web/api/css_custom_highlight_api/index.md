@@ -2,15 +2,11 @@
 title: CSS Custom Highlight API
 slug: Web/API/CSS_Custom_Highlight_API
 page-type: web-api-overview
-tags:
-  - API
-  - CSS Custom Highlight
-  - Reference
-spec-urls: https://w3c.github.io/csswg-drafts/css-highlight-api-1/
 browser-compat:
   - api.Highlight
   - api.HighlightRegistry
   - css.selectors.highlight
+spec-urls: https://drafts.csswg.org/css-highlight-api-1/
 ---
 
 {{DefaultAPISidebar("CSS Custom Highlight API")}}
@@ -69,7 +65,7 @@ Each highlight can be styled differently.
 
 ### Register highlights
 
-Once highlights have been created, register them by using the {{domxref("HighlightRegistry")}} available as {{domxref("CSS.highlights")}}.
+Once highlights have been created, register them by using the {{domxref("HighlightRegistry")}} available as {{domxref("CSS/highlights_static", "CSS.highlights")}}.
 
 The registry is a {{jsxref("Map")}}-like object used to register highlights by names, as seen below:
 
@@ -106,7 +102,7 @@ The final step is to style the registered highlights. This is done by using the 
 - {{domxref("Highlight")}}
   - : This interface is used to represent a collection of ranges to be styled on a document.
 - {{domxref("HighlightRegistry")}}
-  - : Accessible via {{domxref("CSS.highlights")}}, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.
+  - : Accessible via {{domxref("CSS/highlights_static", "CSS.highlights")}}, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.
 
 ## Examples
 
@@ -119,25 +115,25 @@ This example shows how to use the CSS Custom Highlight API to highlight search r
 The HTML code snippet below defines a search field and an article with a few paragraphs of text:
 
 ```html
-<label>Search within text <input id="query" type="text"></label>
+<label>Search within text <input id="query" type="text" /></label>
 <article>
   <p>
     Maxime debitis hic, delectus perspiciatis laborum molestiae labore,
-    deleniti, quam consequatur iure veniam alias voluptas nisi quo.
-    Dolorem eaque alias, quo vel quas repudiandae architecto deserunt
-    quidem, sapiente laudantium nulla.
+    deleniti, quam consequatur iure veniam alias voluptas nisi quo. Dolorem
+    eaque alias, quo vel quas repudiandae architecto deserunt quidem, sapiente
+    laudantium nulla.
   </p>
   <p>
-    Maiores odit molestias, necessitatibus doloremque dolor illum
-    reprehenderit provident nostrum laboriosam iste, tempore perferendis!
-    Ab porro neque esse voluptas libero necessitatibus fugiat, ex, minus
-    atque deserunt veniam molestiae tempora? Vitae.
+    Maiores odit molestias, necessitatibus doloremque dolor illum reprehenderit
+    provident nostrum laboriosam iste, tempore perferendis! Ab porro neque esse
+    voluptas libero necessitatibus fugiat, ex, minus atque deserunt veniam
+    molestiae tempora? Vitae.
   </p>
   <p>
-    Dolorum facilis voluptate eaque eius similique ducimus dignissimos
-    assumenda quos architecto. Doloremque deleniti non exercitationem
-    rerum quam alias harum, nisi obcaecati corporis temporibus vero sapiente
-    voluptatum est quibusdam id ipsa.
+    Dolorum facilis voluptate eaque eius similique ducimus dignissimos assumenda
+    quos architecto. Doloremque deleniti non exercitationem rerum quam alias
+    harum, nisi obcaecati corporis temporibus vero sapiente voluptatum est
+    quibusdam id ipsa.
   </p>
 </article>
 ```
@@ -169,7 +165,7 @@ query.addEventListener("input", () => {
     return;
   }
 
-  // Clear the HighlightRegistry to remove the 
+  // Clear the HighlightRegistry to remove the
   // previous search results.
   CSS.highlights.clear();
 
@@ -195,7 +191,7 @@ query.addEventListener("input", () => {
         startPos = index + str.length;
       }
 
-      // Create a range object for each instance of 
+      // Create a range object for each instance of
       // str we found in the text node.
       return indices.map((index) => {
         const range = new Range();
@@ -241,3 +237,5 @@ The result is shown below. Type text within the search field to highlight matche
 ## See also
 
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
+- HTML [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute
+- CSS {{cssxref("pseudo-elements")}}

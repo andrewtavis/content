@@ -2,11 +2,6 @@
 title: "RangeError: radix must be an integer"
 slug: Web/JavaScript/Reference/Errors/Bad_radix
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
 ---
 
 {{jsSidebar("Errors")}}
@@ -19,7 +14,7 @@ and 36.
 
 ## Message
 
-```
+```plain
 RangeError: toString() radix argument must be between 2 and 36 (V8-based & Safari)
 RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
 ```

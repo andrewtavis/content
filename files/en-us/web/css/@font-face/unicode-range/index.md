@@ -2,37 +2,29 @@
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
 page-type: css-at-rule-descriptor
-tags:
-  - At-rule descriptor
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.at-rules.font-face.unicode-range
 ---
 
 {{CSSRef}}
 
-The **`unicode-range`** CSS descriptor sets the specific range of characters to be used from a font defined by {{cssxref("@font-face")}} and made available for use on the current page. If the page doesn't use any character in this range, the font is not downloaded; if it uses at least one, the whole font is downloaded.
+The **`unicode-range`** CSS descriptor sets the specific range of characters to be used from a font defined using the {{cssxref("@font-face")}} at-rule and made available for use on the current page. If the page doesn't use any character in this range, the font is not downloaded; if it uses at least one, the whole font is downloaded.
 
 ## Syntax
 
 ```css
 /* <unicode-range> values */
-unicode-range: U+26; /* single codepoint */
+unicode-range: U+26; /* single code point */
 unicode-range: U+0-7F;
-unicode-range: U+0025-00FF; /* codepoint range */
+unicode-range: U+0025-00FF; /* code point range */
 unicode-range: U+4??; /* wildcard range */
 unicode-range: U+0025-00FF, U+4??; /* multiple values */
 ```
 
 ### Values
 
-- **_single codepoint_**
+- **_single code point_**
   - : A single Unicode character code point, for example `U+26`.
-- **_codepoint range_**
+- **_code point range_**
   - : A range of Unicode code points. So for example, `U+0025-00FF` means _include all characters in the range `U+0025` to `U+00FF`_.
 - **_wildcard range_**
   - : A range of Unicode code points containing wildcard characters, that is using the `'?'` character, so for example `U+4??` means _include all characters in the range `U+400` to `U+4FF`_.
@@ -53,7 +45,7 @@ The purpose of this descriptor is to allow the font resources to be segmented so
 
 ### Using a different font for a single character
 
-In this example we create a simple HTML containing a single {{HTMLElement("div")}} element, including an ampersand, that we want to style with a different font. To make it obvious, we will use a sans-serif font, _Helvetica_, for the text, and a serif font, _Times New Roman_, for the ampersand.
+In this example, we create a single {{HTMLElement("div")}} element, with a text string that includes an ampersand that we want to style with a different font. To make it obvious, we will use a sans-serif font, _Helvetica_, for the text, and a serif font, _Times New Roman_, for the ampersand.
 
 In the CSS we are in effect defining a completely separate {{cssxref("@font-face")}} that only includes a single character in it, meaning that only this character will be styled with this font. We could also have done this by wrapping the ampersand in a {{HTMLElement("span")}} and applying a different font just to that, but that is an extra element and rule set.
 

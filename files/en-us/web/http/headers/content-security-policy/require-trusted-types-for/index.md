@@ -1,12 +1,9 @@
 ---
 title: "CSP: require-trusted-types-for"
 slug: Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for
-tags:
-  - CSP
-  - Directive
-  - HTTP
-  - Security
-  - Experimental
+page-type: http-csp-directive
+status:
+  - experimental
 browser-compat: http.headers.Content-Security-Policy.require-trusted-types-for
 ---
 
@@ -58,6 +55,6 @@ if (typeof trustedTypes !== "undefined") {
 - {{HTTPHeader("Content-Security-Policy")}}
 - [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
 - [DOM XSS injection sinks covered by Trusted Types](https://w3c.github.io/trusted-types/dist/spec/#injection-sinks)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)
 - Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
 - [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill)

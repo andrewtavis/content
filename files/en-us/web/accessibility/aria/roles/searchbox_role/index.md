@@ -1,15 +1,11 @@
 ---
 title: "ARIA: searchbox role"
 slug: Web/Accessibility/ARIA/Roles/searchbox_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - searchbox
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#searchbox
 ---
+
+{{AccessibilitySidebar}}
 
 The `searchbox` role indicates an element is a type of `textbox` intended for specifying search criteria.
 
@@ -67,16 +63,8 @@ Including `role="searchbox"` when the form is a `search` and the label indicates
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 - [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
 - [ARIA: `textbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

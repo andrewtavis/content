@@ -1,17 +1,12 @@
 ---
-title: performance.measure()
+title: "Performance: measure() method"
+short-title: measure()
 slug: Web/API/Performance/measure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
-  - Web Workers
 browser-compat: api.Performance.measure
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`measure()`** method creates a named {{domxref("PerformanceMeasure")}} object representing a time measurement between two marks in the browser's performance timeline.
 
@@ -54,8 +49,9 @@ To only provide an `endMark`, you need to provide an empty `measureOptions` obje
         If this is a string naming a {{domxref("PerformanceMark")}}, then it is defined in the same way as `startMark`.
 
     - `duration` {{optional_inline}}
-      - : Duration between the start and end mark times. If omitted, this defaults to {{domxref("performance.now()")}}; the time that has elapsed since the context was created. If provided, you must also specify either `start` or `end` but not both.
+      - : Duration (in milliseconds) between the start and end mark times. If omitted, this defaults to {{domxref("performance.now()")}}; the time that has elapsed since the context was created. If provided, you must also specify either `start` or `end` but not both.
     - `end` {{optional_inline}}
+
       - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or string that names a {{domxref("PerformanceMark")}} to use for the end time.
 
         If this is a string naming a {{domxref("PerformanceMark")}}, then it is defined in the same way as `endMark`.
@@ -72,8 +68,8 @@ The {{domxref("PerformanceMeasure")}} entry that was created.
 
 The returned _measure_ will have the following property values:
 
-- {{domxref("PerformanceEntry.entryType","entryType")}} - set to "`measure`".
-- {{domxref("PerformanceEntry.name","name")}} - set to the "`name`" argument.
+- {{domxref("PerformanceEntry.entryType","entryType")}} - set to `"measure"`.
+- {{domxref("PerformanceEntry.name","name")}} - set to the `name` argument.
 - {{domxref("PerformanceEntry.startTime","startTime")}} - set to:
 
   - a {{domxref("DOMHighResTimeStamp","timestamp")}}, if specified in `measureOptions.start`.
@@ -128,7 +124,7 @@ Given two of your own markers `"login-started"` and `"login-finished"`, you can 
 const loginMeasure = performance.measure(
   "login-duration",
   "login-started",
-  "login-finished"
+  "login-finished",
 );
 console.log(loginMeasure.duration);
 ```

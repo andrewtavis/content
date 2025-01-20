@@ -1,16 +1,8 @@
 ---
-title: OVR_multiview2.framebufferTextureMultiviewOVR()
+title: "OVR_multiview2: framebufferTextureMultiviewOVR() method"
+short-title: framebufferTextureMultiviewOVR()
 slug: Web/API/OVR_multiview2/framebufferTextureMultiviewOVR
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Multiview
-  - VR
-  - WebGL
-  - WebGL extensions
-  - WebVR
-  - WebXR
 browser-compat: api.OVR_multiview2.framebufferTextureMultiviewOVR
 ---
 
@@ -30,7 +22,7 @@ framebufferTextureMultiviewOVR(target, attachment, texture, level, baseViewIndex
 
 - `target`
 
-  - : A {{domxref("WebGL_API.Types")}} specifying the binding point (target). Possible values:
+  - : A {{domxref("WebGL_API.Types", "GLenum")}} specifying the binding point (target). Possible values:
 
     - `gl.FRAMEBUFFER`
       - : Collection buffer data storage of color, alpha,
@@ -43,7 +35,7 @@ framebufferTextureMultiviewOVR(target, attachment, texture, level, baseViewIndex
 
 - `attachment`
 
-  - : A {{domxref("WebGL_API.Types")}} specifying the attachment point for the
+  - : A {{domxref("WebGL_API.Types", "GLenum")}} specifying the attachment point for the
     `texture`. Possible values:
 
     - `gl.COLOR_ATTACHMENT0`: Attaches the texture to the framebuffer's
@@ -68,13 +60,13 @@ framebufferTextureMultiviewOVR(target, attachment, texture, level, baseViewIndex
 - `texture`
   - : A {{domxref("WebGLTexture")}} object whose image to attach.
 - `level`
-  - : A {{domxref("WebGL_API.Types")}} specifying the mipmap level of the texture image to be
+  - : A {{domxref("WebGL_API.Types", "GLint")}} specifying the mipmap level of the texture image to be
     attached. Must be 0.
 - `baseViewIndex`
-  - : A {{domxref("WebGL_API.Types")}} specifying the base view index of the framebuffer object
+  - : A {{domxref("WebGL_API.Types", "GLint")}} specifying the base view index of the framebuffer object
     attachment.
 - `numViews`
-  - : A {{domxref("WebGL_API.Types")}} specifying the number of views of the framebuffer object
+  - : A {{domxref("WebGL_API.Types", "GLsizei")}} specifying the number of views of the framebuffer object
     attachment.
 
 ### Return value
@@ -100,7 +92,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-ext.framebufferTextureMultiviewOVR(gl.DRAW_FRAMEBUFFER, gl.COLOR_ATTACHMENT0, colorTex, 0, 0, 2);
+ext.framebufferTextureMultiviewOVR(
+  gl.DRAW_FRAMEBUFFER,
+  gl.COLOR_ATTACHMENT0,
+  colorTex,
+  0,
+  0,
+  2,
+);
 ```
 
 ## Specifications

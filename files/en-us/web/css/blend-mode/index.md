@@ -2,15 +2,6 @@
 title: <blend-mode>
 slug: Web/CSS/blend-mode
 page-type: css-type
-tags:
-  - Blend modes
-  - CSS
-  - CSS Data Type
-  - Compositing
-  - Compositing and Blending
-  - Data Type
-  - Reference
-  - color
 browser-compat: css.types.blend-mode
 ---
 
@@ -57,7 +48,7 @@ The `<blend-mode>` data type is defined using a keyword value chosen from the li
 - `soft-light`
   - : The final color is similar to `hard-light`, but softer.
     This blend mode behaves similar to `hard-light`.
-    The effect is similar to shining a _diffused_ spotlight on the backdrop*.*
+    The effect is similar to shining a _diffused_ spotlight on the backdrop.
 - `difference`
   - : The final color is the result of subtracting the darker of the two colors from the lighter one.
     A black layer has no effect, while a white layer inverts the other layer's color.
@@ -395,8 +386,10 @@ In the following example, we have a `<div>` with two background images set on it
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
-      no-repeat center, linear-gradient(to bottom, blue, orange);
+  background:
+    url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+      no-repeat center,
+    linear-gradient(to bottom, blue, orange);
 }
 ```
 
@@ -425,7 +418,7 @@ selectElem.addEventListener("change", () => {
 
 ## See also
 
-- The [CSS compositing and blending](/en-US/docs/Web/CSS/Compositing_and_Blending) module that defines the `<blend-mode>` values.
+- The [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module that defines the `<blend-mode>` values.
 - Properties that use this data type: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 
 Description to various blend modes on other website:

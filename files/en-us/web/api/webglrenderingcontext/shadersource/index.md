@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.shaderSource()
+title: "WebGLRenderingContext: shaderSource() method"
+short-title: shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.shaderSource
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.shaderSource()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the source code of a
 {{domxref("WebGLShader")}}.

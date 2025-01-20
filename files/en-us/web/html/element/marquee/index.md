@@ -1,14 +1,9 @@
 ---
-title: '<marquee>: The Marquee element'
+title: "<marquee>: The Marquee element"
 slug: Web/HTML/Element/marquee
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
-  - marquee
+status:
+  - deprecated
 browser-compat: html.elements.marquee
 ---
 
@@ -16,46 +11,32 @@ browser-compat: html.elements.marquee
 
 The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.
 
+The HTML `<marquee>` element is deprecated and its use is strongly discouraged. If you must create the effect of scrolling text or continuous elements, consider using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) with [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) instead of `<marquee>` elements to smoothly animate content. Additionally, include the [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) CSS {{cssxref("@media")}} query to stop the animation based on user preference, thereby improving user experience and accessibility.
+
 ## Attributes
 
-- {{htmlattrdef("behavior")}} {{Deprecated_Inline}}
+- `behavior` {{Deprecated_Inline}}
   - : Sets how the text is scrolled within the marquee. Possible values are `scroll`, `slide` and `alternate`. If no value is specified, the default value is `scroll`.
-- {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
+- `bgcolor` {{Deprecated_Inline}}
   - : Sets the background color through color name or hexadecimal value.
-- {{htmlattrdef("direction")}} {{Deprecated_Inline}}
+- `direction` {{Deprecated_Inline}}
   - : Sets the direction of the scrolling within the marquee. Possible values are `left`, `right`, `up` and `down`. If no value is specified, the default value is `left`.
-- {{htmlattrdef("height")}} {{Deprecated_Inline}}
+- `height` {{Deprecated_Inline}}
   - : Sets the height in pixels or percentage value.
-- {{htmlattrdef("hspace")}} {{Deprecated_Inline}}
+- `hspace` {{Deprecated_Inline}}
   - : Sets the horizontal margin
-- {{htmlattrdef("loop")}} {{Deprecated_Inline}}
+- `loop` {{Deprecated_Inline}}
   - : Sets the number of times the marquee will scroll. If no value is specified, the default value is −1, which means the marquee will scroll continuously.
-- {{htmlattrdef("scrollamount")}} {{Deprecated_Inline}}
+- `scrollamount` {{Deprecated_Inline}}
   - : Sets the amount of scrolling at each interval in pixels. The default value is 6.
-- {{htmlattrdef("scrolldelay")}} {{Deprecated_Inline}}
+- `scrolldelay` {{Deprecated_Inline}}
   - : Sets the interval between each scroll movement in milliseconds. The default value is 85. Note that any value smaller than 60 is ignored and the value 60 is used instead unless `truespeed` is specified.
-- {{htmlattrdef("truespeed")}} {{Deprecated_Inline}}
+- `truespeed` {{Deprecated_Inline}}
   - : By default, `scrolldelay` values lower than 60 are ignored. If `truespeed` is present, those values are not ignored.
-- {{htmlattrdef("vspace")}} {{Deprecated_Inline}}
+- `vspace` {{Deprecated_Inline}}
   - : Sets the vertical margin in pixels or percentage value.
-- {{htmlattrdef("width")}} {{Deprecated_Inline}}
+- `width` {{Deprecated_Inline}}
   - : Sets the width in pixels or percentage value.
-
-## Event handlers
-
-- {{htmlattrdef("onbounce")}}
-  - : Fires when the marquee has reached the end of its scroll position. It can only fire when the behavior attribute is set to `alternate`.
-- {{htmlattrdef("onfinish")}}
-  - : Fires when the marquee has finished the amount of scrolling that is set by the loop attribute. It can only fire when the loop attribute is set to some number that is greater than 0.
-- {{htmlattrdef("onstart")}}
-  - : Fires when the marquee starts scrolling.
-
-## Methods
-
-- `start()`
-  - : Starts scrolling of the marquee.
-- `stop()`
-  - : Stops scrolling of the marquee.
 
 ## Examples
 
@@ -70,9 +51,11 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
   height="200"
   behavior="alternate"
   style="border:solid">
-  <marquee behavior="alternate"> This text will bounce </marquee>
+  <marquee behavior="alternate">This text will bounce</marquee>
 </marquee>
 ```
+
+### Result
 
 {{EmbedLiveSample("Examples", 600, 450)}}
 
@@ -97,4 +80,8 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
 
 ## See also
 
+- CSS {{cssxref("transform")}} property
+- CSS {{cssxref("translate")}} property
+- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
 - {{DOMxRef("HTMLMarqueeElement")}}

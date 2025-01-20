@@ -2,13 +2,6 @@
 title: letter-spacing
 slug: Web/CSS/letter-spacing
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - SVG
-  - recipe:css-property
 browser-compat: css.properties.letter-spacing
 ---
 
@@ -44,7 +37,7 @@ letter-spacing: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : Specifies extra inter-character space _in addition to_ the default space between characters. Values may be negative, but there may be implementation-specific limits. User agents may not further increase or decrease the inter-character space in order to justify text.
 
-## Accessibility concerns
+## Accessibility
 
 A large positive or negative `letter-spacing` value will make the word(s) the styling is applied to unreadable. For text styled with a very large positive value, the letters will be so far apart that the word(s) will appear like a series of individual, unconnected letters. For text styled with a very large negative value, the letters will overlap each other to the point where the word(s) may be unrecognizable.
 

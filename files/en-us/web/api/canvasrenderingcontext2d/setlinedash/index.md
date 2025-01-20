@@ -1,17 +1,8 @@
 ---
-title: CanvasRenderingContext2D.setLineDash()
+title: "CanvasRenderingContext2D: setLineDash() method"
+short-title: setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Dashes
-  - LInes
-  - Method
-  - Reference
-  - patterns
-  - setLineDash
 browser-compat: api.CanvasRenderingContext2D.setLineDash
 ---
 
@@ -22,7 +13,8 @@ The **`setLineDash()`** method of the Canvas 2D API's
 stroking lines. It uses an array of values that specify alternating lengths of lines
 and gaps which describe the pattern.
 
-> **Note:** To return to using solid lines, set the line dash list to an
+> [!NOTE]
+> To return to using solid lines, set the line dash list to an
 > empty array.
 
 ## Syntax

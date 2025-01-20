@@ -1,14 +1,8 @@
 ---
-title: BiquadFilterNode.frequency
+title: "BiquadFilterNode: frequency property"
+short-title: frequency
 slug: Web/API/BiquadFilterNode/frequency
 page-type: web-api-instance-property
-tags:
-  - API
-  - BiquadFilterNode
-  - Property
-  - Reference
-  - Web Audio API
-  - frequency
 browser-compat: api.BiquadFilterNode.frequency
 ---
 
@@ -22,7 +16,8 @@ Its default value is `350`, with a nominal range of `10` to the [Nyquist frequen
 
 An {{domxref("AudioParam")}}.
 
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Examples
 

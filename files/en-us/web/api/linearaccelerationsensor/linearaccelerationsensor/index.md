@@ -1,21 +1,12 @@
 ---
-title: LinearAccelerationSensor()
+title: "LinearAccelerationSensor: LinearAccelerationSensor() constructor"
+short-title: LinearAccelerationSensor()
 slug: Web/API/LinearAccelerationSensor/LinearAccelerationSensor
 page-type: web-api-constructor
-tags:
-  - API
-  - Accelerometer
-  - Constructor
-  - Generic Sensor API
-  - LinearAccelerationSensor
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.LinearAccelerationSensor.LinearAccelerationSensor
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`LinearAccelerationSensor()`**
 constructor creates a new {{domxref("LinearAccelerationSensor")}} object which
@@ -35,13 +26,13 @@ new LinearAccelerationSensor(options)
 
   - : Options are as follows:
 
-    - `frequency`
+    - `frequency` {{optional_inline}}
       - : The desired number of times per second a sample should
         be taken, meaning the number of times per second that the
         {{domxref('sensor.reading_event', 'reading')}} event will be called. A whole number or decimal may be
         used, the latter for frequencies less than a second. The actual reading frequency
         depends on device hardware and consequently may be less than requested.
-    - `referenceFrame`
+    - `referenceFrame` {{optional_inline}}
       - : Either `'device'` or
         `'screen'`. The default is `'device'`.
 

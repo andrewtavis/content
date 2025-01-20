@@ -2,20 +2,10 @@
 title: alarms.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - getAll
 browser-compat: webextensions.api.alarms.getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets all active alarms for the extension.
 
@@ -53,4 +43,5 @@ browser.alarms.getAll().then(gotAll);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.

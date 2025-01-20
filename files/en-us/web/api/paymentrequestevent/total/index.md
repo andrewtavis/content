@@ -1,20 +1,14 @@
 ---
-title: PaymentRequestEvent.total
+title: "PaymentRequestEvent: total property"
+short-title: total
 slug: Web/API/PaymentRequestEvent/total
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request API
-  - PaymentRequestEvent
-  - Property
-  - Reference
-  - payment
-  - total
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.total
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Handler API")}}
+{{SeeCompatTable}}{{APIRef("Payment Handler API")}}{{AvailableInWorkers("service")}}
 
 The **`total`** read-only property of the {{domxref("PaymentRequestEvent")}} interface returns a
 `PaymentCurrencyAmount` object containing the total amount being requested for payment.
@@ -31,7 +25,7 @@ A `PaymentCurrencyAmount` object. This object contains the following properties:
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.total);
 });
 ```
@@ -46,8 +40,8 @@ self.addEventListener('paymentrequest', e => {
 
 ## See also
 
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

@@ -1,18 +1,12 @@
 ---
-title: CookieStoreManager.subscribe()
+title: "CookieStoreManager: subscribe() method"
+short-title: subscribe()
 slug: Web/API/CookieStoreManager/subscribe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - subscribe
-  - CookieStoreManager
-  - Experimental
 browser-compat: api.CookieStoreManager.subscribe
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
 The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface subscribes a {{domxref("ServiceWorkerRegistration")}} to cookie change events.
 
@@ -26,7 +20,7 @@ subscribe(subscriptions)
 
 - `subscriptions`
 
-  - : An object containing:
+  - : An array of objects, each of which has the following properties:
 
     - `name`
       - : A string with the name of a cookie.
@@ -44,7 +38,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subs
 
 ## Examples
 
-In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is subscribing to change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
+In this example, the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is subscribing to change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
 const subscriptions = [{ name: "cookie1", url: `/path1` }];

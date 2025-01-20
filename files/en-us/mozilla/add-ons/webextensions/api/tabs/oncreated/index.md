@@ -2,20 +2,10 @@
 title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCreated
-  - tabs
 browser-compat: webextensions.api.tabs.onCreated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a tab is created.
 
@@ -24,14 +14,14 @@ Note that the tab's URL may not be given its final value at the time this event 
 ## Syntax
 
 ```js-nolint
-browser.tabs.onCreated.addListener(callback)
+browser.tabs.onCreated.addListener(listener)
 browser.tabs.onCreated.removeListener(listener)
 browser.tabs.onCreated.hasListener(listener)
 ```
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,9 +32,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Details of the tab that was created.
@@ -67,7 +57,8 @@ browser.tabs.onCreated.addListener(handleCreated);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onCreated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#event-onCreated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

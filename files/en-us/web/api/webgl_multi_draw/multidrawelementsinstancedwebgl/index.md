@@ -1,18 +1,14 @@
 ---
-title: WEBGL_multi_draw.multiDrawElementsInstancedWEBGL()
+title: "WEBGL_multi_draw: multiDrawElementsInstancedWEBGL() method"
+short-title: multiDrawElementsInstancedWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL
 page-type: webgl-extension-method
-tags:
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawElementsInstancedWEBGL
 ---
 
 {{APIRef("WebGL")}}
 
-The **`WEBGL_multi_draw.multiDrawElementsWEBGL()`** method of
+The **`WEBGL_multi_draw.multiDrawElementsInstancedWEBGL()`** method of
 the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) renders multiple primitives from
 array data. It is
@@ -106,7 +102,17 @@ None.
 const counts = new Int32Array(/* … */);
 const offsets = new Int32Array(/* … */);
 const instanceCounts = new Int32Array(/* … */);
-ext.multiDrawElementsInstancedWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0, counts.length);
+ext.multiDrawElementsInstancedWEBGL(
+  gl.TRIANGLES,
+  counts,
+  0,
+  gl.UNSIGNED_SHORT,
+  offsets,
+  0,
+  instanceCounts,
+  0,
+  counts.length,
+);
 ```
 
 ## Specifications

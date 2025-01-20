@@ -2,12 +2,6 @@
 title: "SyntaxError: JSON.parse: bad parsing"
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JSON
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}
@@ -17,7 +11,7 @@ to be parsed as JSON.
 
 ## Message
 
-```
+```plain
 SyntaxError: JSON.parse: unterminated string literal
 SyntaxError: JSON.parse: bad control character in string literal
 SyntaxError: JSON.parse: bad character in string literal

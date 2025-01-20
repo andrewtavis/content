@@ -2,12 +2,6 @@
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
 page-type: web-api-interface
-tags:
-  - API
-  - BiquadFilterNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.BiquadFilterNode
 ---
 
@@ -51,7 +45,8 @@ The `BiquadFilterNode` interface represents a simple low-order filter, and is cr
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-> **Note:** Though the `AudioParam` objects returned are read-only, the values they represent are not.
+> [!NOTE]
+> Though the `AudioParam` objects returned are read-only, the values they represent are not.
 
 - {{domxref("BiquadFilterNode.frequency")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
@@ -67,7 +62,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
     <table class="standard-table">
       <caption>
-        The meaning of the different parameters depending of the type of the filter
+        The meaning of the different parameters depending on the type of the filter
         (detune has the same meaning regardless, so isn't listed below)
       </caption>
       <thead>
@@ -222,7 +217,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Example
 
-See [`AudioContext.createBiquadFilter`](/en-US/docs/Web/API/BaseAudioContext/createBiquadFilter#example) for example code that shows how to use an `AudioContext` to create a Biquad filter node.
+See [`AudioContext.createBiquadFilter`](/en-US/docs/Web/API/BaseAudioContext/createBiquadFilter#examples) for example code that shows how to use an `AudioContext` to create a Biquad filter node.
 
 ## Specifications
 

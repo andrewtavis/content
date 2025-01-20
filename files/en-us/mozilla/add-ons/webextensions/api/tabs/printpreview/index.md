@@ -2,19 +2,10 @@
 title: tabs.printPreview()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/printPreview
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - printPreview
-  - tabs
 browser-compat: webextensions.api.tabs.printPreview
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Opens print preview for the active tab.
 
@@ -40,14 +31,13 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-In this example a background script listens for a click on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), then opens print preview for the currently active tab:
+In this example a background script listens for a click on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), then opens print preview for the currently active tab:
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.printPreview()
-    .then(() => {
-      console.log("Entered print preview");
-    });
+  browser.tabs.printPreview().then(() => {
+    console.log("Entered print preview");
+  });
 });
 ```
 

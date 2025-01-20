@@ -2,12 +2,6 @@
 title: columns
 slug: Web/CSS/columns
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.columns
 ---
 
@@ -101,5 +95,5 @@ The `columns` property may be specified as one or two of the values listed below
 
 - {{cssxref("widows")}}
 - {{cssxref("orphans")}}
-- [Paged media](/en-US/docs/Web/CSS/Paged_Media)
-- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Paged media](/en-US/docs/Web/CSS/CSS_paged_media)
+- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)

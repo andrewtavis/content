@@ -2,14 +2,6 @@
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 page-type: javascript-static-method
-tags:
-  - ES6
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - fround
-  - Polyfill
 browser-compat: javascript.builtins.Math.fround
 ---
 
@@ -32,7 +24,7 @@ Math.fround(doubleFloat)
 
 ### Return value
 
-The nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of `x`.
+The nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of `doubleFloat`.
 
 ## Description
 

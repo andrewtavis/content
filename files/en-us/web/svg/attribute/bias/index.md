@@ -2,11 +2,6 @@
 title: bias
 slug: Web/SVG/Attribute/bias
 page-type: svg-attribute
-tags:
-  - Filters
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.bias
 ---
 
@@ -25,7 +20,7 @@ You can use this attribute with the following SVG elements:
     <tr>
       <th scope="row">Value</th>
       <td>
-        <a href="/en-US/docs/Web/SVG/Content_type#Number">&#x3C;number></a>
+        <a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a>
       </td>
     </tr>
     <tr>

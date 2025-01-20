@@ -2,15 +2,6 @@
 title: Manipulating video using canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 page-type: guide
-tags:
-  - API
-  - Canvas
-  - Chroma-Key
-  - Editing
-  - Guide
-  - Manipulating
-  - Video
-  - effects
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -24,7 +15,7 @@ By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Element/vide
 The HTML document used to render this content is shown below.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -53,7 +44,7 @@ The HTML document used to render this content is shown below.
       <video
         id="video"
         src="media/video.mp4"
-        controls="true"
+        controls
         crossorigin="anonymous" />
     </div>
     <div>
@@ -98,7 +89,7 @@ processor.doLoad = function doLoad() {
       this.height = video.videoHeight / 2;
       this.timerCallback();
     },
-    false
+    false,
   );
 };
 ```
@@ -155,15 +146,15 @@ When this routine is called, the video element is displaying the most recent fra
 
 ![A single frame of the video element. There is a person wearing a black t-shirt. The background-color is yellow.](video.png)
 
-In line 2, that frame of video is copied into the graphics context `ctx1` of the first canvas, specifying as the height and width the values we previously saved to draw the frame at half size. Note that you can pass the video element into the context's `drawImage()` method to draw the current video frame into the context. The result is:
+That frame of video is copied into the graphics context `ctx1` of the first canvas, specifying as the height and width the values we previously saved to draw the frame at half size. Note that you can pass the video element into the context's `drawImage()` method to draw the current video frame into the context. The result is:
 
 ![A single frame of the video element. There is a person wearing a black t-shirt. The background-color is yellow. This is a smaller version of the picture above.](sourcectx.png)
 
-Line 3 fetches a copy of the raw graphics data for the current frame of video by calling the `getImageData()` method on the first context. This provides raw 32-bit pixel image data we can then manipulate. Line 4 computes the number of pixels in the image by dividing the total size of the frame's image data by four.
+Calling the `getImageData()` method on the first context fetches a copy of the raw graphics data for the current frame of video. This provides raw 32-bit pixel image data we can then manipulate. We then compute the number of pixels in the image by dividing the total size of the frame's image data by four.
 
-The `for` loop that begins on line 6 scans through the frame's pixels, pulling out the red, green, and blue values for each pixel, and compares the values against predetermined numbers that are used to detect the green screen that will be replaced with the still background image imported from `foo.png`.
+The `for` loop scans through the frame's pixels, pulling out the red, green, and blue values for each pixel, and compares the values against predetermined numbers that are used to detect the green screen that will be replaced with the still background image imported from `foo.png`.
 
-Every pixel in the frame's image data that is found that is within the parameters that are considered to be part of the green screen has its alpha value replaced with a zero, indicating that the pixel is entirely transparent. As a result, the final image has the entire green screen area 100% transparent, so that when it's drawn into the destination context in line 13, the result is an overlay onto the static backdrop.
+Every pixel in the frame's image data that is found that is within the parameters that are considered to be part of the green screen has its alpha value replaced with a zero, indicating that the pixel is entirely transparent. As a result, the final image has the entire green screen area 100% transparent, so that when it's drawn into the destination context using `ctx2.putImageData`, the result is an overlay onto the static backdrop.
 
 The resulting image looks like this:
 
@@ -177,4 +168,4 @@ This is done repeatedly as the video plays, so that frame after frame is process
 
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [Learning area: Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Learning area: HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
